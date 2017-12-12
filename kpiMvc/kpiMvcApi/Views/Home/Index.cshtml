@@ -1,0 +1,119 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Charts</title>
+    <link rel="stylesheet" type="text/css" href="~/semantic/dist/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script src="~/semantic/dist/semantic.min.js"></script>
+    <script src="~/js/tablesort.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js"></script>
+    <script>
+        var barChartData =
+            {
+                @using kpiMvcApi.DataTransferObjects
+                labels: @Html.Raw(ViewBag.diagramData.getChartLabel("barcanvas")),
+                datasets: [{
+                    label: 'ProductWise Sales Count',
+                    backgroundColor: [
+                        "#f990a7",
+                        "#aad2ed",
+                        "#9966FF",
+                        "#99e5e5",
+                        "#f7bd83",
+                    ],
+                    borderWidth: 2,
+                    data: @ViewBag.diagramData.getChartDatastring("barcanvas")
+                }]
+            };
+
+            window.onload = function () {
+                var ctx1 = document.getElementById("barcanvas").getContext("2d");
+                window.myBar = new Chart(ctx1,
+                    {
+                        type: 'bar',
+                        data: barChartData,
+                        options:
+                            {
+                                title:
+                                {
+                                    display: true,
+                                    text: "ProductWise Sales Count"
+                                },
+                                responsive: true,
+                                maintainAspectRatio: true
+                            }
+                    });
+            }
+    </script>
+</head>
+<body>
+    <div class="ui left vertical inverted sidebar labeled icon blue menu">
+        <a class="item">
+            <i class="home icon"></i>
+            Home
+        </a>
+        <a class="item">
+            <i class="block layout icon"></i>
+            Topics
+        </a>
+        <a class="item">
+            <i class="smile icon"></i>
+            Friends
+        </a>
+    </div>
+    <div>
+        <button class="ui compact icon blue button" id="btnSidebar">
+            <i class="sidebar icon"> </i>
+        </button>
+        <h1>HelloWorld</h1>
+        @using (Html.BeginForm("ExportToExcel", "Home", FormMethod.Post))
+        {
+            <table class="ui sortable celled table">
+                <thead>
+                    <tr>
+                        <th class="sorted ascending">Id</th>
+                        <th class="">Label</th>
+                        <th class="">Data</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var ddata in ViewBag.diagramData.DiagramDataRepo)
+                    {
+                        <tr>
+                            <td>@ddata.DiagramDataId</td>
+                            <td>@ddata.DiagramDataLabel</td>
+                            <td>@ddata.DiagramData</td>
+                        </tr>
+                    }
+                    <tr>
+                        <td colspan="4">
+                            <br />
+                            <br />
+                            <input type="submit" value="Export to Excel" class="button" />
+                        </td>
+                    </tr>
+            </table>
+        }
+        <div style="text-align: center">
+            <canvas id="barcanvas"></canvas>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $("#btnSidebar").click(function () {
+                    $('.ui.labeled.icon.sidebar')
+                        .sidebar('toggle')
+                        ;
+                });
+                $('table').tablesort()
+            });
+        </script>
+    </div>
+</body>
+</html>
