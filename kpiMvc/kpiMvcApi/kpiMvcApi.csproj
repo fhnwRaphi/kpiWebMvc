@@ -127,6 +127,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="js\charts.js" />
+    <Content Include="js\jqLayoutRoot.js" />
     <Content Include="js\tablesort.js" />
     <Content Include="Models\kpiAzureModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -376,6 +378,8 @@
     <Content Include="semantic\dist\themes\default\assets\fonts\icons.woff" />
     <Content Include="semantic\dist\themes\default\assets\fonts\icons.woff2" />
     <None Include="Properties\PublishProfiles\kpiwebmvc - Web Deploy.pubxml" />
+    <Content Include="Views\Shared\_LayoutRoot.cshtml" />
+    <Content Include="Views\ViewPage1.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
