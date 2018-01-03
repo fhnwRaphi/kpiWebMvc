@@ -1,4 +1,5 @@
 ﻿using kpiMvcApi.DataTransferObjects;
+using kpiMvcApi.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -49,10 +50,30 @@ namespace kpiMvcApi.Controllers
             ViewBag.diagramData = testdata;
             return View();
         }
-        public ActionResult Next()
+        public ActionResult Home()
         {
             // return "next" partial view
-            return PartialView("_PartialPage2");
+            return PartialView("_Home");
+        }
+        public ActionResult UserLogin()
+        {
+            // return "next" partial view
+            return PartialView("_UserLogin");
+        }
+        public ActionResult ProductionData()
+        {
+            // return "next" partial view
+            return PartialView("_ProductionData");
+        }
+        public ActionResult QualityData()
+        {
+            // return "next" partial view
+            return PartialView("_QualityData");
+        }
+        public ActionResult Oee()
+        {
+            // return "next" partial view
+            return PartialView("_Oee");
         }
     }
 }

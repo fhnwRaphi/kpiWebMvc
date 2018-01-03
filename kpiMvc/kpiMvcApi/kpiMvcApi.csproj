@@ -364,6 +364,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>kpiModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\SiteModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -395,10 +396,12 @@
     <Content Include="semantic\dist\themes\default\assets\fonts\icons.woff2" />
     <None Include="Properties\PublishProfiles\kpiwebmvc - Web Deploy.pubxml" />
     <Content Include="Views\Shared\_LayoutRoot.cshtml" />
-    <Content Include="Views\ViewPage1.cshtml" />
     <Content Include="Views\Home\Frame.cshtml" />
-    <Content Include="Views\Home\_PartialPage1.cshtml" />
-    <Content Include="Views\Home\_PartialPage2.cshtml" />
+    <Content Include="Views\Home\_Home.cshtml" />
+    <Content Include="Views\Home\_UserLogin.cshtml" />
+    <Content Include="Views\Home\_ProductionData.cshtml" />
+    <Content Include="Views\Home\_Oee.cshtml" />
+    <Content Include="Views\Home\_QualityData.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

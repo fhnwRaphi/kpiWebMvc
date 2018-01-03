@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     Layout = "~/Views/Shared/_LayoutRoot.cshtml";
 }
 <!DOCTYPE html>
@@ -12,43 +11,51 @@
         <i class="sidebar icon"> </i>
     </button>
     <div class="ui left vertical inverted sidebar labeled icon blue menu">
-        <a class="item" id="home" href="_PartialPage2.cshtml">
+        <a class="item mySidebarBtn" id="Home">
             <i class="home icon"></i>
             Home
         </a>
-        <a class="item">
+        <a class="item mySidebarBtn" id="UserLogin">
             <i class="user icon"></i>
             User Login
         </a>
-        <a class="item" id="btnTest">
+        <a class="item mySidebarBtn" id="ProductionData">
             <i class="industry icon"></i>
+            ProductionData
         </a>
-        <a class="item">
+        <a class="item mySidebarBtn" id="QualityData">
             <i class="heartbeat icon"></i>
             Quality Data
         </a>
-        <a class="item">
+        <a class="item mySidebarBtn" id="OEE">
             <i class="dashboard icon"></i>
             OEE
         </a>
-            @Ajax.ActionLink("Production Data", "Next", null, new AjaxOptions { UpdateTargetId = "partialContent", InsertionMode = InsertionMode.InsertAfter }, new { @class = "white" })
-        @Ajax.ActionLink("Next", "Next", null, new AjaxOptions { UpdateTargetId = "partialContent", InsertionMode = InsertionMode.InsertAfter }, new { @class = "btn btn-default" })
     </div>
-    <div id="partialContent">
-        @{
-            Html.RenderPartial("_PartialPage2");
-        }
-    </div>
+<div id = "partialContent" >
+@{
+    Html.RenderPartial("_Home");
+}
+</div>
+        <script>
+        $(document).ready(function () {
+            $(".mySidebarBtn").click(function () {
+                var partialContent = $("#partialContent");
+                $.ajax({
+                    type: "GET",
+                    url: '/Home/' + $(this).attr("id"),
+                    data: {"id": 0 },
+                    success: function (data) {
+                        partialContent.html('');
+                        partialContent.html(data);
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        alert('error on load.');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
-<script>
-    $("#btnTest").click(
-        function (e)
-        {
-            e.preventDefault();
-            var href = $(this).attr("href");
-            $("partialContent").
-        }
-    )
-</script>
 </html>
 
