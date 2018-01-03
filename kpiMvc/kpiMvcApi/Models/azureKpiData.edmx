@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="kpidbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ePcbClass">
+          <Key>
+            <PropertyRef Name="pcbClassId" />
+          </Key>
+          <Property Name="pcbClassId" Type="int" Nullable="false" />
+          <Property Name="ClassName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ePcbDaily">
+          <Key>
+            <PropertyRef Name="pcbDailyId" />
+          </Key>
+          <Property Name="pcbDailyId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="productionDay" Type="date" Nullable="false" />
+          <Property Name="pcbQuantity" Type="int" Nullable="false" />
+          <Property Name="pcbSumPrice" Type="money" Nullable="false" />
+          <Property Name="pcbGenerationId" Type="int" Nullable="false" />
+          <Property Name="pcbClassId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ePcbGeneration">
+          <Key>
+            <PropertyRef Name="pcbGenerationId" />
+          </Key>
+          <Property Name="pcbGenerationId" Type="int" Nullable="false" />
+          <Property Name="genName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="fkPcbDailyRefPcbClass">
+          <End Role="ePcbClass" Type="Self.ePcbClass" Multiplicity="1" />
+          <End Role="ePcbDaily" Type="Self.ePcbDaily" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ePcbClass">
+              <PropertyRef Name="pcbClassId" />
+            </Principal>
+            <Dependent Role="ePcbDaily">
+              <PropertyRef Name="pcbClassId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkPcbDailyRefPcbGeneration">
+          <End Role="ePcbGeneration" Type="Self.ePcbGeneration" Multiplicity="1" />
+          <End Role="ePcbDaily" Type="Self.ePcbDaily" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ePcbGeneration">
+              <PropertyRef Name="pcbGenerationId" />
+            </Principal>
+            <Dependent Role="ePcbDaily">
+              <PropertyRef Name="pcbGenerationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="kpidbModelStoreContainer">
+          <EntitySet Name="ePcbClass" EntityType="Self.ePcbClass" Schema="kpi" store:Type="Tables" />
+          <EntitySet Name="ePcbDaily" EntityType="Self.ePcbDaily" Schema="kpi" store:Type="Tables" />
+          <EntitySet Name="ePcbGeneration" EntityType="Self.ePcbGeneration" Schema="kpi" store:Type="Tables" />
+          <AssociationSet Name="fkPcbDailyRefPcbClass" Association="Self.fkPcbDailyRefPcbClass">
+            <End Role="ePcbClass" EntitySet="ePcbClass" />
+            <End Role="ePcbDaily" EntitySet="ePcbDaily" />
+          </AssociationSet>
+          <AssociationSet Name="fkPcbDailyRefPcbGeneration" Association="Self.fkPcbDailyRefPcbGeneration">
+            <End Role="ePcbGeneration" EntitySet="ePcbGeneration" />
+            <End Role="ePcbDaily" EntitySet="ePcbDaily" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="kpidbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ePcbClass">
+          <Key>
+            <PropertyRef Name="pcbClassId" />
+          </Key>
+          <Property Name="pcbClassId" Type="Int32" Nullable="false" />
+          <Property Name="ClassName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ePcbDailies" Relationship="Self.fkPcbDailyRefPcbClass" FromRole="ePcbClass" ToRole="ePcbDaily" />
+        </EntityType>
+        <EntityType Name="ePcbDaily">
+          <Key>
+            <PropertyRef Name="pcbDailyId" />
+          </Key>
+          <Property Name="pcbDailyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="productionDay" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="pcbQuantity" Type="Int32" Nullable="false" />
+          <Property Name="pcbSumPrice" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="pcbGenerationId" Type="Int32" Nullable="false" />
+          <Property Name="pcbClassId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ePcbClass" Relationship="Self.fkPcbDailyRefPcbClass" FromRole="ePcbDaily" ToRole="ePcbClass" />
+          <NavigationProperty Name="ePcbGeneration" Relationship="Self.fkPcbDailyRefPcbGeneration" FromRole="ePcbDaily" ToRole="ePcbGeneration" />
+        </EntityType>
+        <EntityType Name="ePcbGeneration">
+          <Key>
+            <PropertyRef Name="pcbGenerationId" />
+          </Key>
+          <Property Name="pcbGenerationId" Type="Int32" Nullable="false" />
+          <Property Name="genName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ePcbDailies" Relationship="Self.fkPcbDailyRefPcbGeneration" FromRole="ePcbGeneration" ToRole="ePcbDaily" />
+        </EntityType>
+        <Association Name="fkPcbDailyRefPcbClass">
+          <End Role="ePcbClass" Type="Self.ePcbClass" Multiplicity="1" />
+          <End Role="ePcbDaily" Type="Self.ePcbDaily" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ePcbClass">
+              <PropertyRef Name="pcbClassId" />
+            </Principal>
+            <Dependent Role="ePcbDaily">
+              <PropertyRef Name="pcbClassId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkPcbDailyRefPcbGeneration">
+          <End Role="ePcbGeneration" Type="Self.ePcbGeneration" Multiplicity="1" />
+          <End Role="ePcbDaily" Type="Self.ePcbDaily" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ePcbGeneration">
+              <PropertyRef Name="pcbGenerationId" />
+            </Principal>
+            <Dependent Role="ePcbDaily">
+              <PropertyRef Name="pcbGenerationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="kpidbEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ePcbClasses" EntityType="Self.ePcbClass" />
+          <EntitySet Name="ePcbDailies" EntityType="Self.ePcbDaily" />
+          <EntitySet Name="ePcbGenerations" EntityType="Self.ePcbGeneration" />
+          <AssociationSet Name="fkPcbDailyRefPcbClass" Association="Self.fkPcbDailyRefPcbClass">
+            <End Role="ePcbClass" EntitySet="ePcbClasses" />
+            <End Role="ePcbDaily" EntitySet="ePcbDailies" />
+          </AssociationSet>
+          <AssociationSet Name="fkPcbDailyRefPcbGeneration" Association="Self.fkPcbDailyRefPcbGeneration">
+            <End Role="ePcbGeneration" EntitySet="ePcbGenerations" />
+            <End Role="ePcbDaily" EntitySet="ePcbDailies" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="kpidbModelStoreContainer" CdmEntityContainer="kpidbEntities1">
+          <EntitySetMapping Name="ePcbClasses">
+            <EntityTypeMapping TypeName="kpidbModel.ePcbClass">
+              <MappingFragment StoreEntitySet="ePcbClass">
+                <ScalarProperty Name="pcbClassId" ColumnName="pcbClassId" />
+                <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ePcbDailies">
+            <EntityTypeMapping TypeName="kpidbModel.ePcbDaily">
+              <MappingFragment StoreEntitySet="ePcbDaily">
+                <ScalarProperty Name="pcbDailyId" ColumnName="pcbDailyId" />
+                <ScalarProperty Name="productionDay" ColumnName="productionDay" />
+                <ScalarProperty Name="pcbQuantity" ColumnName="pcbQuantity" />
+                <ScalarProperty Name="pcbSumPrice" ColumnName="pcbSumPrice" />
+                <ScalarProperty Name="pcbGenerationId" ColumnName="pcbGenerationId" />
+                <ScalarProperty Name="pcbClassId" ColumnName="pcbClassId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ePcbGenerations">
+            <EntityTypeMapping TypeName="kpidbModel.ePcbGeneration">
+              <MappingFragment StoreEntitySet="ePcbGeneration">
+                <ScalarProperty Name="pcbGenerationId" ColumnName="pcbGenerationId" />
+                <ScalarProperty Name="genName" ColumnName="genName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

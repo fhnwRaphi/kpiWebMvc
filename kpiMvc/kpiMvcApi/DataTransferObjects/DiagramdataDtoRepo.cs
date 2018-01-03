@@ -73,5 +73,7 @@ namespace kpiMvcApi.DataTransferObjects
             sb.Append("]");
             return sb.ToString();
         }
+
+
     }
 }

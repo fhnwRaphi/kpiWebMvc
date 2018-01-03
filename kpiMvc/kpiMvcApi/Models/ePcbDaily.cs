@@ -12,10 +12,16 @@ namespace kpiMvcApi.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class eWebpage
+    public partial class ePcbDaily
     {
-        public int WebpageId { get; set; }
-        public string webpagename { get; set; }
-        public Nullable<int> usergroupId { get; set; }
+        public int pcbDailyId { get; set; }
+        public System.DateTime productionDay { get; set; }
+        public int pcbQuantity { get; set; }
+        public decimal pcbSumPrice { get; set; }
+        public int pcbGenerationId { get; set; }
+        public int pcbClassId { get; set; }
+    
+        public virtual ePcbClass ePcbClass { get; set; }
+        public virtual ePcbGeneration ePcbGeneration { get; set; }
     }
 }

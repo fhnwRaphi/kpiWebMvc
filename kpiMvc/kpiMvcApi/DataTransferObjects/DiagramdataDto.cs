@@ -7,9 +7,8 @@ namespace kpiMvcApi.DataTransferObjects
 {
     public class DiagramdataDto
     {
-        public int DiagramDataId{ get; set; }
+        public int DiagramDataId { get; set; }
         public string DiagramDataLabel { get; set; }
         public string DiagramData { get; set; }
     }
-
 }

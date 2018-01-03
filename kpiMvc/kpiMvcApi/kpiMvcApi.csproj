@@ -130,15 +130,15 @@
     <Content Include="js\charts.js" />
     <Content Include="js\jqLayoutRoot.js" />
     <Content Include="js\tablesort.js" />
-    <Content Include="Models\kpiAzureModel.Context.tt">
+    <Content Include="Models\azureKpiData.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>kpiAzureModel.edmx</DependentUpon>
-      <LastGenOutput>kpiAzureModel.Context.cs</LastGenOutput>
+      <DependentUpon>azureKpiData.edmx</DependentUpon>
+      <LastGenOutput>azureKpiData.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\kpiAzureModel.tt">
+    <Content Include="Models\azureKpiData.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>kpiAzureModel.edmx</DependentUpon>
-      <LastGenOutput>kpiAzureModel.cs</LastGenOutput>
+      <DependentUpon>azureKpiData.edmx</DependentUpon>
+      <LastGenOutput>azureKpiData.cs</LastGenOutput>
     </Content>
     <Content Include="Models\kpiModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -304,34 +304,40 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\DiagramdataController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KpidataController.cs" />
     <Compile Include="DataTransferObjects\DiagramdataDto.cs" />
     <Compile Include="DataTransferObjects\DiagramdataDtoRepo.cs" />
+    <Compile Include="DataTransferObjects\ProductionDataDto.cs" />
+    <Compile Include="DataTransferObjects\ProductionDataDtoRs.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\eData.cs">
-      <DependentUpon>kpiAzureModel.tt</DependentUpon>
+    <Compile Include="Models\azureKpiData.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>azureKpiData.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\azureKpiData.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>azureKpiData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\azureKpiData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>azureKpiData.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\eDiagramdata.cs">
       <DependentUpon>kpiModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\eWebpage.cs">
-      <DependentUpon>kpiAzureModel.tt</DependentUpon>
+    <Compile Include="Models\ePcbClass.cs">
+      <DependentUpon>azureKpiData.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\kpiAzureModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>kpiAzureModel.Context.tt</DependentUpon>
+    <Compile Include="Models\ePcbDaily.cs">
+      <DependentUpon>azureKpiData.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\kpiAzureModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>kpiAzureModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\kpiAzureModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>kpiAzureModel.edmx</DependentUpon>
+    <Compile Include="Models\ePcbGeneration.cs">
+      <DependentUpon>azureKpiData.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\kpiModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -359,12 +365,12 @@
     <Content Include="Models\kpiModel.edmx.diagram">
       <DependentUpon>kpiModel.edmx</DependentUpon>
     </Content>
-    <EntityDeploy Include="Models\kpiAzureModel.edmx">
+    <EntityDeploy Include="Models\azureKpiData.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>kpiAzureModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>azureKpiData.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\kpiAzureModel.edmx.diagram">
-      <DependentUpon>kpiAzureModel.edmx</DependentUpon>
+    <Content Include="Models\azureKpiData.edmx.diagram">
+      <DependentUpon>azureKpiData.edmx</DependentUpon>
     </Content>
     <None Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />

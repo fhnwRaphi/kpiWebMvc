@@ -13,10 +13,10 @@ namespace kpiMvcApi.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class kpidbEntities : DbContext
+    public partial class kpidbEntities1 : DbContext
     {
-        public kpidbEntities()
-            : base("name=kpidbEntities")
+        public kpidbEntities1()
+            : base("name=kpidbEntities1")
         {
         }
     
@@ -25,7 +25,8 @@ namespace kpiMvcApi.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<eWebpage> eWebpages { get; set; }
-        public virtual DbSet<eData> eDatas { get; set; }
+        public virtual DbSet<ePcbClass> ePcbClasses { get; set; }
+        public virtual DbSet<ePcbDaily> ePcbDailies { get; set; }
+        public virtual DbSet<ePcbGeneration> ePcbGenerations { get; set; }
     }
 }
