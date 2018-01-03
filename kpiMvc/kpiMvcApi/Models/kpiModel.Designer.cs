@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Ulysses\Documents\01_StudyFhnw\815_veri\kpiWebMvc\kpiMvc\kpiMvcApi\Models\kpiModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\i00202128\Source\Repos\kpiWebMvc\kpiMvc\kpiMvcApi\Models\kpiModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
