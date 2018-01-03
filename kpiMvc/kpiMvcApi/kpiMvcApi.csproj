@@ -1,4 +1,5 @@
-﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -128,7 +129,7 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="js\charts.js" />
-    <Content Include="js\jqLayoutRoot.js" />
+    <Content Include="js\jqFrameRoot.js" />
     <Content Include="js\tablesort.js" />
     <Content Include="Models\azureKpiData.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -150,6 +151,15 @@
       <DependentUpon>kpiModel.edmx</DependentUpon>
       <LastGenOutput>kpiModel.cs</LastGenOutput>
     </Content>
+    <None Include="js\jquery-1.8.0.intellisense.js" />
+    <Content Include="js\jquery-1.8.0.js" />
+    <Content Include="js\jquery-1.8.0.min.js" />
+    <Content Include="js\jquery.unobtrusive-ajax.js" />
+    <Content Include="js\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="semantic\dist\calendar.css" />
+    <Content Include="semantic\dist\calendar.js" />
+    <Content Include="semantic\dist\calendar.min.css" />
+    <Content Include="semantic\dist\calendar.min.js" />
     <Content Include="semantic\dist\components\accordion.css" />
     <Content Include="semantic\dist\components\accordion.js" />
     <Content Include="semantic\dist\components\accordion.min.css" />
@@ -386,6 +396,9 @@
     <None Include="Properties\PublishProfiles\kpiwebmvc - Web Deploy.pubxml" />
     <Content Include="Views\Shared\_LayoutRoot.cshtml" />
     <Content Include="Views\ViewPage1.cshtml" />
+    <Content Include="Views\Home\Frame.cshtml" />
+    <Content Include="Views\Home\_PartialPage1.cshtml" />
+    <Content Include="Views\Home\_PartialPage2.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -395,8 +408,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="css\" />
-    <Folder Include="pic\" />
     <Folder Include="Views\Exportexcell\" />
   </ItemGroup>
   <ItemGroup>

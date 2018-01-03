@@ -41,5 +41,18 @@ namespace kpiMvcApi.Controllers
             Response.End();
             return View();
         }
+
+        public ActionResult Frame()
+        {
+            DiagramdataDtoRepo testdata = new DiagramdataDtoRepo();
+            testdata.genRandomisedData(10);
+            ViewBag.diagramData = testdata;
+            return View();
+        }
+        public ActionResult Next()
+        {
+            // return "next" partial view
+            return PartialView("_PartialPage2");
+        }
     }
 }
