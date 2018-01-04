@@ -141,16 +141,6 @@
       <DependentUpon>azureKpiData.edmx</DependentUpon>
       <LastGenOutput>azureKpiData.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\kpiModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>kpiModel.Context.cs</LastGenOutput>
-      <DependentUpon>kpiModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\kpiModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>kpiModel.edmx</DependentUpon>
-      <LastGenOutput>kpiModel.cs</LastGenOutput>
-    </Content>
     <None Include="js\jquery-1.8.0.intellisense.js" />
     <Content Include="js\jquery-1.8.0.js" />
     <Content Include="js\jquery-1.8.0.min.js" />
@@ -337,9 +327,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>azureKpiData.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\eDiagramdata.cs">
-      <DependentUpon>kpiModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\ePcbClass.cs">
       <DependentUpon>azureKpiData.tt</DependentUpon>
     </Compile>
@@ -349,33 +336,11 @@
     <Compile Include="Models\ePcbGeneration.cs">
       <DependentUpon>azureKpiData.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\kpiModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>kpiModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\kpiModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>kpiModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\kpiModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>kpiModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Models\SiteModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
-    <EntityDeploy Include="Models\kpiModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>kpiModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\kpiModel.edmx.diagram">
-      <DependentUpon>kpiModel.edmx</DependentUpon>
-    </Content>
     <EntityDeploy Include="Models\azureKpiData.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>azureKpiData.Designer.cs</LastGenOutput>

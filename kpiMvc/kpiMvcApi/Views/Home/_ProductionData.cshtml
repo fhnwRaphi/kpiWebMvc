@@ -1,1 +1,41 @@
-﻿<h1>Production Data</h1>
+﻿@model kpiMvcApi.DataTransferObjects.ProductionDataDtoRs
+
+<script>
+
+    var barChartData = {
+            labels: @Html.Raw(Model.getChartLabels()),
+            datasets: [
+                        {
+                        label:@Html.Raw(Model.getDatasetLabel()),
+                        backgroundColor: @Html.Raw(Model.getDatsetBackroundColor()),
+                        borderWidth: 2,
+                        data:  @Html.Raw(Model.getDataset()),
+                        }
+                    ]
+        };
+    $(document).ready(function () {
+                    var ctx1 = document.getElementById("chartcanvas").getContext("2d");
+                    window.myBar = new Chart(ctx1,
+                        {
+                type: 'bar',
+                data: barChartData,
+                options:
+                    {
+                    title:
+                        {
+                        display: true,
+                        text: @Html.Raw(Model.getChartTitle()),
+                        },
+                        responsive: true,
+                        maintainAspectRatio: true
+                    }
+                });
+    });
+
+</script>
+<div>
+    <h1>Production Data</h1>
+    <div style="width: 35%;">
+        <canvas width="600"  height="400"  id="chartcanvas"></canvas>
+    </div>
+</div>

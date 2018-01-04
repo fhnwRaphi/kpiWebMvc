@@ -50,7 +50,7 @@ namespace kpiMvcApi.Controllers
             ViewBag.diagramData = testdata;
             return View();
         }
-        public ActionResult Home()
+        public ActionResult Home(string startDate, string stopDate)
         {
             // return "next" partial view
             return PartialView("_Home");
@@ -60,10 +60,10 @@ namespace kpiMvcApi.Controllers
             // return "next" partial view
             return PartialView("_UserLogin");
         }
-        public ActionResult ProductionData()
+        public ActionResult ProductionData(string startDate, string stopDate)
         {
-            // return "next" partial view
-            return PartialView("_ProductionData");
+            ProductionDataDtoRs model = new ProductionDataDtoRs();
+            return PartialView("_ProductionData", model);
         }
         public ActionResult QualityData()
         {

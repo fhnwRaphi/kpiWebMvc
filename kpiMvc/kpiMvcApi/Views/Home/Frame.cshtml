@@ -1,12 +1,27 @@
 ﻿@{
     Layout = "~/Views/Shared/_LayoutRoot.cshtml";
 }
-<!DOCTYPE html>
-<html>
-<head>
+
     <script src="~/js/jqFrameRoot.js"></script>
-</head>
-<body>
+            <script>
+        $(document).ready(function () {
+            $(".mySidebarBtn").click(function () {
+                var partialContent = $("#partialContent");
+                $.ajax({
+                    type: "GET",
+                    url: '/Home/' + $(this).attr("id"),
+                    data: {startDate: "01.01.18", stopDate: "01.02.18" },
+                    success: function (data) {
+                        //partialContent.html('');
+                        partialContent.html(data);
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        alert('error on load.');
+                    }
+                });
+            });
+        });
+    </script>
     <button class="ui compact icon blue button" id="btnSidebar">
         <i class="sidebar icon"> </i>
     </button>
@@ -32,30 +47,6 @@
             OEE
         </a>
     </div>
-<div id = "partialContent" >
-@{
-    Html.RenderPartial("_Home");
-}
-</div>
-        <script>
-        $(document).ready(function () {
-            $(".mySidebarBtn").click(function () {
-                var partialContent = $("#partialContent");
-                $.ajax({
-                    type: "GET",
-                    url: '/Home/' + $(this).attr("id"),
-                    data: {"id": 0 },
-                    success: function (data) {
-                        partialContent.html('');
-                        partialContent.html(data);
-                    },
-                    error: function (xhr, ajaxOptions, thrownError) {
-                        alert('error on load.');
-                    }
-                });
-            });
-        });
-    </script>
-</body>
-</html>
 
+<div id = "partialContent" >
+</div>

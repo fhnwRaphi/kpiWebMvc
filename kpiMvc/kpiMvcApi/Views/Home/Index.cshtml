@@ -8,7 +8,7 @@
     <script>
         var barChartData = {
             @using kpiMvcApi.DataTransferObjects
-            labels: @Html.Raw(ViewBag.diagramData.getChartLabel("barcanvas")),
+            labels: @Html.Raw("['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange']"),
             datasets: [{
                 label: 'ProductWise Sales Count',
                 backgroundColor: [
@@ -19,7 +19,7 @@
                     "#f7bd83",
                      ],
                     borderWidth: 2,
-                    data: @ViewBag.diagramData.getChartDatastring("barcanvas")
+                    data:  @Html.Raw("[12, 19, 3, 5, 2, 3]"),
                  }]
             };
         window.onload = function () {
