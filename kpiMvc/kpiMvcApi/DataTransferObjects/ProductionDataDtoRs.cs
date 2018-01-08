@@ -73,6 +73,37 @@ namespace kpiMvcApi.DataTransferObjects
             return true;
         }
 
+        internal bool updateData(List<ProductionDataDto> kvpdto)
+        {
+            Models.kpidbEntities1 model = new Models.kpidbEntities1();
+            foreach (var dto in kvpdto)
+            {
+                Models.ePcbDaily mdl = new Models.ePcbDaily();
+                mdl.pcbGenerationId = dto.PcbGenerationId;
+                mdl.pcbClassId = dto.PcbClassId;
+                mdl.pcbQuantity = dto.PcbQuantity;
+                mdl.pcbSumPrice = dto.PcbSumPrice;
+                mdl.productionDay = dto.ProductionDay;
+                model.ePcbDailies.Add(mdl);
+            }
+            model.SaveChanges();
+            return true;
+        }
+
+        internal bool deleteData(List<ProductionDataDto> kvpdto)
+        {
+            Models.kpidbEntities1 model = new Models.kpidbEntities1();
+
+            foreach (var dto in kvpdto)
+            {
+                Models.ePcbDaily mdl = new Models.ePcbDaily();
+                mdl.pcbDailyId = dto.PcbDailyId;
+                model.ePcbDailies.Remove(mdl);
+            }
+            return true;
+        }
+
+
         public enum dataset { Datalabels = 0, dataset1 }
         public enum charttype { Prolinechart=0}
 

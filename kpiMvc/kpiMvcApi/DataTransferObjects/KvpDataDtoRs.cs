@@ -73,6 +73,36 @@ namespace kpiMvcApi.DataTransferObjects
             return true;
         }
 
+        internal bool updateData(List<KvpDataDto> kvpdto)
+        {
+            Models.kpidbEntities1 model = new Models.kpidbEntities1();
+            foreach (var dto in kvpdto)
+            {
+                Models.eKvp mdl = new Models.eKvp();
+                mdl.kvpId = dto.KvpId;
+                mdl.kvpDate = dto.KvpDate;
+                mdl.kvpName = dto.KvpName;
+                mdl.kvpClassId = dto.KvpClassId;
+                mdl.kvpStateId = dto.KvpStateId;
+                model.eKvps.Add(mdl);
+            }
+            model.SaveChanges();
+            return true;
+        }
+
+        internal bool deleteData(List<KvpDataDto> kvpdto)
+        {
+            Models.kpidbEntities1 model = new Models.kpidbEntities1();
+
+            foreach (var dto in kvpdto)
+            {
+                Models.eKvp mdl = new Models.eKvp();
+                mdl.kvpId = dto.KvpId;
+                model.eKvps.Remove(mdl);
+            }
+            return true;
+        }
+
         public enum dataset { Datalabels = 0, dataset1 }
         public enum charttype {KvpMonthChart=0}
         public string getDataset(charttype charttype, dataset datset, string groupMode)

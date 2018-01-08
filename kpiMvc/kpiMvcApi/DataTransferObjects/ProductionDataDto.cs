@@ -8,6 +8,7 @@ namespace kpiMvcApi.DataTransferObjects
 {
     public class ProductionDataDto
     {
+        public int PcbDailyId { get; set; }
         public DateTime ProductionDay { get; set; }
         public int PcbQuantity { get; set; }
         public Decimal PcbSumPrice { get; set; }

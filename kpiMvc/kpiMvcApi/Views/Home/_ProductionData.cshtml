@@ -64,11 +64,52 @@
         window.myPolarArea = new Chart(ctx2, pieChartData);
     });
 </script>
-<div>
+<<div class="ui container">
     <h1>Production Data</h1>
     <div style="width: 35%;">
         <canvas width="600" height="400" id="chartcanvas1"></canvas>
     </div>
+     @using (Html.BeginForm("ProdDataToExcel", "Export", FormMethod.Post))
+     {
+         <table class="ui sortable celled table">
+             <thead>
+                 <tr>
+                     <th class="sorted ascending">Id</th>
+                     <th class="">Id</th>
+                     <th class="">Data</th>
+                     <th class="">Pcb Class</th>
+                     <th class="">Pcb Generation</th>
+                     <th class="">Quantity<th>
+                     <th class="">Price Sum</th>
+                     <th class="">Date</th>
+                 </tr>
+             </thead>
+             <tbody>
+                 @foreach (var mdl in Model.getData())
+                 {
+                     <tr>
+                         <td>@mdl.PcbClassId</td>
+                         <td>@mdl.PcbClassName</td>
+                         <td>@mdl.PcbGenerationName</td>
+                         <td>@mdl.PcbQuantity</td>
+                         <td>@mdl.PcbSumPrice</td>
+                         <td>@mdl.ProductionDay</td>
+                     </tr>
+                 }
+             </tbody>
+             <tfoot>
+                 <tr>
+                     <td colspan="4">
+                         <br />
+                         <br />
+                         <button type="submit" class="ui compact icon green button" id="btnExcelDownload">
+                             <i class="file excel outline icon"> </i>
+                         </button>
+                     </td>
+                 </tr>
+             </tfoot>
+         </table>
+     }
     <div style="width: 35%;">
         <canvas width="600" height="400" id="chartcanvas2"></canvas>
     </div>
