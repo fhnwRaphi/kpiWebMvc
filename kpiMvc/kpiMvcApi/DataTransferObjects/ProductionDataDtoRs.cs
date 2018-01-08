@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
 
 namespace kpiMvcApi.DataTransferObjects
@@ -12,12 +13,21 @@ namespace kpiMvcApi.DataTransferObjects
         public ProductionDataDtoRs()
         {
             this.ProductionDataRs = new List<ProductionDataDto>();
+            this.loadData();
         }
-        public List<ProductionDataDto> getData()
+        public ProductionDataDtoRs(DateTime startdate, DateTime stopdate)
+        {
+            this.ProductionDataRs = new List<ProductionDataDto>();
+            this.loadData(startdate, stopdate);
+        }
+        public void loadData()
         {
             DateTime startdate = new DateTime(2018, 1, 1);
             DateTime stopdate = DateTime.Now;
-
+            this.loadData(startdate, stopdate);
+        }
+        public void loadData(DateTime startdate, DateTime stopdate)
+        {
             var model = new Models.kpidbEntities1();
             var rs = model.ePcbDailies.Where(x => x.productionDay >= startdate && x.productionDay <= stopdate);
 
@@ -29,10 +39,21 @@ namespace kpiMvcApi.DataTransferObjects
                     PcbQuantity = r.pcbQuantity,
                     PcbSumPrice = r.pcbSumPrice,
                     PcbGenerationId = r.pcbGenerationId,
-                    PcbClassId = r.pcbClassId
+                    PcbClassId = r.pcbClassId,
+                    PcbGenerationName = r.ePcbGeneration.genName,
+                    PcbClassName = r.ePcbClass.ClassName
                 };
                 this.ProductionDataRs.Add(pddto);
             }
+        }
+        public List<ProductionDataDto> getData()
+        {
+            this.loadData();
+            return this.ProductionDataRs;
+        }
+        public List<ProductionDataDto> getData(DateTime startdate, DateTime stopdate)
+        {
+            this.loadData(startdate, stopdate);
             return this.ProductionDataRs;
         }
         public bool setData(List<ProductionDataDto> ppdto)
@@ -51,13 +72,85 @@ namespace kpiMvcApi.DataTransferObjects
             model.SaveChanges();
             return true;
         }
+
+        public enum dataset { Datalabels = 0, dataset1 }
+        public enum charttype { Prolinechart=0}
+
+        public string getDataset(charttype charttype, dataset datset )
+        {
+            StringBuilder sb = new StringBuilder("[");
+            switch (charttype)
+            {
+                case charttype.Prolinechart:
+                    var rs = this.ProductionDataRs.GroupBy(p => p.PcbGenerationName)
+                        .Select(q =>
+                           new
+                           {
+                               PcbGenerationName = q.Key,
+                               PcbQuantity = q.Sum(w => w.PcbQuantity)
+                           })
+                       .OrderBy(x => x.PcbGenerationName);
+                    foreach (var r in rs)
+                    {
+                        switch (datset)
+                        {
+                            case dataset.Datalabels:
+                                sb.Append("'" + r.PcbGenerationName + "',");
+                                break;
+                            case dataset.dataset1:
+                                sb.Append("'" + r.PcbQuantity + "',");
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                    break;
+                default:
+                    break;
+            }
+            sb.Remove(sb.Length - 1, 1);
+            sb.Append("]");
+            return sb.ToString();
+        }
+
         public string getDataset()
         {
-            return "[12, 19, 3, 5, 2, 3]";
+            StringBuilder sb = new StringBuilder("[");
+            var rs = this.ProductionDataRs.GroupBy(p => p.ProductionDay.ToString("M"))
+                .Select(q =>
+                   new
+                   {
+                       ProductionDay = q.Key,
+                       PcbQuantity = q.Sum(w => w.PcbQuantity)
+                   })
+               .OrderBy(x => x.ProductionDay);
+            foreach (var r in rs)
+            {
+                sb.Append(r.PcbQuantity + ",");
+            }
+            sb.Remove(sb.Length - 1, 1);
+            sb.Append("]");
+            return sb.ToString();
         }
         public string getChartLabels()
         {
-            return "['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange']";
+            var rs = this.ProductionDataRs.GroupBy(p => p.ProductionDay.ToString("M"))
+                .Select(q =>
+                   new
+                   {
+                       ProductionDay = q.Key,
+                       PcbQuantity = q.Sum(w => w.PcbQuantity)
+                   })
+                 .OrderBy(x => x.ProductionDay);
+
+            StringBuilder sb = new StringBuilder("[");
+            foreach (var r in rs)
+            {
+                sb.Append("'" + r.ProductionDay + "',");
+            }
+            sb.Remove(sb.Length - 1, 1);
+            sb.Append("]");
+            return sb.ToString();
         }
         public string getDatasetLabel()
         {
@@ -65,7 +158,7 @@ namespace kpiMvcApi.DataTransferObjects
         }
         public string getDatsetBackroundColor()
         {
-            return  "['rgba(255, 99, 132, 0.2)','rgba(54, 162, 235, 0.2)','rgba(255, 206, 86, 0.2)','rgba(75, 192, 192, 0.2)','rgba(153, 102, 255, 0.2)','rgba(255, 159, 64, 0.2)']";
+            return "'rgba(0, 12, 132, 0.2)'";
         }
         public string getChartTitle()
         {

@@ -5,7 +5,7 @@
     <script src="~/js/jqFrameRoot.js"></script>
             <script>
         $(document).ready(function () {
-            $(".mySidebarBtn").click(function () {
+            $(".mySidebarBtn").click(function (){
                 var partialContent = $("#partialContent");
                 $.ajax({
                     type: "GET",
@@ -38,7 +38,7 @@
             <i class="industry icon"></i>
             ProductionData
         </a>
-        <a class="item mySidebarBtn" id="QualityData">
+        <a class="item mySidebarBtn" id="Kvp">
             <i class="heartbeat icon"></i>
             Quality Data
         </a>
@@ -49,4 +49,7 @@
     </div>
 
 <div id = "partialContent" >
+    @{
+        Html.RenderPartial("_Home");
+    }
 </div>

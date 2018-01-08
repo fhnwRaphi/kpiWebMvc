@@ -1,0 +1,9 @@
+﻿CREATE TABLE [kpi].[eKvp]
+(
+	[kvpId] INT NOT NULL IDENTITY(1,1),
+	[kvpName] NVARCHAR(50),
+	[kvpDate] DATE NOT NULL DEFAULT GETDATE(),
+	[kvpClassId] INT NOT NULL DEFAULT 0,
+	[kvpStateId] INT NOT NULL DEFAULT 0,
+	CONSTRAINT pkKvpId PRIMARY KEY (kvpId)
+)

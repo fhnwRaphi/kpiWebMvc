@@ -4,7 +4,50 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="kpidbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="kpidbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="eCountry">
+          <Key>
+            <PropertyRef Name="countryId" />
+          </Key>
+          <Property Name="countryId" Type="int" Nullable="false" />
+          <Property Name="countryName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="eDelivery">
+          <Key>
+            <PropertyRef Name="deliveryId" />
+          </Key>
+          <Property Name="deliveryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="orderDate" Type="date" Nullable="false" />
+          <Property Name="orderedPc" Type="int" Nullable="false" />
+          <Property Name="deliveredPc" Type="int" Nullable="false" />
+          <Property Name="notdeliveredPc" Type="int" StoreGeneratedPattern="Computed" />
+          <Property Name="notdeliveredRel" Type="int" StoreGeneratedPattern="Computed" />
+          <Property Name="countryId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="eKvp">
+          <Key>
+            <PropertyRef Name="kvpId" />
+          </Key>
+          <Property Name="kvpId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="kvpName" Type="nvarchar" MaxLength="50" />
+          <Property Name="kvpDate" Type="date" Nullable="false" />
+          <Property Name="kvpClassId" Type="int" Nullable="false" />
+          <Property Name="kvpStateId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="eKvpClass">
+          <Key>
+            <PropertyRef Name="kvpClassId" />
+          </Key>
+          <Property Name="kvpClassId" Type="int" Nullable="false" />
+          <Property Name="kvpClassName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="eKvpState">
+          <Key>
+            <PropertyRef Name="kvpStateId" />
+          </Key>
+          <Property Name="kvpStateId" Type="int" Nullable="false" />
+          <Property Name="kvpStateName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="ePcbClass">
           <Key>
             <PropertyRef Name="pcbClassId" />
@@ -30,6 +73,30 @@
           <Property Name="pcbGenerationId" Type="int" Nullable="false" />
           <Property Name="genName" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <Association Name="fkKvpRefKvpClass">
+          <End Role="eKvpClass" Type="Self.eKvpClass" Multiplicity="1" />
+          <End Role="eKvp" Type="Self.eKvp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="eKvpClass">
+              <PropertyRef Name="kvpClassId" />
+            </Principal>
+            <Dependent Role="eKvp">
+              <PropertyRef Name="kvpClassId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkKvpRefKvpState">
+          <End Role="eKvpState" Type="Self.eKvpState" Multiplicity="1" />
+          <End Role="eKvp" Type="Self.eKvp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="eKvpState">
+              <PropertyRef Name="kvpStateId" />
+            </Principal>
+            <Dependent Role="eKvp">
+              <PropertyRef Name="kvpStateId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fkPcbDailyRefPcbClass">
           <End Role="ePcbClass" Type="Self.ePcbClass" Multiplicity="1" />
           <End Role="ePcbDaily" Type="Self.ePcbDaily" Multiplicity="*" />
@@ -55,9 +122,22 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="kpidbModelStoreContainer">
+          <EntitySet Name="eCountry" EntityType="Self.eCountry" Schema="kpi" store:Type="Tables" />
+          <EntitySet Name="eDelivery" EntityType="Self.eDelivery" Schema="kpi" store:Type="Tables" />
+          <EntitySet Name="eKvp" EntityType="Self.eKvp" Schema="kpi" store:Type="Tables" />
+          <EntitySet Name="eKvpClass" EntityType="Self.eKvpClass" Schema="kpi" store:Type="Tables" />
+          <EntitySet Name="eKvpState" EntityType="Self.eKvpState" Schema="kpi" store:Type="Tables" />
           <EntitySet Name="ePcbClass" EntityType="Self.ePcbClass" Schema="kpi" store:Type="Tables" />
           <EntitySet Name="ePcbDaily" EntityType="Self.ePcbDaily" Schema="kpi" store:Type="Tables" />
           <EntitySet Name="ePcbGeneration" EntityType="Self.ePcbGeneration" Schema="kpi" store:Type="Tables" />
+          <AssociationSet Name="fkKvpRefKvpClass" Association="Self.fkKvpRefKvpClass">
+            <End Role="eKvpClass" EntitySet="eKvpClass" />
+            <End Role="eKvp" EntitySet="eKvp" />
+          </AssociationSet>
+          <AssociationSet Name="fkKvpRefKvpState" Association="Self.fkKvpRefKvpState">
+            <End Role="eKvpState" EntitySet="eKvpState" />
+            <End Role="eKvp" EntitySet="eKvp" />
+          </AssociationSet>
           <AssociationSet Name="fkPcbDailyRefPcbClass" Association="Self.fkPcbDailyRefPcbClass">
             <End Role="ePcbClass" EntitySet="ePcbClass" />
             <End Role="ePcbDaily" EntitySet="ePcbDaily" />
@@ -67,8 +147,7 @@
             <End Role="ePcbDaily" EntitySet="ePcbDaily" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="kpidbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -137,7 +216,109 @@
             <End Role="ePcbGeneration" EntitySet="ePcbGenerations" />
             <End Role="ePcbDaily" EntitySet="ePcbDailies" />
           </AssociationSet>
+          <EntitySet Name="eKvps" EntityType="kpidbModel.eKvp" />
+          <EntitySet Name="eKvpClasses" EntityType="kpidbModel.eKvpClass" />
+          <EntitySet Name="eKvpStates" EntityType="kpidbModel.eKvpState" />
+          <AssociationSet Name="fkKvpRefKvpClass" Association="kpidbModel.fkKvpRefKvpClass">
+            <End Role="eKvpClass" EntitySet="eKvpClasses" />
+            <End Role="eKvp" EntitySet="eKvps" />
+          </AssociationSet>
+          <AssociationSet Name="fkKvpRefKvpState" Association="kpidbModel.fkKvpRefKvpState">
+            <End Role="eKvpState" EntitySet="eKvpStates" />
+            <End Role="eKvp" EntitySet="eKvps" />
+          </AssociationSet>
+          <EntitySet Name="eCountries" EntityType="kpidbModel.eCountry" />
+          <EntitySet Name="eDeliveries" EntityType="kpidbModel.eDelivery" />
+          <AssociationSet Name="fkDeliveryRefCountry" Association="kpidbModel.fkDeliveryRefCountry">
+            <End Role="eCountry" EntitySet="eCountries" />
+            <End Role="eDelivery" EntitySet="eDeliveries" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="eKvp">
+          <Key>
+            <PropertyRef Name="kvpId" />
+          </Key>
+          <Property Name="kvpId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kvpName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="kvpDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="kvpClassId" Type="Int32" Nullable="false" />
+          <Property Name="kvpStateId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="eKvpClass" Relationship="kpidbModel.fkKvpRefKvpClass" FromRole="eKvp" ToRole="eKvpClass" />
+          <NavigationProperty Name="eKvpState" Relationship="kpidbModel.fkKvpRefKvpState" FromRole="eKvp" ToRole="eKvpState" />
+        </EntityType>
+        <EntityType Name="eKvpClass">
+          <Key>
+            <PropertyRef Name="kvpClassId" />
+          </Key>
+          <Property Name="kvpClassId" Type="Int32" Nullable="false" />
+          <Property Name="kvpClassName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="eKvps" Relationship="kpidbModel.fkKvpRefKvpClass" FromRole="eKvpClass" ToRole="eKvp" />
+        </EntityType>
+        <EntityType Name="eKvpState">
+          <Key>
+            <PropertyRef Name="kvpStateId" />
+          </Key>
+          <Property Name="kvpStateId" Type="Int32" Nullable="false" />
+          <Property Name="kvpStateName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="eKvps" Relationship="kpidbModel.fkKvpRefKvpState" FromRole="eKvpState" ToRole="eKvp" />
+        </EntityType>
+        <Association Name="fkKvpRefKvpClass">
+          <End Type="kpidbModel.eKvpClass" Role="eKvpClass" Multiplicity="1" />
+          <End Type="kpidbModel.eKvp" Role="eKvp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="eKvpClass">
+              <PropertyRef Name="kvpClassId" />
+            </Principal>
+            <Dependent Role="eKvp">
+              <PropertyRef Name="kvpClassId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkKvpRefKvpState">
+          <End Type="kpidbModel.eKvpState" Role="eKvpState" Multiplicity="1" />
+          <End Type="kpidbModel.eKvp" Role="eKvp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="eKvpState">
+              <PropertyRef Name="kvpStateId" />
+            </Principal>
+            <Dependent Role="eKvp">
+              <PropertyRef Name="kvpStateId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="eCountry">
+          <Key>
+            <PropertyRef Name="countryId" />
+          </Key>
+          <Property Name="countryId" Type="Int32" Nullable="false" />
+          <Property Name="countryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="eDelivery" Relationship="kpidbModel.fkDeliveryRefCountry" FromRole="eCountry" ToRole="eDelivery" />
+        </EntityType>
+        <EntityType Name="eDelivery">
+          <Key>
+            <PropertyRef Name="deliveryId" />
+          </Key>
+          <Property Name="deliveryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="orderDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="orderedPc" Type="Int32" Nullable="false" />
+          <Property Name="deliveredPc" Type="Int32" Nullable="false" />
+          <Property Name="notdeliveredPc" Type="Int32" />
+          <Property Name="countryId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="eCountry" Relationship="kpidbModel.fkDeliveryRefCountry" FromRole="eDelivery" ToRole="eCountry" />
+          <Property Name="notdeliveredRel" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <Association Name="fkDeliveryRefCountry">
+          <End Type="kpidbModel.eCountry" Role="eCountry" Multiplicity="1" />
+          <End Type="kpidbModel.eDelivery" Role="eDelivery" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="eCountry">
+              <PropertyRef Name="countryId" />
+            </Principal>
+            <Dependent Role="eDelivery">
+              <PropertyRef Name="deliveryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -169,6 +350,54 @@
               <MappingFragment StoreEntitySet="ePcbGeneration">
                 <ScalarProperty Name="pcbGenerationId" ColumnName="pcbGenerationId" />
                 <ScalarProperty Name="genName" ColumnName="genName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="eKvps">
+            <EntityTypeMapping TypeName="kpidbModel.eKvp">
+              <MappingFragment StoreEntitySet="eKvp">
+                <ScalarProperty Name="kvpStateId" ColumnName="kvpStateId" />
+                <ScalarProperty Name="kvpClassId" ColumnName="kvpClassId" />
+                <ScalarProperty Name="kvpDate" ColumnName="kvpDate" />
+                <ScalarProperty Name="kvpName" ColumnName="kvpName" />
+                <ScalarProperty Name="kvpId" ColumnName="kvpId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="eKvpClasses">
+            <EntityTypeMapping TypeName="kpidbModel.eKvpClass">
+              <MappingFragment StoreEntitySet="eKvpClass">
+                <ScalarProperty Name="kvpClassName" ColumnName="kvpClassName" />
+                <ScalarProperty Name="kvpClassId" ColumnName="kvpClassId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="eKvpStates">
+            <EntityTypeMapping TypeName="kpidbModel.eKvpState">
+              <MappingFragment StoreEntitySet="eKvpState">
+                <ScalarProperty Name="kvpStateName" ColumnName="kvpStateName" />
+                <ScalarProperty Name="kvpStateId" ColumnName="kvpStateId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="eCountries">
+            <EntityTypeMapping TypeName="kpidbModel.eCountry">
+              <MappingFragment StoreEntitySet="eCountry">
+                <ScalarProperty Name="countryName" ColumnName="countryName" />
+                <ScalarProperty Name="countryId" ColumnName="countryId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="eDeliveries">
+            <EntityTypeMapping TypeName="kpidbModel.eDelivery">
+              <MappingFragment StoreEntitySet="eDelivery">
+                <ScalarProperty Name="notdeliveredRel" ColumnName="notdeliveredRel" />
+                <ScalarProperty Name="countryId" ColumnName="countryId" />
+                <ScalarProperty Name="notdeliveredPc" ColumnName="notdeliveredPc" />
+                <ScalarProperty Name="deliveredPc" ColumnName="deliveredPc" />
+                <ScalarProperty Name="orderedPc" ColumnName="orderedPc" />
+                <ScalarProperty Name="orderDate" ColumnName="orderDate" />
+                <ScalarProperty Name="deliveryId" ColumnName="deliveryId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

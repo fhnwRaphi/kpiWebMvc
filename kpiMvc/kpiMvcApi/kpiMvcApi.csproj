@@ -34,6 +34,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -305,9 +307,12 @@
     <Compile Include="Controllers\DiagramdataController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KpidataController.cs" />
+    <Compile Include="DataTransferObjects\DeliveryDto.cs" />
     <Compile Include="DataTransferObjects\DiagramdataDto.cs" />
     <Compile Include="DataTransferObjects\DiagramdataDtoRepo.cs" />
+    <Compile Include="DataTransferObjects\KvpDataDto.cs" />
     <Compile Include="DataTransferObjects\ProductionDataDto.cs" />
+    <Compile Include="DataTransferObjects\KvpDataDtoRs.cs" />
     <Compile Include="DataTransferObjects\ProductionDataDtoRs.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -326,6 +331,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>azureKpiData.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\eCountry.cs">
+      <DependentUpon>azureKpiData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\eDelivery.cs">
+      <DependentUpon>azureKpiData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\eKvp.cs">
+      <DependentUpon>azureKpiData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\eKvpClass.cs">
+      <DependentUpon>azureKpiData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\eKvpState.cs">
+      <DependentUpon>azureKpiData.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ePcbClass.cs">
       <DependentUpon>azureKpiData.tt</DependentUpon>
@@ -359,14 +379,14 @@
     <Content Include="semantic\dist\themes\default\assets\fonts\icons.ttf" />
     <Content Include="semantic\dist\themes\default\assets\fonts\icons.woff" />
     <Content Include="semantic\dist\themes\default\assets\fonts\icons.woff2" />
-    <None Include="Properties\PublishProfiles\kpiwebmvc - Web Deploy.pubxml" />
     <Content Include="Views\Shared\_LayoutRoot.cshtml" />
     <Content Include="Views\Home\Frame.cshtml" />
     <Content Include="Views\Home\_Home.cshtml" />
     <Content Include="Views\Home\_UserLogin.cshtml" />
     <Content Include="Views\Home\_ProductionData.cshtml" />
     <Content Include="Views\Home\_Oee.cshtml" />
-    <Content Include="Views\Home\_QualityData.cshtml" />
+    <Content Include="Views\Home\_Kvp.cshtml" />
+    <None Include="Properties\PublishProfiles\kpiMvcApi20180104043203 - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

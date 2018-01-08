@@ -1,0 +1,81 @@
+﻿@model kpiMvcApi.DataTransferObjects.KvpDataDtoRs
+@using kpiMvcApi.DataTransferObjects;
+
+<script>
+
+    var barChartData = {
+        @using kpiMvcApi.DataTransferObjects
+        labels: @Html.Raw("['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange']"),
+        datasets: [{
+            label: 'ProductWise Sales Count',
+            backgroundColor: [
+                "#f990a7",
+                "#aad2ed",
+                "#9966FF",
+                "#99e5e5",
+                "#f7bd83",
+                    ],
+                borderWidth: 2,
+                data:  @Html.Raw("[12, 19, 3, 5, 2, 3]"),
+                }]
+        };
+    $(document).ready(function () {
+
+        $('#startDate').calendar();
+        $('#stopDate').calendar();
+
+        var ctx1 = document.getElementById("chartcanvas").getContext("2d");
+        window.myBar = new Chart(ctx1,
+            {
+                type: 'bar',
+                data: barChartData,
+                options:
+                    {
+                        title:
+                        {
+                            display: true,
+                            text: "ProductWise Sales Count"
+                        },
+                        responsive: true,
+                        maintainAspectRatio: true
+                    }
+            });
+    });
+
+</script>
+
+<<div class="ui container">
+    <h1>KVP Data</h1>
+    <div class="ui four column grid">
+        <div class="column">
+            <div class="ui calendar" id="startDate">
+                <div class="ui input left icon">
+                    <i class="calendar icon"></i>
+                    <input type="text" placeholder="Start Date" />
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="ui calendar" id="stopDate">
+                <div class="ui input left icon">
+                    <i class="calendar icon"></i>
+                    <input type="text" placeholder="Stop Date" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="width: 40%;">
+        <canvas id="chartcanvas"></canvas>
+    </div>
+
+    <div class="ui inverted segment" style="width: 40%;">
+        <div class="ui inverted relaxed divided list">
+            @foreach (var mdl in Model.getKvpList())
+            {
+                <div class="header">@mdl.KvpName</div>
+                @Html.Raw("Zuordnung: " + mdl.KvpClassName.ToString() + "&nbsp;&nbsp;&nbsp; Status: " + mdl.KvpStateName.ToString())
+            }
+        </div>
+    </div>
+</div>
+

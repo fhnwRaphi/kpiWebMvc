@@ -1,20 +1,57 @@
 ﻿
-<head>
-    <script>
-        $(document).ready(function () {
-            $('#startDate').calendar();
+<script>
+    $(document).ready(function () {
+        $(".myHomeNavBtn").click(function () {
+            var partialContent = $("#partialContent");
+            $.ajax({
+                type: "GET",
+                url: '/Home/' + $(this).attr("id"),
+                data: { startDate: "01.01.18", stopDate: "01.02.18" },
+                success: function (data) {
+                    //partialContent.html('');
+                    partialContent.html(data);
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert('error on load.');
+                }
+            });
         });
-    </script>
-</head>
-<body>
-    <h1>Partial 1</h1>
-
-    <h3>Input</h3>
-    <div class="ui calendar" id="startDate">
-        <div class="ui input left icon">
-            <i class="calendar icon"></i>
-            <input type="text" placeholder="Date/Time" />
+    });
+</script>
+<<div class="ui container">
+    <h2>Available Dashboards</h2>
+    <div class="ui three column doubling stackable grid container">
+        <div class="column">
+            <button class="massive ui grey button myHomeNavBtn" id="Home" style="width: 80%;">
+                <i class="home icon"></i>
+                Home
+            </button>
+        </div>
+        <div class="column">
+            <button class="massive ui blue button myHomeNavBtn" id="UserLogin" style="width: 80%;">
+                <i class="user icon"></i>
+                User Login
+            </button>
+        </div>
+        <div class="column">
+            <button class="massive ui blue button myHomeNavBtn" id="ProductionData" style="width: 80%;">
+                <i class="industry icon"></i>
+                ProductionData
+            </button>
+        </div>
+        <div class="column">
+            <button class="massive ui blue button myHomeNavBtn" id="Kvp" style="width: 80%;">
+                <i class="heartbeat icon"></i>
+                Quality Data
+            </button>
+        </div>
+        <div class="column">
+            <button class="massive ui blue button myHomeNavBtn" id="OEE" style="width: 80%;">
+                <i class="dashboard icon"></i>
+                OEE
+            </button>
         </div>
     </div>
+    <h3>Cloud State</h3>
 
-</body>
+</div>

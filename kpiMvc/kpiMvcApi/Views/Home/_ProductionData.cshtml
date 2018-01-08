@@ -1,41 +1,75 @@
 ﻿@model kpiMvcApi.DataTransferObjects.ProductionDataDtoRs
+@using kpiMvcApi.DataTransferObjects;
 
 <script>
-
-    var barChartData = {
-            labels: @Html.Raw(Model.getChartLabels()),
-            datasets: [
-                        {
+    var barChartData =
+        {
+            type: 'bar',
+            data:
+            {
+                labels: @Html.Raw(Model.getChartLabels()),
+                datasets:
+                [
+                    {
                         label:@Html.Raw(Model.getDatasetLabel()),
                         backgroundColor: @Html.Raw(Model.getDatsetBackroundColor()),
                         borderWidth: 2,
-                        data:  @Html.Raw(Model.getDataset()),
-                        }
-                    ]
+                        data:@Html.Raw(Model.getDataset()),
+                    }
+                ],
+            },
+            options:
+            {
+                title:
+                {
+                    display: true,
+                    text: @Html.Raw(Model.getChartTitle()),
+                },
+                responsive: true,
+                maintainAspectRatio: true
+            }
+        };
+        var pieChartData =
+        {
+            type: 'pie',
+            data:
+            {
+                labels: @Html.Raw(Model.getDataset(ProductionDataDtoRs.charttype.Prolinechart, ProductionDataDtoRs.dataset.Datalabels)),
+                datasets:
+                [
+                    {
+                        label:@Html.Raw(Model.getDatasetLabel()),
+                        backgroundColor: @Html.Raw(Model.getDatsetBackroundColor()),
+                        borderWidth: 2,
+                        data:@Html.Raw(Model.getDataset(ProductionDataDtoRs.charttype.Prolinechart, ProductionDataDtoRs.dataset.dataset1)),
+                    }
+                ],
+            },
+            options:
+            {
+                title:
+                {
+                    display: true,
+                    text: @Html.Raw(Model.getChartTitle()),
+                },
+                responsive: true,
+                maintainAspectRatio: true
+            }
         };
     $(document).ready(function () {
-                    var ctx1 = document.getElementById("chartcanvas").getContext("2d");
-                    window.myBar = new Chart(ctx1,
-                        {
-                type: 'bar',
-                data: barChartData,
-                options:
-                    {
-                    title:
-                        {
-                        display: true,
-                        text: @Html.Raw(Model.getChartTitle()),
-                        },
-                        responsive: true,
-                        maintainAspectRatio: true
-                    }
-                });
-    });
+        var ctx1 = document.getElementById("chartcanvas1").getContext("2d");
+        window.myBar = new Chart(ctx1, barChartData);
 
+        var ctx2 = document.getElementById("chartcanvas2").getContext("2d");
+        window.myPolarArea = new Chart(ctx2, pieChartData);
+    });
 </script>
 <div>
     <h1>Production Data</h1>
     <div style="width: 35%;">
-        <canvas width="600"  height="400"  id="chartcanvas"></canvas>
+        <canvas width="600" height="400" id="chartcanvas1"></canvas>
+    </div>
+    <div style="width: 35%;">
+        <canvas width="600" height="400" id="chartcanvas2"></canvas>
     </div>
 </div>

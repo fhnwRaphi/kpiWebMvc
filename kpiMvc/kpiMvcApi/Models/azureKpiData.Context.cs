@@ -28,5 +28,10 @@ namespace kpiMvcApi.Models
         public virtual DbSet<ePcbClass> ePcbClasses { get; set; }
         public virtual DbSet<ePcbDaily> ePcbDailies { get; set; }
         public virtual DbSet<ePcbGeneration> ePcbGenerations { get; set; }
+        public virtual DbSet<eKvp> eKvps { get; set; }
+        public virtual DbSet<eKvpClass> eKvpClasses { get; set; }
+        public virtual DbSet<eKvpState> eKvpStates { get; set; }
+        public virtual DbSet<eCountry> eCountries { get; set; }
+        public virtual DbSet<eDelivery> eDeliveries { get; set; }
     }
 }

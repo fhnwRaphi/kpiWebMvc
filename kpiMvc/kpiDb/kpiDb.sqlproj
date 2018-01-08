@@ -65,5 +65,13 @@
     <Build Include="ePcbClass.sql" />
     <Build Include="fkPcbDailyRefPcbGeneration.sql" />
     <Build Include="fkPcbDailyRefPcbClass.sql" />
+    <Build Include="eKvp.sql" />
+    <Build Include="eKvpClass.sql" />
+    <Build Include="eKvpState.sql" />
+    <Build Include="fkKvpRefKvpClass.sql" />
+    <Build Include="fkKvpRefKvpState.sql" />
+    <Build Include="eDelivery.sql" />
+    <Build Include="eCountry.sql" />
+    <Build Include="fkDeliveryRefCountry.sql" />
   </ItemGroup>
 </Project>

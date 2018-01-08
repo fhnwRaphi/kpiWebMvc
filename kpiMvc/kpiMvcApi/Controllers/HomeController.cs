@@ -65,10 +65,11 @@ namespace kpiMvcApi.Controllers
             ProductionDataDtoRs model = new ProductionDataDtoRs();
             return PartialView("_ProductionData", model);
         }
-        public ActionResult QualityData()
+        public ActionResult Kvp(string startDate, string stopDate)
         {
+            KvpDataDtoRs model = new KvpDataDtoRs();
             // return "next" partial view
-            return PartialView("_QualityData");
+            return PartialView("_Kvp", model);
         }
         public ActionResult Oee()
         {

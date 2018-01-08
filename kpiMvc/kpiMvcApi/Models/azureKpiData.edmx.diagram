@@ -4,12 +4,20 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="6de595a6a5854cc59701e50ff25241ad" Name="Diagram1">
-        <EntityTypeShape EntityType="kpidbModel.ePcbClass" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="kpidbModel.ePcbDaily" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+      <Diagram DiagramId="6de595a6a5854cc59701e50ff25241ad" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="kpidbModel.ePcbClass" Width="1.5" PointX="2.5" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="kpidbModel.ePcbDaily" Width="1.5" PointX="0.875" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="kpidbModel.ePcbGeneration" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
         <AssociationConnector Association="kpidbModel.fkPcbDailyRefPcbClass" ManuallyRouted="false" />
         <AssociationConnector Association="kpidbModel.fkPcbDailyRefPcbGeneration" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="kpidbModel.eKvp" Width="1.5" PointX="5.25" PointY="0.75" />
+        <EntityTypeShape EntityType="kpidbModel.eKvpClass" Width="1.5" PointX="7.125" PointY="3.875" />
+        <EntityTypeShape EntityType="kpidbModel.eKvpState" Width="1.5" PointX="5.25" PointY="3.875" />
+        <AssociationConnector Association="kpidbModel.fkKvpRefKvpClass" />
+        <AssociationConnector Association="kpidbModel.fkKvpRefKvpState" />
+        <EntityTypeShape EntityType="kpidbModel.eCountry" Width="1.5" PointX="9.125" PointY="3.875" />
+        <EntityTypeShape EntityType="kpidbModel.eDelivery" Width="1.5" PointX="9.125" PointY="0.75" />
+        <AssociationConnector Association="kpidbModel.fkDeliveryRefCountry" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
