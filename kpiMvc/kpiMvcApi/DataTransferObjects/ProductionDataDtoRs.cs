@@ -35,6 +35,7 @@ namespace kpiMvcApi.DataTransferObjects
             {
                 ProductionDataDto pddto = new ProductionDataDto()
                 {
+                    PcbDailyId = r.pcbDailyId,
                     ProductionDay = r.productionDay,
                     PcbQuantity = r.pcbQuantity,
                     PcbSumPrice = r.pcbSumPrice,

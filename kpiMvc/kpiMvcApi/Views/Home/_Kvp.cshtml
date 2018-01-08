@@ -20,10 +20,6 @@
                 }]
         };
     $(document).ready(function () {
-
-        $('#startDate').calendar();
-        $('#stopDate').calendar();
-
         var ctx1 = document.getElementById("chartcanvas").getContext("2d");
         window.myBar = new Chart(ctx1,
             {
@@ -46,24 +42,6 @@
 
 <<div class="ui container">
     <h1>KVP Data</h1>
-    <div class="ui four column grid">
-        <div class="column">
-            <div class="ui calendar" id="startDate">
-                <div class="ui input left icon">
-                    <i class="calendar icon"></i>
-                    <input type="text" placeholder="Start Date" />
-                </div>
-            </div>
-        </div>
-        <div class="column">
-            <div class="ui calendar" id="stopDate">
-                <div class="ui input left icon">
-                    <i class="calendar icon"></i>
-                    <input type="text" placeholder="Stop Date" />
-                </div>
-            </div>
-        </div>
-    </div>
     <div style="width: 40%;">
         <canvas id="chartcanvas"></canvas>
     </div>

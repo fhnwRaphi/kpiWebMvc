@@ -42,7 +42,17 @@ namespace kpiMvcApi.Controllers
         }
         public ActionResult ProductionData(string startDate, string stopDate)
         {
-            ProductionDataDtoRs model = new ProductionDataDtoRs();
+            ProductionDataDtoRs model;
+            try
+            {
+                DateTime startdateParsed = DateTime.Parse(startDate.Substring(4, 11));
+                DateTime stopdateParsed = DateTime.Parse(stopDate.Substring(4, 11));
+                model = new ProductionDataDtoRs(startdateParsed, stopdateParsed);
+            }
+            catch
+            {
+                model = new ProductionDataDtoRs();
+            }
             return PartialView("_ProductionData", model);
         }
         public ActionResult Kvp(string startDate, string stopDate)

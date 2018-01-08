@@ -131,7 +131,6 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="js\charts.js" />
-    <Content Include="js\jqFrameRoot.js" />
     <Content Include="js\tablesort.js" />
     <Content Include="Models\azureKpiData.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

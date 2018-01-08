@@ -2,53 +2,84 @@
     Layout = "~/Views/Shared/_LayoutRoot.cshtml";
 }
 
-    <script src="~/js/jqFrameRoot.js"></script>
-            <script>
-        $(document).ready(function () {
-            $(".mySidebarBtn").click(function (){
-                var partialContent = $("#partialContent");
-                $.ajax({
-                    type: "GET",
-                    url: '/Home/' + $(this).attr("id"),
-                    data: {startDate: "01.01.18", stopDate: "01.02.18" },
-                    success: function (data) {
-                        //partialContent.html('');
-                        partialContent.html(data);
-                    },
-                    error: function (xhr, ajaxOptions, thrownError) {
-                        alert('error on load.');
-                    }
-                });
+<script>
+    $(document).ready(function () {
+
+        $(".mySidebarBtn").click(function () {
+            var startDateVal = $('#startDate').calendar("get date");
+            var stopDateVal = $('#stopDate').calendar("get date");
+            var partialContent = $("#partialContent");
+            $.ajax({
+                type: "GET",
+                url: '/Home/' + $(this).attr("id"),
+                data: { startDate: startDateVal, stopDate: stopDateVal },
+                success: function (data) {
+                    //partialContent.html('');
+                    partialContent.html(data);
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert('error on load.');
+                }
             });
         });
-    </script>
-    <button class="ui compact icon blue button" id="btnSidebar">
-        <i class="sidebar icon"> </i>
-    </button>
-    <div class="ui left vertical inverted sidebar labeled icon blue menu">
-        <a class="item mySidebarBtn" id="Home">
-            <i class="home icon"></i>
-            Home
-        </a>
-        <a class="item mySidebarBtn" id="UserLogin">
-            <i class="user icon"></i>
-            User Login
-        </a>
-        <a class="item mySidebarBtn" id="ProductionData">
-            <i class="industry icon"></i>
-            ProductionData
-        </a>
-        <a class="item mySidebarBtn" id="Kvp">
-            <i class="heartbeat icon"></i>
-            Quality Data
-        </a>
-        <a class="item mySidebarBtn" id="OEE">
-            <i class="dashboard icon"></i>
-            OEE
-        </a>
-    </div>
 
-<div id = "partialContent" >
+        $("#btnSidebar").click(function () {
+            $('#mySidebar').sidebar('toggle');
+            $('#startDate').calendar({ type: 'date' });
+            $('#stopDate').calendar({ type: 'date' });
+
+        });
+        $('#startDate').calendar({ type: 'date' });
+        $('#stopDate').calendar({ type: 'date' });
+    });
+</script>
+
+<button class="ui compact icon blue button item" id="btnSidebar">
+    <i class="sidebar icon"> </i>
+</button>
+<div class="ui four column doubling stackable grid container">
+    <div class="column">
+        <div class="ui calendar" id="startDate">
+            <div class="ui input left icon">
+                <i class="calendar icon"></i>
+                <input type="text" placeholder="Start Date" />
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="ui calendar" id="stopDate">
+            <div class="ui input left icon">
+                <i class="calendar icon"></i>
+                <input type="text" placeholder="Stop Date" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ui left vertical inverted sidebar labeled icon blue menu" id="mySidebar">
+    <a class="item mySidebarBtn" id="Home">
+        <i class="home icon"></i>
+        Home
+    </a>
+    <a class="item mySidebarBtn" id="UserLogin">
+        <i class="user icon"></i>
+        User Login
+    </a>
+    <a class="item mySidebarBtn" id="ProductionData">
+        <i class="industry icon"></i>
+        ProductionData
+    </a>
+    <a class="item mySidebarBtn" id="Kvp">
+        <i class="heartbeat icon"></i>
+        Quality Data
+    </a>
+    <a class="item mySidebarBtn" id="OEE">
+        <i class="dashboard icon"></i>
+        OEE
+    </a>
+</div>
+
+<div id="partialContent">
     @{
         Html.RenderPartial("_Home");
     }

@@ -12,8 +12,7 @@ namespace kpiMvcApi.Controllers
 {
     public class ExportController : Controller
     {
-
-        public ActionResult ProdDataToExcel()
+                public ActionResult ProdDataToExcel()
         {
             ProductionDataDtoRs pdata = new ProductionDataDtoRs();
             var gv = new GridView();

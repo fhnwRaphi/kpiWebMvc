@@ -47,6 +47,7 @@
             },
             options:
             {
+
                 title:
                 {
                     display: true,
@@ -62,55 +63,78 @@
 
         var ctx2 = document.getElementById("chartcanvas2").getContext("2d");
         window.myPolarArea = new Chart(ctx2, pieChartData);
+
+        $('.ui.accordion').accordion();
+        $('.ui.accordion').accordion('toggle', $(this).index());
+
     });
 </script>
+
 <<div class="ui container">
     <h1>Production Data</h1>
-    <div style="width: 35%;">
-        <canvas width="600" height="400" id="chartcanvas1"></canvas>
-    </div>
-     @using (Html.BeginForm("ProdDataToExcel", "Export", FormMethod.Post))
-     {
-         <table class="ui sortable celled table">
-             <thead>
-                 <tr>
-                     <th class="sorted ascending">Id</th>
-                     <th class="">Id</th>
-                     <th class="">Data</th>
-                     <th class="">Pcb Class</th>
-                     <th class="">Pcb Generation</th>
-                     <th class="">Quantity<th>
-                     <th class="">Price Sum</th>
-                     <th class="">Date</th>
-                 </tr>
-             </thead>
-             <tbody>
-                 @foreach (var mdl in Model.getData())
-                 {
-                     <tr>
-                         <td>@mdl.PcbClassId</td>
-                         <td>@mdl.PcbClassName</td>
-                         <td>@mdl.PcbGenerationName</td>
-                         <td>@mdl.PcbQuantity</td>
-                         <td>@mdl.PcbSumPrice</td>
-                         <td>@mdl.ProductionDay</td>
-                     </tr>
-                 }
-             </tbody>
-             <tfoot>
-                 <tr>
-                     <td colspan="4">
-                         <br />
-                         <br />
-                         <button type="submit" class="ui compact icon green button" id="btnExcelDownload">
-                             <i class="file excel outline icon"> </i>
-                         </button>
-                     </td>
-                 </tr>
-             </tfoot>
-         </table>
-     }
-    <div style="width: 35%;">
-        <canvas width="600" height="400" id="chartcanvas2"></canvas>
+    <div class="ui two column doubling stackable grid container">
+        <div class="column">
+            <div style="width: 100%;">
+                <canvas width="600" height="400" id="chartcanvas1"></canvas>
+            </div>
+            <div class="ui inverted segment">
+                <div class="ui inverted accordion">
+                    <div class="title">
+                        <i class="dropdown icon"></i>
+                        Datatable
+                    </div>
+                    <div class="content">
+                        @using (Html.BeginForm("ProdDataToExcel", "Export", FormMethod.Post))
+                        {
+                            <button type="submit" class="ui compact icon green button" id="btnExcelDownload">
+                                <i class="file excel outline icon"> </i>
+                            </button>
+
+                            <table class="ui sortable celled small table">
+                                <thead>
+                                    <tr>
+                                        <th class="sorted ascending">Id</th>
+                                        <th class="sorted ascending">Date</th>
+                                        <th class="">Quantity</th>
+                                        <th class="">Price</th>
+                                        <th class="">Pcb Class</th>
+                                        <th class="">Pcb Generation</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var mdl in Model.getData())
+                                    {
+                                        <tr>
+                                            <td>@mdl.PcbDailyId</td>
+                                            <td>@mdl.ProductionDay</td>
+                                            <td>@mdl.PcbQuantity</td>
+                                            <td>@mdl.PcbSumPrice CHF</td>
+                                            <td>@mdl.PcbClassName</td>
+                                            <td>@mdl.PcbGenerationName</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="4">
+                                            <br />
+
+                                            <br />
+
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div style="width: 100%;">
+                <canvas width="600" height="400" id="chartcanvas2"></canvas>
+            </div>
+        </div>
     </div>
 </div>
