@@ -304,13 +304,12 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\DiagramdataController.cs" />
     <Compile Include="Controllers\ExportController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KpidataController.cs" />
     <Compile Include="DataTransferObjects\DeliveryDataDto.cs" />
-    <Compile Include="DataTransferObjects\DiagramdataDto.cs" />
-    <Compile Include="DataTransferObjects\DiagramdataDtoRepo.cs" />
+    <Compile Include="DataTransferObjects\DataDto.cs" />
+    <Compile Include="DataTransferObjects\DataDtoRs.cs" />
     <Compile Include="DataTransferObjects\KvpDataDto.cs" />
     <Compile Include="DataTransferObjects\DeliveryDataDtoRs.cs" />
     <Compile Include="DataTransferObjects\ProductionDataDto.cs" />

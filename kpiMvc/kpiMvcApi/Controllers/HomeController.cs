@@ -9,38 +9,62 @@ using System.Web.Mvc;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-
+/// <summary>
+/// Implementiert die Controller der Dashboard Api
+/// </summary>
 namespace kpiMvcApi.Controllers
 {
+    /// <summary>
+    /// Webseite Controller
+    /// Setllt die Views und die Partaialviews bereit
+    /// </summary>
     public class HomeController : Controller
     {
-        // GET: Home
+        /// <summary>
+        /// Test Webseite um Funktionen zu testen
+        /// </summary>
+        /// <returns> ActionResult IndexView</returns>
         [HttpGet]
         public ActionResult Index()
         {
-            DiagramdataDtoRepo testdata = new DiagramdataDtoRepo();
+            DataDtoRs testdata = new DataDtoRs();
             testdata.genRandomisedData(10);
             ViewBag.diagramData = testdata;
             return View();
         }
 
+        /// <summary>
+        /// The Dashboard Frame
+        /// Returns the FrameView withe Menue and Sidebar
+        /// </summary>
+        /// <returns>ActionResult FrameView</returns>
         public ActionResult Frame()
         {
-            DiagramdataDtoRepo testdata = new DiagramdataDtoRepo();
+            DataDtoRs testdata = new DataDtoRs();
             testdata.genRandomisedData(10);
             ViewBag.diagramData = testdata;
             return View();
         }
+        /// <summary>
+        /// The Home View
+        /// Returns the Home View with Av
+        /// </summary>
+        /// <param name="startDate"></param>
+        /// <param name="stopDate"></param>
+        /// <returns></returns>
         public ActionResult Home(string startDate, string stopDate)
         {
-            // return "next" partial view
             return PartialView("_Home");
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public ActionResult UserLogin()
         {
-            // return "next" partial view
             return PartialView("_UserLogin");
         }
+
         public ActionResult ProductionData(string startDate, string stopDate)
         {
             ProductionDataDtoRs model;

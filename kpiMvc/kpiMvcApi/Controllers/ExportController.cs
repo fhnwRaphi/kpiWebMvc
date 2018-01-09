@@ -8,9 +8,6 @@ using System.Web.Mvc;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-/// <summary>
-/// Implementiert die Controller der Dashboard Api
-/// </summary>
 namespace kpiMvcApi.Controllers
 {
     /// <summary>

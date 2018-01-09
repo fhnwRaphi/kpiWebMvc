@@ -5,7 +5,7 @@ using System.Web;
 
 namespace kpiMvcApi.DataTransferObjects
 {
-    public class DiagramdataDto
+    public class DataDto
     {
         public int DiagramDataId { get; set; }
         public string DiagramDataLabel { get; set; }

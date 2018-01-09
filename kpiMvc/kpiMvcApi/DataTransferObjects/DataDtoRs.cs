@@ -7,22 +7,22 @@ using System.Text;
 
 namespace kpiMvcApi.DataTransferObjects
 {
-    public class DiagramdataDtoRepo
+    public class DataDtoRs
     {
-        public List<DiagramdataDto> DiagramDataRepo { get; set; }
+        public List<DataDto> DiagramDataRepo { get; set; }
         public enum charts { Testchart = 1, Debugchart };
-        public DiagramdataDtoRepo()
+        public DataDtoRs()
         {
-            this.DiagramDataRepo = new List<DiagramdataDto>();
+            this.DiagramDataRepo = new List<DataDto>();
         }
 
-        public List<DiagramdataDto> genRandomisedData(int len)
+        public List<DataDto> genRandomisedData(int len)
         {
             Random rnd = new Random();
 
             for (int ic = 0; ic < len; ic++)
             {
-                DiagramdataDto dddto = new DiagramdataDto
+                DataDto dddto = new DataDto
                 {
                     DiagramDataId = ic,
                     DiagramDataLabel = (ic * 10).ToString(),
