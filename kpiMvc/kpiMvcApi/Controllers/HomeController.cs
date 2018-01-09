@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+
 namespace kpiMvcApi.Controllers
 {
     public class HomeController : Controller
@@ -61,10 +62,10 @@ namespace kpiMvcApi.Controllers
             // return "next" partial view
             return PartialView("_Kvp", model);
         }
-        public ActionResult Oee()
+        public ActionResult Delivery()
         {
             // return "next" partial view
-            return PartialView("_Oee");
+            return PartialView("_Delivery");
         }
     }
 }

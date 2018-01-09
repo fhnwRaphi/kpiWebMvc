@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace kpiMvcApi.DataTransferObjects
 {
-    public class DeliveryDto
+    public class DeliveryDataDto
     {
         public int DeliveryId { get; set; }
         public DateTime OrderDate { get; set; }

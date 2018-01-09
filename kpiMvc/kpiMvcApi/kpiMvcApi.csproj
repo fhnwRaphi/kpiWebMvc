@@ -308,10 +308,11 @@
     <Compile Include="Controllers\ExportController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KpidataController.cs" />
-    <Compile Include="DataTransferObjects\DeliveryDto.cs" />
+    <Compile Include="DataTransferObjects\DeliveryDataDto.cs" />
     <Compile Include="DataTransferObjects\DiagramdataDto.cs" />
     <Compile Include="DataTransferObjects\DiagramdataDtoRepo.cs" />
     <Compile Include="DataTransferObjects\KvpDataDto.cs" />
+    <Compile Include="DataTransferObjects\DeliveryDataDtoRs.cs" />
     <Compile Include="DataTransferObjects\ProductionDataDto.cs" />
     <Compile Include="DataTransferObjects\KvpDataDtoRs.cs" />
     <Compile Include="DataTransferObjects\ProductionDataDtoRs.cs" />

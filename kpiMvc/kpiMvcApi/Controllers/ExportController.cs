@@ -8,13 +8,21 @@ using System.Web.Mvc;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+/// <summary>
+/// Implementiert die Controller der Dashboard Api
+/// </summary>
 namespace kpiMvcApi.Controllers
 {
     /// <summary>
-    /// 
+    /// Der Exportkontroller stellt den alle Dienste zur exportierung von Files zur Verfügung.
     /// </summary>
     public class ExportController : Controller
     {
+        /// <summary>
+        /// Exportier die Daten welche in einer Gridview übergeben werden in ein Excell File
+        /// </summary>
+        /// <param name="gv"></param>
+        /// <returns></returns>
         private ActionResult exportExcell(GridView gv)
         {
             gv.DataBind();
@@ -34,6 +42,12 @@ namespace kpiMvcApi.Controllers
 
             return View();
         }
+        /// <summary>
+        /// Nimmt daten aus dem Production Data Data Transfer Object Recordset
+        /// Bindet die Daten in eine Gridview
+        /// Exportiert die Daten in eine Excell.xls
+        /// </summary>
+        /// <returns> View() Excell .xls File </returns>
         public ActionResult ProdDataToExcel()
         {
             ProductionDataDtoRs pdata = new ProductionDataDtoRs();
@@ -42,6 +56,12 @@ namespace kpiMvcApi.Controllers
 
             return this.exportExcell(gv);
         }
+        /// <summary>
+        /// Nimmt daten aus dem Kvp Data Data Transfer Object Recordset
+        /// Bindet die Daten in eine Gridview
+        /// Exportiert die Daten in eine Excell.xls
+        /// </summary>
+        /// <returns> View() Excell .xls File </returns>
         public ActionResult KvpDataToExcel()
         {
             KvpDataDtoRs kvpdata = new KvpDataDtoRs();
