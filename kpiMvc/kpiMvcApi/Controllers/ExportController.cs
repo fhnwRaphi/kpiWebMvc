@@ -10,13 +10,13 @@ using System.Web.UI.WebControls;
 
 namespace kpiMvcApi.Controllers
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class ExportController : Controller
     {
-                public ActionResult ProdDataToExcel()
+        private ActionResult exportExcell(GridView gv)
         {
-            ProductionDataDtoRs pdata = new ProductionDataDtoRs();
-            var gv = new GridView();
-            gv.DataSource = pdata.getData();
             gv.DataBind();
 
             Response.ClearContent();
@@ -33,6 +33,22 @@ namespace kpiMvcApi.Controllers
             Response.End();
 
             return View();
+        }
+        public ActionResult ProdDataToExcel()
+        {
+            ProductionDataDtoRs pdata = new ProductionDataDtoRs();
+            var gv = new GridView();
+            gv.DataSource = pdata.getData();
+
+            return this.exportExcell(gv);
+        }
+        public ActionResult KvpDataToExcel()
+        {
+            KvpDataDtoRs kvpdata = new KvpDataDtoRs();
+            var gv = new GridView();
+            gv.DataSource = kvpdata.getData();
+
+            return this.exportExcell(gv);
         }
     }
 }

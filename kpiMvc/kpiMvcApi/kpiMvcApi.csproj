@@ -36,6 +36,7 @@
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
+    <DocumentationFile>bin\kpiMvcApi.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -384,7 +385,7 @@
     <Content Include="Views\Home\_Home.cshtml" />
     <Content Include="Views\Home\_UserLogin.cshtml" />
     <Content Include="Views\Home\_ProductionData.cshtml" />
-    <Content Include="Views\Home\_Oee.cshtml" />
+    <Content Include="Views\Home\_Delivery.cshtml" />
     <Content Include="Views\Home\_Kvp.cshtml" />
     <None Include="Properties\PublishProfiles\kpiMvcApi20180104043203 - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
