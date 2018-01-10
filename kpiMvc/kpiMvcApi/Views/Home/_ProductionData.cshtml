@@ -7,14 +7,14 @@
             type: 'bar',
             data:
             {
-                labels: @Html.Raw(Model.getChartLabels()),
+                labels: @Html.Raw(Model.getDataset(ProductionDataDtoRs.charttype.Quantitychart, ProductionDataDtoRs.dataset.Datalabels, "d")),
                 datasets:
                 [
                     {
                         label:@Html.Raw(Model.getDatasetLabel()),
                         backgroundColor: @Html.Raw(Model.getDatsetBackroundColor()),
                         borderWidth: 2,
-                        data:@Html.Raw(Model.getDataset()),
+                        data:@Html.Raw(Model.getDataset(ProductionDataDtoRs.charttype.Quantitychart, ProductionDataDtoRs.dataset.dataset1, "d")),
                     }
                 ],
             },
@@ -34,14 +34,14 @@
             type: 'pie',
             data:
             {
-                labels: @Html.Raw(Model.getDataset(ProductionDataDtoRs.charttype.Prolinechart, ProductionDataDtoRs.dataset.Datalabels)),
+                labels: @Html.Raw(Model.getDataset(ProductionDataDtoRs.charttype.Prolinechart, ProductionDataDtoRs.dataset.Datalabels, "d")),
                 datasets:
                 [
                     {
                         label:@Html.Raw(Model.getDatasetLabel()),
                         backgroundColor: @Html.Raw(Model.getDatsetBackroundColor()),
                         borderWidth: 2,
-                        data:@Html.Raw(Model.getDataset(ProductionDataDtoRs.charttype.Prolinechart, ProductionDataDtoRs.dataset.dataset1)),
+                        data:@Html.Raw(Model.getDataset(ProductionDataDtoRs.charttype.Prolinechart, ProductionDataDtoRs.dataset.dataset1, "d")),
                     }
                 ],
             },

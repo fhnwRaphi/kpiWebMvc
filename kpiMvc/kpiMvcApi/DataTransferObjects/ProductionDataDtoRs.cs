@@ -6,8 +6,16 @@ using System.Web;
 
 namespace kpiMvcApi.DataTransferObjects
 {
+    /// <summary>
+    /// This Recordset stores a List of ProductionData Data transfer object
+    /// It prowides all Methods to read, write, update and delete date from databse
+    /// It provides Methods to provides HTML data for the frontend
+    /// </summary>
     public class ProductionDataDtoRs
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public List<ProductionDataDto> ProductionDataRs { get; set; }
 
         public ProductionDataDtoRs()
@@ -47,9 +55,32 @@ namespace kpiMvcApi.DataTransferObjects
                 this.ProductionDataRs.Add(pddto);
             }
         }
+        public void loadData(int id)
+        {
+            var model = new Models.kpidbEntities1();
+            Models.ePcbDaily rs = model.ePcbDailies.Where(x => x.pcbDailyId == id).FirstOrDefault();
+
+            ProductionDataDto pddto = new ProductionDataDto()
+            {
+                PcbDailyId = r.pcbDailyId,
+                ProductionDay = r.productionDay,
+                PcbQuantity = r.pcbQuantity,
+                PcbSumPrice = r.pcbSumPrice,
+                PcbGenerationId = r.pcbGenerationId,
+                PcbClassId = r.pcbClassId,
+                PcbGenerationName = r.ePcbGeneration.genName,
+                PcbClassName = r.ePcbClass.ClassName
+            };
+            this.ProductionDataRs.Add(pddto);
+        }
         public List<ProductionDataDto> getData()
         {
             this.loadData();
+            return this.ProductionDataRs;
+        }
+        public List<ProductionDataDto> getData(int id)
+        {
+            this.loadData(id);
             return this.ProductionDataRs;
         }
         public List<ProductionDataDto> getData(DateTime startdate, DateTime stopdate)
@@ -76,45 +107,45 @@ namespace kpiMvcApi.DataTransferObjects
 
         internal bool updateData(List<ProductionDataDto> kvpdto)
         {
-            Models.kpidbEntities1 model = new Models.kpidbEntities1();
+            var ctx = new Models.kpidbEntities1();
+
             foreach (var dto in kvpdto)
             {
-                Models.ePcbDaily mdl = new Models.ePcbDaily();
+                Models.ePcbDaily mdl = ctx.ePcbDailies.Where(x => x.pcbDailyId == dto.PcbDailyId).FirstOrDefault();
                 mdl.pcbGenerationId = dto.PcbGenerationId;
                 mdl.pcbClassId = dto.PcbClassId;
                 mdl.pcbQuantity = dto.PcbQuantity;
                 mdl.pcbSumPrice = dto.PcbSumPrice;
                 mdl.productionDay = dto.ProductionDay;
-                model.ePcbDailies.Add(mdl);
             }
-            model.SaveChanges();
+            ctx.SaveChanges();
             return true;
         }
 
         internal bool deleteData(List<ProductionDataDto> kvpdto)
         {
-            Models.kpidbEntities1 model = new Models.kpidbEntities1();
+            var ctx = new Models.kpidbEntities1();
 
             foreach (var dto in kvpdto)
             {
-                Models.ePcbDaily mdl = new Models.ePcbDaily();
-                mdl.pcbDailyId = dto.PcbDailyId;
-                model.ePcbDailies.Remove(mdl);
+                Models.ePcbDaily mdl = ctx.ePcbDailies.Where(x => x.pcbDailyId == dto.PcbDailyId).FirstOrDefault();
+                ctx.Entry(mdl).State = System.Data.Entity.EntityState.Deleted;
             }
+            ctx.SaveChanges();
             return true;
         }
 
 
         public enum dataset { Datalabels = 0, dataset1 }
-        public enum charttype { Prolinechart=0}
+        public enum charttype { Prolinechart = 0, Quantitychart }
 
-        public string getDataset(charttype charttype, dataset datset )
+        public string getDataset(charttype charttype, dataset datset, string filter)
         {
             StringBuilder sb = new StringBuilder("[");
             switch (charttype)
             {
                 case charttype.Prolinechart:
-                    var rs = this.ProductionDataRs.GroupBy(p => p.PcbGenerationName)
+                    var rsPd = this.ProductionDataRs.GroupBy(p => p.PcbGenerationName)
                         .Select(q =>
                            new
                            {
@@ -122,7 +153,32 @@ namespace kpiMvcApi.DataTransferObjects
                                PcbQuantity = q.Sum(w => w.PcbQuantity)
                            })
                        .OrderBy(x => x.PcbGenerationName);
-                    foreach (var r in rs)
+                    foreach (var r in rsPd)
+                    {
+                        switch (datset)
+                        {
+                            case dataset.Datalabels:
+                                sb.Append("'" + r.PcbGenerationName + "',");
+                                break;
+                            case dataset.dataset1:
+                                sb.Append("'" + r.PcbQuantity + "',");
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                    break;
+
+                case charttype.Quantitychart:
+                    var rsQ = this.ProductionDataRs.GroupBy(p => p.ProductionDay.ToString(filter))
+                        .Select(q =>
+                           new
+                           {
+                               PcbGenerationName = q.Key,
+                               PcbQuantity = q.Sum(w => w.PcbQuantity)
+                           })
+                       .OrderBy(x => x.PcbGenerationName);
+                    foreach (var r in rsQ)
                     {
                         switch (datset)
                         {
@@ -139,46 +195,6 @@ namespace kpiMvcApi.DataTransferObjects
                     break;
                 default:
                     break;
-            }
-            sb.Remove(sb.Length - 1, 1);
-            sb.Append("]");
-            return sb.ToString();
-        }
-
-        public string getDataset()
-        {
-            StringBuilder sb = new StringBuilder("[");
-            var rs = this.ProductionDataRs.GroupBy(p => p.ProductionDay.ToString("M"))
-                .Select(q =>
-                   new
-                   {
-                       ProductionDay = q.Key,
-                       PcbQuantity = q.Sum(w => w.PcbQuantity)
-                   })
-               .OrderBy(x => x.ProductionDay);
-            foreach (var r in rs)
-            {
-                sb.Append(r.PcbQuantity + ",");
-            }
-            sb.Remove(sb.Length - 1, 1);
-            sb.Append("]");
-            return sb.ToString();
-        }
-        public string getChartLabels()
-        {
-            var rs = this.ProductionDataRs.GroupBy(p => p.ProductionDay.ToString("M"))
-                .Select(q =>
-                   new
-                   {
-                       ProductionDay = q.Key,
-                       PcbQuantity = q.Sum(w => w.PcbQuantity)
-                   })
-                 .OrderBy(x => x.ProductionDay);
-
-            StringBuilder sb = new StringBuilder("[");
-            foreach (var r in rs)
-            {
-                sb.Append("'" + r.ProductionDay + "',");
             }
             sb.Remove(sb.Length - 1, 1);
             sb.Append("]");

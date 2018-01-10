@@ -8,16 +8,16 @@ namespace kpiMvcApi.DataTransferObjects
 {
     public class DeliveryDataDtoRs
     {
-        public List<KvpDataDto> KvpDataRs { get; set; }
+        public List<DeliveryDataDto> DeliveryDataRs { get; set; }
 
         public DeliveryDataDtoRs()
         {
-            this.KvpDataRs = new List<KvpDataDto>();
+            this.DeliveryDataRs = new List<DeliveryDataDto>();
             this.loadData();
         }
         public DeliveryDataDtoRs(DateTime startdate, DateTime stopdate)
         {
-            this.KvpDataRs = new List<KvpDataDto>();
+            this.DeliveryDataRs = new List<DeliveryDataDto>();
             this.loadData(startdate, stopdate);
         }
         public void loadData()
@@ -29,82 +29,82 @@ namespace kpiMvcApi.DataTransferObjects
         public void loadData(DateTime startdate, DateTime stopdate)
         {
             var model = new Models.kpidbEntities1();
-            var rs = model.eKvps.Where(x => x.kvpDate >= startdate && x.kvpDate <= stopdate);
+            var rs = model.eDeliveries.Where(x => x.orderDate >= startdate && x.orderDate <= stopdate);
 
             foreach (var r in rs)
             {
-                KvpDataDto kvpdto = new KvpDataDto()
+                DeliveryDataDto deldto = new DeliveryDataDto()
                 {
-                    KvpId = r.kvpId,
-                    KvpDate = r.kvpDate,
-                    KvpName = r.kvpName,
-                    KvpClassId = r.eKvpClass.kvpClassId,
-                    KvpClassName = r.eKvpClass.kvpClassName,
-                    KvpStateId = r.eKvpState.kvpStateId,
-                    KvpStateName = r.eKvpState.kvpStateName,                
+                    DeliveryId = r.deliveryId,
+                    OrderDate = r.orderDate,
+                    OrderedPc = r.orderedPc,
+                    DeliveredPc = r.deliveredPc,
+                    CountryId = r.eCountry.countryId,
+                    CountryName = r.eCountry.countryName,
                 };
-                this.KvpDataRs.Add(kvpdto);
+                this.DeliveryDataRs.Add(deldto);
             }
         }
-        public List<KvpDataDto> getData()
+        public List<DeliveryDataDto> getData()
         {
             this.loadData();
-            return this.KvpDataRs;
+            return this.DeliveryDataRs;
         }
-        public List<KvpDataDto> getData(DateTime startdate, DateTime stopdate)
+        public List<DeliveryDataDto> getData(DateTime startdate, DateTime stopdate)
         {
             this.loadData(startdate, stopdate);
-            return this.KvpDataRs;
+            return this.DeliveryDataRs;
         }
-        public bool setData(List<KvpDataDto> kvpdto)
+        public bool setData(List<DeliveryDataDto> deldto)
         {
             Models.kpidbEntities1 model = new Models.kpidbEntities1();
-            foreach (var dto in kvpdto)
+            foreach (var dto in deldto)
             {
-                Models.eKvp mdl = new Models.eKvp();
-                mdl.kvpId = dto.KvpId;
-                mdl.kvpDate = dto.KvpDate;
-                mdl.kvpName = dto.KvpName;
-                mdl.kvpClassId = dto.KvpClassId;
-                mdl.kvpStateId = dto.KvpStateId;
-                model.eKvps.Add(mdl);
+                Models.eDelivery mdl = new Models.eDelivery();
+                mdl.deliveryId = dto.DeliveryId;
+                mdl.orderDate = dto.OrderDate;
+                mdl.orderedPc = dto.OrderedPc;
+                mdl.deliveredPc = dto.DeliveredPc;
+                mdl.countryId = dto.CountryId;
+                model.eDeliveries.Add(mdl);
             }
             model.SaveChanges();
             return true;
         }
 
-        internal bool updateData(List<KvpDataDto> kvpdto)
+        internal bool updateData(List<DeliveryDataDto> kvpdto)
         {
             Models.kpidbEntities1 model = new Models.kpidbEntities1();
             foreach (var dto in kvpdto)
             {
-                Models.eKvp mdl = new Models.eKvp();
-                mdl.kvpId = dto.KvpId;
-                mdl.kvpDate = dto.KvpDate;
-                mdl.kvpName = dto.KvpName;
-                mdl.kvpClassId = dto.KvpClassId;
-                mdl.kvpStateId = dto.KvpStateId;
-                model.eKvps.Add(mdl);
+                Models.eDelivery mdl = new Models.eDelivery();
+                mdl.deliveryId = dto.DeliveryId;
+                mdl.orderDate = dto.OrderDate;
+                mdl.orderedPc = dto.OrderedPc;
+                mdl.deliveredPc = dto.DeliveredPc;
+                mdl.countryId = dto.CountryId;
+                model.eDeliveries.Add(mdl);
             }
             model.SaveChanges();
             return true;
         }
 
-        internal bool deleteData(List<KvpDataDto> kvpdto)
+        internal bool deleteData(List<DeliveryDataDto> kvpdto)
         {
             Models.kpidbEntities1 model = new Models.kpidbEntities1();
 
             foreach (var dto in kvpdto)
             {
-                Models.eKvp mdl = new Models.eKvp();
-                mdl.kvpId = dto.KvpId;
-                model.eKvps.Remove(mdl);
+                Models.eDelivery mdl = new Models.eDelivery();
+                mdl.deliveryId = dto.DeliveryId;
+                model.eDeliveries.Remove(mdl);
             }
+            model.SaveChanges();
             return true;
         }
 
-        public enum dataset { Datalabels = 0, dataset1 }
-        public enum charttype {KvpMonthChart=0}
+        public enum dataset { Datalabels = 0, dataset1, dataset2 }
+        public enum charttype { KvpMonthChart = 0 }
         public string getDataset(charttype charttype, dataset datset, string groupMode)
         {
             StringBuilder sb = new StringBuilder("[");
@@ -112,23 +112,27 @@ namespace kpiMvcApi.DataTransferObjects
             switch (charttype)
             {
                 case charttype.KvpMonthChart:
-                   var rs = this.KvpDataRs.GroupBy(p => p.KvpDate.ToString(groupMode))
-                        .Select(q =>
-                           new
-                           {
-                               KvpId = q.Key,
-                               KvpQuantity = q.Count(r => r.KvpId >= 0)
-                           })
-                       .OrderBy(x => x.KvpId);
+                    var rs = this.DeliveryDataRs.GroupBy(p => p.OrderDate.ToString(groupMode))
+                         .Select(q =>
+                            new
+                            {
+                                OrderDate = q.Key,
+                                DeliveredPc = q.Sum(r => r.DeliveredPc),
+                                NotdeliveredPc = q.Sum(r => r.NotdeliveredPc),
+                            })
+                        .OrderBy(x => x.OrderDate);
                     foreach (var r in rs)
                     {
                         switch (datset)
                         {
                             case dataset.Datalabels:
-                                sb.Append("'" + r.KvpId + "',");
+                                sb.Append("'" + r.OrderDate + "',");
                                 break;
                             case dataset.dataset1:
-                                sb.Append("'" + r.KvpQuantity + "',");
+                                sb.Append("'" + r.DeliveredPc + "',");
+                                break;
+                            case dataset.dataset2:
+                                sb.Append("'" + r.NotdeliveredPc + "',");
                                 break;
                             default:
                                 break;
@@ -142,9 +146,9 @@ namespace kpiMvcApi.DataTransferObjects
             sb.Append("]");
             return sb.ToString();
         }
-        public List<KvpDataDto> getKvpList()
+        public List<DeliveryDataDto> getKvpList()
         {
-            return this.KvpDataRs;
+            return this.DeliveryDataRs;
         }
         public string getDatasetLabel()
         {

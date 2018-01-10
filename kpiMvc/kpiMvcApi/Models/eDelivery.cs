@@ -18,9 +18,7 @@ namespace kpiMvcApi.Models
         public System.DateTime orderDate { get; set; }
         public int orderedPc { get; set; }
         public int deliveredPc { get; set; }
-        public Nullable<int> notdeliveredPc { get; set; }
         public int countryId { get; set; }
-        public Nullable<int> notdeliveredRel { get; set; }
     
         public virtual eCountry eCountry { get; set; }
     }

@@ -1,0 +1,65 @@
+\hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs}{}\section{kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Delivery\+Data\+Dto\+Rs Class Reference}
+\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs}\index{kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Delivery\+Data\+Dto\+Rs@{kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Delivery\+Data\+Dto\+Rs}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs_aae6559e3841d130771a24d8345f9a97c}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs_aae6559e3841d130771a24d8345f9a97c}} 
+enum {\bfseries dataset} \{ {\bfseries Datalabels} = 0, 
+{\bfseries dataset1}, 
+{\bfseries dataset2}
+ \}
+\item 
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs_a09a01f7e378bb8d705847ee3b4fd06f0}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs_a09a01f7e378bb8d705847ee3b4fd06f0}} 
+enum {\bfseries charttype} \{ {\bfseries Kvp\+Month\+Chart} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs_ab4a2e25c208fc08d574771e5054f6f96}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs_ab4a2e25c208fc08d574771e5054f6f96}} 
+{\bfseries Delivery\+Data\+Dto\+Rs} (Date\+Time startdate, Date\+Time stopdate)
+\item 
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs_a49d6be9988a6157c75746ca357a44813}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs_a49d6be9988a6157c75746ca357a44813}} 
+void {\bfseries load\+Data} ()
+\item 
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs_aab956a92693af48a6da78eab193b9ca7}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs_aab956a92693af48a6da78eab193b9ca7}} 
+void {\bfseries load\+Data} (Date\+Time startdate, Date\+Time stopdate)
+\item 
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs_a7c771808f4607524b53ee7a65fec5119}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs_a7c771808f4607524b53ee7a65fec5119}} 
+List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto}{Delivery\+Data\+Dto} $>$ {\bfseries get\+Data} ()
+\item 
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs_a1ba5fe32ae589d5aa5da5e301bfa5356}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs_a1ba5fe32ae589d5aa5da5e301bfa5356}} 
+List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto}{Delivery\+Data\+Dto} $>$ {\bfseries get\+Data} (Date\+Time startdate, Date\+Time stopdate)
+\item 
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs_ab7a5599b20fc48614aa3245dc5ee8302}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs_ab7a5599b20fc48614aa3245dc5ee8302}} 
+bool {\bfseries set\+Data} (List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto}{Delivery\+Data\+Dto} $>$ deldto)
+\item 
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs_aeb50241c1126f86bd7c3a34b829bfa99}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs_aeb50241c1126f86bd7c3a34b829bfa99}} 
+string {\bfseries get\+Dataset} (charttype charttype, dataset datset, string group\+Mode)
+\item 
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs_ab074181fa2c9dc804bb1e435e8f563f0}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs_ab074181fa2c9dc804bb1e435e8f563f0}} 
+List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto}{Delivery\+Data\+Dto} $>$ {\bfseries get\+Kvp\+List} ()
+\item 
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs_a8409245fef6ebe61c3ca608363b8ca59}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs_a8409245fef6ebe61c3ca608363b8ca59}} 
+string {\bfseries get\+Dataset\+Label} ()
+\item 
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs_a963e855134d343e9686771929910db26}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs_a963e855134d343e9686771929910db26}} 
+string {\bfseries get\+Datset\+Backround\+Color} ()
+\item 
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs_a5604f97bdcb8087efa4ac924e928e00a}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs_a5604f97bdcb8087efa4ac924e928e00a}} 
+string {\bfseries get\+Chart\+Title} ()
+\item 
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs_a91f1349a7d1f86bbb2a75faa9c99595f}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs_a91f1349a7d1f86bbb2a75faa9c99595f}} 
+int {\bfseries get\+Chart\+Border\+Width} ()
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs_ad533bafa32f72f2a3b008d5004bd1d1f}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs_ad533bafa32f72f2a3b008d5004bd1d1f}} 
+List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto}{Delivery\+Data\+Dto} $>$ {\bfseries Delivery\+Data\+Rs}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Ulysses/\+Documents/01\+\_\+\+Study\+Fhnw/815\+\_\+veri/kpi\+Web\+Mvc/kpi\+Mvc/kpi\+Mvc\+Api/\+Data\+Transfer\+Objects/Delivery\+Data\+Dto\+Rs.\+cs\end{DoxyCompactItemize}

@@ -20,8 +20,6 @@
           <Property Name="orderDate" Type="date" Nullable="false" />
           <Property Name="orderedPc" Type="int" Nullable="false" />
           <Property Name="deliveredPc" Type="int" Nullable="false" />
-          <Property Name="notdeliveredPc" Type="int" StoreGeneratedPattern="Computed" />
-          <Property Name="notdeliveredRel" Type="int" StoreGeneratedPattern="Computed" />
           <Property Name="countryId" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="eKvp">
@@ -73,6 +71,18 @@
           <Property Name="pcbGenerationId" Type="int" Nullable="false" />
           <Property Name="genName" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <Association Name="fkDeliveryRefCountry">
+          <End Role="eCountry" Type="Self.eCountry" Multiplicity="1" />
+          <End Role="eDelivery" Type="Self.eDelivery" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="eCountry">
+              <PropertyRef Name="countryId" />
+            </Principal>
+            <Dependent Role="eDelivery">
+              <PropertyRef Name="deliveryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fkKvpRefKvpClass">
           <End Role="eKvpClass" Type="Self.eKvpClass" Multiplicity="1" />
           <End Role="eKvp" Type="Self.eKvp" Multiplicity="*" />
@@ -130,6 +140,10 @@
           <EntitySet Name="ePcbClass" EntityType="Self.ePcbClass" Schema="kpi" store:Type="Tables" />
           <EntitySet Name="ePcbDaily" EntityType="Self.ePcbDaily" Schema="kpi" store:Type="Tables" />
           <EntitySet Name="ePcbGeneration" EntityType="Self.ePcbGeneration" Schema="kpi" store:Type="Tables" />
+          <AssociationSet Name="fkDeliveryRefCountry" Association="Self.fkDeliveryRefCountry">
+            <End Role="eCountry" EntitySet="eCountry" />
+            <End Role="eDelivery" EntitySet="eDelivery" />
+          </AssociationSet>
           <AssociationSet Name="fkKvpRefKvpClass" Association="Self.fkKvpRefKvpClass">
             <End Role="eKvpClass" EntitySet="eKvpClass" />
             <End Role="eKvp" EntitySet="eKvp" />
@@ -302,10 +316,8 @@
           <Property Name="orderDate" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="orderedPc" Type="Int32" Nullable="false" />
           <Property Name="deliveredPc" Type="Int32" Nullable="false" />
-          <Property Name="notdeliveredPc" Type="Int32" />
           <Property Name="countryId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="eCountry" Relationship="kpidbModel.fkDeliveryRefCountry" FromRole="eDelivery" ToRole="eCountry" />
-          <Property Name="notdeliveredRel" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
         </EntityType>
         <Association Name="fkDeliveryRefCountry">
           <End Type="kpidbModel.eCountry" Role="eCountry" Multiplicity="1" />
@@ -391,9 +403,7 @@
           <EntitySetMapping Name="eDeliveries">
             <EntityTypeMapping TypeName="kpidbModel.eDelivery">
               <MappingFragment StoreEntitySet="eDelivery">
-                <ScalarProperty Name="notdeliveredRel" ColumnName="notdeliveredRel" />
                 <ScalarProperty Name="countryId" ColumnName="countryId" />
-                <ScalarProperty Name="notdeliveredPc" ColumnName="notdeliveredPc" />
                 <ScalarProperty Name="deliveredPc" ColumnName="deliveredPc" />
                 <ScalarProperty Name="orderedPc" ColumnName="orderedPc" />
                 <ScalarProperty Name="orderDate" ColumnName="orderDate" />

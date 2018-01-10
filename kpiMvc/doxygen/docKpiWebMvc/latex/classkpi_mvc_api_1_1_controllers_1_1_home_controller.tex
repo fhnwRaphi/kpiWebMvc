@@ -1,5 +1,10 @@
 \hypertarget{classkpi_mvc_api_1_1_controllers_1_1_home_controller}{}\section{kpi\+Mvc\+Api.\+Controllers.\+Home\+Controller Class Reference}
 \label{classkpi_mvc_api_1_1_controllers_1_1_home_controller}\index{kpi\+Mvc\+Api.\+Controllers.\+Home\+Controller@{kpi\+Mvc\+Api.\+Controllers.\+Home\+Controller}}
+
+
+Webseite Controller Setllt die Views und die Partaialviews bereit  
+
+
 Inheritance diagram for kpi\+Mvc\+Api.\+Controllers.\+Home\+Controller\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,8 +14,25 @@ Inheritance diagram for kpi\+Mvc\+Api.\+Controllers.\+Home\+Controller\+:\begin{
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+Action\+Result \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a10e3c3151fdc896f23d1ed374bdcd6cf}{Index} ()
+\begin{DoxyCompactList}\small\item\em Test Webseite um Funktionen zu testen \end{DoxyCompactList}\item 
+Action\+Result \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a8fe51f06ec9db44e1766f89691af44f6}{Frame} ()
+\begin{DoxyCompactList}\small\item\em The Dashboard Frame Returns the Frame\+View withe Menue and Sidebar \end{DoxyCompactList}\item 
+Action\+Result \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a71cc0c383f8e44677455f0caf590e0a7}{Home} ()
+\begin{DoxyCompactList}\small\item\em The Home View Returns the Home View with Av \end{DoxyCompactList}\item 
+Action\+Result \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a52ba84d65a16f3ec9f7c18ef46313b23}{User\+Login} ()
+\begin{DoxyCompactList}\small\item\em The User Login View Returns the View to login a User \end{DoxyCompactList}\item 
+Action\+Result \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_home_controller_ae5c2fcc4413eda2cab2775cd9819efca}{Production\+Data} (string start\+Date, string stop\+Date)
+\begin{DoxyCompactList}\small\item\em The Production Data View Tries to parse the Date Strings to Date\+Time Class The Data is filtered by these Parameters For nonvalid Dates the Standarddate will be loaded \end{DoxyCompactList}\item 
+Action\+Result \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_home_controller_aab951608121b90d9424bb58c68bd0b23}{Kvp} (string start\+Date, string stop\+Date)
+\begin{DoxyCompactList}\small\item\em The K\+VP View Tries to parse the Date Strings to Date\+Time Class The Data is filtered by these Parameters For nonvalid Dates the Standarddate will be loaded \end{DoxyCompactList}\item 
+Action\+Result \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a0fe5ac7be69616c8f56e8938e042cc27}{Delivery} (string start\+Date, string stop\+Date)
+\begin{DoxyCompactList}\small\item\em The Delivery View Tries to parse the Date Strings to Date\+Time Class The Data is filtered by these Parameters For nonvalid Dates the Standarddate will be loaded \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a10e3c3151fdc896f23d1ed374bdcd6cf}\label{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a10e3c3151fdc896f23d1ed374bdcd6cf}} 
 Action\+Result {\bfseries Index} ()
+\item 
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a632bd6044f851bdf520c08b6fbf9604e}\label{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a632bd6044f851bdf520c08b6fbf9604e}} 
+Action\+Result {\bfseries Export\+To\+Excel} ()
 \item 
 \mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a8fe51f06ec9db44e1766f89691af44f6}\label{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a8fe51f06ec9db44e1766f89691af44f6}} 
 Action\+Result {\bfseries Frame} ()
@@ -24,14 +46,134 @@ Action\+Result {\bfseries User\+Login} ()
 \mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_home_controller_ae5c2fcc4413eda2cab2775cd9819efca}\label{classkpi_mvc_api_1_1_controllers_1_1_home_controller_ae5c2fcc4413eda2cab2775cd9819efca}} 
 Action\+Result {\bfseries Production\+Data} (string start\+Date, string stop\+Date)
 \item 
-\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_home_controller_aab951608121b90d9424bb58c68bd0b23}\label{classkpi_mvc_api_1_1_controllers_1_1_home_controller_aab951608121b90d9424bb58c68bd0b23}} 
-Action\+Result {\bfseries Kvp} (string start\+Date, string stop\+Date)
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a2b29fc025ba4bc7cb5be2cf16a4ab4b8}\label{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a2b29fc025ba4bc7cb5be2cf16a4ab4b8}} 
+Action\+Result {\bfseries Quality\+Data} ()
 \item 
-\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_home_controller_ac2b20012bdd1fec14e7db3aec9e05bf0}\label{classkpi_mvc_api_1_1_controllers_1_1_home_controller_ac2b20012bdd1fec14e7db3aec9e05bf0}} 
-Action\+Result {\bfseries Delivery} ()
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_home_controller_aa62132d07d9a778856a532fa6a2112b0}\label{classkpi_mvc_api_1_1_controllers_1_1_home_controller_aa62132d07d9a778856a532fa6a2112b0}} 
+Action\+Result {\bfseries Oee} ()
 \end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Webseite Controller Setllt die Views und die Partaialviews bereit 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a0fe5ac7be69616c8f56e8938e042cc27}\label{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a0fe5ac7be69616c8f56e8938e042cc27}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller}!Delivery@{Delivery}}
+\index{Delivery@{Delivery}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller}}
+\subsubsection{\texorpdfstring{Delivery()}{Delivery()}}
+{\footnotesize\ttfamily Action\+Result kpi\+Mvc\+Api.\+Controllers.\+Home\+Controller.\+Delivery (\begin{DoxyParamCaption}\item[{string}]{start\+Date,  }\item[{string}]{stop\+Date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The Delivery View Tries to parse the Date Strings to Date\+Time Class The Data is filtered by these Parameters For nonvalid Dates the Standarddate will be loaded 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Date} & \\
+\hline
+{\em stop\+Date} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily Partial\+View(\char`\"{}\+\_\+\+Delivery\char`\"{}, model);} The View Containing all selected Delivery Data, shown as a diagram and a Table. Also provide an Excell export function 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a8fe51f06ec9db44e1766f89691af44f6}\label{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a8fe51f06ec9db44e1766f89691af44f6}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller}!Frame@{Frame}}
+\index{Frame@{Frame}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller}}
+\subsubsection{\texorpdfstring{Frame()}{Frame()}}
+{\footnotesize\ttfamily Action\+Result kpi\+Mvc\+Api.\+Controllers.\+Home\+Controller.\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The Dashboard Frame Returns the Frame\+View withe Menue and Sidebar 
+
+\begin{DoxyReturn}{Returns}
+Action\+Result Frame\+View
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a71cc0c383f8e44677455f0caf590e0a7}\label{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a71cc0c383f8e44677455f0caf590e0a7}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller}!Home@{Home}}
+\index{Home@{Home}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller}}
+\subsubsection{\texorpdfstring{Home()}{Home()}}
+{\footnotesize\ttfamily Action\+Result kpi\+Mvc\+Api.\+Controllers.\+Home\+Controller.\+Home (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The Home View Returns the Home View with Av 
+
+\begin{DoxyReturn}{Returns}
+Action\+Result Home\+View/returns$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a10e3c3151fdc896f23d1ed374bdcd6cf}\label{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a10e3c3151fdc896f23d1ed374bdcd6cf}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller}!Index@{Index}}
+\index{Index@{Index}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller}}
+\subsubsection{\texorpdfstring{Index()}{Index()}}
+{\footnotesize\ttfamily Action\+Result kpi\+Mvc\+Api.\+Controllers.\+Home\+Controller.\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Test Webseite um Funktionen zu testen 
+
+\begin{DoxyReturn}{Returns}
+Action\+Result Index\+View
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_home_controller_aab951608121b90d9424bb58c68bd0b23}\label{classkpi_mvc_api_1_1_controllers_1_1_home_controller_aab951608121b90d9424bb58c68bd0b23}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller}!Kvp@{Kvp}}
+\index{Kvp@{Kvp}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller}}
+\subsubsection{\texorpdfstring{Kvp()}{Kvp()}}
+{\footnotesize\ttfamily Action\+Result kpi\+Mvc\+Api.\+Controllers.\+Home\+Controller.\+Kvp (\begin{DoxyParamCaption}\item[{string}]{start\+Date,  }\item[{string}]{stop\+Date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The K\+VP View Tries to parse the Date Strings to Date\+Time Class The Data is filtered by these Parameters For nonvalid Dates the Standarddate will be loaded 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Date} & \\
+\hline
+{\em stop\+Date} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily Partial\+View(\char`\"{}\+\_\+\+Kvp\char`\"{}, model);} The View Containing all selected K\+VP Data, shown as a diagram and a List. Also provide an Excell export function 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_home_controller_ae5c2fcc4413eda2cab2775cd9819efca}\label{classkpi_mvc_api_1_1_controllers_1_1_home_controller_ae5c2fcc4413eda2cab2775cd9819efca}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller}!Production\+Data@{Production\+Data}}
+\index{Production\+Data@{Production\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller}}
+\subsubsection{\texorpdfstring{Production\+Data()}{ProductionData()}}
+{\footnotesize\ttfamily Action\+Result kpi\+Mvc\+Api.\+Controllers.\+Home\+Controller.\+Production\+Data (\begin{DoxyParamCaption}\item[{string}]{start\+Date,  }\item[{string}]{stop\+Date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The Production Data View Tries to parse the Date Strings to Date\+Time Class The Data is filtered by these Parameters For nonvalid Dates the Standarddate will be loaded 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Date} & The Date the Dataset starts\\
+\hline
+{\em stop\+Date} & The Date the Dataset stops \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily Action\+Result Partial\+View(\char`\"{}\+\_\+\+Production\+Data\char`\"{}, model);} The View containing all selected Production Date, shown as a diagram and a table. Also provide an Excell export function 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a52ba84d65a16f3ec9f7c18ef46313b23}\label{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a52ba84d65a16f3ec9f7c18ef46313b23}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller}!User\+Login@{User\+Login}}
+\index{User\+Login@{User\+Login}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller}}
+\subsubsection{\texorpdfstring{User\+Login()}{UserLogin()}}
+{\footnotesize\ttfamily Action\+Result kpi\+Mvc\+Api.\+Controllers.\+Home\+Controller.\+User\+Login (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The User Login View Returns the View to login a User 
+
+\begin{DoxyReturn}{Returns}
+Action\+Result User\+Login\+View
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/i00202128/\+Source/\+Repos/kpi\+Web\+Mvc/kpi\+Mvc/kpi\+Mvc\+Api/\+Controllers/Home\+Controller.\+cs\end{DoxyCompactItemize}
+C\+:/\+Users/\+Ulysses/\+Documents/01\+\_\+\+Study\+Fhnw/815\+\_\+veri/kpi\+Web\+Mvc/kpi\+Mvc/kpi\+Mvc\+Api/\+Controllers/Home\+Controller.\+cs\end{DoxyCompactItemize}

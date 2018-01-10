@@ -16,6 +16,12 @@ namespace kpiMvcApi.Controllers
             ProductionDataDtoRs prodDataRs = new ProductionDataDtoRs();
             return prodDataRs.getData();
         }
+        [HttpGet]
+        public List<ProductionDataDto> getProductionData(int id)
+        {
+            ProductionDataDtoRs prodDataRs = new ProductionDataDtoRs();
+            return prodDataRs.getData(id);
+        }
 
         [HttpPost]
         public HttpResponseMessage setProductionData(List<ProductionDataDto> prodDataList)
@@ -71,6 +77,37 @@ namespace kpiMvcApi.Controllers
             KvpDataDtoRs prodDataRs = new KvpDataDtoRs();
             prodDataRs.deleteData(kvpId);
             var response = Request.CreateResponse<List<KvpDataDto>>(System.Net.HttpStatusCode.Created, kvpId);
+            return response;
+        }
+        [HttpGet]
+        public List<DeliveryDataDto> getDeliveryData()
+        {
+            DeliveryDataDtoRs deliveryDataRs = new DeliveryDataDtoRs();
+            return deliveryDataRs.getData();
+        }
+
+        [HttpPost]
+        public HttpResponseMessage setDeliveryData(List<DeliveryDataDto> deliveryDataList)
+        {
+            DeliveryDataDtoRs deliveryDataRs = new DeliveryDataDtoRs();
+            deliveryDataRs.setData(deliveryDataList);
+            var response = Request.CreateResponse<List<DeliveryDataDto>>(System.Net.HttpStatusCode.Created, deliveryDataList);
+            return response;
+        }
+        [HttpPut]
+        public HttpResponseMessage updateDeliveryData(List<DeliveryDataDto> deliveryDataList)
+        {
+            DeliveryDataDtoRs kvpDataRs = new DeliveryDataDtoRs();
+            kvpDataRs.updateData(deliveryDataList);
+            var response = Request.CreateResponse<List<DeliveryDataDto>>(System.Net.HttpStatusCode.Created, deliveryDataList);
+            return response;
+        }
+        [HttpDelete]
+        public HttpResponseMessage deleteDeliveryData(List<DeliveryDataDto> deliveryDataList)
+        {
+            DeliveryDataDtoRs prodDataRs = new DeliveryDataDtoRs();
+            prodDataRs.deleteData(deliveryDataList);
+            var response = Request.CreateResponse<List<DeliveryDataDto>>(System.Net.HttpStatusCode.Created, deliveryDataList);
             return response;
         }
     }

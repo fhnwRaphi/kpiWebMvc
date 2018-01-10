@@ -49,22 +49,33 @@ namespace kpiMvcApi.Controllers
         /// The Home View
         /// Returns the Home View with Av
         /// </summary>
-        /// <param name="startDate"></param>
-        /// <param name="stopDate"></param>
-        /// <returns></returns>
-        public ActionResult Home(string startDate, string stopDate)
+        /// <returns>ActionResult HomeView/returns>
+        public ActionResult Home()
         {
             return PartialView("_Home");
         }
         /// <summary>
-        /// 
+        /// The User Login View
+        /// Returns the View to login a User
         /// </summary>
-        /// <returns></returns>
+        /// <returns>ActionResult UserLoginView</returns>
         public ActionResult UserLogin()
         {
             return PartialView("_UserLogin");
         }
 
+        /// <summary>
+        /// The Production Data View
+        /// Tries to parse the Date Strings to DateTime Class
+        /// The Data is filtered by these Parameters
+        /// For nonvalid Dates the Standarddate will be loaded
+        /// </summary>
+        /// <param name="startDate">The Date  the Dataset starts</param>
+        /// <param name="stopDate">The Date the Dataset stops </param>
+        /// <returns>
+        /// <c>ActionResult PartialView("_ProductionData", model);</c> 
+        /// The View containing all selected Production Date, shown as a diagram and a table. Also provide an Excell export function
+        /// </returns>
         public ActionResult ProductionData(string startDate, string stopDate)
         {
             ProductionDataDtoRs model;
@@ -80,16 +91,59 @@ namespace kpiMvcApi.Controllers
             }
             return PartialView("_ProductionData", model);
         }
+        /// <summary>
+        /// The KVP View
+        /// Tries to parse the Date Strings to DateTime Class
+        /// The Data is filtered by these Parameters
+        /// For nonvalid Dates the Standarddate will be loaded
+        /// </summary>
+        /// <param name="startDate"></param>
+        /// <param name="stopDate"></param>
+        /// <returns>
+        /// <c>PartialView("_Kvp", model);</c> 
+        /// The View Containing all selected KVP Data, shown as a diagram and a List. Also provide an Excell export function
+        /// </returns>
         public ActionResult Kvp(string startDate, string stopDate)
         {
-            KvpDataDtoRs model = new KvpDataDtoRs();
-            // return "next" partial view
+            KvpDataDtoRs model;
+            try
+            {
+                DateTime startdateParsed = DateTime.Parse(startDate.Substring(4, 11));
+                DateTime stopdateParsed = DateTime.Parse(stopDate.Substring(4, 11));
+                model = new KvpDataDtoRs(startdateParsed, stopdateParsed);
+            }
+            catch
+            {
+                model = new KvpDataDtoRs();
+            }
             return PartialView("_Kvp", model);
         }
-        public ActionResult Delivery()
+        /// <summary>
+        /// The Delivery View
+        /// Tries to parse the Date Strings to DateTime Class
+        /// The Data is filtered by these Parameters
+        /// For nonvalid Dates the Standarddate will be loaded
+        /// </summary>
+        /// <param name="startDate"></param>
+        /// <param name="stopDate"></param>
+        /// <returns>
+        /// <c>PartialView("_Delivery", model);</c> 
+        /// The View Containing all selected Delivery Data, shown as a diagram and a Table. Also provide an Excell export function
+        /// </returns>
+        public ActionResult Delivery(string startDate, string stopDate)
         {
-            // return "next" partial view
-            return PartialView("_Delivery");
+            DeliveryDataDtoRs model;
+            try
+            {
+                DateTime startdateParsed = DateTime.Parse(startDate.Substring(4, 11));
+                DateTime stopdateParsed = DateTime.Parse(stopDate.Substring(4, 11));
+                model = new DeliveryDataDtoRs(startdateParsed, stopdateParsed);
+            }
+            catch
+            {
+                model = new DeliveryDataDtoRs();
+            }
+            return PartialView("_Delivery", model);
         }
     }
 }

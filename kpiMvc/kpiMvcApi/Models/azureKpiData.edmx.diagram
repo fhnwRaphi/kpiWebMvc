@@ -15,8 +15,8 @@
         <EntityTypeShape EntityType="kpidbModel.eKvpState" Width="1.5" PointX="5.25" PointY="3.875" />
         <AssociationConnector Association="kpidbModel.fkKvpRefKvpClass" />
         <AssociationConnector Association="kpidbModel.fkKvpRefKvpState" />
-        <EntityTypeShape EntityType="kpidbModel.eCountry" Width="1.5" PointX="9.125" PointY="3.875" />
-        <EntityTypeShape EntityType="kpidbModel.eDelivery" Width="1.5" PointX="9.125" PointY="0.75" />
+        <EntityTypeShape EntityType="kpidbModel.eCountry" Width="1.5" PointX="10" PointY="4" />
+        <EntityTypeShape EntityType="kpidbModel.eDelivery" Width="1.5" PointX="10" PointY="1" />
         <AssociationConnector Association="kpidbModel.fkDeliveryRefCountry" />
       </Diagram>
     </edmx:Diagrams>
