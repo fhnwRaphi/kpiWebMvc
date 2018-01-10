@@ -23,7 +23,9 @@ namespace kpiMvcApi.Controllers
         /// <summary>
         /// Test Webseite um Funktionen zu testen
         /// </summary>
-        /// <returns> ActionResult IndexView</returns>
+        /// <returns> <c> ActionResult IndexView </c>
+        /// Die Index View
+        /// </returns>
         [HttpGet]
         public ActionResult Index()
         {
@@ -34,10 +36,11 @@ namespace kpiMvcApi.Controllers
         }
 
         /// <summary>
-        /// The Dashboard Frame
-        /// Returns the FrameView withe Menue and Sidebar
+        /// Das Dashboard Fenster
         /// </summary>
-        /// <returns>ActionResult FrameView</returns>
+        /// <returns><c>ActionResult FrameView</c>
+        /// Giebt die FrameView zurück. Diese Beinhaltet die Sidebar und die Menueleiste.
+        /// </returns>
         public ActionResult Frame()
         {
             DataDtoRs testdata = new DataDtoRs();
@@ -46,31 +49,34 @@ namespace kpiMvcApi.Controllers
             return View();
         }
         /// <summary>
-        /// The Home View
-        /// Returns the Home View with Av
+        /// Das Home Fenster
         /// </summary>
-        /// <returns>ActionResult HomeView/returns>
+        /// <returns><c>ActionResult _HomeView</c>
+        /// Giebt die HomeView als Partielle View zurück. Diese Beinhaltet die übersicht über Verfügbare Dashboards
+        /// </returns>
         public ActionResult Home()
         {
             return PartialView("_Home");
         }
         /// <summary>
-        /// The User Login View
+        /// Das User Login Fenster
         /// Returns the View to login a User
         /// </summary>
-        /// <returns>ActionResult UserLoginView</returns>
+        /// <returns><c>ActionResult _UserLoginView</c>
+        /// Giebt die _UserLoginView als Partielle View zurück. Diese Beinhaltet die Funktion um den User einzuloggen
+        /// </returns>
         public ActionResult UserLogin()
         {
             return PartialView("_UserLogin");
         }
 
         /// <summary>
-        /// The Production Data View
-        /// Tries to parse the Date Strings to DateTime Class
-        /// The Data is filtered by these Parameters
-        /// For nonvalid Dates the Standarddate will be loaded
+        /// Das Production Data Fenster
+        /// Versucht einen Date String in eine DateTime Class zu arsen
+        /// Der Datensatz wird über diese Datumswerte gefiltert
+        /// Für nicht gültige Datumswerte wird ein standardatum von 1.1.18 bis zum aktuellen Tag gewählt
         /// </summary>
-        /// <param name="startDate">The Date  the Dataset starts</param>
+        /// <param name="startDate">The Date the Dataset starts</param>
         /// <param name="stopDate">The Date the Dataset stops </param>
         /// <returns>
         /// <c>ActionResult PartialView("_ProductionData", model);</c> 

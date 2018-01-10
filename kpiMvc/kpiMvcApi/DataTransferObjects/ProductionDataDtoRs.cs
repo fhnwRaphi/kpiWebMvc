@@ -73,11 +73,20 @@ namespace kpiMvcApi.DataTransferObjects
             };
             this.ProductionDataRs.Add(pddto);
         }
+        /// <summary>
+        /// Get all Data From ProductionDataDto 
+        /// </summary>
+        /// <returns></returns>
         public List<ProductionDataDto> getData()
         {
             this.loadData();
             return this.ProductionDataRs;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id">Specifies the Selected Datatupel id</param>
+        /// <returns></returns>
         public List<ProductionDataDto> getData(int id)
         {
             this.loadData(id);

@@ -8,21 +8,40 @@ using System.Web.Http;
 
 namespace kpiMvcApi.Controllers
 {
+    /// <summary>
+    /// This Controller contains all API GET POST PUT DELETE methods
+    /// </summary>
     public class KpidataController : ApiController
     {
+
         [HttpGet]
         public List<ProductionDataDto> getProductionData()
         {
             ProductionDataDtoRs prodDataRs = new ProductionDataDtoRs();
             return prodDataRs.getData();
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id">Sets the Dataid</param>
+        /// <returns></returns>
         [HttpGet]
         public List<ProductionDataDto> getProductionData(int id)
         {
             ProductionDataDtoRs prodDataRs = new ProductionDataDtoRs();
-            return prodDataRs.getData(id);
+            return prodDataRs.getData((int)id);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id">Sets the Dataid</param>
+        /// <returns></returns>
+        [HttpGet]
+        public List<ProductionDataDto> getProductionData(string startdate, string stopdate)
+        {
+            ProductionDataDtoRs prodDataRs = new ProductionDataDtoRs();
+            return prodDataRs.getData();
+        }
         [HttpPost]
         public HttpResponseMessage setProductionData(List<ProductionDataDto> prodDataList)
         {

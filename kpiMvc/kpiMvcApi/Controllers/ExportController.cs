@@ -67,5 +67,19 @@ namespace kpiMvcApi.Controllers
 
             return this.exportExcell(gv);
         }
+        /// <summary>
+        /// Nimmt daten aus dem Deliovery Data Data Transfer Object Recordset
+        /// Bindet die Daten in eine Gridview
+        /// Exportiert die Daten in eine Excell.xls
+        /// </summary>
+        /// <returns> View() Excell .xls File </returns>
+        public ActionResult DeliveryToExcel()
+        {
+            DeliveryDataDtoRs delivData = new DeliveryDataDtoRs();
+            var gv = new GridView();
+            gv.DataSource = delivData.getData();
+
+            return this.exportExcell(gv);
+        }
     }
 }
