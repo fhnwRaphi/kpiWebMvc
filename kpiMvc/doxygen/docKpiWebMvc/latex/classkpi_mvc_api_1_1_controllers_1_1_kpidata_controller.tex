@@ -1,5 +1,10 @@
 \hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller}{}\section{kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller Class Reference}
 \label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller}\index{kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller@{kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller}}
+
+
+This Controller contains all A\+PI G\+ET P\+O\+ST P\+UT D\+E\+L\+E\+TE methods  
+
+
 Inheritance diagram for kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,8 +14,11 @@ Inheritance diagram for kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller\+:\beg
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a0ab15672f7d3b5a077a8c4b0612feab8}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a0ab15672f7d3b5a077a8c4b0612feab8}} 
-List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$ {\bfseries get\+Production\+Data} ()
+List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$ \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a0ab15672f7d3b5a077a8c4b0612feab8}{get\+Production\+Data} ()
+\begin{DoxyCompactList}\small\item\em Returns the Production Data from 1.\+1.\+2018 till the actual Date \end{DoxyCompactList}\item 
+List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$ \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a2cc4fffc5f66a92f16f917715cb36d0e}{get\+Production\+Data} (int id)
+\item 
+List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$ \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a27722d65abe0781d4b670c84c2e07a76}{get\+Production\+Data} (string start\+Date, string stop\+Date)
 \item 
 \mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a7f6c6c359f37a9b9a83d481b5c26a037}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a7f6c6c359f37a9b9a83d481b5c26a037}} 
 Http\+Response\+Message {\bfseries set\+Production\+Data} (List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$ prod\+Data\+List)
@@ -51,6 +59,90 @@ List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_dat
 \mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a7f6c6c359f37a9b9a83d481b5c26a037}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a7f6c6c359f37a9b9a83d481b5c26a037}} 
 Http\+Response\+Message {\bfseries set\+Production\+Data} (List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$ prod\+Data\+List)
 \end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This Controller contains all A\+PI G\+ET P\+O\+ST P\+UT D\+E\+L\+E\+TE methods 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a0ab15672f7d3b5a077a8c4b0612feab8}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a0ab15672f7d3b5a077a8c4b0612feab8}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!get\+Production\+Data@{get\+Production\+Data}}
+\index{get\+Production\+Data@{get\+Production\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
+\subsubsection{\texorpdfstring{get\+Production\+Data()}{getProductionData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily List$<$\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto}$>$ kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+get\+Production\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the Production Data from 1.\+1.\+2018 till the actual Date 
+
+\begin{DoxyReturn}{Returns}
+Returns J\+S\+ON data in the format\+: 
+\begin{DoxyCode}
+[
+   \{
+       \textcolor{stringliteral}{"PcbDailyId"}: 7,
+       \textcolor{stringliteral}{"ProductionDay"}: \textcolor{stringliteral}{"2018-01-09T00:00:00"},
+       \textcolor{stringliteral}{"PcbQuantity"}: 512345,
+       \textcolor{stringliteral}{"PcbSumPrice"}: 5123456,
+       \textcolor{stringliteral}{"PcbGenerationId"}: 3,
+       \textcolor{stringliteral}{"PcbClassId"}: 0,
+       \textcolor{stringliteral}{"PcbGenerationName"}: null,
+       \textcolor{stringliteral}{"PcbClassName"}: null
+   \},
+   \{
+       \textcolor{stringliteral}{"PcbDailyId"}: 8,
+       \textcolor{stringliteral}{"ProductionDay"}: \textcolor{stringliteral}{"2018-01-09T00:00:00"},
+       \textcolor{stringliteral}{"PcbQuantity"}: 512345,
+       \textcolor{stringliteral}{"PcbSumPrice"}: 5123456,
+       \textcolor{stringliteral}{"PcbGenerationId"}: 3,
+       \textcolor{stringliteral}{"PcbClassId"}: 0,
+       \textcolor{stringliteral}{"PcbGenerationName"}: null,
+       \textcolor{stringliteral}{"PcbClassName"}: null
+   \}
+]
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a2cc4fffc5f66a92f16f917715cb36d0e}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a2cc4fffc5f66a92f16f917715cb36d0e}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!get\+Production\+Data@{get\+Production\+Data}}
+\index{get\+Production\+Data@{get\+Production\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
+\subsubsection{\texorpdfstring{get\+Production\+Data()}{getProductionData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily List$<$\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto}$>$ kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+get\+Production\+Data (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Sets the Dataid\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a27722d65abe0781d4b670c84c2e07a76}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a27722d65abe0781d4b670c84c2e07a76}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!get\+Production\+Data@{get\+Production\+Data}}
+\index{get\+Production\+Data@{get\+Production\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
+\subsubsection{\texorpdfstring{get\+Production\+Data()}{getProductionData()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily List$<$\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto}$>$ kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+get\+Production\+Data (\begin{DoxyParamCaption}\item[{string}]{start\+Date,  }\item[{string}]{stop\+Date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Date} & \\
+\hline
+{\em stop\+Date} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

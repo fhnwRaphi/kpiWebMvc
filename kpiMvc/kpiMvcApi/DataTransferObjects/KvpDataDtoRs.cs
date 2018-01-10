@@ -15,6 +15,12 @@ namespace kpiMvcApi.DataTransferObjects
             this.KvpDataRs = new List<KvpDataDto>();
             this.loadData();
         }
+
+        public KvpDataDtoRs(int id)
+        {
+            this.KvpDataRs = new List<KvpDataDto>();
+            this.loadData(id);
+        }
         public KvpDataDtoRs(DateTime startdate, DateTime stopdate)
         {
             this.KvpDataRs = new List<KvpDataDto>();
@@ -41,28 +47,40 @@ namespace kpiMvcApi.DataTransferObjects
                     KvpClassId = r.eKvpClass.kvpClassId,
                     KvpClassName = r.eKvpClass.kvpClassName,
                     KvpStateId = r.eKvpState.kvpStateId,
-                    KvpStateName = r.eKvpState.kvpStateName,                
+                    KvpStateName = r.eKvpState.kvpStateName,
                 };
                 this.KvpDataRs.Add(kvpdto);
             }
         }
+        public void loadData(int id)
+        {
+            var model = new Models.kpidbEntities1();
+            Models.eKvp r = model.eKvps.Where(x => x.kvpId == id).FirstOrDefault();
+
+            KvpDataDto kvpdto = new KvpDataDto()
+            {
+                KvpId = r.kvpId,
+                KvpDate = r.kvpDate,
+                KvpName = r.kvpName,
+                KvpClassId = r.eKvpClass.kvpClassId,
+                KvpClassName = r.eKvpClass.kvpClassName,
+                KvpStateId = r.eKvpState.kvpStateId,
+                KvpStateName = r.eKvpState.kvpStateName,
+            };
+            this.KvpDataRs.Add(kvpdto);
+        }
+
         public List<KvpDataDto> getData()
         {
-            this.loadData();
             return this.KvpDataRs;
         }
-        public List<KvpDataDto> getData(DateTime startdate, DateTime stopdate)
-        {
-            this.loadData(startdate, stopdate);
-            return this.KvpDataRs;
-        }
+
         public bool setData(List<KvpDataDto> kvpdto)
         {
             Models.kpidbEntities1 model = new Models.kpidbEntities1();
             foreach (var dto in kvpdto)
             {
                 Models.eKvp mdl = new Models.eKvp();
-                mdl.kvpId = dto.KvpId;
                 mdl.kvpDate = dto.KvpDate;
                 mdl.kvpName = dto.KvpName;
                 mdl.kvpClassId = dto.KvpClassId;
@@ -75,36 +93,53 @@ namespace kpiMvcApi.DataTransferObjects
 
         internal bool updateData(List<KvpDataDto> kvpdto)
         {
-            Models.kpidbEntities1 model = new Models.kpidbEntities1();
+            var ctx = new Models.kpidbEntities1();
+
             foreach (var dto in kvpdto)
             {
-                Models.eKvp mdl = new Models.eKvp();
-                mdl.kvpId = dto.KvpId;
+                Models.eKvp mdl = ctx.eKvps.Where(x => x.kvpId == dto.KvpId).FirstOrDefault();
+                if (mdl == null)
+                {
+                    mdl = new Models.eKvp();
+                }
                 mdl.kvpDate = dto.KvpDate;
                 mdl.kvpName = dto.KvpName;
                 mdl.kvpClassId = dto.KvpClassId;
                 mdl.kvpStateId = dto.KvpStateId;
-                model.eKvps.Add(mdl);
             }
-            model.SaveChanges();
+            ctx.SaveChanges();
             return true;
         }
 
         internal bool deleteData(List<KvpDataDto> kvpdto)
         {
-            Models.kpidbEntities1 model = new Models.kpidbEntities1();
+            var ctx = new Models.kpidbEntities1();
 
             foreach (var dto in kvpdto)
             {
-                Models.eKvp mdl = new Models.eKvp();
-                mdl.kvpId = dto.KvpId;
-                model.eKvps.Remove(mdl);
+                Models.eKvp mdl = ctx.eKvps.Where(x => x.kvpId == dto.KvpId).FirstOrDefault();
+                ctx.Entry(mdl).State = System.Data.Entity.EntityState.Deleted;
             }
+            ctx.SaveChanges();
+            return true;
+        }
+        internal bool deleteData(DateTime startdate, DateTime stopdate)
+        {
+            var ctx = new Models.kpidbEntities1();
+            var rs = ctx.eKvps.Where(x => x.kvpDate >= startdate && x.kvpDate <= stopdate);
+
+            foreach (var r in rs)
+            {
+                Models.eKvp mdl = ctx.eKvps.Where(x => x.kvpId == r.kvpId).FirstOrDefault();
+                ctx.Entry(mdl).State = System.Data.Entity.EntityState.Deleted;
+            }
+            ctx.SaveChanges();
             return true;
         }
 
+
         public enum dataset { Datalabels = 0, dataset1 }
-        public enum charttype {KvpMonthChart=0}
+        public enum charttype { KvpMonthChart = 0 }
         public string getDataset(charttype charttype, dataset datset, string groupMode)
         {
             StringBuilder sb = new StringBuilder("[");
@@ -112,14 +147,14 @@ namespace kpiMvcApi.DataTransferObjects
             switch (charttype)
             {
                 case charttype.KvpMonthChart:
-                   var rs = this.KvpDataRs.GroupBy(p => p.KvpDate.ToString(groupMode))
-                        .Select(q =>
-                           new
-                           {
-                               KvpId = q.Key,
-                               KvpQuantity = q.Count(r => r.KvpId >= 0)
-                           })
-                       .OrderBy(x => x.KvpId);
+                    var rs = this.KvpDataRs.GroupBy(p => p.KvpDate.ToString(groupMode))
+                         .Select(q =>
+                            new
+                            {
+                                KvpId = q.Key,
+                                KvpQuantity = q.Count(r => r.KvpId >= 0)
+                            })
+                        .OrderBy(x => x.KvpId);
                     foreach (var r in rs)
                     {
                         switch (datset)

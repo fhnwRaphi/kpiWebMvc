@@ -1,5 +1,10 @@
 \hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs}{}\section{kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Production\+Data\+Dto\+Rs Class Reference}
 \label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs}\index{kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Production\+Data\+Dto\+Rs@{kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Production\+Data\+Dto\+Rs}}
+
+
+This Recordset stores a List of Production\+Data Data transfer object It prowides all Methods to read, write, update and delete date from databse It provides Methods to provides H\+T\+ML data for the frontend  
+
+
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
@@ -11,7 +16,8 @@ enum {\bfseries dataset} \{ {\bfseries Datalabels} = 0,
  \}
 \item 
 \mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_a45716f0cdee396710530b9562be56f9a}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_a45716f0cdee396710530b9562be56f9a}} 
-enum {\bfseries charttype} \{ {\bfseries Prolinechart} =0, 
+enum {\bfseries charttype} \{ {\bfseries Prolinechart} = 0, 
+{\bfseries Quantitychart}, 
 {\bfseries Prolinechart} =0
  \}
 \item 
@@ -23,12 +29,16 @@ enum {\bfseries dataset} \{ {\bfseries Datalabels} = 0,
  \}
 \item 
 \mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_a45716f0cdee396710530b9562be56f9a}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_a45716f0cdee396710530b9562be56f9a}} 
-enum {\bfseries charttype} \{ {\bfseries Prolinechart} =0, 
+enum {\bfseries charttype} \{ {\bfseries Prolinechart} = 0, 
+{\bfseries Quantitychart}, 
 {\bfseries Prolinechart} =0
  \}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_af322603913a41645237ffe3d7060cf51}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_af322603913a41645237ffe3d7060cf51}} 
+{\bfseries Production\+Data\+Dto\+Rs} (int id)
 \item 
 \mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_a1694f3f486bf07ce79efd887f9086d63}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_a1694f3f486bf07ce79efd887f9086d63}} 
 {\bfseries Production\+Data\+Dto\+Rs} (Date\+Time startdate, Date\+Time stopdate)
@@ -39,23 +49,16 @@ void {\bfseries load\+Data} ()
 \mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_a375b888daefaacc620cffef48ac7ab81}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_a375b888daefaacc620cffef48ac7ab81}} 
 void {\bfseries load\+Data} (Date\+Time startdate, Date\+Time stopdate)
 \item 
-\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_abd52b81c37bd026514f480e3d6dd952b}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_abd52b81c37bd026514f480e3d6dd952b}} 
-List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$ {\bfseries get\+Data} ()
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_a7d16375d7b096dca36d98942a6e0f80f}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_a7d16375d7b096dca36d98942a6e0f80f}} 
+void {\bfseries load\+Data} (int id)
 \item 
-\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_ac36de1b8510fc1464a7ae2ab1c2e8b62}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_ac36de1b8510fc1464a7ae2ab1c2e8b62}} 
-List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$ {\bfseries get\+Data} (Date\+Time startdate, Date\+Time stopdate)
-\item 
+List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_abd52b81c37bd026514f480e3d6dd952b}{get\+Data} ()
+\begin{DoxyCompactList}\small\item\em Get all Data From \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_a403a889d4d7b6dbc5ddd07e85c660892}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_a403a889d4d7b6dbc5ddd07e85c660892}} 
 bool {\bfseries set\+Data} (List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$ ppdto)
 \item 
-\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_a539333c9167f7b1f779c56e4ddccae84}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_a539333c9167f7b1f779c56e4ddccae84}} 
-string {\bfseries get\+Dataset} (charttype charttype, dataset datset)
-\item 
-\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_a0904170d1247550304be65c67f293e89}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_a0904170d1247550304be65c67f293e89}} 
-string {\bfseries get\+Dataset} ()
-\item 
-\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_adcc807c9f645569dd7495594fd378e0e}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_adcc807c9f645569dd7495594fd378e0e}} 
-string {\bfseries get\+Chart\+Labels} ()
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_adc1e1fa71f2425f2eff2ac5a563f4d7c}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_adc1e1fa71f2425f2eff2ac5a563f4d7c}} 
+string {\bfseries get\+Dataset} (charttype charttype, dataset datset, string filter)
 \item 
 \mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_a00fbb03b6dab63ddc0076349fcf419b3}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_a00fbb03b6dab63ddc0076349fcf419b3}} 
 string {\bfseries get\+Dataset\+Label} ()
@@ -123,9 +126,42 @@ string {\bfseries get\+Chart\+Width} ()
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
+List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_a4f6705f015bff504dffa7567f1df1296}{Production\+Data\+Rs}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A List of Production\+Data Data Transfer Object This List is loaded at construction and reprsent the actual Dataset \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This Recordset stores a List of Production\+Data Data transfer object It prowides all Methods to read, write, update and delete date from databse It provides Methods to provides H\+T\+ML data for the frontend 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_abd52b81c37bd026514f480e3d6dd952b}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_abd52b81c37bd026514f480e3d6dd952b}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Production\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Production\+Data\+Dto\+Rs}!get\+Data@{get\+Data}}
+\index{get\+Data@{get\+Data}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Production\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Production\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{get\+Data()}{getData()}}
+{\footnotesize\ttfamily List$<$\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto}$>$ kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Production\+Data\+Dto\+Rs.\+get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get all Data From \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\subsection{Property Documentation}
 \mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_a4f6705f015bff504dffa7567f1df1296}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs_a4f6705f015bff504dffa7567f1df1296}} 
-List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$ {\bfseries Production\+Data\+Rs}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Production\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Production\+Data\+Dto\+Rs}!Production\+Data\+Rs@{Production\+Data\+Rs}}
+\index{Production\+Data\+Rs@{Production\+Data\+Rs}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Production\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Production\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{Production\+Data\+Rs}{ProductionDataRs}}
+{\footnotesize\ttfamily List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$ kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Production\+Data\+Dto\+Rs.\+Production\+Data\+Rs\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+A List of Production\+Data Data Transfer Object This List is loaded at construction and reprsent the actual Dataset 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

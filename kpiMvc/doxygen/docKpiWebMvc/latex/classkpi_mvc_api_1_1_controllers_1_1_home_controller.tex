@@ -17,13 +17,13 @@ Inheritance diagram for kpi\+Mvc\+Api.\+Controllers.\+Home\+Controller\+:\begin{
 Action\+Result \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a10e3c3151fdc896f23d1ed374bdcd6cf}{Index} ()
 \begin{DoxyCompactList}\small\item\em Test Webseite um Funktionen zu testen \end{DoxyCompactList}\item 
 Action\+Result \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a8fe51f06ec9db44e1766f89691af44f6}{Frame} ()
-\begin{DoxyCompactList}\small\item\em The Dashboard Frame Returns the Frame\+View withe Menue and Sidebar \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Das Dashboard Fenster \end{DoxyCompactList}\item 
 Action\+Result \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a71cc0c383f8e44677455f0caf590e0a7}{Home} ()
-\begin{DoxyCompactList}\small\item\em The Home View Returns the Home View with Av \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Das Home Fenster \end{DoxyCompactList}\item 
 Action\+Result \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a52ba84d65a16f3ec9f7c18ef46313b23}{User\+Login} ()
-\begin{DoxyCompactList}\small\item\em The User Login View Returns the View to login a User \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Das User Login Fenster Returns the View to login a User \end{DoxyCompactList}\item 
 Action\+Result \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_home_controller_ae5c2fcc4413eda2cab2775cd9819efca}{Production\+Data} (string start\+Date, string stop\+Date)
-\begin{DoxyCompactList}\small\item\em The Production Data View Tries to parse the Date Strings to Date\+Time Class The Data is filtered by these Parameters For nonvalid Dates the Standarddate will be loaded \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Das Production Data Fenster Versucht einen Date String in eine Date\+Time Class zu arsen Der Datensatz wird über diese Datumswerte gefiltert Für nicht gültige Datumswerte wird ein standardatum von 1.\+1.\+18 bis zum aktuellen Tag gewählt \end{DoxyCompactList}\item 
 Action\+Result \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_home_controller_aab951608121b90d9424bb58c68bd0b23}{Kvp} (string start\+Date, string stop\+Date)
 \begin{DoxyCompactList}\small\item\em The K\+VP View Tries to parse the Date Strings to Date\+Time Class The Data is filtered by these Parameters For nonvalid Dates the Standarddate will be loaded \end{DoxyCompactList}\item 
 Action\+Result \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a0fe5ac7be69616c8f56e8938e042cc27}{Delivery} (string start\+Date, string stop\+Date)
@@ -88,10 +88,10 @@ The Delivery View Tries to parse the Date Strings to Date\+Time Class The Data i
 
 
 
-The Dashboard Frame Returns the Frame\+View withe Menue and Sidebar 
+Das Dashboard Fenster 
 
 \begin{DoxyReturn}{Returns}
-Action\+Result Frame\+View
+{\ttfamily Action\+Result Frame\+View} Giebt die Frame\+View zurück. Diese Beinhaltet die Sidebar und die Menueleiste. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a71cc0c383f8e44677455f0caf590e0a7}\label{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a71cc0c383f8e44677455f0caf590e0a7}} 
 \index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller}!Home@{Home}}
@@ -101,10 +101,10 @@ Action\+Result Frame\+View
 
 
 
-The Home View Returns the Home View with Av 
+Das Home Fenster 
 
 \begin{DoxyReturn}{Returns}
-Action\+Result Home\+View/returns$>$ 
+{\ttfamily Action\+Result \+\_\+\+Home\+View} Giebt die Home\+View als Partielle View zurück. Diese Beinhaltet die übersicht über Verfügbare Dashboards 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a10e3c3151fdc896f23d1ed374bdcd6cf}\label{classkpi_mvc_api_1_1_controllers_1_1_home_controller_a10e3c3151fdc896f23d1ed374bdcd6cf}} 
 \index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller}!Index@{Index}}
@@ -117,7 +117,7 @@ Action\+Result Home\+View/returns$>$
 Test Webseite um Funktionen zu testen 
 
 \begin{DoxyReturn}{Returns}
-Action\+Result Index\+View
+{\ttfamily  Action\+Result Index\+View } Die Index View 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_home_controller_aab951608121b90d9424bb58c68bd0b23}\label{classkpi_mvc_api_1_1_controllers_1_1_home_controller_aab951608121b90d9424bb58c68bd0b23}} 
 \index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Home\+Controller}!Kvp@{Kvp}}
@@ -147,7 +147,7 @@ The K\+VP View Tries to parse the Date Strings to Date\+Time Class The Data is f
 
 
 
-The Production Data View Tries to parse the Date Strings to Date\+Time Class The Data is filtered by these Parameters For nonvalid Dates the Standarddate will be loaded 
+Das Production Data Fenster Versucht einen Date String in eine Date\+Time Class zu arsen Der Datensatz wird über diese Datumswerte gefiltert Für nicht gültige Datumswerte wird ein standardatum von 1.\+1.\+18 bis zum aktuellen Tag gewählt 
 
 
 \begin{DoxyParams}{Parameters}
@@ -167,10 +167,10 @@ The Production Data View Tries to parse the Date Strings to Date\+Time Class The
 
 
 
-The User Login View Returns the View to login a User 
+Das User Login Fenster Returns the View to login a User 
 
 \begin{DoxyReturn}{Returns}
-Action\+Result User\+Login\+View
+{\ttfamily Action\+Result \+\_\+\+User\+Login\+View} Giebt die \+\_\+\+User\+Login\+View als Partielle View zurück. Diese Beinhaltet die Funktion um den User einzuloggen 
 \end{DoxyReturn}
 
 

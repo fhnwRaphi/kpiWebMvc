@@ -15,6 +15,11 @@ namespace kpiMvcApi.DataTransferObjects
             this.DeliveryDataRs = new List<DeliveryDataDto>();
             this.loadData();
         }
+        public DeliveryDataDtoRs(int id)
+        {
+            this.DeliveryDataRs = new List<DeliveryDataDto>();
+            this.loadData(id);
+        }
         public DeliveryDataDtoRs(DateTime startdate, DateTime stopdate)
         {
             this.DeliveryDataRs = new List<DeliveryDataDto>();
@@ -45,16 +50,27 @@ namespace kpiMvcApi.DataTransferObjects
                 this.DeliveryDataRs.Add(deldto);
             }
         }
+        public void loadData(int id)
+        {
+            var model = new Models.kpidbEntities1();
+            Models.eDelivery r = model.eDeliveries.Where(x => x.deliveryId == id).FirstOrDefault();
+
+            DeliveryDataDto deldto = new DeliveryDataDto()
+            {
+                DeliveryId = r.deliveryId,
+                OrderDate = r.orderDate,
+                OrderedPc = r.orderedPc,
+                DeliveredPc = r.deliveredPc,
+                CountryId = r.eCountry.countryId,
+                CountryName = r.eCountry.countryName,
+            };
+            this.DeliveryDataRs.Add(deldto);
+        }
         public List<DeliveryDataDto> getData()
         {
-            this.loadData();
             return this.DeliveryDataRs;
         }
-        public List<DeliveryDataDto> getData(DateTime startdate, DateTime stopdate)
-        {
-            this.loadData(startdate, stopdate);
-            return this.DeliveryDataRs;
-        }
+
         public bool setData(List<DeliveryDataDto> deldto)
         {
             Models.kpidbEntities1 model = new Models.kpidbEntities1();
@@ -72,34 +88,49 @@ namespace kpiMvcApi.DataTransferObjects
             return true;
         }
 
-        internal bool updateData(List<DeliveryDataDto> kvpdto)
+        internal bool updateData(List<DeliveryDataDto> deldto)
         {
-            Models.kpidbEntities1 model = new Models.kpidbEntities1();
-            foreach (var dto in kvpdto)
+            var ctx = new Models.kpidbEntities1();
+
+            foreach (var dto in deldto)
             {
-                Models.eDelivery mdl = new Models.eDelivery();
-                mdl.deliveryId = dto.DeliveryId;
+                Models.eDelivery mdl = ctx.eDeliveries.Where(x => x.deliveryId == dto.DeliveryId).FirstOrDefault();
+                if (mdl == null)
+                {
+                    mdl = new Models.eDelivery();
+                }
                 mdl.orderDate = dto.OrderDate;
                 mdl.orderedPc = dto.OrderedPc;
                 mdl.deliveredPc = dto.DeliveredPc;
                 mdl.countryId = dto.CountryId;
-                model.eDeliveries.Add(mdl);
             }
-            model.SaveChanges();
+            ctx.SaveChanges();
             return true;
         }
 
-        internal bool deleteData(List<DeliveryDataDto> kvpdto)
+        internal bool deleteData(List<DeliveryDataDto> deldto)
         {
-            Models.kpidbEntities1 model = new Models.kpidbEntities1();
+            var ctx = new Models.kpidbEntities1();
 
-            foreach (var dto in kvpdto)
+            foreach (var dto in deldto)
             {
-                Models.eDelivery mdl = new Models.eDelivery();
-                mdl.deliveryId = dto.DeliveryId;
-                model.eDeliveries.Remove(mdl);
+                Models.eDelivery mdl = ctx.eDeliveries.Where(x => x.deliveryId == dto.DeliveryId).FirstOrDefault();
+                ctx.Entry(mdl).State = System.Data.Entity.EntityState.Deleted;
             }
-            model.SaveChanges();
+            ctx.SaveChanges();
+            return true;
+        }
+        internal bool deleteData(DateTime startdate, DateTime stopdate)
+        {
+            var ctx = new Models.kpidbEntities1();
+            var rs = ctx.eDeliveries.Where(x => x.orderDate >= startdate && x.orderDate <= stopdate);
+
+            foreach (var r in rs)
+            {
+                Models.eDelivery mdl = ctx.eDeliveries.Where(x => x.deliveryId == r.deliveryId).FirstOrDefault();
+                ctx.Entry(mdl).State = System.Data.Entity.EntityState.Deleted;
+            }
+            ctx.SaveChanges();
             return true;
         }
 

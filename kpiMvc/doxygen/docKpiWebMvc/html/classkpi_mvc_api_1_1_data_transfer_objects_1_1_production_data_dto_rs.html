@@ -50,6 +50,9 @@ $(function() {
 <div class="title">kpiMvcApi.DataTransferObjects.ProductionDataDtoRs Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This Recordset stores a List of ProductionData Data transfer object It prowides all Methods to read, write, update and delete date from databse It provides Methods to provides HTML data for the frontend  
+ <a href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -59,7 +62,8 @@ Public Types</h2></td></tr>
 <b>dataset1</b>
  }</td></tr>
 <tr class="separator:ab356c7600182705746e7b61967dd63df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45716f0cdee396710530b9562be56f9a"><td class="memItemLeft" align="right" valign="top"><a id="a45716f0cdee396710530b9562be56f9a"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>charttype</b> { <b>Prolinechart</b> =0, 
+<tr class="memitem:a45716f0cdee396710530b9562be56f9a"><td class="memItemLeft" align="right" valign="top"><a id="a45716f0cdee396710530b9562be56f9a"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>charttype</b> { <b>Prolinechart</b> = 0, 
+<b>Quantitychart</b>, 
 <b>Prolinechart</b> =0
  }</td></tr>
 <tr class="separator:a45716f0cdee396710530b9562be56f9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -69,13 +73,17 @@ Public Types</h2></td></tr>
 <b>dataset1</b>
  }</td></tr>
 <tr class="separator:ab356c7600182705746e7b61967dd63df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45716f0cdee396710530b9562be56f9a"><td class="memItemLeft" align="right" valign="top"><a id="a45716f0cdee396710530b9562be56f9a"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>charttype</b> { <b>Prolinechart</b> =0, 
+<tr class="memitem:a45716f0cdee396710530b9562be56f9a"><td class="memItemLeft" align="right" valign="top"><a id="a45716f0cdee396710530b9562be56f9a"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>charttype</b> { <b>Prolinechart</b> = 0, 
+<b>Quantitychart</b>, 
 <b>Prolinechart</b> =0
  }</td></tr>
 <tr class="separator:a45716f0cdee396710530b9562be56f9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:af322603913a41645237ffe3d7060cf51"><td class="memItemLeft" align="right" valign="top"><a id="af322603913a41645237ffe3d7060cf51"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ProductionDataDtoRs</b> (int id)</td></tr>
+<tr class="separator:af322603913a41645237ffe3d7060cf51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1694f3f486bf07ce79efd887f9086d63"><td class="memItemLeft" align="right" valign="top"><a id="a1694f3f486bf07ce79efd887f9086d63"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>ProductionDataDtoRs</b> (DateTime startdate, DateTime stopdate)</td></tr>
 <tr class="separator:a1694f3f486bf07ce79efd887f9086d63"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -85,24 +93,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>loadData</b> ()</td><
 <tr class="memitem:a375b888daefaacc620cffef48ac7ab81"><td class="memItemLeft" align="right" valign="top"><a id="a375b888daefaacc620cffef48ac7ab81"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>loadData</b> (DateTime startdate, DateTime stopdate)</td></tr>
 <tr class="separator:a375b888daefaacc620cffef48ac7ab81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd52b81c37bd026514f480e3d6dd952b"><td class="memItemLeft" align="right" valign="top"><a id="abd52b81c37bd026514f480e3d6dd952b"></a>
-List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getData</b> ()</td></tr>
+<tr class="memitem:a7d16375d7b096dca36d98942a6e0f80f"><td class="memItemLeft" align="right" valign="top"><a id="a7d16375d7b096dca36d98942a6e0f80f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>loadData</b> (int id)</td></tr>
+<tr class="separator:a7d16375d7b096dca36d98942a6e0f80f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd52b81c37bd026514f480e3d6dd952b"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs.html#abd52b81c37bd026514f480e3d6dd952b">getData</a> ()</td></tr>
+<tr class="memdesc:abd52b81c37bd026514f480e3d6dd952b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all Data From <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html" title="Represents the Production data model Transfers the data between the WebFrontend and the Database Back...">ProductionDataDto</a>  <a href="#abd52b81c37bd026514f480e3d6dd952b">More...</a><br /></td></tr>
 <tr class="separator:abd52b81c37bd026514f480e3d6dd952b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac36de1b8510fc1464a7ae2ab1c2e8b62"><td class="memItemLeft" align="right" valign="top"><a id="ac36de1b8510fc1464a7ae2ab1c2e8b62"></a>
-List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getData</b> (DateTime startdate, DateTime stopdate)</td></tr>
-<tr class="separator:ac36de1b8510fc1464a7ae2ab1c2e8b62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a403a889d4d7b6dbc5ddd07e85c660892"><td class="memItemLeft" align="right" valign="top"><a id="a403a889d4d7b6dbc5ddd07e85c660892"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>setData</b> (List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a> &gt; ppdto)</td></tr>
 <tr class="separator:a403a889d4d7b6dbc5ddd07e85c660892"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a539333c9167f7b1f779c56e4ddccae84"><td class="memItemLeft" align="right" valign="top"><a id="a539333c9167f7b1f779c56e4ddccae84"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>getDataset</b> (charttype charttype, dataset datset)</td></tr>
-<tr class="separator:a539333c9167f7b1f779c56e4ddccae84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0904170d1247550304be65c67f293e89"><td class="memItemLeft" align="right" valign="top"><a id="a0904170d1247550304be65c67f293e89"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>getDataset</b> ()</td></tr>
-<tr class="separator:a0904170d1247550304be65c67f293e89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcc807c9f645569dd7495594fd378e0e"><td class="memItemLeft" align="right" valign="top"><a id="adcc807c9f645569dd7495594fd378e0e"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>getChartLabels</b> ()</td></tr>
-<tr class="separator:adcc807c9f645569dd7495594fd378e0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc1e1fa71f2425f2eff2ac5a563f4d7c"><td class="memItemLeft" align="right" valign="top"><a id="adc1e1fa71f2425f2eff2ac5a563f4d7c"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>getDataset</b> (charttype charttype, dataset datset, string filter)</td></tr>
+<tr class="separator:adc1e1fa71f2425f2eff2ac5a563f4d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00fbb03b6dab63ddc0076349fcf419b3"><td class="memItemLeft" align="right" valign="top"><a id="a00fbb03b6dab63ddc0076349fcf419b3"></a>
 string&#160;</td><td class="memItemRight" valign="bottom"><b>getDatasetLabel</b> ()</td></tr>
 <tr class="separator:a00fbb03b6dab63ddc0076349fcf419b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -169,10 +171,66 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>getChartWidth</b> (
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:a4f6705f015bff504dffa7567f1df1296"><td class="memItemLeft" align="right" valign="top"><a id="a4f6705f015bff504dffa7567f1df1296"></a>
-List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ProductionDataRs</b><code> [get, set]</code></td></tr>
+<tr class="memitem:a4f6705f015bff504dffa7567f1df1296"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto_rs.html#a4f6705f015bff504dffa7567f1df1296">ProductionDataRs</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a4f6705f015bff504dffa7567f1df1296"><td class="mdescLeft">&#160;</td><td class="mdescRight">A List of ProductionData Data Transfer Object This List is loaded at construction and reprsent the actual Dataset  <a href="#a4f6705f015bff504dffa7567f1df1296">More...</a><br /></td></tr>
 <tr class="separator:a4f6705f015bff504dffa7567f1df1296"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This Recordset stores a List of ProductionData Data transfer object It prowides all Methods to read, write, update and delete date from databse It provides Methods to provides HTML data for the frontend </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="abd52b81c37bd026514f480e3d6dd952b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd52b81c37bd026514f480e3d6dd952b">&#9670;&nbsp;</a></span>getData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a>&gt; kpiMvcApi.DataTransferObjects.ProductionDataDtoRs.getData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get all Data From <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html" title="Represents the Production data model Transfers the data between the WebFrontend and the Database Back...">ProductionDataDto</a> </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="a4f6705f015bff504dffa7567f1df1296"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f6705f015bff504dffa7567f1df1296">&#9670;&nbsp;</a></span>ProductionDataRs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a> &gt; kpiMvcApi.DataTransferObjects.ProductionDataDtoRs.ProductionDataRs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A List of ProductionData Data Transfer Object This List is loaded at construction and reprsent the actual Dataset </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>C:/Users/Ulysses/Documents/01_StudyFhnw/815_veri/kpiWebMvc/kpiMvc/kpiMvcApi/DataTransferObjects/ProductionDataDtoRs.cs</li>
 </ul>

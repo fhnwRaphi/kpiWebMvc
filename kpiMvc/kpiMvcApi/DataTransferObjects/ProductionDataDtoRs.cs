@@ -14,14 +14,22 @@ namespace kpiMvcApi.DataTransferObjects
     public class ProductionDataDtoRs
     {
         /// <summary>
-        /// 
+        /// A List of ProductionData Data Transfer Object
+        /// This List is loaded at construction
+        /// and reprsent the actual Dataset
         /// </summary>
         public List<ProductionDataDto> ProductionDataRs { get; set; }
+
 
         public ProductionDataDtoRs()
         {
             this.ProductionDataRs = new List<ProductionDataDto>();
             this.loadData();
+        }
+        public ProductionDataDtoRs(int id)
+        {
+            this.ProductionDataRs = new List<ProductionDataDto>();
+            this.loadData(id);
         }
         public ProductionDataDtoRs(DateTime startdate, DateTime stopdate)
         {
@@ -58,7 +66,7 @@ namespace kpiMvcApi.DataTransferObjects
         public void loadData(int id)
         {
             var model = new Models.kpidbEntities1();
-            Models.ePcbDaily rs = model.ePcbDailies.Where(x => x.pcbDailyId == id).FirstOrDefault();
+            Models.ePcbDaily r = model.ePcbDailies.Where(x => x.pcbDailyId == id).FirstOrDefault();
 
             ProductionDataDto pddto = new ProductionDataDto()
             {
@@ -73,30 +81,16 @@ namespace kpiMvcApi.DataTransferObjects
             };
             this.ProductionDataRs.Add(pddto);
         }
+
         /// <summary>
         /// Get all Data From ProductionDataDto 
         /// </summary>
         /// <returns></returns>
         public List<ProductionDataDto> getData()
         {
-            this.loadData();
             return this.ProductionDataRs;
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="id">Specifies the Selected Datatupel id</param>
-        /// <returns></returns>
-        public List<ProductionDataDto> getData(int id)
-        {
-            this.loadData(id);
-            return this.ProductionDataRs;
-        }
-        public List<ProductionDataDto> getData(DateTime startdate, DateTime stopdate)
-        {
-            this.loadData(startdate, stopdate);
-            return this.ProductionDataRs;
-        }
+
         public bool setData(List<ProductionDataDto> ppdto)
         {
             Models.kpidbEntities1 model = new Models.kpidbEntities1();
@@ -114,13 +108,17 @@ namespace kpiMvcApi.DataTransferObjects
             return true;
         }
 
-        internal bool updateData(List<ProductionDataDto> kvpdto)
+        internal bool updateData(List<ProductionDataDto> ppdto)
         {
             var ctx = new Models.kpidbEntities1();
 
-            foreach (var dto in kvpdto)
+            foreach (var dto in ppdto)
             {
                 Models.ePcbDaily mdl = ctx.ePcbDailies.Where(x => x.pcbDailyId == dto.PcbDailyId).FirstOrDefault();
+                if(mdl == null)
+                {
+                    mdl = new Models.ePcbDaily();
+                }
                 mdl.pcbGenerationId = dto.PcbGenerationId;
                 mdl.pcbClassId = dto.PcbClassId;
                 mdl.pcbQuantity = dto.PcbQuantity;
@@ -131,13 +129,26 @@ namespace kpiMvcApi.DataTransferObjects
             return true;
         }
 
-        internal bool deleteData(List<ProductionDataDto> kvpdto)
+        internal bool deleteData(List<ProductionDataDto> ppdto)
         {
             var ctx = new Models.kpidbEntities1();
 
-            foreach (var dto in kvpdto)
+            foreach (var dto in ppdto)
             {
                 Models.ePcbDaily mdl = ctx.ePcbDailies.Where(x => x.pcbDailyId == dto.PcbDailyId).FirstOrDefault();
+                ctx.Entry(mdl).State = System.Data.Entity.EntityState.Deleted;
+            }
+            ctx.SaveChanges();
+            return true;
+        }
+        internal bool deleteData(DateTime startdate, DateTime stopdate)
+        {
+            var ctx = new Models.kpidbEntities1();
+            var rs = ctx.ePcbDailies.Where(x => x.productionDay >= startdate && x.productionDay <= stopdate);
+
+            foreach (var r in rs)
+            {
+                Models.ePcbDaily mdl = ctx.ePcbDailies.Where(x => x.pcbDailyId == r.pcbDailyId).FirstOrDefault();
                 ctx.Entry(mdl).State = System.Data.Entity.EntityState.Deleted;
             }
             ctx.SaveChanges();
