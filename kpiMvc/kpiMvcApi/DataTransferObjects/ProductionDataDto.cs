@@ -10,7 +10,7 @@ namespace kpiMvcApi.DataTransferObjects
     /// Represents the Production data model
     /// Transfers the data between the WebFrontend and the Database Backend
     /// </summary>
-    public class ProductionDataDto
+    public class ProductionDataDto : DataDto
     {
         /// <summary>
         /// Dataset Id

@@ -5,10 +5,11 @@ using System.Web;
 
 namespace kpiMvcApi.DataTransferObjects
 {
+    /// <summary>
+    /// Parent Class for all Data Transfer Objects
+    /// </summary>
     public class DataDto
     {
-        public int DiagramDataId { get; set; }
-        public string DiagramDataLabel { get; set; }
-        public string DiagramData { get; set; }
+        // TODO: implement the datatransfer object common functionality
     }
 }
