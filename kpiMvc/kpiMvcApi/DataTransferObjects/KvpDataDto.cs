@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace kpiMvcApi.DataTransferObjects
 {
-    public class KvpDataDto
+    public class KvpDataDto : DataDto
     {
         public int KvpId { get; set; }
         public string KvpName { get; set; }

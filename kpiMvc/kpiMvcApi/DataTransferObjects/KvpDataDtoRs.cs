@@ -6,16 +6,33 @@ using System.Web;
 
 namespace kpiMvcApi.DataTransferObjects
 {
-    public class KvpDataDtoRs
+    /// <summary>
+    /// This Recordset stores a List of Kvap Data transfer objects
+    /// It prowides all Methods to read, write, update and delete data from databse
+    /// It provides Methods to get HTML data for the frontend
+    /// </summary>
+    public class KvpDataDtoRs: DataDtoRs
     {
+        /// <summary>
+        /// A List of Kvp Data transfer Objects
+        /// This List is loaded at construction
+        /// and reprsent the actual Dataset
+        /// </summary>
         public List<KvpDataDto> KvpDataRs { get; set; }
-
+        
+        /// <summary>
+        /// Constructor loads the default data from 1.1.18 till today
+        /// </summary>
         public KvpDataDtoRs()
         {
             this.KvpDataRs = new List<KvpDataDto>();
             this.loadData();
         }
 
+        /// <summary>
+        /// Constructor loads the specified id
+        /// </summary>
+        /// <param name="id">id of requested dataset</param>
         public KvpDataDtoRs(int id)
         {
             this.KvpDataRs = new List<KvpDataDto>();

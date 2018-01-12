@@ -6,7 +6,7 @@ using System.Web;
 
 namespace kpiMvcApi.DataTransferObjects
 {
-    public class DeliveryDataDtoRs
+    public class DeliveryDataDtoRs: DataDtoRs
     {
         public List<DeliveryDataDto> DeliveryDataRs { get; set; }
 
