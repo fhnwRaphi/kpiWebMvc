@@ -5,13 +5,34 @@
 <script>
     $(document).ready(function () {
 
+        var sitename = "Home";
+
         $(".mySidebarBtn").click(function () {
+            var startDateVal = $('#startDate').calendar("get date");
+            var stopDateVal = $('#stopDate').calendar("get date");
+            var partialContent = $("#partialContent");
+            sitename = $(this).attr("id");
+            $.ajax({
+                type: "GET",
+                url: '/Home/' + sitename,
+                data: { startDate: startDateVal, stopDate: stopDateVal },
+                success: function (data) {
+                    //partialContent.html('');
+                    partialContent.html(data);
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert('error on load.');
+                }
+            });
+        });
+
+        $("#myRefresBtn").click(function () {
             var startDateVal = $('#startDate').calendar("get date");
             var stopDateVal = $('#stopDate').calendar("get date");
             var partialContent = $("#partialContent");
             $.ajax({
                 type: "GET",
-                url: '/Home/' + $(this).attr("id"),
+                url: '/Home/' + sitename,
                 data: { startDate: startDateVal, stopDate: stopDateVal },
                 success: function (data) {
                     //partialContent.html('');
@@ -54,7 +75,19 @@
             </div>
         </div>
     </div>
+    <div class="column">
+        <div class="circular ui button purple" id="myRefresBtn">
+            <i class="refresh icon"></i>
+            Refresh
+        </div>
+    </div>
+    <div class="column">
+        <div type="submit" class="ui compact icon green button" id="btnExcelDownload">
+            <i class="file excel outline icon"> </i>
+        </div>
+    </div>
 </div>
+
 
 <div class="ui left vertical inverted sidebar labeled icon blue menu" id="mySidebar">
     <a class="item mySidebarBtn" id="Home">
@@ -71,11 +104,11 @@
     </a>
     <a class="item mySidebarBtn" id="Kvp">
         <i class="heartbeat icon"></i>
-        Quality Data
+        KVP Data
     </a>
-    <a class="item mySidebarBtn" id="OEE">
+    <a class="item mySidebarBtn" id="Delivery">
         <i class="dashboard icon"></i>
-        OEE
+        Delivery
     </a>
 </div>
 

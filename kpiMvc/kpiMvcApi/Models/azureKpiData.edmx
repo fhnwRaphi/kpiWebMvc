@@ -73,13 +73,13 @@
         </EntityType>
         <Association Name="fkDeliveryRefCountry">
           <End Role="eCountry" Type="Self.eCountry" Multiplicity="1" />
-          <End Role="eDelivery" Type="Self.eDelivery" Multiplicity="0..1" />
+          <End Role="eDelivery" Type="Self.eDelivery" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="eCountry">
               <PropertyRef Name="countryId" />
             </Principal>
             <Dependent Role="eDelivery">
-              <PropertyRef Name="deliveryId" />
+              <PropertyRef Name="countryId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -247,7 +247,7 @@
             <End Role="eCountry" EntitySet="eCountries" />
             <End Role="eDelivery" EntitySet="eDeliveries" />
           </AssociationSet>
-        </EntityContainer>
+          </EntityContainer>
         <EntityType Name="eKvp">
           <Key>
             <PropertyRef Name="kvpId" />
@@ -306,7 +306,7 @@
           </Key>
           <Property Name="countryId" Type="Int32" Nullable="false" />
           <Property Name="countryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="eDelivery" Relationship="kpidbModel.fkDeliveryRefCountry" FromRole="eCountry" ToRole="eDelivery" />
+          <NavigationProperty Name="eDeliveries" Relationship="kpidbModel.fkDeliveryRefCountry" FromRole="eCountry" ToRole="eDelivery" />
         </EntityType>
         <EntityType Name="eDelivery">
           <Key>
@@ -321,17 +321,17 @@
         </EntityType>
         <Association Name="fkDeliveryRefCountry">
           <End Type="kpidbModel.eCountry" Role="eCountry" Multiplicity="1" />
-          <End Type="kpidbModel.eDelivery" Role="eDelivery" Multiplicity="0..1" />
+          <End Type="kpidbModel.eDelivery" Role="eDelivery" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="eCountry">
               <PropertyRef Name="countryId" />
             </Principal>
             <Dependent Role="eDelivery">
-              <PropertyRef Name="deliveryId" />
+              <PropertyRef Name="countryId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -411,7 +411,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-        </EntityContainerMapping>
+          </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>

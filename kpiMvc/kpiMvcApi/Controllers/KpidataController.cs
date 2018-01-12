@@ -193,6 +193,27 @@ namespace kpiMvcApi.Controllers
             KvpDataDtoRs kvpDataRs = new KvpDataDtoRs();
             return kvpDataRs.getData();
         }
+        [HttpGet]
+        public List<KvpDataDto> getKvpData(int id)
+        {
+            KvpDataDtoRs kvpDataRs = new KvpDataDtoRs(id);
+            return kvpDataRs.getData();
+        }
+        [HttpGet]
+        public List<KvpDataDto> getKvpData(string startDate, string stopDate)
+        {
+            try
+            {
+                DateTime startdateParsed = DateTime.Parse(startDate);
+                DateTime stopdateParsed = DateTime.Parse(stopDate);
+                KvpDataDtoRs kvpDataRs = new KvpDataDtoRs(startdateParsed, stopdateParsed);
+                return kvpDataRs.getData();
+            }
+            catch
+            {
+                return this.getKvpData();
+            }
+        }
 
         [HttpPost]
         public HttpResponseMessage setKvpData(List<KvpDataDto> kvpDataList)
@@ -248,6 +269,27 @@ namespace kpiMvcApi.Controllers
         {
             DeliveryDataDtoRs deliveryDataRs = new DeliveryDataDtoRs();
             return deliveryDataRs.getData();
+        }
+        [HttpGet]
+        public List<DeliveryDataDto> getDeliveryData(int id)
+        {
+            DeliveryDataDtoRs deliveryDataRs = new DeliveryDataDtoRs(id);
+            return deliveryDataRs.getData();
+        }
+        [HttpGet]
+        public List<DeliveryDataDto> getDeliveryData(string startDate, string stopDate)
+        {
+            try
+            {
+                DateTime startdateParsed = DateTime.Parse(startDate);
+                DateTime stopdateParsed = DateTime.Parse(stopDate);
+                DeliveryDataDtoRs delDataRs = new DeliveryDataDtoRs(startdateParsed, stopdateParsed);
+                return delDataRs.getData();
+            }
+            catch
+            {
+                return this.getDeliveryData();
+            }
         }
 
         [HttpPost]

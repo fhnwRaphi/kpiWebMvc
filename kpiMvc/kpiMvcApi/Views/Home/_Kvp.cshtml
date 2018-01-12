@@ -2,48 +2,89 @@
 @using kpiMvcApi.DataTransferObjects;
 
 <script>
-
-    var barChartData = {
-        @using kpiMvcApi.DataTransferObjects
-        labels: @Html.Raw("['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange']"),
-        datasets: [{
-            label: 'ProductWise Sales Count',
-            backgroundColor: [
-                "#f990a7",
-                "#aad2ed",
-                "#9966FF",
-                "#99e5e5",
-                "#f7bd83",
-                    ],
-                borderWidth: 2,
-                data:  @Html.Raw("[12, 19, 3, 5, 2, 3]"),
-                }]
-        };
-    $(document).ready(function () {
-        var ctx1 = document.getElementById("chartcanvas").getContext("2d");
-        window.myBar = new Chart(ctx1,
+    var barChartData =
+        {
+            type: 'bar',
+            data:
             {
-                type: 'bar',
-                data: barChartData,
-                options:
+                labels: @Html.Raw(Model.getDataset(KvpDataDtoRs.charttype.KvpMonthChart, KvpDataDtoRs.dataset.Datalabels, "MMMM")),
+                datasets:
+                [
                     {
-                        title:
-                        {
-                            display: true,
-                            text: "ProductWise Sales Count"
-                        },
-                        responsive: true,
-                        maintainAspectRatio: true
+                        label:@Html.Raw(Model.getDatasetLabel()),
+                        backgroundColor: @Html.Raw(Model.getDatsetBackroundColor()),
+                        borderWidth: 2,
+                        data:@Html.Raw(Model.getDataset(KvpDataDtoRs.charttype.KvpMonthChart, KvpDataDtoRs.dataset.dataset1, "MMMM")),
                     }
-            });
+                ],
+            },
+            options:
+            {
+
+                title:
+                {
+                    display: true,
+                    text: @Html.Raw(Model.getChartTitle()),
+                },
+                responsive: true,
+                maintainAspectRatio: true
+            }
+        };
+    var barChartData2 = 
+        {
+            type: 'radar',
+            data:
+            {
+                labels: @Html.Raw(Model.getDataset(KvpDataDtoRs.charttype.KvpClassChart, KvpDataDtoRs.dataset.Datalabels, "")),
+                datasets:
+                [
+                    {
+                        label:@Html.Raw(Model.getDatasetLabel()),
+                        backgroundColor: @Html.Raw(Model.getDatsetBackroundColor()),
+                        borderWidth: 2,
+                        data:@Html.Raw(Model.getDataset(KvpDataDtoRs.charttype.KvpClassChart, KvpDataDtoRs.dataset.dataset1, "")),
+                    }
+                ],
+            },
+            options:
+            {
+
+                title:
+                {
+                    display: true,
+                    text: @Html.Raw(Model.getChartTitle()),
+                },
+                responsive: true,
+                maintainAspectRatio: true
+            }
+        };
+
+    // Draws the Diagram
+    $(document).ready(function () {
+
+        var ctx1 = document.getElementById("chartcanvas1").getContext("2d");
+        window.myBar = new Chart(ctx1, barChartData);
+
+        var ctx2 = document.getElementById("chartcanvas2").getContext("2d");
+        window.myBar = new Chart(ctx2, barChartData2);
     });
+
 
 </script>
 
 <<div class="ui container">
     <h1>KVP Data</h1>
-    <div style="width: 40%;">
-        <canvas id="chartcanvas"></canvas>
+    <div class="ui two column doubling stackable grid container">
+        <div class="column">
+            <div style="width: 100%;">
+                <canvas id="chartcanvas1"></canvas>
+            </div>
+        </div>
+        <div class="column">
+            <div style="width: 100%;">
+                <canvas id="chartcanvas2"></canvas>
+            </div>
+        </div>
     </div>
 
     <div class="ui inverted segment" style="width: 40%;">

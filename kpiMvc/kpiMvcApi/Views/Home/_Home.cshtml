@@ -1,12 +1,15 @@
 ﻿
 <script>
     $(document).ready(function () {
+        var sitenameHome = "Home";
+
         $(".myHomeNavBtn").click(function () {
+            sitenameHome = $(this).attr("id");
             var partialContent = $("#partialContent");
             $.ajax({
                 type: "GET",
-                url: '/Home/' + $(this).attr("id"),
-                data: { startDate: "01.01.18", stopDate: "01.02.18" },
+                url: '/Home/' + sitenameHome,
+                data: { startDate: "", stopDate: "" },
                 success: function (data) {
                     //partialContent.html('');
                     partialContent.html(data);
@@ -42,15 +45,14 @@
         <div class="column">
             <button class="massive ui blue button myHomeNavBtn" id="Kvp" style="height: 100%; width: 80%;">
                 <i class="heartbeat icon"></i>
-                Quality Data
+                KVP Data
             </button>
         </div>
         <div class="column">
-            <button class="massive ui blue button myHomeNavBtn" id="OEE" style="height: 100%; width: 80%;">
+            <button class="massive ui blue button myHomeNavBtn" id="Delivery" style="height: 100%; width: 80%;">
                 <i class="dashboard icon"></i>
-                OEE
+                Delivery
             </button>
         </div>
     </div>
-    <h3>Cloud State</h3>
 </div>

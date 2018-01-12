@@ -1,4 +1,4 @@
 ﻿ALTER TABLE [kpi].[eDelivery]
 	ADD CONSTRAINT [fkDeliveryRefCountry]
-	FOREIGN KEY ([deliveryId])
+	FOREIGN KEY ([countryId])
 	REFERENCES [kpi].[eCountry] (countryId);

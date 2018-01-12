@@ -1,1 +1,96 @@
-﻿<h1>OEE</h1>
+﻿@model kpiMvcApi.DataTransferObjects.DeliveryDataDtoRs
+@using kpiMvcApi.DataTransferObjects;
+
+<script>
+    var barChartData =
+        {
+            type: 'line',
+            data:
+            {
+                labels: @Html.Raw(Model.getDataset(DeliveryDataDtoRs.charttype.DeliveryDaily, DeliveryDataDtoRs.dataset.Datalabels, "d")),
+                datasets:
+                [
+                    {
+                        label:@Html.Raw(Model.getDatasetLabel(DeliveryDataDtoRs.charttype.DeliveryDaily, DeliveryDataDtoRs.dataset.dataset1)),
+                        backgroundColor: @Html.Raw(Model.getDatsetBackroundColor()),
+                        borderWidth: 2,
+                        data: @Html.Raw(Model.getDataset(DeliveryDataDtoRs.charttype.DeliveryDaily, DeliveryDataDtoRs.dataset.dataset1, "d")),
+                    },
+                    {
+                        label:@Html.Raw(Model.getDatasetLabel(DeliveryDataDtoRs.charttype.DeliveryDaily, DeliveryDataDtoRs.dataset.dataset2)),
+                        backgroundColor: @Html.Raw(Model.getDatsetBackroundColor()),
+                        borderWidth: 2,
+                        data: @Html.Raw(Model.getDataset(DeliveryDataDtoRs.charttype.DeliveryDaily, DeliveryDataDtoRs.dataset.dataset2, "d")),
+                    }
+                ],
+            },
+            options:
+            {
+
+                title:
+                {
+                    display: true,
+                    text: @Html.Raw(Model.getChartTitle(DeliveryDataDtoRs.charttype.DeliveryDaily)),
+                },
+                responsive: true,
+                maintainAspectRatio: true
+            }
+        };
+    var barChartData2 =
+        {
+            type: 'doughnut',
+            data:
+            {
+                labels: @Html.Raw(Model.getDataset(DeliveryDataDtoRs.charttype.DeliveryCountry, DeliveryDataDtoRs.dataset.Datalabels, "")),
+                datasets:
+                [
+                    {
+                        label:@Html.Raw(Model.getDatasetLabel(DeliveryDataDtoRs.charttype.DeliveryCountry, DeliveryDataDtoRs.dataset.dataset1)),
+                        backgroundColor: @Html.Raw(Model.getDatsetBackroundColor()),
+                        borderWidth: 2,
+                        data:@Html.Raw(Model.getDataset(DeliveryDataDtoRs.charttype.DeliveryCountry, DeliveryDataDtoRs.dataset.dataset1, "")),
+                    }
+                ],
+            },
+            options:
+            {
+
+                title:
+                {
+                    display: true,
+                    text: @Html.Raw(Model.getChartTitle(DeliveryDataDtoRs.charttype.DeliveryCountry)),
+                },
+                responsive: true,
+                maintainAspectRatio: true
+            }
+        };
+
+    // Draws the Diagram
+    $(document).ready(function () {
+
+        var ctx1 = document.getElementById("chartcanvas1").getContext("2d");
+        window.myBar = new Chart(ctx1, barChartData);
+
+        var ctx2 = document.getElementById("chartcanvas2").getContext("2d");
+        window.myBar = new Chart(ctx2, barChartData2);
+    });
+
+
+</script>
+
+<<div class="ui container">
+    <h1>Delivery Data</h1>
+    <div class="ui two column doubling stackable grid container">
+        <div class="column">
+            <div style="width: 100%;">
+                <canvas id="chartcanvas1"></canvas>
+            </div>
+        </div>
+        <div class="column">
+            <div style="width: 100%;">
+                <canvas id="chartcanvas2"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+

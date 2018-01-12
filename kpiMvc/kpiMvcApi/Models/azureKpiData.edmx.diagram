@@ -15,10 +15,10 @@
         <EntityTypeShape EntityType="kpidbModel.eKvpState" Width="1.5" PointX="5.25" PointY="3.875" />
         <AssociationConnector Association="kpidbModel.fkKvpRefKvpClass" />
         <AssociationConnector Association="kpidbModel.fkKvpRefKvpState" />
-        <EntityTypeShape EntityType="kpidbModel.eCountry" Width="1.5" PointX="10" PointY="4" />
-        <EntityTypeShape EntityType="kpidbModel.eDelivery" Width="1.5" PointX="10" PointY="1" />
+        <EntityTypeShape EntityType="kpidbModel.eCountry" Width="1.5" PointX="0.75" PointY="7.25" />
+        <EntityTypeShape EntityType="kpidbModel.eDelivery" Width="1.5" PointX="3" PointY="6.875" />
         <AssociationConnector Association="kpidbModel.fkDeliveryRefCountry" />
-      </Diagram>
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

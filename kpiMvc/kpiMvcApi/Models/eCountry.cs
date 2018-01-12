@@ -14,9 +14,16 @@ namespace kpiMvcApi.Models
     
     public partial class eCountry
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public eCountry()
+        {
+            this.eDeliveries = new HashSet<eDelivery>();
+        }
+    
         public int countryId { get; set; }
         public string countryName { get; set; }
     
-        public virtual eDelivery eDelivery { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<eDelivery> eDeliveries { get; set; }
     }
 }

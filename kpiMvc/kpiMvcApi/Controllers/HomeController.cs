@@ -26,14 +26,14 @@ namespace kpiMvcApi.Controllers
         /// <returns> <c> ActionResult IndexView </c>
         /// Die Index View
         /// </returns>
-        [HttpGet]
-        public ActionResult Index()
-        {
-            DataDtoRs testdata = new DataDtoRs();
-            testdata.genRandomisedData(10);
-            ViewBag.diagramData = testdata;
-            return View();
-        }
+        //[HttpGet]
+        //public ActionResult Index()
+        //{
+        //    //DataDtoRs testdata = new DataDtoRs();
+        //    //testdata.genRandomisedData(10);
+        //    //ViewBag.diagramData = testdata;
+        //    //return View();
+        //}
 
         /// <summary>
         /// Das Dashboard Fenster
@@ -43,9 +43,6 @@ namespace kpiMvcApi.Controllers
         /// </returns>
         public ActionResult Frame()
         {
-            DataDtoRs testdata = new DataDtoRs();
-            testdata.genRandomisedData(10);
-            ViewBag.diagramData = testdata;
             return View();
         }
         /// <summary>

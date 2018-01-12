@@ -38,6 +38,7 @@ namespace kpiMvcApi.DataTransferObjects
             this.ProductionDataRs = new List<ProductionDataDto>();
             this.loadData(id);
         }
+
         /// <summary>
         ///  Constructor loads with the specified daterange
         /// </summary>
@@ -48,6 +49,7 @@ namespace kpiMvcApi.DataTransferObjects
             this.ProductionDataRs = new List<ProductionDataDto>();
             this.loadData(startdate, stopdate);
         }
+
         /// <summary>
         /// loads the default data from 1.1.18 till today
         /// stores in object <c>ProductionData</c>
@@ -145,6 +147,7 @@ namespace kpiMvcApi.DataTransferObjects
             model.SaveChanges();
             return true;
         }
+
         /// <summary>
         /// Updates Data in the database. Adds data if the data didn't exist
         /// </summary>
@@ -158,10 +161,11 @@ namespace kpiMvcApi.DataTransferObjects
 
             foreach (var dto in ppdto)
             {
+                bool add = false;
                 Models.ePcbDaily mdl = ctx.ePcbDailies.Where(x => x.pcbDailyId == dto.PcbDailyId).FirstOrDefault();
-
                 if(mdl == null)
                 {
+                    add = true;
                     mdl = new Models.ePcbDaily();
                 }
                 mdl.pcbGenerationId = dto.PcbGenerationId;
@@ -169,10 +173,15 @@ namespace kpiMvcApi.DataTransferObjects
                 mdl.pcbQuantity = dto.PcbQuantity;
                 mdl.pcbSumPrice = dto.PcbSumPrice;
                 mdl.productionDay = dto.ProductionDay;
+                if (add == true)
+                {
+                    ctx.ePcbDailies.Add(mdl);
+                }
             }
             ctx.SaveChanges();
             return true;
         }
+
         /// <summary>
         /// Delete the data by id
         /// </summary>
@@ -192,6 +201,7 @@ namespace kpiMvcApi.DataTransferObjects
             ctx.SaveChanges();
             return true;
         }
+
         /// <summary>
         /// Delete the data by dates
         /// </summary>
@@ -217,16 +227,17 @@ namespace kpiMvcApi.DataTransferObjects
         /// </summary>
         public enum dataset { Datalabels = 0, dataset1 }
         /// <summary>
-        /// Containing zhe available diagramm types
+        /// Containing the available diagramm types
         /// </summary>
         public enum charttype { Prolinechart = 0, Quantitychart }
+
         /// <summary>
         /// Produces Datastrings for the html / chart.js charts
         /// </summary>
         /// <param name="charttype"></param>
         /// <param name="datset"></param>
         /// <param name="filter"></param>
-        /// <returns><c>string HTML.Raw Datastring</c> string for direct implementation in html.raw() view</returns>
+        /// <param name="filter">"y" year, "M" month, "d" day</param>
         public string getDataset(charttype charttype, dataset datset, string filter)
         {
             StringBuilder sb = new StringBuilder("[");
@@ -296,8 +307,9 @@ namespace kpiMvcApi.DataTransferObjects
         /// <returns>string containing the Chartlabel text</returns>
         public string getDatasetLabel()
         {
-            return "'Chart Label'";
+            return "'Quantity Sum Pc'";
         }
+
         /// <summary>
         /// Returns the chart colors
         /// </summary>
@@ -306,6 +318,7 @@ namespace kpiMvcApi.DataTransferObjects
         {
             return "'rgba(0, 12, 132, 0.2)'";
         }
+
         /// <summary>
         /// Returns the chart title
         /// </summary>
@@ -314,6 +327,7 @@ namespace kpiMvcApi.DataTransferObjects
         {
             return "'Production Data'";
         }
+
         /// <summary>
         /// returns the boarer width
         /// </summary>
