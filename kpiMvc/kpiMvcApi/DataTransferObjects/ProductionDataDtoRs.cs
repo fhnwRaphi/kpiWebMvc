@@ -115,6 +115,7 @@ namespace kpiMvcApi.DataTransferObjects
             foreach (var dto in ppdto)
             {
                 Models.ePcbDaily mdl = ctx.ePcbDailies.Where(x => x.pcbDailyId == dto.PcbDailyId).FirstOrDefault();
+
                 if(mdl == null)
                 {
                     mdl = new Models.ePcbDaily();
