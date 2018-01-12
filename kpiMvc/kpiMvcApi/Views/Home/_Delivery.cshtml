@@ -80,6 +80,12 @@
 
 <<div class="ui container">
     <h1>Delivery Data</h1>
+    @using (Html.BeginForm("DeliveryDataToExcel", "Export", FormMethod.Post))
+    {
+        <button type="submit" class="ui compact icon green button" id="btnExcelDownload">
+            <i class="file excel outline icon"> </i>
+        </button>
+    }
     <div class="ui two column doubling stackable grid container">
         <div class="column">
             <div style="width: 100%;">

@@ -72,6 +72,12 @@
 
 <<div class="ui container">
     <h1>Production Data</h1>
+    @using (Html.BeginForm("ProdDataToExcel", "Export", FormMethod.Post))
+    {
+        <button type="submit" class="ui compact icon green button" id="btnExcelDownload">
+            <i class="file excel outline icon"> </i>
+        </button>
+    }
     <div class="ui two column doubling stackable grid container">
         <div class="column">
             <div style="width: 100%;">
@@ -84,48 +90,41 @@
                         Datatable
                     </div>
                     <div class="content">
-                        @using (Html.BeginForm("ProdDataToExcel", "Export", FormMethod.Post))
-                        {
-                            <button type="submit" class="ui compact icon green button" id="btnExcelDownload">
-                                <i class="file excel outline icon"> </i>
-                            </button>
-
-                            <table class="ui sortable celled small table">
-                                <thead>
+                        <table class="ui sortable celled small table">
+                            <thead>
+                                <tr>
+                                    <th class="sorted ascending">Id</th>
+                                    <th class="sorted ascending">Date</th>
+                                    <th class="">Quantity</th>
+                                    <th class="">Price</th>
+                                    <th class="">Pcb Class</th>
+                                    <th class="">Pcb Generation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var mdl in Model.getData())
+                                {
                                     <tr>
-                                        <th class="sorted ascending">Id</th>
-                                        <th class="sorted ascending">Date</th>
-                                        <th class="">Quantity</th>
-                                        <th class="">Price</th>
-                                        <th class="">Pcb Class</th>
-                                        <th class="">Pcb Generation</th>
+                                        <td>@mdl.PcbDailyId</td>
+                                        <td>@mdl.ProductionDay</td>
+                                        <td>@mdl.PcbQuantity</td>
+                                        <td>@mdl.PcbSumPrice CHF</td>
+                                        <td>@mdl.PcbClassName</td>
+                                        <td>@mdl.PcbGenerationName</td>
                                     </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach (var mdl in Model.getData())
-                                    {
-                                        <tr>
-                                            <td>@mdl.PcbDailyId</td>
-                                            <td>@mdl.ProductionDay</td>
-                                            <td>@mdl.PcbQuantity</td>
-                                            <td>@mdl.PcbSumPrice CHF</td>
-                                            <td>@mdl.PcbClassName</td>
-                                            <td>@mdl.PcbGenerationName</td>
-                                        </tr>
-                                    }
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <td colspan="4">
-                                            <br />
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="4">
+                                        <br />
 
-                                            <br />
+                                        <br />
 
-                                        </td>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                        }
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
                     </div>
                 </div>
             </div>

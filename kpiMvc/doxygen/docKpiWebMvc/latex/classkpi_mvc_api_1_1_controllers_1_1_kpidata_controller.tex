@@ -17,20 +17,67 @@ Inheritance diagram for kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller\+:\beg
 List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$ \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a0ab15672f7d3b5a077a8c4b0612feab8}{get\+Production\+Data} ()
 \begin{DoxyCompactList}\small\item\em Returns the Production Data from 1.\+1.\+2018 till the actual Date \end{DoxyCompactList}\item 
 List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$ \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a2cc4fffc5f66a92f16f917715cb36d0e}{get\+Production\+Data} (int id)
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the Production Data from with the specified id \end{DoxyCompactList}\item 
 List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$ \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a27722d65abe0781d4b670c84c2e07a76}{get\+Production\+Data} (string start\+Date, string stop\+Date)
-\item 
-\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a7f6c6c359f37a9b9a83d481b5c26a037}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a7f6c6c359f37a9b9a83d481b5c26a037}} 
-Http\+Response\+Message {\bfseries set\+Production\+Data} (List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$ prod\+Data\+List)
-\item 
-\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a82f308e9ae4809dfdca3ce685af05774}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a82f308e9ae4809dfdca3ce685af05774}} 
-Http\+Response\+Message {\bfseries update\+Production\+Data} (List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$ prod\+Data\+List)
-\item 
-\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_af1c1e99336a8408bbe4b637cfaaddc4b}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_af1c1e99336a8408bbe4b637cfaaddc4b}} 
-Http\+Response\+Message {\bfseries delete\+Production\+Data} (List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$ prod\+Data\+List)
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the Production Data between the specified Dates with the specified id \end{DoxyCompactList}\item 
+Http\+Response\+Message \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a7f6c6c359f37a9b9a83d481b5c26a037}{set\+Production\+Data} (List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$ prod\+Data\+List)
+\begin{DoxyCompactList}\small\item\em Adds data into the database, creates new identifiers The data must hafe the following Format \mbox{[} \{ \char`\"{}\+Production\+Day\char`\"{}\+: \char`\"{}2018-\/01-\/09\+T00\+:00\+:00\char`\"{}, \char`\"{}\+Pcb\+Quantity\char`\"{}\+: 512345, \char`\"{}\+Pcb\+Sum\+Price\char`\"{}\+: 5123456, \char`\"{}\+Pcb\+Generation\+Id\char`\"{}\+: 3, \char`\"{}\+Pcb\+Class\+Id\char`\"{}\+: 0, \char`\"{}\+Pcb\+Generation\+Name\char`\"{}\+: null, \char`\"{}\+Pcb\+Class\+Name\char`\"{}\+: null \}, \{ ... \} \mbox{]} \end{DoxyCompactList}\item 
+Http\+Response\+Message \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a82f308e9ae4809dfdca3ce685af05774}{update\+Production\+Data} (List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$ prod\+Data\+List)
+\begin{DoxyCompactList}\small\item\em Adds data into the database If the Id alredy exists, update the Dataset if not create the dataset The data must hafe the following format \mbox{[} \{ \char`\"{}\+Pcb\+Daily\+Id\char`\"{}\+: 8, \char`\"{}\+Production\+Day\char`\"{}\+: \char`\"{}2018-\/01-\/09\+T00\+:00\+:00\char`\"{}, \char`\"{}\+Pcb\+Quantity\char`\"{}\+: 512345, \char`\"{}\+Pcb\+Sum\+Price\char`\"{}\+: 5123456, \char`\"{}\+Pcb\+Generation\+Id\char`\"{}\+: 3, \char`\"{}\+Pcb\+Class\+Id\char`\"{}\+: 0, \char`\"{}\+Pcb\+Generation\+Name\char`\"{}\+: null, \char`\"{}\+Pcb\+Class\+Name\char`\"{}\+: null \}, \{ ... \} \mbox{]} \end{DoxyCompactList}\item 
+Http\+Response\+Message \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_af1c1e99336a8408bbe4b637cfaaddc4b}{delete\+Production\+Data} (List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$ prod\+Data\+List)
+\begin{DoxyCompactList}\small\item\em Deletes data $^\wedge$with specified id from the database The data must hafe the following format \mbox{[} \{ \char`\"{}\+Pcb\+Daily\+Id\char`\"{}\+: 8, \}, \{ ... \} \mbox{]} \end{DoxyCompactList}\item 
+Http\+Response\+Message \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a10ba0d225612ba751e0948c601db9a9d}{delete\+Production\+Data} (string start\+Date, string stop\+Date)
+\begin{DoxyCompactList}\small\item\em Deletes data in the specified daterange \end{DoxyCompactList}\item 
+List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} $>$ \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_ae5b9cebd2043650b2fd60caa72e49da7}{get\+Kvp\+Data} ()
+\begin{DoxyCompactList}\small\item\em Returns the K\+VP Data from 1.\+1.\+2018 till the actual Date \end{DoxyCompactList}\item 
+List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} $>$ \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a1dc630ba17a33a597ff3ecfb67ec8497}{get\+Kvp\+Data} (int id)
+\begin{DoxyCompactList}\small\item\em Returns the K\+VP Data from with the specified id \end{DoxyCompactList}\item 
+List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} $>$ \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_abcc1190cc0eb07ddb510bb47052cef58}{get\+Kvp\+Data} (string start\+Date, string stop\+Date)
+\begin{DoxyCompactList}\small\item\em Returns the K\+VP Data between the specified Dates with the specified id \end{DoxyCompactList}\item 
+Http\+Response\+Message \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_aaed21921287f9a780cc3ff7e1042dc2a}{set\+Kvp\+Data} (List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} $>$ kvp\+Data\+List)
+\begin{DoxyCompactList}\small\item\em Adds data into the database, creates new identifiers The data must hafe the following Format \mbox{[} \{ \char`\"{}\+Kvp\+Name\char`\"{}\+: \char`\"{}\+Dashboard3\char`\"{}, \char`\"{}\+Kvp\+Date\char`\"{}\+: \char`\"{}2018-\/01-\/05\+T00\+:00\+:00\char`\"{}, \char`\"{}\+Kvp\+Class\+Id\char`\"{}\+: 2, \char`\"{}\+Kvp\+State\+Id\char`\"{}\+: 2, \char`\"{}\+Kvp\+State\+Name\char`\"{}\+: \char`\"{}\+Do\char`\"{}, \char`\"{}\+Kvp\+Class\+Name\char`\"{}\+: \char`\"{}\+Produktivität\char`\"{} \}, \{ ... \} \mbox{]} \end{DoxyCompactList}\item 
+Http\+Response\+Message \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_ac165b3dedfa1744a41af6a1acc07a657}{update\+Kvp\+Data} (List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} $>$ kvp\+Data\+List)
+\begin{DoxyCompactList}\small\item\em Adds data into the database If the Id alredy exists, update the Dataset if not create the dataset The data must hafe the following format \mbox{[} \{ \char`\"{}\+Kvp\+Id\char`\"{}\+: 4, \char`\"{}\+Kvp\+Name\char`\"{}\+: \char`\"{}\+Dashboard3\char`\"{}, \char`\"{}\+Kvp\+Date\char`\"{}\+: \char`\"{}2018-\/01-\/05\+T00\+:00\+:00\char`\"{}, \char`\"{}\+Kvp\+Class\+Id\char`\"{}\+: 2, \char`\"{}\+Kvp\+State\+Id\char`\"{}\+: 2, \char`\"{}\+Kvp\+State\+Name\char`\"{}\+: \char`\"{}\+Do\char`\"{}, \char`\"{}\+Kvp\+Class\+Name\char`\"{}\+: \char`\"{}\+Produktivität\char`\"{} \}, \{ ... \} \mbox{]} \end{DoxyCompactList}\item 
+Http\+Response\+Message \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a42bfeef2bf903c70d9d8452367ed6dd0}{delete\+Kvp\+Data} (List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} $>$ kvp\+Id)
+\begin{DoxyCompactList}\small\item\em Deletes data with specified id from the database The data must hafe the following format \mbox{[} \{ \char`\"{}\+Kvp\+Id\char`\"{}\+: 8, \}, \{ ... \} \mbox{]} \end{DoxyCompactList}\item 
+Http\+Response\+Message \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a39dbc332ddee57f0a7bda5d724a0d694}{delete\+Kvp\+Data} (string start\+Date, string stop\+Date)
+\begin{DoxyCompactList}\small\item\em Deletes data in the specified daterange \end{DoxyCompactList}\item 
+List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto}{Delivery\+Data\+Dto} $>$ \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a731d149b7c58ba7de0a45c2eb3110fe1}{get\+Delivery\+Data} ()
+\begin{DoxyCompactList}\small\item\em Returns the Delivery Data from 1.\+1.\+2018 till the actual Date \end{DoxyCompactList}\item 
+List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto}{Delivery\+Data\+Dto} $>$ \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a63c0c7c25b53904dbae7786dd66285e4}{get\+Delivery\+Data} (int id)
+\begin{DoxyCompactList}\small\item\em Returns the Delivery Data from with the specified id \end{DoxyCompactList}\item 
+List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto}{Delivery\+Data\+Dto} $>$ \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_aa080da542869888b3e45666e7e751b72}{get\+Delivery\+Data} (string start\+Date, string stop\+Date)
+\begin{DoxyCompactList}\small\item\em Returns the Delivery Data between the specified Dates with the specified id \end{DoxyCompactList}\item 
+Http\+Response\+Message \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_ae0c16d6b3d009224eae6ea5a2b20aabd}{set\+Delivery\+Data} (List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto}{Delivery\+Data\+Dto} $>$ delivery\+Data\+List)
+\begin{DoxyCompactList}\small\item\em Adds data into the database, creates new identifiers The data must hafe the following Format \mbox{[} \{ \char`\"{}\+Order\+Date\char`\"{}\+: \char`\"{}2018-\/01-\/01\+T00\+:00\+:00\char`\"{}, \char`\"{}\+Ordered\+Pc\char`\"{}\+: 100, \char`\"{}\+Delivered\+Pc\char`\"{}\+: 100, \char`\"{}\+Notdelivered\+Pc\char`\"{}\+: null, \char`\"{}\+Notdelivered\+Rel\char`\"{}\+: null, \char`\"{}\+Country\+Id\char`\"{}\+: 1, \char`\"{}\+Country\+Name\char`\"{}\+: \char`\"{}\+Switzerland\char`\"{} \}, \{ ... \} \mbox{]} \end{DoxyCompactList}\item 
+Http\+Response\+Message \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a893e7ff73b6dbd31afa5e1aa73e5abae}{update\+Delivery\+Data} (List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto}{Delivery\+Data\+Dto} $>$ delivery\+Data\+List)
+\begin{DoxyCompactList}\small\item\em Adds data into the database If the Id alredy exists, update the Dataset if not create the dataset The data must hafe the following format \mbox{[} \{ \char`\"{}\+Delivery\+Id\char`\"{}\+: 4, \char`\"{}\+Order\+Date\char`\"{}\+: \char`\"{}2018-\/01-\/01\+T00\+:00\+:00\char`\"{}, \char`\"{}\+Ordered\+Pc\char`\"{}\+: 100, \char`\"{}\+Delivered\+Pc\char`\"{}\+: 100, \char`\"{}\+Notdelivered\+Pc\char`\"{}\+: null, \char`\"{}\+Notdelivered\+Rel\char`\"{}\+: null, \char`\"{}\+Country\+Id\char`\"{}\+: 1, \char`\"{}\+Country\+Name\char`\"{}\+: \char`\"{}\+Switzerland\char`\"{} \}, \{ ... \} \mbox{]} \end{DoxyCompactList}\item 
+Http\+Response\+Message \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a2494970082b1b00fd50353e4aa840188}{delete\+Delivery\+Data} (List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto}{Delivery\+Data\+Dto} $>$ delivery\+Data\+List)
+\begin{DoxyCompactList}\small\item\em Deletes data with specified id from the database The data must hafe the following format \mbox{[} \{ \char`\"{}\+Delivery\+Id\char`\"{}\+: 8, \}, \{ ... \} \mbox{]} \end{DoxyCompactList}\item 
+Http\+Response\+Message \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_afa78742271a206304b8daa11cb747bde}{delete\+Delivery\+Data} (string start\+Date, string stop\+Date)
+\begin{DoxyCompactList}\small\item\em Deletes data in the specified daterange \end{DoxyCompactList}\item 
+List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$ \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a0ab15672f7d3b5a077a8c4b0612feab8}{get\+Production\+Data} ()
+\begin{DoxyCompactList}\small\item\em Returns the Production Data from 1.\+1.\+2018 till the actual Date \end{DoxyCompactList}\item 
+List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$ \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a2cc4fffc5f66a92f16f917715cb36d0e}{get\+Production\+Data} (int id)
+\begin{DoxyCompactList}\small\item\em Returns the Production Data from with the specified id \end{DoxyCompactList}\item 
+List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$ \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a27722d65abe0781d4b670c84c2e07a76}{get\+Production\+Data} (string start\+Date, string stop\+Date)
+\begin{DoxyCompactList}\small\item\em Returns the Production Data between the specified Dates with the specified id \end{DoxyCompactList}\item 
+Http\+Response\+Message \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a7f6c6c359f37a9b9a83d481b5c26a037}{set\+Production\+Data} (List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$ prod\+Data\+List)
+\begin{DoxyCompactList}\small\item\em Adds data into the database, creates new identifiers The data must hafe the following Format \mbox{[} \{ \char`\"{}\+Production\+Day\char`\"{}\+: \char`\"{}2018-\/01-\/09\+T00\+:00\+:00\char`\"{}, \char`\"{}\+Pcb\+Quantity\char`\"{}\+: 512345, \char`\"{}\+Pcb\+Sum\+Price\char`\"{}\+: 5123456, \char`\"{}\+Pcb\+Generation\+Id\char`\"{}\+: 3, \char`\"{}\+Pcb\+Class\+Id\char`\"{}\+: 0, \char`\"{}\+Pcb\+Generation\+Name\char`\"{}\+: null, \char`\"{}\+Pcb\+Class\+Name\char`\"{}\+: null \}, \{ ... \} \mbox{]} \end{DoxyCompactList}\item 
+Http\+Response\+Message \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a82f308e9ae4809dfdca3ce685af05774}{update\+Production\+Data} (List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$ prod\+Data\+List)
+\begin{DoxyCompactList}\small\item\em Adds data into the database If the Id alredy exists, update the Dataset if not create the dataset The data must hafe the following format \mbox{[} \{ \char`\"{}\+Pcb\+Daily\+Id\char`\"{}\+: 8, \char`\"{}\+Production\+Day\char`\"{}\+: \char`\"{}2018-\/01-\/09\+T00\+:00\+:00\char`\"{}, \char`\"{}\+Pcb\+Quantity\char`\"{}\+: 512345, \char`\"{}\+Pcb\+Sum\+Price\char`\"{}\+: 5123456, \char`\"{}\+Pcb\+Generation\+Id\char`\"{}\+: 3, \char`\"{}\+Pcb\+Class\+Id\char`\"{}\+: 0, \char`\"{}\+Pcb\+Generation\+Name\char`\"{}\+: null, \char`\"{}\+Pcb\+Class\+Name\char`\"{}\+: null \}, \{ ... \} \mbox{]} \end{DoxyCompactList}\item 
+Http\+Response\+Message \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_af1c1e99336a8408bbe4b637cfaaddc4b}{delete\+Production\+Data} (List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$ prod\+Data\+List)
+\begin{DoxyCompactList}\small\item\em Deletes data $^\wedge$with specified id from the database The data must hafe the following format \mbox{[} \{ \char`\"{}\+Pcb\+Daily\+Id\char`\"{}\+: 8, \}, \{ ... \} \mbox{]} \end{DoxyCompactList}\item 
+Http\+Response\+Message \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a10ba0d225612ba751e0948c601db9a9d}{delete\+Production\+Data} (string start\+Date, string stop\+Date)
+\begin{DoxyCompactList}\small\item\em Deletes data in the specified daterange \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_ae5b9cebd2043650b2fd60caa72e49da7}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_ae5b9cebd2043650b2fd60caa72e49da7}} 
 List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} $>$ {\bfseries get\+Kvp\+Data} ()
+\item 
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a1dc630ba17a33a597ff3ecfb67ec8497}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a1dc630ba17a33a597ff3ecfb67ec8497}} 
+List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} $>$ {\bfseries get\+Kvp\+Data} (int id)
+\item 
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_abcc1190cc0eb07ddb510bb47052cef58}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_abcc1190cc0eb07ddb510bb47052cef58}} 
+List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} $>$ {\bfseries get\+Kvp\+Data} (string start\+Date, string stop\+Date)
 \item 
 \mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_aaed21921287f9a780cc3ff7e1042dc2a}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_aaed21921287f9a780cc3ff7e1042dc2a}} 
 Http\+Response\+Message {\bfseries set\+Kvp\+Data} (List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} $>$ kvp\+Data\+List)
@@ -41,8 +88,16 @@ Http\+Response\+Message {\bfseries update\+Kvp\+Data} (List$<$ \hyperlink{classk
 \mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a42bfeef2bf903c70d9d8452367ed6dd0}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a42bfeef2bf903c70d9d8452367ed6dd0}} 
 Http\+Response\+Message {\bfseries delete\+Kvp\+Data} (List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} $>$ kvp\+Id)
 \item 
+Http\+Response\+Message \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a39dbc332ddee57f0a7bda5d724a0d694}{delete\+Kvp\+Data} (string start\+Date, string stop\+Date)
+\begin{DoxyCompactList}\small\item\em Deletes data in the specified daterange \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a731d149b7c58ba7de0a45c2eb3110fe1}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a731d149b7c58ba7de0a45c2eb3110fe1}} 
 List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto}{Delivery\+Data\+Dto} $>$ {\bfseries get\+Delivery\+Data} ()
+\item 
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a63c0c7c25b53904dbae7786dd66285e4}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a63c0c7c25b53904dbae7786dd66285e4}} 
+List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto}{Delivery\+Data\+Dto} $>$ {\bfseries get\+Delivery\+Data} (int id)
+\item 
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_aa080da542869888b3e45666e7e751b72}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_aa080da542869888b3e45666e7e751b72}} 
+List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto}{Delivery\+Data\+Dto} $>$ {\bfseries get\+Delivery\+Data} (string start\+Date, string stop\+Date)
 \item 
 \mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_ae0c16d6b3d009224eae6ea5a2b20aabd}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_ae0c16d6b3d009224eae6ea5a2b20aabd}} 
 Http\+Response\+Message {\bfseries set\+Delivery\+Data} (List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto}{Delivery\+Data\+Dto} $>$ delivery\+Data\+List)
@@ -53,12 +108,8 @@ Http\+Response\+Message {\bfseries update\+Delivery\+Data} (List$<$ \hyperlink{c
 \mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a2494970082b1b00fd50353e4aa840188}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a2494970082b1b00fd50353e4aa840188}} 
 Http\+Response\+Message {\bfseries delete\+Delivery\+Data} (List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto}{Delivery\+Data\+Dto} $>$ delivery\+Data\+List)
 \item 
-\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a0ab15672f7d3b5a077a8c4b0612feab8}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a0ab15672f7d3b5a077a8c4b0612feab8}} 
-List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$ {\bfseries get\+Production\+Data} ()
-\item 
-\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a7f6c6c359f37a9b9a83d481b5c26a037}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a7f6c6c359f37a9b9a83d481b5c26a037}} 
-Http\+Response\+Message {\bfseries set\+Production\+Data} (List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$ prod\+Data\+List)
-\end{DoxyCompactItemize}
+Http\+Response\+Message \hyperlink{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_afa78742271a206304b8daa11cb747bde}{delete\+Delivery\+Data} (string start\+Date, string stop\+Date)
+\begin{DoxyCompactList}\small\item\em Deletes data in the specified daterange \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -67,10 +118,338 @@ This Controller contains all A\+PI G\+ET P\+O\+ST P\+UT D\+E\+L\+E\+TE methods
 
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_afa78742271a206304b8daa11cb747bde}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_afa78742271a206304b8daa11cb747bde}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!delete\+Delivery\+Data@{delete\+Delivery\+Data}}
+\index{delete\+Delivery\+Data@{delete\+Delivery\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
+\subsubsection{\texorpdfstring{delete\+Delivery\+Data()}{deleteDeliveryData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Http\+Response\+Message kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+delete\+Delivery\+Data (\begin{DoxyParamCaption}\item[{string}]{start\+Date,  }\item[{string}]{stop\+Date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes data in the specified daterange 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Date} & \\
+\hline
+{\em stop\+Date} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily Http\+Response\+Message} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a2494970082b1b00fd50353e4aa840188}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a2494970082b1b00fd50353e4aa840188}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!delete\+Delivery\+Data@{delete\+Delivery\+Data}}
+\index{delete\+Delivery\+Data@{delete\+Delivery\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
+\subsubsection{\texorpdfstring{delete\+Delivery\+Data()}{deleteDeliveryData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Http\+Response\+Message kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+delete\+Delivery\+Data (\begin{DoxyParamCaption}\item[{List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto}{Delivery\+Data\+Dto} $>$}]{delivery\+Data\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes data with specified id from the database The data must hafe the following format \mbox{[} \{ \char`\"{}\+Delivery\+Id\char`\"{}\+: 8, \}, \{ ... \} \mbox{]} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delivery\+Data\+List} & Dataset Id to delete in Json Format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily Http\+Response\+Message} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_afa78742271a206304b8daa11cb747bde}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_afa78742271a206304b8daa11cb747bde}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!delete\+Delivery\+Data@{delete\+Delivery\+Data}}
+\index{delete\+Delivery\+Data@{delete\+Delivery\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
+\subsubsection{\texorpdfstring{delete\+Delivery\+Data()}{deleteDeliveryData()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Http\+Response\+Message kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+delete\+Delivery\+Data (\begin{DoxyParamCaption}\item[{string}]{start\+Date,  }\item[{string}]{stop\+Date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes data in the specified daterange 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Date} & \\
+\hline
+{\em stop\+Date} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily Http\+Response\+Message} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a39dbc332ddee57f0a7bda5d724a0d694}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a39dbc332ddee57f0a7bda5d724a0d694}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!delete\+Kvp\+Data@{delete\+Kvp\+Data}}
+\index{delete\+Kvp\+Data@{delete\+Kvp\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
+\subsubsection{\texorpdfstring{delete\+Kvp\+Data()}{deleteKvpData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Http\+Response\+Message kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+delete\+Kvp\+Data (\begin{DoxyParamCaption}\item[{string}]{start\+Date,  }\item[{string}]{stop\+Date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes data in the specified daterange 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Date} & \\
+\hline
+{\em stop\+Date} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily Http\+Response\+Message} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a42bfeef2bf903c70d9d8452367ed6dd0}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a42bfeef2bf903c70d9d8452367ed6dd0}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!delete\+Kvp\+Data@{delete\+Kvp\+Data}}
+\index{delete\+Kvp\+Data@{delete\+Kvp\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
+\subsubsection{\texorpdfstring{delete\+Kvp\+Data()}{deleteKvpData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Http\+Response\+Message kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+delete\+Kvp\+Data (\begin{DoxyParamCaption}\item[{List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} $>$}]{kvp\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes data with specified id from the database The data must hafe the following format \mbox{[} \{ \char`\"{}\+Kvp\+Id\char`\"{}\+: 8, \}, \{ ... \} \mbox{]} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kvp\+Id} & Dataset Id to delete in Json Format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily Http\+Response\+Message} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a39dbc332ddee57f0a7bda5d724a0d694}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a39dbc332ddee57f0a7bda5d724a0d694}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!delete\+Kvp\+Data@{delete\+Kvp\+Data}}
+\index{delete\+Kvp\+Data@{delete\+Kvp\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
+\subsubsection{\texorpdfstring{delete\+Kvp\+Data()}{deleteKvpData()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Http\+Response\+Message kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+delete\+Kvp\+Data (\begin{DoxyParamCaption}\item[{string}]{start\+Date,  }\item[{string}]{stop\+Date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes data in the specified daterange 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Date} & \\
+\hline
+{\em stop\+Date} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily Http\+Response\+Message} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_af1c1e99336a8408bbe4b637cfaaddc4b}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_af1c1e99336a8408bbe4b637cfaaddc4b}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!delete\+Production\+Data@{delete\+Production\+Data}}
+\index{delete\+Production\+Data@{delete\+Production\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
+\subsubsection{\texorpdfstring{delete\+Production\+Data()}{deleteProductionData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Http\+Response\+Message kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+delete\+Production\+Data (\begin{DoxyParamCaption}\item[{List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$}]{prod\+Data\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes data $^\wedge$with specified id from the database The data must hafe the following format \mbox{[} \{ \char`\"{}\+Pcb\+Daily\+Id\char`\"{}\+: 8, \}, \{ ... \} \mbox{]} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prod\+Data\+List} & Dataset Id to delete in Json Format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily Http\+Response\+Message} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_af1c1e99336a8408bbe4b637cfaaddc4b}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_af1c1e99336a8408bbe4b637cfaaddc4b}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!delete\+Production\+Data@{delete\+Production\+Data}}
+\index{delete\+Production\+Data@{delete\+Production\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
+\subsubsection{\texorpdfstring{delete\+Production\+Data()}{deleteProductionData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Http\+Response\+Message kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+delete\+Production\+Data (\begin{DoxyParamCaption}\item[{List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$}]{prod\+Data\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes data $^\wedge$with specified id from the database The data must hafe the following format \mbox{[} \{ \char`\"{}\+Pcb\+Daily\+Id\char`\"{}\+: 8, \}, \{ ... \} \mbox{]} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prod\+Data\+List} & Dataset Id to delete in Json Format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily Http\+Response\+Message} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a10ba0d225612ba751e0948c601db9a9d}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a10ba0d225612ba751e0948c601db9a9d}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!delete\+Production\+Data@{delete\+Production\+Data}}
+\index{delete\+Production\+Data@{delete\+Production\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
+\subsubsection{\texorpdfstring{delete\+Production\+Data()}{deleteProductionData()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Http\+Response\+Message kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+delete\+Production\+Data (\begin{DoxyParamCaption}\item[{string}]{start\+Date,  }\item[{string}]{stop\+Date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes data in the specified daterange 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Date} & \\
+\hline
+{\em stop\+Date} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily Http\+Response\+Message} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a10ba0d225612ba751e0948c601db9a9d}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a10ba0d225612ba751e0948c601db9a9d}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!delete\+Production\+Data@{delete\+Production\+Data}}
+\index{delete\+Production\+Data@{delete\+Production\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
+\subsubsection{\texorpdfstring{delete\+Production\+Data()}{deleteProductionData()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Http\+Response\+Message kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+delete\+Production\+Data (\begin{DoxyParamCaption}\item[{string}]{start\+Date,  }\item[{string}]{stop\+Date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes data in the specified daterange 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Date} & \\
+\hline
+{\em stop\+Date} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily Http\+Response\+Message} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a731d149b7c58ba7de0a45c2eb3110fe1}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a731d149b7c58ba7de0a45c2eb3110fe1}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!get\+Delivery\+Data@{get\+Delivery\+Data}}
+\index{get\+Delivery\+Data@{get\+Delivery\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
+\subsubsection{\texorpdfstring{get\+Delivery\+Data()}{getDeliveryData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily List$<$\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto}{Delivery\+Data\+Dto}$>$ kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+get\+Delivery\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the Delivery Data from 1.\+1.\+2018 till the actual Date 
+
+\begin{DoxyReturn}{Returns}
+Returns J\+S\+ON data in the format\+: 
+\begin{DoxyCode}
+[
+\{
+    \textcolor{stringliteral}{"KvpId"}: 4,
+    \textcolor{stringliteral}{"KvpName"}: \textcolor{stringliteral}{"Dashboard3"},
+    \textcolor{stringliteral}{"KvpDate"}: \textcolor{stringliteral}{"2018-01-05T00:00:00"},
+    \textcolor{stringliteral}{"KvpClassId"}: 2,
+    \textcolor{stringliteral}{"KvpStateId"}: 2,
+    \textcolor{stringliteral}{"KvpStateName"}: \textcolor{stringliteral}{"Do"},
+    \textcolor{stringliteral}{"KvpClassName"}: \textcolor{stringliteral}{"Produktivität"}
+\}
+   \{
+        ...
+   \}
+]
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a63c0c7c25b53904dbae7786dd66285e4}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a63c0c7c25b53904dbae7786dd66285e4}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!get\+Delivery\+Data@{get\+Delivery\+Data}}
+\index{get\+Delivery\+Data@{get\+Delivery\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
+\subsubsection{\texorpdfstring{get\+Delivery\+Data()}{getDeliveryData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily List$<$\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto}{Delivery\+Data\+Dto}$>$ kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+get\+Delivery\+Data (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the Delivery Data from with the specified id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Sets the Dataid\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns J\+S\+ON data
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_aa080da542869888b3e45666e7e751b72}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_aa080da542869888b3e45666e7e751b72}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!get\+Delivery\+Data@{get\+Delivery\+Data}}
+\index{get\+Delivery\+Data@{get\+Delivery\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
+\subsubsection{\texorpdfstring{get\+Delivery\+Data()}{getDeliveryData()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily List$<$\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto}{Delivery\+Data\+Dto}$>$ kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+get\+Delivery\+Data (\begin{DoxyParamCaption}\item[{string}]{start\+Date,  }\item[{string}]{stop\+Date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the Delivery Data between the specified Dates with the specified id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Date} & \\
+\hline
+{\em stop\+Date} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns J\+S\+ON data
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_ae5b9cebd2043650b2fd60caa72e49da7}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_ae5b9cebd2043650b2fd60caa72e49da7}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!get\+Kvp\+Data@{get\+Kvp\+Data}}
+\index{get\+Kvp\+Data@{get\+Kvp\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
+\subsubsection{\texorpdfstring{get\+Kvp\+Data()}{getKvpData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily List$<$\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto}$>$ kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+get\+Kvp\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the K\+VP Data from 1.\+1.\+2018 till the actual Date 
+
+\begin{DoxyReturn}{Returns}
+Returns J\+S\+ON data in the format\+: 
+\begin{DoxyCode}
+[
+\{
+    \textcolor{stringliteral}{"KvpId"}: 4,
+    \textcolor{stringliteral}{"KvpName"}: \textcolor{stringliteral}{"Dashboard3"},
+    \textcolor{stringliteral}{"KvpDate"}: \textcolor{stringliteral}{"2018-01-05T00:00:00"},
+    \textcolor{stringliteral}{"KvpClassId"}: 2,
+    \textcolor{stringliteral}{"KvpStateId"}: 2,
+    \textcolor{stringliteral}{"KvpStateName"}: \textcolor{stringliteral}{"Do"},
+    \textcolor{stringliteral}{"KvpClassName"}: \textcolor{stringliteral}{"Produktivität"}
+\}
+   \{
+        ...
+   \}
+]
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a1dc630ba17a33a597ff3ecfb67ec8497}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a1dc630ba17a33a597ff3ecfb67ec8497}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!get\+Kvp\+Data@{get\+Kvp\+Data}}
+\index{get\+Kvp\+Data@{get\+Kvp\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
+\subsubsection{\texorpdfstring{get\+Kvp\+Data()}{getKvpData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily List$<$\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto}$>$ kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+get\+Kvp\+Data (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the K\+VP Data from with the specified id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Sets the Dataid\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns J\+S\+ON data
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_abcc1190cc0eb07ddb510bb47052cef58}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_abcc1190cc0eb07ddb510bb47052cef58}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!get\+Kvp\+Data@{get\+Kvp\+Data}}
+\index{get\+Kvp\+Data@{get\+Kvp\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
+\subsubsection{\texorpdfstring{get\+Kvp\+Data()}{getKvpData()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily List$<$\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto}$>$ kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+get\+Kvp\+Data (\begin{DoxyParamCaption}\item[{string}]{start\+Date,  }\item[{string}]{stop\+Date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the K\+VP Data between the specified Dates with the specified id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Date} & \\
+\hline
+{\em stop\+Date} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns J\+S\+ON data
+\end{DoxyReturn}
 \mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a0ab15672f7d3b5a077a8c4b0612feab8}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a0ab15672f7d3b5a077a8c4b0612feab8}} 
 \index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!get\+Production\+Data@{get\+Production\+Data}}
 \index{get\+Production\+Data@{get\+Production\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
-\subsubsection{\texorpdfstring{get\+Production\+Data()}{getProductionData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+\subsubsection{\texorpdfstring{get\+Production\+Data()}{getProductionData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
 {\footnotesize\ttfamily List$<$\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto}$>$ kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+get\+Production\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
@@ -92,7 +471,28 @@ Returns J\+S\+ON data in the format\+:
        \textcolor{stringliteral}{"PcbClassName"}: null
    \},
    \{
-       \textcolor{stringliteral}{"PcbDailyId"}: 8,
+        ...
+   \}
+]
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a0ab15672f7d3b5a077a8c4b0612feab8}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a0ab15672f7d3b5a077a8c4b0612feab8}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!get\+Production\+Data@{get\+Production\+Data}}
+\index{get\+Production\+Data@{get\+Production\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
+\subsubsection{\texorpdfstring{get\+Production\+Data()}{getProductionData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily List$<$\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto}$>$ kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+get\+Production\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the Production Data from 1.\+1.\+2018 till the actual Date 
+
+\begin{DoxyReturn}{Returns}
+Returns J\+S\+ON data in the format\+: 
+\begin{DoxyCode}
+[
+   \{
+       \textcolor{stringliteral}{"PcbDailyId"}: 7,
        \textcolor{stringliteral}{"ProductionDay"}: \textcolor{stringliteral}{"2018-01-09T00:00:00"},
        \textcolor{stringliteral}{"PcbQuantity"}: 512345,
        \textcolor{stringliteral}{"PcbSumPrice"}: 5123456,
@@ -100,6 +500,9 @@ Returns J\+S\+ON data in the format\+:
        \textcolor{stringliteral}{"PcbClassId"}: 0,
        \textcolor{stringliteral}{"PcbGenerationName"}: null,
        \textcolor{stringliteral}{"PcbClassName"}: null
+   \},
+   \{
+        ...
    \}
 ]
 \end{DoxyCode}
@@ -108,12 +511,12 @@ Returns J\+S\+ON data in the format\+:
 \mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a2cc4fffc5f66a92f16f917715cb36d0e}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a2cc4fffc5f66a92f16f917715cb36d0e}} 
 \index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!get\+Production\+Data@{get\+Production\+Data}}
 \index{get\+Production\+Data@{get\+Production\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
-\subsubsection{\texorpdfstring{get\+Production\+Data()}{getProductionData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+\subsubsection{\texorpdfstring{get\+Production\+Data()}{getProductionData()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
 {\footnotesize\ttfamily List$<$\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto}$>$ kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+get\+Production\+Data (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-
+Returns the Production Data from with the specified id 
 
 
 \begin{DoxyParams}{Parameters}
@@ -121,17 +524,35 @@ Returns J\+S\+ON data in the format\+:
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
+Returns J\+S\+ON data
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a2cc4fffc5f66a92f16f917715cb36d0e}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a2cc4fffc5f66a92f16f917715cb36d0e}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!get\+Production\+Data@{get\+Production\+Data}}
+\index{get\+Production\+Data@{get\+Production\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
+\subsubsection{\texorpdfstring{get\+Production\+Data()}{getProductionData()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily List$<$\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto}$>$ kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+get\+Production\+Data (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Returns the Production Data from with the specified id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Sets the Dataid\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns J\+S\+ON data
 \end{DoxyReturn}
 \mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a27722d65abe0781d4b670c84c2e07a76}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a27722d65abe0781d4b670c84c2e07a76}} 
 \index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!get\+Production\+Data@{get\+Production\+Data}}
 \index{get\+Production\+Data@{get\+Production\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
-\subsubsection{\texorpdfstring{get\+Production\+Data()}{getProductionData()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+\subsubsection{\texorpdfstring{get\+Production\+Data()}{getProductionData()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
 {\footnotesize\ttfamily List$<$\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto}$>$ kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+get\+Production\+Data (\begin{DoxyParamCaption}\item[{string}]{start\+Date,  }\item[{string}]{stop\+Date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-
+Returns the Production Data between the specified Dates with the specified id 
 
 
 \begin{DoxyParams}{Parameters}
@@ -141,7 +562,171 @@ Returns J\+S\+ON data in the format\+:
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
+Returns J\+S\+ON data
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a27722d65abe0781d4b670c84c2e07a76}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a27722d65abe0781d4b670c84c2e07a76}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!get\+Production\+Data@{get\+Production\+Data}}
+\index{get\+Production\+Data@{get\+Production\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
+\subsubsection{\texorpdfstring{get\+Production\+Data()}{getProductionData()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily List$<$\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto}$>$ kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+get\+Production\+Data (\begin{DoxyParamCaption}\item[{string}]{start\+Date,  }\item[{string}]{stop\+Date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Returns the Production Data between the specified Dates with the specified id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Date} & \\
+\hline
+{\em stop\+Date} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns J\+S\+ON data
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_ae0c16d6b3d009224eae6ea5a2b20aabd}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_ae0c16d6b3d009224eae6ea5a2b20aabd}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!set\+Delivery\+Data@{set\+Delivery\+Data}}
+\index{set\+Delivery\+Data@{set\+Delivery\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
+\subsubsection{\texorpdfstring{set\+Delivery\+Data()}{setDeliveryData()}}
+{\footnotesize\ttfamily Http\+Response\+Message kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+set\+Delivery\+Data (\begin{DoxyParamCaption}\item[{List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto}{Delivery\+Data\+Dto} $>$}]{delivery\+Data\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds data into the database, creates new identifiers The data must hafe the following Format \mbox{[} \{ \char`\"{}\+Order\+Date\char`\"{}\+: \char`\"{}2018-\/01-\/01\+T00\+:00\+:00\char`\"{}, \char`\"{}\+Ordered\+Pc\char`\"{}\+: 100, \char`\"{}\+Delivered\+Pc\char`\"{}\+: 100, \char`\"{}\+Notdelivered\+Pc\char`\"{}\+: null, \char`\"{}\+Notdelivered\+Rel\char`\"{}\+: null, \char`\"{}\+Country\+Id\char`\"{}\+: 1, \char`\"{}\+Country\+Name\char`\"{}\+: \char`\"{}\+Switzerland\char`\"{} \}, \{ ... \} \mbox{]} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delivery\+Data\+List} & New Dataset in Json Format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily Http\+Response\+Message} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_aaed21921287f9a780cc3ff7e1042dc2a}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_aaed21921287f9a780cc3ff7e1042dc2a}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!set\+Kvp\+Data@{set\+Kvp\+Data}}
+\index{set\+Kvp\+Data@{set\+Kvp\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
+\subsubsection{\texorpdfstring{set\+Kvp\+Data()}{setKvpData()}}
+{\footnotesize\ttfamily Http\+Response\+Message kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+set\+Kvp\+Data (\begin{DoxyParamCaption}\item[{List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} $>$}]{kvp\+Data\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds data into the database, creates new identifiers The data must hafe the following Format \mbox{[} \{ \char`\"{}\+Kvp\+Name\char`\"{}\+: \char`\"{}\+Dashboard3\char`\"{}, \char`\"{}\+Kvp\+Date\char`\"{}\+: \char`\"{}2018-\/01-\/05\+T00\+:00\+:00\char`\"{}, \char`\"{}\+Kvp\+Class\+Id\char`\"{}\+: 2, \char`\"{}\+Kvp\+State\+Id\char`\"{}\+: 2, \char`\"{}\+Kvp\+State\+Name\char`\"{}\+: \char`\"{}\+Do\char`\"{}, \char`\"{}\+Kvp\+Class\+Name\char`\"{}\+: \char`\"{}\+Produktivität\char`\"{} \}, \{ ... \} \mbox{]} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kvp\+Data\+List} & New Dataset in Json Format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily Http\+Response\+Message} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a7f6c6c359f37a9b9a83d481b5c26a037}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a7f6c6c359f37a9b9a83d481b5c26a037}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!set\+Production\+Data@{set\+Production\+Data}}
+\index{set\+Production\+Data@{set\+Production\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
+\subsubsection{\texorpdfstring{set\+Production\+Data()}{setProductionData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Http\+Response\+Message kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+set\+Production\+Data (\begin{DoxyParamCaption}\item[{List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$}]{prod\+Data\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds data into the database, creates new identifiers The data must hafe the following Format \mbox{[} \{ \char`\"{}\+Production\+Day\char`\"{}\+: \char`\"{}2018-\/01-\/09\+T00\+:00\+:00\char`\"{}, \char`\"{}\+Pcb\+Quantity\char`\"{}\+: 512345, \char`\"{}\+Pcb\+Sum\+Price\char`\"{}\+: 5123456, \char`\"{}\+Pcb\+Generation\+Id\char`\"{}\+: 3, \char`\"{}\+Pcb\+Class\+Id\char`\"{}\+: 0, \char`\"{}\+Pcb\+Generation\+Name\char`\"{}\+: null, \char`\"{}\+Pcb\+Class\+Name\char`\"{}\+: null \}, \{ ... \} \mbox{]} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prod\+Data\+List} & New Dataset in Json Format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily Http\+Response\+Message} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a7f6c6c359f37a9b9a83d481b5c26a037}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a7f6c6c359f37a9b9a83d481b5c26a037}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!set\+Production\+Data@{set\+Production\+Data}}
+\index{set\+Production\+Data@{set\+Production\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
+\subsubsection{\texorpdfstring{set\+Production\+Data()}{setProductionData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Http\+Response\+Message kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+set\+Production\+Data (\begin{DoxyParamCaption}\item[{List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$}]{prod\+Data\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds data into the database, creates new identifiers The data must hafe the following Format \mbox{[} \{ \char`\"{}\+Production\+Day\char`\"{}\+: \char`\"{}2018-\/01-\/09\+T00\+:00\+:00\char`\"{}, \char`\"{}\+Pcb\+Quantity\char`\"{}\+: 512345, \char`\"{}\+Pcb\+Sum\+Price\char`\"{}\+: 5123456, \char`\"{}\+Pcb\+Generation\+Id\char`\"{}\+: 3, \char`\"{}\+Pcb\+Class\+Id\char`\"{}\+: 0, \char`\"{}\+Pcb\+Generation\+Name\char`\"{}\+: null, \char`\"{}\+Pcb\+Class\+Name\char`\"{}\+: null \}, \{ ... \} \mbox{]} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prod\+Data\+List} & New Dataset in Json Format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily Http\+Response\+Message} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a893e7ff73b6dbd31afa5e1aa73e5abae}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a893e7ff73b6dbd31afa5e1aa73e5abae}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!update\+Delivery\+Data@{update\+Delivery\+Data}}
+\index{update\+Delivery\+Data@{update\+Delivery\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
+\subsubsection{\texorpdfstring{update\+Delivery\+Data()}{updateDeliveryData()}}
+{\footnotesize\ttfamily Http\+Response\+Message kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+update\+Delivery\+Data (\begin{DoxyParamCaption}\item[{List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto}{Delivery\+Data\+Dto} $>$}]{delivery\+Data\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds data into the database If the Id alredy exists, update the Dataset if not create the dataset The data must hafe the following format \mbox{[} \{ \char`\"{}\+Delivery\+Id\char`\"{}\+: 4, \char`\"{}\+Order\+Date\char`\"{}\+: \char`\"{}2018-\/01-\/01\+T00\+:00\+:00\char`\"{}, \char`\"{}\+Ordered\+Pc\char`\"{}\+: 100, \char`\"{}\+Delivered\+Pc\char`\"{}\+: 100, \char`\"{}\+Notdelivered\+Pc\char`\"{}\+: null, \char`\"{}\+Notdelivered\+Rel\char`\"{}\+: null, \char`\"{}\+Country\+Id\char`\"{}\+: 1, \char`\"{}\+Country\+Name\char`\"{}\+: \char`\"{}\+Switzerland\char`\"{} \}, \{ ... \} \mbox{]} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delivery\+Data\+List} & New Dataset in Json Format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily Http\+Response\+Message} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_ac165b3dedfa1744a41af6a1acc07a657}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_ac165b3dedfa1744a41af6a1acc07a657}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!update\+Kvp\+Data@{update\+Kvp\+Data}}
+\index{update\+Kvp\+Data@{update\+Kvp\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
+\subsubsection{\texorpdfstring{update\+Kvp\+Data()}{updateKvpData()}}
+{\footnotesize\ttfamily Http\+Response\+Message kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+update\+Kvp\+Data (\begin{DoxyParamCaption}\item[{List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} $>$}]{kvp\+Data\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds data into the database If the Id alredy exists, update the Dataset if not create the dataset The data must hafe the following format \mbox{[} \{ \char`\"{}\+Kvp\+Id\char`\"{}\+: 4, \char`\"{}\+Kvp\+Name\char`\"{}\+: \char`\"{}\+Dashboard3\char`\"{}, \char`\"{}\+Kvp\+Date\char`\"{}\+: \char`\"{}2018-\/01-\/05\+T00\+:00\+:00\char`\"{}, \char`\"{}\+Kvp\+Class\+Id\char`\"{}\+: 2, \char`\"{}\+Kvp\+State\+Id\char`\"{}\+: 2, \char`\"{}\+Kvp\+State\+Name\char`\"{}\+: \char`\"{}\+Do\char`\"{}, \char`\"{}\+Kvp\+Class\+Name\char`\"{}\+: \char`\"{}\+Produktivität\char`\"{} \}, \{ ... \} \mbox{]} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kvp\+Data\+List} & New Dataset in Json Format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily Http\+Response\+Message} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a82f308e9ae4809dfdca3ce685af05774}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a82f308e9ae4809dfdca3ce685af05774}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!update\+Production\+Data@{update\+Production\+Data}}
+\index{update\+Production\+Data@{update\+Production\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
+\subsubsection{\texorpdfstring{update\+Production\+Data()}{updateProductionData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Http\+Response\+Message kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+update\+Production\+Data (\begin{DoxyParamCaption}\item[{List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$}]{prod\+Data\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds data into the database If the Id alredy exists, update the Dataset if not create the dataset The data must hafe the following format \mbox{[} \{ \char`\"{}\+Pcb\+Daily\+Id\char`\"{}\+: 8, \char`\"{}\+Production\+Day\char`\"{}\+: \char`\"{}2018-\/01-\/09\+T00\+:00\+:00\char`\"{}, \char`\"{}\+Pcb\+Quantity\char`\"{}\+: 512345, \char`\"{}\+Pcb\+Sum\+Price\char`\"{}\+: 5123456, \char`\"{}\+Pcb\+Generation\+Id\char`\"{}\+: 3, \char`\"{}\+Pcb\+Class\+Id\char`\"{}\+: 0, \char`\"{}\+Pcb\+Generation\+Name\char`\"{}\+: null, \char`\"{}\+Pcb\+Class\+Name\char`\"{}\+: null \}, \{ ... \} \mbox{]} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prod\+Data\+List} & New Dataset in Json Format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily Http\+Response\+Message} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a82f308e9ae4809dfdca3ce685af05774}\label{classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller_a82f308e9ae4809dfdca3ce685af05774}} 
+\index{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}!update\+Production\+Data@{update\+Production\+Data}}
+\index{update\+Production\+Data@{update\+Production\+Data}!kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller@{kpi\+Mvc\+Api\+::\+Controllers\+::\+Kpidata\+Controller}}
+\subsubsection{\texorpdfstring{update\+Production\+Data()}{updateProductionData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Http\+Response\+Message kpi\+Mvc\+Api.\+Controllers.\+Kpidata\+Controller.\+update\+Production\+Data (\begin{DoxyParamCaption}\item[{List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto}{Production\+Data\+Dto} $>$}]{prod\+Data\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds data into the database If the Id alredy exists, update the Dataset if not create the dataset The data must hafe the following format \mbox{[} \{ \char`\"{}\+Pcb\+Daily\+Id\char`\"{}\+: 8, \char`\"{}\+Production\+Day\char`\"{}\+: \char`\"{}2018-\/01-\/09\+T00\+:00\+:00\char`\"{}, \char`\"{}\+Pcb\+Quantity\char`\"{}\+: 512345, \char`\"{}\+Pcb\+Sum\+Price\char`\"{}\+: 5123456, \char`\"{}\+Pcb\+Generation\+Id\char`\"{}\+: 3, \char`\"{}\+Pcb\+Class\+Id\char`\"{}\+: 0, \char`\"{}\+Pcb\+Generation\+Name\char`\"{}\+: null, \char`\"{}\+Pcb\+Class\+Name\char`\"{}\+: null \}, \{ ... \} \mbox{]} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prod\+Data\+List} & New Dataset in Json Format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily Http\+Response\+Message} 
 \end{DoxyReturn}
 
 

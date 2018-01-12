@@ -1,62 +1,578 @@
 \hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs}{}\section{kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs Class Reference}
 \label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs}\index{kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs}}
+
+
+This Recordset stores a List of Kvap Data transfer objects It prowides all Methods to read, write, update and delete data from databse It provides Methods to get H\+T\+ML data for the frontend  
+
+
+Inheritance diagram for kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.958042cm]{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs}
+\end{center}
+\end{figure}
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_aec5ef29d115053aa1f78d15adc7e1373}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_aec5ef29d115053aa1f78d15adc7e1373}} 
-enum {\bfseries dataset} \{ {\bfseries Datalabels} = 0, 
+enum \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_aec5ef29d115053aa1f78d15adc7e1373}{dataset} \{ {\bfseries Datalabels} = 0, 
+{\bfseries dataset1}, 
+{\bfseries Datalabels} = 0, 
 {\bfseries dataset1}
- \}
+ \}\begin{DoxyCompactList}\small\item\em Containing the available diagramm data val == 0 =$>$ x axis, val $>$ 0 =$>$ y axis \end{DoxyCompactList}
 \item 
-\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a829c595d537885ae923de884be501246}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a829c595d537885ae923de884be501246}} 
-enum {\bfseries charttype} \{ {\bfseries Kvp\+Month\+Chart} =0
- \}
+enum \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a829c595d537885ae923de884be501246}{charttype} \{ {\bfseries Kvp\+Month\+Chart} = 0, 
+{\bfseries Kvp\+Class\+Chart}, 
+{\bfseries Kvp\+Month\+Chart} = 0, 
+{\bfseries Kvp\+Class\+Chart}
+ \}\begin{DoxyCompactList}\small\item\em Containing zhe available diagramm types \end{DoxyCompactList}
+\item 
+enum \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_aec5ef29d115053aa1f78d15adc7e1373}{dataset} \{ {\bfseries Datalabels} = 0, 
+{\bfseries dataset1}, 
+{\bfseries Datalabels} = 0, 
+{\bfseries dataset1}
+ \}\begin{DoxyCompactList}\small\item\em Containing the available diagramm data val == 0 =$>$ x axis, val $>$ 0 =$>$ y axis \end{DoxyCompactList}
+\item 
+enum \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a829c595d537885ae923de884be501246}{charttype} \{ {\bfseries Kvp\+Month\+Chart} = 0, 
+{\bfseries Kvp\+Class\+Chart}, 
+{\bfseries Kvp\+Month\+Chart} = 0, 
+{\bfseries Kvp\+Class\+Chart}
+ \}\begin{DoxyCompactList}\small\item\em Containing zhe available diagramm types \end{DoxyCompactList}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a4d9df8d729c0009c23968a0250d45dcc}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a4d9df8d729c0009c23968a0250d45dcc}} 
-{\bfseries Kvp\+Data\+Dto\+Rs} (Date\+Time startdate, Date\+Time stopdate)
-\item 
-\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a562207c4315e1f552734257d994cc2d5}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a562207c4315e1f552734257d994cc2d5}} 
-void {\bfseries load\+Data} ()
-\item 
-\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_afbda5e8db6a5f8b25125d2a6b6dcf7e1}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_afbda5e8db6a5f8b25125d2a6b6dcf7e1}} 
-void {\bfseries load\+Data} (Date\+Time startdate, Date\+Time stopdate)
-\item 
-\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a895f4b97fb8c74c1a853145c03f5d393}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a895f4b97fb8c74c1a853145c03f5d393}} 
-List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} $>$ {\bfseries get\+Data} ()
-\item 
-\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ac6493e99d1c2fc236a25b61bc51014f9}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ac6493e99d1c2fc236a25b61bc51014f9}} 
-List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} $>$ {\bfseries get\+Data} (Date\+Time startdate, Date\+Time stopdate)
-\item 
-\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_aab05e9ab80b2e766a6744a200e4d8e91}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_aab05e9ab80b2e766a6744a200e4d8e91}} 
-bool {\bfseries set\+Data} (List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} $>$ kvpdto)
-\item 
-\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a9aa97ab6777b36a033c3662e86239e81}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a9aa97ab6777b36a033c3662e86239e81}} 
-string {\bfseries get\+Dataset} (charttype charttype, dataset datset, string group\+Mode)
-\item 
-\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ac1bd4b0312a7a0a07b8848d9cdf739da}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ac1bd4b0312a7a0a07b8848d9cdf739da}} 
-List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} $>$ {\bfseries get\+Kvp\+List} ()
-\item 
-\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a29e122aca7de38b447056485ad8b4afa}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a29e122aca7de38b447056485ad8b4afa}} 
-string {\bfseries get\+Dataset\+Label} ()
-\item 
-\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ac08415561811e16a01e4fa425709905b}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ac08415561811e16a01e4fa425709905b}} 
-string {\bfseries get\+Datset\+Backround\+Color} ()
-\item 
-\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ac1a9b5ca7012ddd12549e157929f23e7}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ac1a9b5ca7012ddd12549e157929f23e7}} 
-string {\bfseries get\+Chart\+Title} ()
-\item 
-\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_afcb6b42bf6a7f8271efc95f671bc9e08}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_afcb6b42bf6a7f8271efc95f671bc9e08}} 
-int {\bfseries get\+Chart\+Border\+Width} ()
-\end{DoxyCompactItemize}
+\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a8189fa1bf44fd56db7b2df7895373be4}{Kvp\+Data\+Dto\+Rs} ()
+\begin{DoxyCompactList}\small\item\em Constructor loads the default data from 1.\+1.\+18 till today \end{DoxyCompactList}\item 
+\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ab2f376c9184bcbb70716826a51e774e8}{Kvp\+Data\+Dto\+Rs} (int id)
+\begin{DoxyCompactList}\small\item\em Constructor loads the specified id \end{DoxyCompactList}\item 
+\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a4d9df8d729c0009c23968a0250d45dcc}{Kvp\+Data\+Dto\+Rs} (Date\+Time startdate, Date\+Time stopdate)
+\begin{DoxyCompactList}\small\item\em Constructor loads with the specified daterange \end{DoxyCompactList}\item 
+void \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a562207c4315e1f552734257d994cc2d5}{load\+Data} ()
+\begin{DoxyCompactList}\small\item\em loads the default data from 1.\+1.\+18 till today stores in object {\ttfamily \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs}{Kvp\+Data\+Dto\+Rs}} \end{DoxyCompactList}\item 
+void \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a7c0a2f992ea673548b507ee6a74e4046}{load\+Data} (int id)
+\begin{DoxyCompactList}\small\item\em loads the specified dataset id stores in object {\ttfamily \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs}{Kvp\+Data\+Dto\+Rs}} \end{DoxyCompactList}\item 
+void \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_afbda5e8db6a5f8b25125d2a6b6dcf7e1}{load\+Data} (Date\+Time startdate, Date\+Time stopdate)
+\begin{DoxyCompactList}\small\item\em Constructor loads with the specified daterange stores in object {\ttfamily \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs}{Kvp\+Data\+Dto\+Rs}} \end{DoxyCompactList}\item 
+List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} $>$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a895f4b97fb8c74c1a853145c03f5d393}{get\+Data} ()
+\begin{DoxyCompactList}\small\item\em Get all Data from {\ttfamily \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto}} \end{DoxyCompactList}\item 
+bool \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_aab05e9ab80b2e766a6744a200e4d8e91}{set\+Data} (List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} $>$ kvpdto)
+\begin{DoxyCompactList}\small\item\em Adds Kvp Data into the database Generates new id for each datzaset \end{DoxyCompactList}\item 
+string \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_aded42b5e75fcbc416d4ac02875c34849}{get\+Dataset} (\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a829c595d537885ae923de884be501246}{charttype} \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a829c595d537885ae923de884be501246}{charttype}, \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_aec5ef29d115053aa1f78d15adc7e1373}{dataset} datset, string filter)
+\begin{DoxyCompactList}\small\item\em Produces Datastrings for the html / chart.\+js charts \end{DoxyCompactList}\item 
+List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} $>$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ac1bd4b0312a7a0a07b8848d9cdf739da}{get\+Kvp\+List} ()
+\begin{DoxyCompactList}\small\item\em Returns the kvp list \end{DoxyCompactList}\item 
+string \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a29e122aca7de38b447056485ad8b4afa}{get\+Dataset\+Label} ()
+\begin{DoxyCompactList}\small\item\em Returns the chart label \end{DoxyCompactList}\item 
+string \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ac08415561811e16a01e4fa425709905b}{get\+Datset\+Backround\+Color} ()
+\begin{DoxyCompactList}\small\item\em Returns the chart colors \end{DoxyCompactList}\item 
+string \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ac1a9b5ca7012ddd12549e157929f23e7}{get\+Chart\+Title} ()
+\begin{DoxyCompactList}\small\item\em Returns the chart title \end{DoxyCompactList}\item 
+int \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_afcb6b42bf6a7f8271efc95f671bc9e08}{get\+Chart\+Border\+Width} ()
+\begin{DoxyCompactList}\small\item\em returns the boarer width \end{DoxyCompactList}\item 
+\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a8189fa1bf44fd56db7b2df7895373be4}{Kvp\+Data\+Dto\+Rs} ()
+\begin{DoxyCompactList}\small\item\em Constructor loads the default data from 1.\+1.\+18 till today \end{DoxyCompactList}\item 
+\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ab2f376c9184bcbb70716826a51e774e8}{Kvp\+Data\+Dto\+Rs} (int id)
+\begin{DoxyCompactList}\small\item\em Constructor loads the specified id \end{DoxyCompactList}\item 
+\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a4d9df8d729c0009c23968a0250d45dcc}{Kvp\+Data\+Dto\+Rs} (Date\+Time startdate, Date\+Time stopdate)
+\begin{DoxyCompactList}\small\item\em Constructor loads with the specified daterange \end{DoxyCompactList}\item 
+void \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a562207c4315e1f552734257d994cc2d5}{load\+Data} ()
+\begin{DoxyCompactList}\small\item\em loads the default data from 1.\+1.\+18 till today stores in object {\ttfamily \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs}{Kvp\+Data\+Dto\+Rs}} \end{DoxyCompactList}\item 
+void \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a7c0a2f992ea673548b507ee6a74e4046}{load\+Data} (int id)
+\begin{DoxyCompactList}\small\item\em loads the specified dataset id stores in object {\ttfamily \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs}{Kvp\+Data\+Dto\+Rs}} \end{DoxyCompactList}\item 
+void \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_afbda5e8db6a5f8b25125d2a6b6dcf7e1}{load\+Data} (Date\+Time startdate, Date\+Time stopdate)
+\begin{DoxyCompactList}\small\item\em Constructor loads with the specified daterange stores in object {\ttfamily \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs}{Kvp\+Data\+Dto\+Rs}} \end{DoxyCompactList}\item 
+List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} $>$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a895f4b97fb8c74c1a853145c03f5d393}{get\+Data} ()
+\begin{DoxyCompactList}\small\item\em Get all Data from {\ttfamily \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto}} \end{DoxyCompactList}\item 
+bool \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_aab05e9ab80b2e766a6744a200e4d8e91}{set\+Data} (List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} $>$ kvpdto)
+\begin{DoxyCompactList}\small\item\em Adds Kvp Data into the database Generates new id for each datzaset \end{DoxyCompactList}\item 
+string \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_aded42b5e75fcbc416d4ac02875c34849}{get\+Dataset} (\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a829c595d537885ae923de884be501246}{charttype} \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a829c595d537885ae923de884be501246}{charttype}, \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_aec5ef29d115053aa1f78d15adc7e1373}{dataset} datset, string filter)
+\begin{DoxyCompactList}\small\item\em Produces Datastrings for the html / chart.\+js charts \end{DoxyCompactList}\item 
+List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} $>$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ac1bd4b0312a7a0a07b8848d9cdf739da}{get\+Kvp\+List} ()
+\begin{DoxyCompactList}\small\item\em Returns the kvp list \end{DoxyCompactList}\item 
+string \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a29e122aca7de38b447056485ad8b4afa}{get\+Dataset\+Label} ()
+\begin{DoxyCompactList}\small\item\em Returns the chart label \end{DoxyCompactList}\item 
+string \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ac08415561811e16a01e4fa425709905b}{get\+Datset\+Backround\+Color} ()
+\begin{DoxyCompactList}\small\item\em Returns the chart colors \end{DoxyCompactList}\item 
+string \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ac1a9b5ca7012ddd12549e157929f23e7}{get\+Chart\+Title} ()
+\begin{DoxyCompactList}\small\item\em Returns the chart title \end{DoxyCompactList}\item 
+int \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_afcb6b42bf6a7f8271efc95f671bc9e08}{get\+Chart\+Border\+Width} ()
+\begin{DoxyCompactList}\small\item\em returns the boarer width \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ae4c7dbba98cf290c43fdbce4172b6ca1}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ae4c7dbba98cf290c43fdbce4172b6ca1}} 
-List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} $>$ {\bfseries Kvp\+Data\+Rs}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
+List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} $>$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ae32122a6aba038291afde6128898487e}{Kvp\+Data\+Rs}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A List of Kvp Data transfer Objects This List is loaded at construction and reprsent the actual Dataset \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This Recordset stores a List of Kvap Data transfer objects It prowides all Methods to read, write, update and delete data from databse It provides Methods to get H\+T\+ML data for the frontend 
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a829c595d537885ae923de884be501246}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a829c595d537885ae923de884be501246}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!charttype@{charttype}}
+\index{charttype@{charttype}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{charttype}{charttype}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily enum \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a829c595d537885ae923de884be501246}{kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+charttype}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Containing zhe available diagramm types 
+
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a829c595d537885ae923de884be501246}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a829c595d537885ae923de884be501246}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!charttype@{charttype}}
+\index{charttype@{charttype}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{charttype}{charttype}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily enum \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a829c595d537885ae923de884be501246}{kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+charttype}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Containing zhe available diagramm types 
+
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_aec5ef29d115053aa1f78d15adc7e1373}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_aec5ef29d115053aa1f78d15adc7e1373}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!dataset@{dataset}}
+\index{dataset@{dataset}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{dataset}{dataset}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily enum \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_aec5ef29d115053aa1f78d15adc7e1373}{kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+dataset}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Containing the available diagramm data val == 0 =$>$ x axis, val $>$ 0 =$>$ y axis 
+
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_aec5ef29d115053aa1f78d15adc7e1373}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_aec5ef29d115053aa1f78d15adc7e1373}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!dataset@{dataset}}
+\index{dataset@{dataset}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{dataset}{dataset}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily enum \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_aec5ef29d115053aa1f78d15adc7e1373}{kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+dataset}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Containing the available diagramm data val == 0 =$>$ x axis, val $>$ 0 =$>$ y axis 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a8189fa1bf44fd56db7b2df7895373be4}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a8189fa1bf44fd56db7b2df7895373be4}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!Kvp\+Data\+Dto\+Rs@{Kvp\+Data\+Dto\+Rs}}
+\index{Kvp\+Data\+Dto\+Rs@{Kvp\+Data\+Dto\+Rs}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{Kvp\+Data\+Dto\+Rs()}{KvpDataDtoRs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+Kvp\+Data\+Dto\+Rs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor loads the default data from 1.\+1.\+18 till today 
+
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ab2f376c9184bcbb70716826a51e774e8}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ab2f376c9184bcbb70716826a51e774e8}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!Kvp\+Data\+Dto\+Rs@{Kvp\+Data\+Dto\+Rs}}
+\index{Kvp\+Data\+Dto\+Rs@{Kvp\+Data\+Dto\+Rs}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{Kvp\+Data\+Dto\+Rs()}{KvpDataDtoRs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+Kvp\+Data\+Dto\+Rs (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor loads the specified id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & id of requested dataset\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a4d9df8d729c0009c23968a0250d45dcc}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a4d9df8d729c0009c23968a0250d45dcc}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!Kvp\+Data\+Dto\+Rs@{Kvp\+Data\+Dto\+Rs}}
+\index{Kvp\+Data\+Dto\+Rs@{Kvp\+Data\+Dto\+Rs}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{Kvp\+Data\+Dto\+Rs()}{KvpDataDtoRs()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+Kvp\+Data\+Dto\+Rs (\begin{DoxyParamCaption}\item[{Date\+Time}]{startdate,  }\item[{Date\+Time}]{stopdate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor loads with the specified daterange 
+
+
+\begin{DoxyParams}{Parameters}
+{\em startdate} & dataset start date (including)\\
+\hline
+{\em stopdate} & dataset stop date (including)\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a8189fa1bf44fd56db7b2df7895373be4}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a8189fa1bf44fd56db7b2df7895373be4}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!Kvp\+Data\+Dto\+Rs@{Kvp\+Data\+Dto\+Rs}}
+\index{Kvp\+Data\+Dto\+Rs@{Kvp\+Data\+Dto\+Rs}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{Kvp\+Data\+Dto\+Rs()}{KvpDataDtoRs()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+Kvp\+Data\+Dto\+Rs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor loads the default data from 1.\+1.\+18 till today 
+
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ab2f376c9184bcbb70716826a51e774e8}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ab2f376c9184bcbb70716826a51e774e8}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!Kvp\+Data\+Dto\+Rs@{Kvp\+Data\+Dto\+Rs}}
+\index{Kvp\+Data\+Dto\+Rs@{Kvp\+Data\+Dto\+Rs}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{Kvp\+Data\+Dto\+Rs()}{KvpDataDtoRs()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+Kvp\+Data\+Dto\+Rs (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor loads the specified id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & id of requested dataset\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a4d9df8d729c0009c23968a0250d45dcc}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a4d9df8d729c0009c23968a0250d45dcc}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!Kvp\+Data\+Dto\+Rs@{Kvp\+Data\+Dto\+Rs}}
+\index{Kvp\+Data\+Dto\+Rs@{Kvp\+Data\+Dto\+Rs}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{Kvp\+Data\+Dto\+Rs()}{KvpDataDtoRs()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+Kvp\+Data\+Dto\+Rs (\begin{DoxyParamCaption}\item[{Date\+Time}]{startdate,  }\item[{Date\+Time}]{stopdate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor loads with the specified daterange 
+
+
+\begin{DoxyParams}{Parameters}
+{\em startdate} & dataset start date (including)\\
+\hline
+{\em stopdate} & dataset stop date (including)\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_afcb6b42bf6a7f8271efc95f671bc9e08}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_afcb6b42bf6a7f8271efc95f671bc9e08}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!get\+Chart\+Border\+Width@{get\+Chart\+Border\+Width}}
+\index{get\+Chart\+Border\+Width@{get\+Chart\+Border\+Width}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{get\+Chart\+Border\+Width()}{getChartBorderWidth()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+get\+Chart\+Border\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+returns the boarer width 
+
+\begin{DoxyReturn}{Returns}
+string containing the Chart boarer width
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_afcb6b42bf6a7f8271efc95f671bc9e08}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_afcb6b42bf6a7f8271efc95f671bc9e08}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!get\+Chart\+Border\+Width@{get\+Chart\+Border\+Width}}
+\index{get\+Chart\+Border\+Width@{get\+Chart\+Border\+Width}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{get\+Chart\+Border\+Width()}{getChartBorderWidth()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+get\+Chart\+Border\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+returns the boarer width 
+
+\begin{DoxyReturn}{Returns}
+string containing the Chart boarer width
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ac1a9b5ca7012ddd12549e157929f23e7}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ac1a9b5ca7012ddd12549e157929f23e7}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!get\+Chart\+Title@{get\+Chart\+Title}}
+\index{get\+Chart\+Title@{get\+Chart\+Title}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{get\+Chart\+Title()}{getChartTitle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily string kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+get\+Chart\+Title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the chart title 
+
+\begin{DoxyReturn}{Returns}
+string containing the Chart Title
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ac1a9b5ca7012ddd12549e157929f23e7}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ac1a9b5ca7012ddd12549e157929f23e7}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!get\+Chart\+Title@{get\+Chart\+Title}}
+\index{get\+Chart\+Title@{get\+Chart\+Title}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{get\+Chart\+Title()}{getChartTitle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily string kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+get\+Chart\+Title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the chart title 
+
+\begin{DoxyReturn}{Returns}
+string containing the Chart Title
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a895f4b97fb8c74c1a853145c03f5d393}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a895f4b97fb8c74c1a853145c03f5d393}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!get\+Data@{get\+Data}}
+\index{get\+Data@{get\+Data}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{get\+Data()}{getData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily List$<$\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto}$>$ kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get all Data from {\ttfamily \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto}} 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily  List \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} } A list with in this object loaded production data 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a895f4b97fb8c74c1a853145c03f5d393}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a895f4b97fb8c74c1a853145c03f5d393}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!get\+Data@{get\+Data}}
+\index{get\+Data@{get\+Data}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{get\+Data()}{getData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily List$<$\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto}$>$ kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get all Data from {\ttfamily \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto}} 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily  List \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} } A list with in this object loaded production data 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_aded42b5e75fcbc416d4ac02875c34849}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_aded42b5e75fcbc416d4ac02875c34849}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!get\+Dataset@{get\+Dataset}}
+\index{get\+Dataset@{get\+Dataset}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{get\+Dataset()}{getDataset()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily string kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+get\+Dataset (\begin{DoxyParamCaption}\item[{\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a829c595d537885ae923de884be501246}{charttype}}]{charttype,  }\item[{\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_aec5ef29d115053aa1f78d15adc7e1373}{dataset}}]{datset,  }\item[{string}]{filter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Produces Datastrings for the html / chart.\+js charts 
+
+
+\begin{DoxyParams}{Parameters}
+{\em charttype} & \\
+\hline
+{\em datset} & \\
+\hline
+{\em filter} & \char`\"{}y\char`\"{} year, \char`\"{}\+M\char`\"{} month, \char`\"{}d\char`\"{} day\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily string H\+T\+M\+L.\+Raw Datastring} string for direct implementation in html.\+raw() view
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_aded42b5e75fcbc416d4ac02875c34849}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_aded42b5e75fcbc416d4ac02875c34849}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!get\+Dataset@{get\+Dataset}}
+\index{get\+Dataset@{get\+Dataset}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{get\+Dataset()}{getDataset()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily string kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+get\+Dataset (\begin{DoxyParamCaption}\item[{\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a829c595d537885ae923de884be501246}{charttype}}]{charttype,  }\item[{\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_aec5ef29d115053aa1f78d15adc7e1373}{dataset}}]{datset,  }\item[{string}]{filter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Produces Datastrings for the html / chart.\+js charts 
+
+
+\begin{DoxyParams}{Parameters}
+{\em charttype} & \\
+\hline
+{\em datset} & \\
+\hline
+{\em filter} & \char`\"{}y\char`\"{} year, \char`\"{}\+M\char`\"{} month, \char`\"{}d\char`\"{} day\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily string H\+T\+M\+L.\+Raw Datastring} string for direct implementation in html.\+raw() view
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a29e122aca7de38b447056485ad8b4afa}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a29e122aca7de38b447056485ad8b4afa}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!get\+Dataset\+Label@{get\+Dataset\+Label}}
+\index{get\+Dataset\+Label@{get\+Dataset\+Label}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{get\+Dataset\+Label()}{getDatasetLabel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily string kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+get\+Dataset\+Label (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the chart label 
+
+\begin{DoxyReturn}{Returns}
+string containing the Chartlabel text
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a29e122aca7de38b447056485ad8b4afa}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a29e122aca7de38b447056485ad8b4afa}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!get\+Dataset\+Label@{get\+Dataset\+Label}}
+\index{get\+Dataset\+Label@{get\+Dataset\+Label}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{get\+Dataset\+Label()}{getDatasetLabel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily string kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+get\+Dataset\+Label (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the chart label 
+
+\begin{DoxyReturn}{Returns}
+string containing the Chartlabel text
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ac08415561811e16a01e4fa425709905b}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ac08415561811e16a01e4fa425709905b}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!get\+Datset\+Backround\+Color@{get\+Datset\+Backround\+Color}}
+\index{get\+Datset\+Backround\+Color@{get\+Datset\+Backround\+Color}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{get\+Datset\+Backround\+Color()}{getDatsetBackroundColor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily string kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+get\+Datset\+Backround\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the chart colors 
+
+\begin{DoxyReturn}{Returns}
+string containing the Chart backround colors
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ac08415561811e16a01e4fa425709905b}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ac08415561811e16a01e4fa425709905b}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!get\+Datset\+Backround\+Color@{get\+Datset\+Backround\+Color}}
+\index{get\+Datset\+Backround\+Color@{get\+Datset\+Backround\+Color}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{get\+Datset\+Backround\+Color()}{getDatsetBackroundColor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily string kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+get\+Datset\+Backround\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the chart colors 
+
+\begin{DoxyReturn}{Returns}
+string containing the Chart backround colors
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ac1bd4b0312a7a0a07b8848d9cdf739da}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ac1bd4b0312a7a0a07b8848d9cdf739da}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!get\+Kvp\+List@{get\+Kvp\+List}}
+\index{get\+Kvp\+List@{get\+Kvp\+List}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{get\+Kvp\+List()}{getKvpList()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily List$<$\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto}$>$ kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+get\+Kvp\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the kvp list 
+
+\begin{DoxyReturn}{Returns}
+string containing the Chartlabel text
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ac1bd4b0312a7a0a07b8848d9cdf739da}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ac1bd4b0312a7a0a07b8848d9cdf739da}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!get\+Kvp\+List@{get\+Kvp\+List}}
+\index{get\+Kvp\+List@{get\+Kvp\+List}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{get\+Kvp\+List()}{getKvpList()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily List$<$\hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto}$>$ kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+get\+Kvp\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the kvp list 
+
+\begin{DoxyReturn}{Returns}
+string containing the Chartlabel text
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a562207c4315e1f552734257d994cc2d5}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a562207c4315e1f552734257d994cc2d5}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!load\+Data@{load\+Data}}
+\index{load\+Data@{load\+Data}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{load\+Data()}{loadData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily void kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+load\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+loads the default data from 1.\+1.\+18 till today stores in object {\ttfamily \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs}{Kvp\+Data\+Dto\+Rs}} 
+
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a562207c4315e1f552734257d994cc2d5}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a562207c4315e1f552734257d994cc2d5}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!load\+Data@{load\+Data}}
+\index{load\+Data@{load\+Data}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{load\+Data()}{loadData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily void kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+load\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+loads the default data from 1.\+1.\+18 till today stores in object {\ttfamily \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs}{Kvp\+Data\+Dto\+Rs}} 
+
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a7c0a2f992ea673548b507ee6a74e4046}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a7c0a2f992ea673548b507ee6a74e4046}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!load\+Data@{load\+Data}}
+\index{load\+Data@{load\+Data}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{load\+Data()}{loadData()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily void kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+load\+Data (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+loads the specified dataset id stores in object {\ttfamily \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs}{Kvp\+Data\+Dto\+Rs}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & id of requested dataset\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a7c0a2f992ea673548b507ee6a74e4046}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_a7c0a2f992ea673548b507ee6a74e4046}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!load\+Data@{load\+Data}}
+\index{load\+Data@{load\+Data}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{load\+Data()}{loadData()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily void kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+load\+Data (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+loads the specified dataset id stores in object {\ttfamily \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs}{Kvp\+Data\+Dto\+Rs}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & id of requested dataset\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_afbda5e8db6a5f8b25125d2a6b6dcf7e1}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_afbda5e8db6a5f8b25125d2a6b6dcf7e1}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!load\+Data@{load\+Data}}
+\index{load\+Data@{load\+Data}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{load\+Data()}{loadData()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily void kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+load\+Data (\begin{DoxyParamCaption}\item[{Date\+Time}]{startdate,  }\item[{Date\+Time}]{stopdate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor loads with the specified daterange stores in object {\ttfamily \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs}{Kvp\+Data\+Dto\+Rs}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em startdate} & dataset start date (including)\\
+\hline
+{\em stopdate} & dataset stop date (including)\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_afbda5e8db6a5f8b25125d2a6b6dcf7e1}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_afbda5e8db6a5f8b25125d2a6b6dcf7e1}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!load\+Data@{load\+Data}}
+\index{load\+Data@{load\+Data}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{load\+Data()}{loadData()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily void kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+load\+Data (\begin{DoxyParamCaption}\item[{Date\+Time}]{startdate,  }\item[{Date\+Time}]{stopdate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor loads with the specified daterange stores in object {\ttfamily \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs}{Kvp\+Data\+Dto\+Rs}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em startdate} & dataset start date (including)\\
+\hline
+{\em stopdate} & dataset stop date (including)\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_aab05e9ab80b2e766a6744a200e4d8e91}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_aab05e9ab80b2e766a6744a200e4d8e91}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!set\+Data@{set\+Data}}
+\index{set\+Data@{set\+Data}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{set\+Data()}{setData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+set\+Data (\begin{DoxyParamCaption}\item[{List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} $>$}]{kvpdto }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds Kvp Data into the database Generates new id for each datzaset 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kvpdto} & {\ttfamily  List \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} } a list of Kvp data data transfer object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily booo} success
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_aab05e9ab80b2e766a6744a200e4d8e91}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_aab05e9ab80b2e766a6744a200e4d8e91}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!set\+Data@{set\+Data}}
+\index{set\+Data@{set\+Data}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{set\+Data()}{setData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+set\+Data (\begin{DoxyParamCaption}\item[{List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} $>$}]{kvpdto }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds Kvp Data into the database Generates new id for each datzaset 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kvpdto} & {\ttfamily  List \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} } a list of Kvp data data transfer object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily booo} success
+\end{DoxyReturn}
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ae32122a6aba038291afde6128898487e}\label{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs_ae32122a6aba038291afde6128898487e}} 
+\index{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}!Kvp\+Data\+Rs@{Kvp\+Data\+Rs}}
+\index{Kvp\+Data\+Rs@{Kvp\+Data\+Rs}!kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs@{kpi\+Mvc\+Api\+::\+Data\+Transfer\+Objects\+::\+Kvp\+Data\+Dto\+Rs}}
+\subsubsection{\texorpdfstring{Kvp\+Data\+Rs}{KvpDataRs}}
+{\footnotesize\ttfamily List$<$ \hyperlink{classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto}{Kvp\+Data\+Dto} $>$ kpi\+Mvc\+Api.\+Data\+Transfer\+Objects.\+Kvp\+Data\+Dto\+Rs.\+Kvp\+Data\+Rs\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+A List of Kvp Data transfer Objects This List is loaded at construction and reprsent the actual Dataset 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

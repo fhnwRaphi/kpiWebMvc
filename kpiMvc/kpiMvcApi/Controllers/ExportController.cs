@@ -73,7 +73,7 @@ namespace kpiMvcApi.Controllers
         /// Exportiert die Daten in eine Excell.xls
         /// </summary>
         /// <returns> View() Excell .xls File </returns>
-        public ActionResult DeliveryToExcel()
+        public ActionResult DeliveryDataToExcel()
         {
             DeliveryDataDtoRs delivData = new DeliveryDataDtoRs();
             var gv = new GridView();

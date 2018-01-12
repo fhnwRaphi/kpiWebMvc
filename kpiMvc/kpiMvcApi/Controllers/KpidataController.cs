@@ -56,6 +56,7 @@ namespace kpiMvcApi.Controllers
             ProductionDataDtoRs prodDataRs = new ProductionDataDtoRs(id);
             return prodDataRs.getData();
         }
+
         /// <summary>
         /// Returns the Production Data between the specified Dates with the specified id
         /// </summary>
@@ -77,6 +78,7 @@ namespace kpiMvcApi.Controllers
                 return this.getProductionData();
             }
         }
+
         /// <summary>
         /// Adds data into the database, creates new identifiers
         /// The data must hafe the following Format
@@ -187,18 +189,53 @@ namespace kpiMvcApi.Controllers
             }
         }
 
+        /// <summary>
+        /// Returns the KVP Data from 1.1.2018 till the actual Date
+        /// </summary>
+        /// <returns>
+        /// Returns JSON data in the format:
+        /// <code> 
+        /// [
+        /// {
+        ///     "KvpId": 4,
+        ///     "KvpName": "Dashboard3",
+        ///     "KvpDate": "2018-01-05T00:00:00",
+        ///     "KvpClassId": 2,
+        ///     "KvpStateId": 2,
+        ///     "KvpStateName": "Do",
+        ///     "KvpClassName": "Produktivität"
+        /// }
+        ///    {
+        ///         ...
+        ///    }
+        /// ]
+        /// </code>
+        /// </returns>
         [HttpGet]
         public List<KvpDataDto> getKvpData()
         {
             KvpDataDtoRs kvpDataRs = new KvpDataDtoRs();
             return kvpDataRs.getData();
         }
+
+        /// <summary>
+        /// Returns the KVP Data from with the specified id
+        /// </summary>
+        /// <param name="id">Sets the Dataid</param>
+        /// <returns>Returns JSON data</returns>
         [HttpGet]
         public List<KvpDataDto> getKvpData(int id)
         {
             KvpDataDtoRs kvpDataRs = new KvpDataDtoRs(id);
             return kvpDataRs.getData();
         }
+
+        /// <summary>
+        /// Returns the KVP Data between the specified Dates with the specified id
+        /// </summary>
+        /// <param name="startDate"></param>
+        /// <param name="stopDate"></param>
+        /// <returns>Returns JSON data</returns>
         [HttpGet]
         public List<KvpDataDto> getKvpData(string startDate, string stopDate)
         {
@@ -215,6 +252,26 @@ namespace kpiMvcApi.Controllers
             }
         }
 
+        /// <summary>
+        /// Adds data into the database, creates new identifiers
+        /// The data must hafe the following Format
+        /// [
+        ///    {
+        /// "KvpName": "Dashboard3",
+        /// "KvpDate": "2018-01-05T00:00:00",
+        /// "KvpClassId": 2,
+        /// "KvpStateId": 2,
+        /// "KvpStateName": "Do",
+        /// "KvpClassName": "Produktivität"
+        ///    },
+        ///    {
+        ///         ...
+        ///    }
+        /// ]
+        /// </summary>
+        /// <param name="kvpDataList"> New Dataset in Json Format </param>
+        /// <returns> <c>HttpResponseMessage</c>
+        /// </returns>
         [HttpPost]
         public HttpResponseMessage setKvpData(List<KvpDataDto> kvpDataList)
         {
@@ -223,6 +280,30 @@ namespace kpiMvcApi.Controllers
             var response = Request.CreateResponse<List<KvpDataDto>>(System.Net.HttpStatusCode.Created, kvpDataList);
             return response;
         }
+
+        /// <summary>
+        /// Adds data into the database
+        /// If the Id alredy exists, update the Dataset
+        /// if not create the dataset
+        /// The data must hafe the following format
+        /// [
+        ///    {
+        /// "KvpId": 4,
+        /// "KvpName": "Dashboard3",
+        /// "KvpDate": "2018-01-05T00:00:00",
+        /// "KvpClassId": 2,
+        /// "KvpStateId": 2,
+        /// "KvpStateName": "Do",
+        /// "KvpClassName": "Produktivität"
+        ///    },
+        ///    {
+        ///         ...
+        ///    }
+        /// ]
+        /// </summary>
+        /// <param name="kvpDataList"> New Dataset in Json Format </param>
+        /// <returns> <c>HttpResponseMessage</c>
+        /// </returns>
         [HttpPut]
         public HttpResponseMessage updateKvpData(List<KvpDataDto> kvpDataList)
         {
@@ -231,6 +312,21 @@ namespace kpiMvcApi.Controllers
             var response = Request.CreateResponse<List<KvpDataDto>>(System.Net.HttpStatusCode.Created, kvpDataList);
             return response;
         }
+        /// <summary>
+        /// Deletes data with specified id from the database
+        /// The data must hafe the following format
+        /// [
+        ///    {
+        ///        "KvpId": 8,
+        ///    },
+        ///    {
+        ///         ...
+        ///    }
+        /// ]
+        /// </summary>
+        /// <param name="kvpId"> Dataset Id to delete in Json Format </param>
+        /// <returns> <c>HttpResponseMessage</c>
+        /// </returns>
         [HttpDelete]
         public HttpResponseMessage deleteKvpData(List<KvpDataDto> kvpId)
         {
@@ -264,18 +360,53 @@ namespace kpiMvcApi.Controllers
                 return new HttpResponseMessage(HttpStatusCode.ExpectationFailed);
             }
         }
+
+        /// <summary>
+        /// Returns the Delivery Data from 1.1.2018 till the actual Date
+        /// </summary>
+        /// <returns>
+        /// Returns JSON data in the format:
+        /// <code> 
+        /// [
+        /// {
+        ///     "KvpId": 4,
+        ///     "KvpName": "Dashboard3",
+        ///     "KvpDate": "2018-01-05T00:00:00",
+        ///     "KvpClassId": 2,
+        ///     "KvpStateId": 2,
+        ///     "KvpStateName": "Do",
+        ///     "KvpClassName": "Produktivität"
+        /// }
+        ///    {
+        ///         ...
+        ///    }
+        /// ]
+        /// </code>
+        /// </returns>
         [HttpGet]
         public List<DeliveryDataDto> getDeliveryData()
         {
             DeliveryDataDtoRs deliveryDataRs = new DeliveryDataDtoRs();
             return deliveryDataRs.getData();
         }
+        /// <summary>
+        /// Returns the Delivery Data from with the specified id
+        /// </summary>
+        /// <param name="id">Sets the Dataid</param>
+        /// <returns>Returns JSON data</returns>
         [HttpGet]
         public List<DeliveryDataDto> getDeliveryData(int id)
         {
             DeliveryDataDtoRs deliveryDataRs = new DeliveryDataDtoRs(id);
             return deliveryDataRs.getData();
         }
+
+        /// <summary>
+        /// Returns the Delivery Data between the specified Dates with the specified id
+        /// </summary>
+        /// <param name="startDate"></param>
+        /// <param name="stopDate"></param>
+        /// <returns>Returns JSON data</returns>
         [HttpGet]
         public List<DeliveryDataDto> getDeliveryData(string startDate, string stopDate)
         {
@@ -292,6 +423,27 @@ namespace kpiMvcApi.Controllers
             }
         }
 
+        /// <summary>
+        /// Adds data into the database, creates new identifiers
+        /// The data must hafe the following Format
+        /// [
+        ///    {
+        /// "OrderDate": "2018-01-01T00:00:00",
+        /// "OrderedPc": 100,
+        /// "DeliveredPc": 100,
+        /// "NotdeliveredPc": null,
+        /// "NotdeliveredRel": null,
+        /// "CountryId": 1,
+        /// "CountryName": "Switzerland"
+        ///    },
+        ///    {
+        ///         ...
+        ///    }
+        /// ]
+        /// </summary>
+        /// <param name="deliveryDataList"> New Dataset in Json Format </param>
+        /// <returns> <c>HttpResponseMessage</c>
+        /// </returns>
         [HttpPost]
         public HttpResponseMessage setDeliveryData(List<DeliveryDataDto> deliveryDataList)
         {
@@ -300,6 +452,31 @@ namespace kpiMvcApi.Controllers
             var response = Request.CreateResponse<List<DeliveryDataDto>>(System.Net.HttpStatusCode.Created, deliveryDataList);
             return response;
         }
+
+        /// <summary>
+        /// Adds data into the database
+        /// If the Id alredy exists, update the Dataset
+        /// if not create the dataset
+        /// The data must hafe the following format
+        /// [
+        ///    {
+        /// "DeliveryId": 4,   
+        /// "OrderDate": "2018-01-01T00:00:00",
+        /// "OrderedPc": 100,
+        /// "DeliveredPc": 100,
+        /// "NotdeliveredPc": null,
+        /// "NotdeliveredRel": null,
+        /// "CountryId": 1,
+        /// "CountryName": "Switzerland"
+        ///    },
+        ///    {
+        ///         ...
+        ///    }
+        /// ]
+        /// </summary>
+        /// <param name="deliveryDataList"> New Dataset in Json Format </param>
+        /// <returns> <c>HttpResponseMessage</c>
+        /// </returns>
         [HttpPut]
         public HttpResponseMessage updateDeliveryData(List<DeliveryDataDto> deliveryDataList)
         {
@@ -308,6 +485,22 @@ namespace kpiMvcApi.Controllers
             var response = Request.CreateResponse<List<DeliveryDataDto>>(System.Net.HttpStatusCode.Created, deliveryDataList);
             return response;
         }
+
+        /// <summary>
+        /// Deletes data with specified id from the database
+        /// The data must hafe the following format
+        /// [
+        ///    {
+        ///        "DeliveryId": 8,
+        ///    },
+        ///    {
+        ///         ...
+        ///    }
+        /// ]
+        /// </summary>
+        /// <param name="deliveryDataList"> Dataset Id to delete in Json Format </param>
+        /// <returns> <c>HttpResponseMessage</c>
+        /// </returns>
         [HttpDelete]
         public HttpResponseMessage deleteDeliveryData(List<DeliveryDataDto> deliveryDataList)
         {

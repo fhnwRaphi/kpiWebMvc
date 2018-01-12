@@ -66,21 +66,95 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a0ab15672f7d3b5a077a8c4b0612feab8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Production Data from 1.1.2018 till the actual Date  <a href="#a0ab15672f7d3b5a077a8c4b0612feab8">More...</a><br /></td></tr>
 <tr class="separator:a0ab15672f7d3b5a077a8c4b0612feab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cc4fffc5f66a92f16f917715cb36d0e"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller.html#a2cc4fffc5f66a92f16f917715cb36d0e">getProductionData</a> (int id)</td></tr>
+<tr class="memdesc:a2cc4fffc5f66a92f16f917715cb36d0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Production Data from with the specified id  <a href="#a2cc4fffc5f66a92f16f917715cb36d0e">More...</a><br /></td></tr>
 <tr class="separator:a2cc4fffc5f66a92f16f917715cb36d0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27722d65abe0781d4b670c84c2e07a76"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller.html#a27722d65abe0781d4b670c84c2e07a76">getProductionData</a> (string startDate, string stopDate)</td></tr>
+<tr class="memdesc:a27722d65abe0781d4b670c84c2e07a76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Production Data between the specified Dates with the specified id  <a href="#a27722d65abe0781d4b670c84c2e07a76">More...</a><br /></td></tr>
 <tr class="separator:a27722d65abe0781d4b670c84c2e07a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f6c6c359f37a9b9a83d481b5c26a037"><td class="memItemLeft" align="right" valign="top"><a id="a7f6c6c359f37a9b9a83d481b5c26a037"></a>
-HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><b>setProductionData</b> (List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a> &gt; prodDataList)</td></tr>
+<tr class="memitem:a7f6c6c359f37a9b9a83d481b5c26a037"><td class="memItemLeft" align="right" valign="top">HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller.html#a7f6c6c359f37a9b9a83d481b5c26a037">setProductionData</a> (List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a> &gt; prodDataList)</td></tr>
+<tr class="memdesc:a7f6c6c359f37a9b9a83d481b5c26a037"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds data into the database, creates new identifiers The data must hafe the following Format [ { "ProductionDay": "2018-01-09T00:00:00", "PcbQuantity": 512345, "PcbSumPrice": 5123456, "PcbGenerationId": 3, "PcbClassId": 0, "PcbGenerationName": null, "PcbClassName": null }, { ... } ]  <a href="#a7f6c6c359f37a9b9a83d481b5c26a037">More...</a><br /></td></tr>
 <tr class="separator:a7f6c6c359f37a9b9a83d481b5c26a037"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82f308e9ae4809dfdca3ce685af05774"><td class="memItemLeft" align="right" valign="top"><a id="a82f308e9ae4809dfdca3ce685af05774"></a>
-HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><b>updateProductionData</b> (List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a> &gt; prodDataList)</td></tr>
+<tr class="memitem:a82f308e9ae4809dfdca3ce685af05774"><td class="memItemLeft" align="right" valign="top">HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller.html#a82f308e9ae4809dfdca3ce685af05774">updateProductionData</a> (List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a> &gt; prodDataList)</td></tr>
+<tr class="memdesc:a82f308e9ae4809dfdca3ce685af05774"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds data into the database If the Id alredy exists, update the Dataset if not create the dataset The data must hafe the following format [ { "PcbDailyId": 8, "ProductionDay": "2018-01-09T00:00:00", "PcbQuantity": 512345, "PcbSumPrice": 5123456, "PcbGenerationId": 3, "PcbClassId": 0, "PcbGenerationName": null, "PcbClassName": null }, { ... } ]  <a href="#a82f308e9ae4809dfdca3ce685af05774">More...</a><br /></td></tr>
 <tr class="separator:a82f308e9ae4809dfdca3ce685af05774"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1c1e99336a8408bbe4b637cfaaddc4b"><td class="memItemLeft" align="right" valign="top"><a id="af1c1e99336a8408bbe4b637cfaaddc4b"></a>
-HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><b>deleteProductionData</b> (List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a> &gt; prodDataList)</td></tr>
+<tr class="memitem:af1c1e99336a8408bbe4b637cfaaddc4b"><td class="memItemLeft" align="right" valign="top">HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller.html#af1c1e99336a8408bbe4b637cfaaddc4b">deleteProductionData</a> (List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a> &gt; prodDataList)</td></tr>
+<tr class="memdesc:af1c1e99336a8408bbe4b637cfaaddc4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes data ^with specified id from the database The data must hafe the following format [ { "PcbDailyId": 8, }, { ... } ]  <a href="#af1c1e99336a8408bbe4b637cfaaddc4b">More...</a><br /></td></tr>
 <tr class="separator:af1c1e99336a8408bbe4b637cfaaddc4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10ba0d225612ba751e0948c601db9a9d"><td class="memItemLeft" align="right" valign="top">HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller.html#a10ba0d225612ba751e0948c601db9a9d">deleteProductionData</a> (string startDate, string stopDate)</td></tr>
+<tr class="memdesc:a10ba0d225612ba751e0948c601db9a9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes data in the specified daterange  <a href="#a10ba0d225612ba751e0948c601db9a9d">More...</a><br /></td></tr>
+<tr class="separator:a10ba0d225612ba751e0948c601db9a9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5b9cebd2043650b2fd60caa72e49da7"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller.html#ae5b9cebd2043650b2fd60caa72e49da7">getKvpData</a> ()</td></tr>
+<tr class="memdesc:ae5b9cebd2043650b2fd60caa72e49da7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the KVP Data from 1.1.2018 till the actual Date  <a href="#ae5b9cebd2043650b2fd60caa72e49da7">More...</a><br /></td></tr>
+<tr class="separator:ae5b9cebd2043650b2fd60caa72e49da7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dc630ba17a33a597ff3ecfb67ec8497"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller.html#a1dc630ba17a33a597ff3ecfb67ec8497">getKvpData</a> (int id)</td></tr>
+<tr class="memdesc:a1dc630ba17a33a597ff3ecfb67ec8497"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the KVP Data from with the specified id  <a href="#a1dc630ba17a33a597ff3ecfb67ec8497">More...</a><br /></td></tr>
+<tr class="separator:a1dc630ba17a33a597ff3ecfb67ec8497"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcc1190cc0eb07ddb510bb47052cef58"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller.html#abcc1190cc0eb07ddb510bb47052cef58">getKvpData</a> (string startDate, string stopDate)</td></tr>
+<tr class="memdesc:abcc1190cc0eb07ddb510bb47052cef58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the KVP Data between the specified Dates with the specified id  <a href="#abcc1190cc0eb07ddb510bb47052cef58">More...</a><br /></td></tr>
+<tr class="separator:abcc1190cc0eb07ddb510bb47052cef58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaed21921287f9a780cc3ff7e1042dc2a"><td class="memItemLeft" align="right" valign="top">HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller.html#aaed21921287f9a780cc3ff7e1042dc2a">setKvpData</a> (List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a> &gt; kvpDataList)</td></tr>
+<tr class="memdesc:aaed21921287f9a780cc3ff7e1042dc2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds data into the database, creates new identifiers The data must hafe the following Format [ { "KvpName": "Dashboard3", "KvpDate": "2018-01-05T00:00:00", "KvpClassId": 2, "KvpStateId": 2, "KvpStateName": "Do", "KvpClassName": "Produktivität" }, { ... } ]  <a href="#aaed21921287f9a780cc3ff7e1042dc2a">More...</a><br /></td></tr>
+<tr class="separator:aaed21921287f9a780cc3ff7e1042dc2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac165b3dedfa1744a41af6a1acc07a657"><td class="memItemLeft" align="right" valign="top">HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller.html#ac165b3dedfa1744a41af6a1acc07a657">updateKvpData</a> (List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a> &gt; kvpDataList)</td></tr>
+<tr class="memdesc:ac165b3dedfa1744a41af6a1acc07a657"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds data into the database If the Id alredy exists, update the Dataset if not create the dataset The data must hafe the following format [ { "KvpId": 4, "KvpName": "Dashboard3", "KvpDate": "2018-01-05T00:00:00", "KvpClassId": 2, "KvpStateId": 2, "KvpStateName": "Do", "KvpClassName": "Produktivität" }, { ... } ]  <a href="#ac165b3dedfa1744a41af6a1acc07a657">More...</a><br /></td></tr>
+<tr class="separator:ac165b3dedfa1744a41af6a1acc07a657"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42bfeef2bf903c70d9d8452367ed6dd0"><td class="memItemLeft" align="right" valign="top">HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller.html#a42bfeef2bf903c70d9d8452367ed6dd0">deleteKvpData</a> (List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a> &gt; kvpId)</td></tr>
+<tr class="memdesc:a42bfeef2bf903c70d9d8452367ed6dd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes data with specified id from the database The data must hafe the following format [ { "KvpId": 8, }, { ... } ]  <a href="#a42bfeef2bf903c70d9d8452367ed6dd0">More...</a><br /></td></tr>
+<tr class="separator:a42bfeef2bf903c70d9d8452367ed6dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39dbc332ddee57f0a7bda5d724a0d694"><td class="memItemLeft" align="right" valign="top">HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller.html#a39dbc332ddee57f0a7bda5d724a0d694">deleteKvpData</a> (string startDate, string stopDate)</td></tr>
+<tr class="memdesc:a39dbc332ddee57f0a7bda5d724a0d694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes data in the specified daterange  <a href="#a39dbc332ddee57f0a7bda5d724a0d694">More...</a><br /></td></tr>
+<tr class="separator:a39dbc332ddee57f0a7bda5d724a0d694"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a731d149b7c58ba7de0a45c2eb3110fe1"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller.html#a731d149b7c58ba7de0a45c2eb3110fe1">getDeliveryData</a> ()</td></tr>
+<tr class="memdesc:a731d149b7c58ba7de0a45c2eb3110fe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Delivery Data from 1.1.2018 till the actual Date  <a href="#a731d149b7c58ba7de0a45c2eb3110fe1">More...</a><br /></td></tr>
+<tr class="separator:a731d149b7c58ba7de0a45c2eb3110fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63c0c7c25b53904dbae7786dd66285e4"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller.html#a63c0c7c25b53904dbae7786dd66285e4">getDeliveryData</a> (int id)</td></tr>
+<tr class="memdesc:a63c0c7c25b53904dbae7786dd66285e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Delivery Data from with the specified id  <a href="#a63c0c7c25b53904dbae7786dd66285e4">More...</a><br /></td></tr>
+<tr class="separator:a63c0c7c25b53904dbae7786dd66285e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa080da542869888b3e45666e7e751b72"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller.html#aa080da542869888b3e45666e7e751b72">getDeliveryData</a> (string startDate, string stopDate)</td></tr>
+<tr class="memdesc:aa080da542869888b3e45666e7e751b72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Delivery Data between the specified Dates with the specified id  <a href="#aa080da542869888b3e45666e7e751b72">More...</a><br /></td></tr>
+<tr class="separator:aa080da542869888b3e45666e7e751b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0c16d6b3d009224eae6ea5a2b20aabd"><td class="memItemLeft" align="right" valign="top">HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller.html#ae0c16d6b3d009224eae6ea5a2b20aabd">setDeliveryData</a> (List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a> &gt; deliveryDataList)</td></tr>
+<tr class="memdesc:ae0c16d6b3d009224eae6ea5a2b20aabd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds data into the database, creates new identifiers The data must hafe the following Format [ { "OrderDate": "2018-01-01T00:00:00", "OrderedPc": 100, "DeliveredPc": 100, "NotdeliveredPc": null, "NotdeliveredRel": null, "CountryId": 1, "CountryName": "Switzerland" }, { ... } ]  <a href="#ae0c16d6b3d009224eae6ea5a2b20aabd">More...</a><br /></td></tr>
+<tr class="separator:ae0c16d6b3d009224eae6ea5a2b20aabd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a893e7ff73b6dbd31afa5e1aa73e5abae"><td class="memItemLeft" align="right" valign="top">HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller.html#a893e7ff73b6dbd31afa5e1aa73e5abae">updateDeliveryData</a> (List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a> &gt; deliveryDataList)</td></tr>
+<tr class="memdesc:a893e7ff73b6dbd31afa5e1aa73e5abae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds data into the database If the Id alredy exists, update the Dataset if not create the dataset The data must hafe the following format [ { "DeliveryId": 4, "OrderDate": "2018-01-01T00:00:00", "OrderedPc": 100, "DeliveredPc": 100, "NotdeliveredPc": null, "NotdeliveredRel": null, "CountryId": 1, "CountryName": "Switzerland" }, { ... } ]  <a href="#a893e7ff73b6dbd31afa5e1aa73e5abae">More...</a><br /></td></tr>
+<tr class="separator:a893e7ff73b6dbd31afa5e1aa73e5abae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2494970082b1b00fd50353e4aa840188"><td class="memItemLeft" align="right" valign="top">HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller.html#a2494970082b1b00fd50353e4aa840188">deleteDeliveryData</a> (List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a> &gt; deliveryDataList)</td></tr>
+<tr class="memdesc:a2494970082b1b00fd50353e4aa840188"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes data with specified id from the database The data must hafe the following format [ { "DeliveryId": 8, }, { ... } ]  <a href="#a2494970082b1b00fd50353e4aa840188">More...</a><br /></td></tr>
+<tr class="separator:a2494970082b1b00fd50353e4aa840188"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa78742271a206304b8daa11cb747bde"><td class="memItemLeft" align="right" valign="top">HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller.html#afa78742271a206304b8daa11cb747bde">deleteDeliveryData</a> (string startDate, string stopDate)</td></tr>
+<tr class="memdesc:afa78742271a206304b8daa11cb747bde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes data in the specified daterange  <a href="#afa78742271a206304b8daa11cb747bde">More...</a><br /></td></tr>
+<tr class="separator:afa78742271a206304b8daa11cb747bde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ab15672f7d3b5a077a8c4b0612feab8"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller.html#a0ab15672f7d3b5a077a8c4b0612feab8">getProductionData</a> ()</td></tr>
+<tr class="memdesc:a0ab15672f7d3b5a077a8c4b0612feab8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Production Data from 1.1.2018 till the actual Date  <a href="#a0ab15672f7d3b5a077a8c4b0612feab8">More...</a><br /></td></tr>
+<tr class="separator:a0ab15672f7d3b5a077a8c4b0612feab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cc4fffc5f66a92f16f917715cb36d0e"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller.html#a2cc4fffc5f66a92f16f917715cb36d0e">getProductionData</a> (int id)</td></tr>
+<tr class="memdesc:a2cc4fffc5f66a92f16f917715cb36d0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Production Data from with the specified id  <a href="#a2cc4fffc5f66a92f16f917715cb36d0e">More...</a><br /></td></tr>
+<tr class="separator:a2cc4fffc5f66a92f16f917715cb36d0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27722d65abe0781d4b670c84c2e07a76"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller.html#a27722d65abe0781d4b670c84c2e07a76">getProductionData</a> (string startDate, string stopDate)</td></tr>
+<tr class="memdesc:a27722d65abe0781d4b670c84c2e07a76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Production Data between the specified Dates with the specified id  <a href="#a27722d65abe0781d4b670c84c2e07a76">More...</a><br /></td></tr>
+<tr class="separator:a27722d65abe0781d4b670c84c2e07a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f6c6c359f37a9b9a83d481b5c26a037"><td class="memItemLeft" align="right" valign="top">HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller.html#a7f6c6c359f37a9b9a83d481b5c26a037">setProductionData</a> (List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a> &gt; prodDataList)</td></tr>
+<tr class="memdesc:a7f6c6c359f37a9b9a83d481b5c26a037"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds data into the database, creates new identifiers The data must hafe the following Format [ { "ProductionDay": "2018-01-09T00:00:00", "PcbQuantity": 512345, "PcbSumPrice": 5123456, "PcbGenerationId": 3, "PcbClassId": 0, "PcbGenerationName": null, "PcbClassName": null }, { ... } ]  <a href="#a7f6c6c359f37a9b9a83d481b5c26a037">More...</a><br /></td></tr>
+<tr class="separator:a7f6c6c359f37a9b9a83d481b5c26a037"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82f308e9ae4809dfdca3ce685af05774"><td class="memItemLeft" align="right" valign="top">HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller.html#a82f308e9ae4809dfdca3ce685af05774">updateProductionData</a> (List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a> &gt; prodDataList)</td></tr>
+<tr class="memdesc:a82f308e9ae4809dfdca3ce685af05774"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds data into the database If the Id alredy exists, update the Dataset if not create the dataset The data must hafe the following format [ { "PcbDailyId": 8, "ProductionDay": "2018-01-09T00:00:00", "PcbQuantity": 512345, "PcbSumPrice": 5123456, "PcbGenerationId": 3, "PcbClassId": 0, "PcbGenerationName": null, "PcbClassName": null }, { ... } ]  <a href="#a82f308e9ae4809dfdca3ce685af05774">More...</a><br /></td></tr>
+<tr class="separator:a82f308e9ae4809dfdca3ce685af05774"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1c1e99336a8408bbe4b637cfaaddc4b"><td class="memItemLeft" align="right" valign="top">HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller.html#af1c1e99336a8408bbe4b637cfaaddc4b">deleteProductionData</a> (List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a> &gt; prodDataList)</td></tr>
+<tr class="memdesc:af1c1e99336a8408bbe4b637cfaaddc4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes data ^with specified id from the database The data must hafe the following format [ { "PcbDailyId": 8, }, { ... } ]  <a href="#af1c1e99336a8408bbe4b637cfaaddc4b">More...</a><br /></td></tr>
+<tr class="separator:af1c1e99336a8408bbe4b637cfaaddc4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10ba0d225612ba751e0948c601db9a9d"><td class="memItemLeft" align="right" valign="top">HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller.html#a10ba0d225612ba751e0948c601db9a9d">deleteProductionData</a> (string startDate, string stopDate)</td></tr>
+<tr class="memdesc:a10ba0d225612ba751e0948c601db9a9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes data in the specified daterange  <a href="#a10ba0d225612ba751e0948c601db9a9d">More...</a><br /></td></tr>
+<tr class="separator:a10ba0d225612ba751e0948c601db9a9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5b9cebd2043650b2fd60caa72e49da7"><td class="memItemLeft" align="right" valign="top"><a id="ae5b9cebd2043650b2fd60caa72e49da7"></a>
 List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getKvpData</b> ()</td></tr>
 <tr class="separator:ae5b9cebd2043650b2fd60caa72e49da7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dc630ba17a33a597ff3ecfb67ec8497"><td class="memItemLeft" align="right" valign="top"><a id="a1dc630ba17a33a597ff3ecfb67ec8497"></a>
+List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getKvpData</b> (int id)</td></tr>
+<tr class="separator:a1dc630ba17a33a597ff3ecfb67ec8497"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcc1190cc0eb07ddb510bb47052cef58"><td class="memItemLeft" align="right" valign="top"><a id="abcc1190cc0eb07ddb510bb47052cef58"></a>
+List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getKvpData</b> (string startDate, string stopDate)</td></tr>
+<tr class="separator:abcc1190cc0eb07ddb510bb47052cef58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaed21921287f9a780cc3ff7e1042dc2a"><td class="memItemLeft" align="right" valign="top"><a id="aaed21921287f9a780cc3ff7e1042dc2a"></a>
 HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><b>setKvpData</b> (List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a> &gt; kvpDataList)</td></tr>
 <tr class="separator:aaed21921287f9a780cc3ff7e1042dc2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -90,9 +164,18 @@ HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><b>update
 <tr class="memitem:a42bfeef2bf903c70d9d8452367ed6dd0"><td class="memItemLeft" align="right" valign="top"><a id="a42bfeef2bf903c70d9d8452367ed6dd0"></a>
 HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><b>deleteKvpData</b> (List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a> &gt; kvpId)</td></tr>
 <tr class="separator:a42bfeef2bf903c70d9d8452367ed6dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39dbc332ddee57f0a7bda5d724a0d694"><td class="memItemLeft" align="right" valign="top">HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller.html#a39dbc332ddee57f0a7bda5d724a0d694">deleteKvpData</a> (string startDate, string stopDate)</td></tr>
+<tr class="memdesc:a39dbc332ddee57f0a7bda5d724a0d694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes data in the specified daterange  <a href="#a39dbc332ddee57f0a7bda5d724a0d694">More...</a><br /></td></tr>
+<tr class="separator:a39dbc332ddee57f0a7bda5d724a0d694"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a731d149b7c58ba7de0a45c2eb3110fe1"><td class="memItemLeft" align="right" valign="top"><a id="a731d149b7c58ba7de0a45c2eb3110fe1"></a>
 List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getDeliveryData</b> ()</td></tr>
 <tr class="separator:a731d149b7c58ba7de0a45c2eb3110fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63c0c7c25b53904dbae7786dd66285e4"><td class="memItemLeft" align="right" valign="top"><a id="a63c0c7c25b53904dbae7786dd66285e4"></a>
+List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getDeliveryData</b> (int id)</td></tr>
+<tr class="separator:a63c0c7c25b53904dbae7786dd66285e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa080da542869888b3e45666e7e751b72"><td class="memItemLeft" align="right" valign="top"><a id="aa080da542869888b3e45666e7e751b72"></a>
+List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getDeliveryData</b> (string startDate, string stopDate)</td></tr>
+<tr class="separator:aa080da542869888b3e45666e7e751b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0c16d6b3d009224eae6ea5a2b20aabd"><td class="memItemLeft" align="right" valign="top"><a id="ae0c16d6b3d009224eae6ea5a2b20aabd"></a>
 HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><b>setDeliveryData</b> (List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a> &gt; deliveryDataList)</td></tr>
 <tr class="separator:ae0c16d6b3d009224eae6ea5a2b20aabd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -102,18 +185,649 @@ HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><b>update
 <tr class="memitem:a2494970082b1b00fd50353e4aa840188"><td class="memItemLeft" align="right" valign="top"><a id="a2494970082b1b00fd50353e4aa840188"></a>
 HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><b>deleteDeliveryData</b> (List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a> &gt; deliveryDataList)</td></tr>
 <tr class="separator:a2494970082b1b00fd50353e4aa840188"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ab15672f7d3b5a077a8c4b0612feab8"><td class="memItemLeft" align="right" valign="top"><a id="a0ab15672f7d3b5a077a8c4b0612feab8"></a>
-List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getProductionData</b> ()</td></tr>
-<tr class="separator:a0ab15672f7d3b5a077a8c4b0612feab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f6c6c359f37a9b9a83d481b5c26a037"><td class="memItemLeft" align="right" valign="top"><a id="a7f6c6c359f37a9b9a83d481b5c26a037"></a>
-HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><b>setProductionData</b> (List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a> &gt; prodDataList)</td></tr>
-<tr class="separator:a7f6c6c359f37a9b9a83d481b5c26a037"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa78742271a206304b8daa11cb747bde"><td class="memItemLeft" align="right" valign="top">HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_controllers_1_1_kpidata_controller.html#afa78742271a206304b8daa11cb747bde">deleteDeliveryData</a> (string startDate, string stopDate)</td></tr>
+<tr class="memdesc:afa78742271a206304b8daa11cb747bde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes data in the specified daterange  <a href="#afa78742271a206304b8daa11cb747bde">More...</a><br /></td></tr>
+<tr class="separator:afa78742271a206304b8daa11cb747bde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This Controller contains all API GET POST PUT DELETE methods </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="afa78742271a206304b8daa11cb747bde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa78742271a206304b8daa11cb747bde">&#9670;&nbsp;</a></span>deleteDeliveryData() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpResponseMessage kpiMvcApi.Controllers.KpidataController.deleteDeliveryData </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>startDate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>stopDate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deletes data in the specified daterange </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">startDate</td><td></td></tr>
+    <tr><td class="paramname">stopDate</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>HttpResponseMessage</code> </dd></dl>
+
+</div>
+</div>
+<a id="a2494970082b1b00fd50353e4aa840188"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2494970082b1b00fd50353e4aa840188">&#9670;&nbsp;</a></span>deleteDeliveryData() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpResponseMessage kpiMvcApi.Controllers.KpidataController.deleteDeliveryData </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a> &gt;&#160;</td>
+          <td class="paramname"><em>deliveryDataList</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deletes data with specified id from the database The data must hafe the following format [ { "DeliveryId": 8, }, { ... } ] </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deliveryDataList</td><td>Dataset Id to delete in Json Format </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>HttpResponseMessage</code> </dd></dl>
+
+</div>
+</div>
+<a id="afa78742271a206304b8daa11cb747bde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa78742271a206304b8daa11cb747bde">&#9670;&nbsp;</a></span>deleteDeliveryData() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpResponseMessage kpiMvcApi.Controllers.KpidataController.deleteDeliveryData </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>startDate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>stopDate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deletes data in the specified daterange </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">startDate</td><td></td></tr>
+    <tr><td class="paramname">stopDate</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>HttpResponseMessage</code> </dd></dl>
+
+</div>
+</div>
+<a id="a39dbc332ddee57f0a7bda5d724a0d694"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39dbc332ddee57f0a7bda5d724a0d694">&#9670;&nbsp;</a></span>deleteKvpData() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpResponseMessage kpiMvcApi.Controllers.KpidataController.deleteKvpData </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>startDate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>stopDate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deletes data in the specified daterange </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">startDate</td><td></td></tr>
+    <tr><td class="paramname">stopDate</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>HttpResponseMessage</code> </dd></dl>
+
+</div>
+</div>
+<a id="a42bfeef2bf903c70d9d8452367ed6dd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42bfeef2bf903c70d9d8452367ed6dd0">&#9670;&nbsp;</a></span>deleteKvpData() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpResponseMessage kpiMvcApi.Controllers.KpidataController.deleteKvpData </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a> &gt;&#160;</td>
+          <td class="paramname"><em>kvpId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deletes data with specified id from the database The data must hafe the following format [ { "KvpId": 8, }, { ... } ] </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kvpId</td><td>Dataset Id to delete in Json Format </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>HttpResponseMessage</code> </dd></dl>
+
+</div>
+</div>
+<a id="a39dbc332ddee57f0a7bda5d724a0d694"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39dbc332ddee57f0a7bda5d724a0d694">&#9670;&nbsp;</a></span>deleteKvpData() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpResponseMessage kpiMvcApi.Controllers.KpidataController.deleteKvpData </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>startDate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>stopDate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deletes data in the specified daterange </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">startDate</td><td></td></tr>
+    <tr><td class="paramname">stopDate</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>HttpResponseMessage</code> </dd></dl>
+
+</div>
+</div>
+<a id="af1c1e99336a8408bbe4b637cfaaddc4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1c1e99336a8408bbe4b637cfaaddc4b">&#9670;&nbsp;</a></span>deleteProductionData() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpResponseMessage kpiMvcApi.Controllers.KpidataController.deleteProductionData </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a> &gt;&#160;</td>
+          <td class="paramname"><em>prodDataList</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deletes data ^with specified id from the database The data must hafe the following format [ { "PcbDailyId": 8, }, { ... } ] </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prodDataList</td><td>Dataset Id to delete in Json Format </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>HttpResponseMessage</code> </dd></dl>
+
+</div>
+</div>
+<a id="af1c1e99336a8408bbe4b637cfaaddc4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1c1e99336a8408bbe4b637cfaaddc4b">&#9670;&nbsp;</a></span>deleteProductionData() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpResponseMessage kpiMvcApi.Controllers.KpidataController.deleteProductionData </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a> &gt;&#160;</td>
+          <td class="paramname"><em>prodDataList</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deletes data ^with specified id from the database The data must hafe the following format [ { "PcbDailyId": 8, }, { ... } ] </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prodDataList</td><td>Dataset Id to delete in Json Format </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>HttpResponseMessage</code> </dd></dl>
+
+</div>
+</div>
+<a id="a10ba0d225612ba751e0948c601db9a9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10ba0d225612ba751e0948c601db9a9d">&#9670;&nbsp;</a></span>deleteProductionData() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpResponseMessage kpiMvcApi.Controllers.KpidataController.deleteProductionData </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>startDate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>stopDate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deletes data in the specified daterange </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">startDate</td><td></td></tr>
+    <tr><td class="paramname">stopDate</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>HttpResponseMessage</code> </dd></dl>
+
+</div>
+</div>
+<a id="a10ba0d225612ba751e0948c601db9a9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10ba0d225612ba751e0948c601db9a9d">&#9670;&nbsp;</a></span>deleteProductionData() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpResponseMessage kpiMvcApi.Controllers.KpidataController.deleteProductionData </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>startDate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>stopDate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deletes data in the specified daterange </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">startDate</td><td></td></tr>
+    <tr><td class="paramname">stopDate</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>HttpResponseMessage</code> </dd></dl>
+
+</div>
+</div>
+<a id="a731d149b7c58ba7de0a45c2eb3110fe1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a731d149b7c58ba7de0a45c2eb3110fe1">&#9670;&nbsp;</a></span>getDeliveryData() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a>&gt; kpiMvcApi.Controllers.KpidataController.getDeliveryData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the Delivery Data from 1.1.2018 till the actual Date </p>
+<dl class="section return"><dt>Returns</dt><dd>Returns JSON data in the format: <div class="fragment"><div class="line">[</div><div class="line">{</div><div class="line">    <span class="stringliteral">&quot;KvpId&quot;</span>: 4,</div><div class="line">    <span class="stringliteral">&quot;KvpName&quot;</span>: <span class="stringliteral">&quot;Dashboard3&quot;</span>,</div><div class="line">    <span class="stringliteral">&quot;KvpDate&quot;</span>: <span class="stringliteral">&quot;2018-01-05T00:00:00&quot;</span>,</div><div class="line">    <span class="stringliteral">&quot;KvpClassId&quot;</span>: 2,</div><div class="line">    <span class="stringliteral">&quot;KvpStateId&quot;</span>: 2,</div><div class="line">    <span class="stringliteral">&quot;KvpStateName&quot;</span>: <span class="stringliteral">&quot;Do&quot;</span>,</div><div class="line">    <span class="stringliteral">&quot;KvpClassName&quot;</span>: <span class="stringliteral">&quot;Produktivität&quot;</span></div><div class="line">}</div><div class="line">   {</div><div class="line">        ...</div><div class="line">   }</div><div class="line">]</div></div><!-- fragment --> </dd></dl>
+
+</div>
+</div>
+<a id="a63c0c7c25b53904dbae7786dd66285e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63c0c7c25b53904dbae7786dd66285e4">&#9670;&nbsp;</a></span>getDeliveryData() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a>&gt; kpiMvcApi.Controllers.KpidataController.getDeliveryData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the Delivery Data from with the specified id </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Sets the Dataid</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns JSON data</dd></dl>
+
+</div>
+</div>
+<a id="aa080da542869888b3e45666e7e751b72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa080da542869888b3e45666e7e751b72">&#9670;&nbsp;</a></span>getDeliveryData() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a>&gt; kpiMvcApi.Controllers.KpidataController.getDeliveryData </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>startDate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>stopDate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the Delivery Data between the specified Dates with the specified id </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">startDate</td><td></td></tr>
+    <tr><td class="paramname">stopDate</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns JSON data</dd></dl>
+
+</div>
+</div>
+<a id="ae5b9cebd2043650b2fd60caa72e49da7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5b9cebd2043650b2fd60caa72e49da7">&#9670;&nbsp;</a></span>getKvpData() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a>&gt; kpiMvcApi.Controllers.KpidataController.getKvpData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the KVP Data from 1.1.2018 till the actual Date </p>
+<dl class="section return"><dt>Returns</dt><dd>Returns JSON data in the format: <div class="fragment"><div class="line">[</div><div class="line">{</div><div class="line">    <span class="stringliteral">&quot;KvpId&quot;</span>: 4,</div><div class="line">    <span class="stringliteral">&quot;KvpName&quot;</span>: <span class="stringliteral">&quot;Dashboard3&quot;</span>,</div><div class="line">    <span class="stringliteral">&quot;KvpDate&quot;</span>: <span class="stringliteral">&quot;2018-01-05T00:00:00&quot;</span>,</div><div class="line">    <span class="stringliteral">&quot;KvpClassId&quot;</span>: 2,</div><div class="line">    <span class="stringliteral">&quot;KvpStateId&quot;</span>: 2,</div><div class="line">    <span class="stringliteral">&quot;KvpStateName&quot;</span>: <span class="stringliteral">&quot;Do&quot;</span>,</div><div class="line">    <span class="stringliteral">&quot;KvpClassName&quot;</span>: <span class="stringliteral">&quot;Produktivität&quot;</span></div><div class="line">}</div><div class="line">   {</div><div class="line">        ...</div><div class="line">   }</div><div class="line">]</div></div><!-- fragment --> </dd></dl>
+
+</div>
+</div>
+<a id="a1dc630ba17a33a597ff3ecfb67ec8497"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dc630ba17a33a597ff3ecfb67ec8497">&#9670;&nbsp;</a></span>getKvpData() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a>&gt; kpiMvcApi.Controllers.KpidataController.getKvpData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the KVP Data from with the specified id </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Sets the Dataid</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns JSON data</dd></dl>
+
+</div>
+</div>
+<a id="abcc1190cc0eb07ddb510bb47052cef58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcc1190cc0eb07ddb510bb47052cef58">&#9670;&nbsp;</a></span>getKvpData() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a>&gt; kpiMvcApi.Controllers.KpidataController.getKvpData </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>startDate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>stopDate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the KVP Data between the specified Dates with the specified id </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">startDate</td><td></td></tr>
+    <tr><td class="paramname">stopDate</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns JSON data</dd></dl>
+
+</div>
+</div>
 <a id="a0ab15672f7d3b5a077a8c4b0612feab8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ab15672f7d3b5a077a8c4b0612feab8">&#9670;&nbsp;</a></span>getProductionData() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ab15672f7d3b5a077a8c4b0612feab8">&#9670;&nbsp;</a></span>getProductionData() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -136,12 +850,40 @@ HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><b>setPro
 </div><div class="memdoc">
 
 <p>Returns the Production Data from 1.1.2018 till the actual Date </p>
-<dl class="section return"><dt>Returns</dt><dd>Returns JSON data in the format: <div class="fragment"><div class="line">[</div><div class="line">   {</div><div class="line">       <span class="stringliteral">&quot;PcbDailyId&quot;</span>: 7,</div><div class="line">       <span class="stringliteral">&quot;ProductionDay&quot;</span>: <span class="stringliteral">&quot;2018-01-09T00:00:00&quot;</span>,</div><div class="line">       <span class="stringliteral">&quot;PcbQuantity&quot;</span>: 512345,</div><div class="line">       <span class="stringliteral">&quot;PcbSumPrice&quot;</span>: 5123456,</div><div class="line">       <span class="stringliteral">&quot;PcbGenerationId&quot;</span>: 3,</div><div class="line">       <span class="stringliteral">&quot;PcbClassId&quot;</span>: 0,</div><div class="line">       <span class="stringliteral">&quot;PcbGenerationName&quot;</span>: null,</div><div class="line">       <span class="stringliteral">&quot;PcbClassName&quot;</span>: null</div><div class="line">   },</div><div class="line">   {</div><div class="line">       <span class="stringliteral">&quot;PcbDailyId&quot;</span>: 8,</div><div class="line">       <span class="stringliteral">&quot;ProductionDay&quot;</span>: <span class="stringliteral">&quot;2018-01-09T00:00:00&quot;</span>,</div><div class="line">       <span class="stringliteral">&quot;PcbQuantity&quot;</span>: 512345,</div><div class="line">       <span class="stringliteral">&quot;PcbSumPrice&quot;</span>: 5123456,</div><div class="line">       <span class="stringliteral">&quot;PcbGenerationId&quot;</span>: 3,</div><div class="line">       <span class="stringliteral">&quot;PcbClassId&quot;</span>: 0,</div><div class="line">       <span class="stringliteral">&quot;PcbGenerationName&quot;</span>: null,</div><div class="line">       <span class="stringliteral">&quot;PcbClassName&quot;</span>: null</div><div class="line">   }</div><div class="line">]</div></div><!-- fragment --> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns JSON data in the format: <div class="fragment"><div class="line">[</div><div class="line">   {</div><div class="line">       <span class="stringliteral">&quot;PcbDailyId&quot;</span>: 7,</div><div class="line">       <span class="stringliteral">&quot;ProductionDay&quot;</span>: <span class="stringliteral">&quot;2018-01-09T00:00:00&quot;</span>,</div><div class="line">       <span class="stringliteral">&quot;PcbQuantity&quot;</span>: 512345,</div><div class="line">       <span class="stringliteral">&quot;PcbSumPrice&quot;</span>: 5123456,</div><div class="line">       <span class="stringliteral">&quot;PcbGenerationId&quot;</span>: 3,</div><div class="line">       <span class="stringliteral">&quot;PcbClassId&quot;</span>: 0,</div><div class="line">       <span class="stringliteral">&quot;PcbGenerationName&quot;</span>: null,</div><div class="line">       <span class="stringliteral">&quot;PcbClassName&quot;</span>: null</div><div class="line">   },</div><div class="line">   {</div><div class="line">        ...</div><div class="line">   }</div><div class="line">]</div></div><!-- fragment --> </dd></dl>
+
+</div>
+</div>
+<a id="a0ab15672f7d3b5a077a8c4b0612feab8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ab15672f7d3b5a077a8c4b0612feab8">&#9670;&nbsp;</a></span>getProductionData() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a>&gt; kpiMvcApi.Controllers.KpidataController.getProductionData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the Production Data from 1.1.2018 till the actual Date </p>
+<dl class="section return"><dt>Returns</dt><dd>Returns JSON data in the format: <div class="fragment"><div class="line">[</div><div class="line">   {</div><div class="line">       <span class="stringliteral">&quot;PcbDailyId&quot;</span>: 7,</div><div class="line">       <span class="stringliteral">&quot;ProductionDay&quot;</span>: <span class="stringliteral">&quot;2018-01-09T00:00:00&quot;</span>,</div><div class="line">       <span class="stringliteral">&quot;PcbQuantity&quot;</span>: 512345,</div><div class="line">       <span class="stringliteral">&quot;PcbSumPrice&quot;</span>: 5123456,</div><div class="line">       <span class="stringliteral">&quot;PcbGenerationId&quot;</span>: 3,</div><div class="line">       <span class="stringliteral">&quot;PcbClassId&quot;</span>: 0,</div><div class="line">       <span class="stringliteral">&quot;PcbGenerationName&quot;</span>: null,</div><div class="line">       <span class="stringliteral">&quot;PcbClassName&quot;</span>: null</div><div class="line">   },</div><div class="line">   {</div><div class="line">        ...</div><div class="line">   }</div><div class="line">]</div></div><!-- fragment --> </dd></dl>
 
 </div>
 </div>
 <a id="a2cc4fffc5f66a92f16f917715cb36d0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2cc4fffc5f66a92f16f917715cb36d0e">&#9670;&nbsp;</a></span>getProductionData() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cc4fffc5f66a92f16f917715cb36d0e">&#9670;&nbsp;</a></span>getProductionData() <span class="overload">[3/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -164,19 +906,54 @@ HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><b>setPro
 </table>
 </div><div class="memdoc">
 
-<p></p>
+<p>Returns the Production Data from with the specified id </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>Sets the Dataid</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns JSON data</dd></dl>
+
+</div>
+</div>
+<a id="a2cc4fffc5f66a92f16f917715cb36d0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cc4fffc5f66a92f16f917715cb36d0e">&#9670;&nbsp;</a></span>getProductionData() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a>&gt; kpiMvcApi.Controllers.KpidataController.getProductionData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the Production Data from with the specified id </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Sets the Dataid</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns JSON data</dd></dl>
 
 </div>
 </div>
 <a id="a27722d65abe0781d4b670c84c2e07a76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27722d65abe0781d4b670c84c2e07a76">&#9670;&nbsp;</a></span>getProductionData() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a27722d65abe0781d4b670c84c2e07a76">&#9670;&nbsp;</a></span>getProductionData() <span class="overload">[5/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -209,7 +986,7 @@ HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><b>setPro
 </table>
 </div><div class="memdoc">
 
-<p></p>
+<p>Returns the Production Data between the specified Dates with the specified id </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">startDate</td><td></td></tr>
@@ -217,7 +994,333 @@ HttpResponseMessage&#160;</td><td class="memItemRight" valign="bottom"><b>setPro
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns JSON data</dd></dl>
+
+</div>
+</div>
+<a id="a27722d65abe0781d4b670c84c2e07a76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27722d65abe0781d4b670c84c2e07a76">&#9670;&nbsp;</a></span>getProductionData() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a>&gt; kpiMvcApi.Controllers.KpidataController.getProductionData </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>startDate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>stopDate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the Production Data between the specified Dates with the specified id </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">startDate</td><td></td></tr>
+    <tr><td class="paramname">stopDate</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns JSON data</dd></dl>
+
+</div>
+</div>
+<a id="ae0c16d6b3d009224eae6ea5a2b20aabd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0c16d6b3d009224eae6ea5a2b20aabd">&#9670;&nbsp;</a></span>setDeliveryData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpResponseMessage kpiMvcApi.Controllers.KpidataController.setDeliveryData </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a> &gt;&#160;</td>
+          <td class="paramname"><em>deliveryDataList</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds data into the database, creates new identifiers The data must hafe the following Format [ { "OrderDate": "2018-01-01T00:00:00", "OrderedPc": 100, "DeliveredPc": 100, "NotdeliveredPc": null, "NotdeliveredRel": null, "CountryId": 1, "CountryName": "Switzerland" }, { ... } ] </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deliveryDataList</td><td>New Dataset in Json Format </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>HttpResponseMessage</code> </dd></dl>
+
+</div>
+</div>
+<a id="aaed21921287f9a780cc3ff7e1042dc2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaed21921287f9a780cc3ff7e1042dc2a">&#9670;&nbsp;</a></span>setKvpData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpResponseMessage kpiMvcApi.Controllers.KpidataController.setKvpData </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a> &gt;&#160;</td>
+          <td class="paramname"><em>kvpDataList</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds data into the database, creates new identifiers The data must hafe the following Format [ { "KvpName": "Dashboard3", "KvpDate": "2018-01-05T00:00:00", "KvpClassId": 2, "KvpStateId": 2, "KvpStateName": "Do", "KvpClassName": "Produktivität" }, { ... } ] </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kvpDataList</td><td>New Dataset in Json Format </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>HttpResponseMessage</code> </dd></dl>
+
+</div>
+</div>
+<a id="a7f6c6c359f37a9b9a83d481b5c26a037"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f6c6c359f37a9b9a83d481b5c26a037">&#9670;&nbsp;</a></span>setProductionData() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpResponseMessage kpiMvcApi.Controllers.KpidataController.setProductionData </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a> &gt;&#160;</td>
+          <td class="paramname"><em>prodDataList</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds data into the database, creates new identifiers The data must hafe the following Format [ { "ProductionDay": "2018-01-09T00:00:00", "PcbQuantity": 512345, "PcbSumPrice": 5123456, "PcbGenerationId": 3, "PcbClassId": 0, "PcbGenerationName": null, "PcbClassName": null }, { ... } ] </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prodDataList</td><td>New Dataset in Json Format </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>HttpResponseMessage</code> </dd></dl>
+
+</div>
+</div>
+<a id="a7f6c6c359f37a9b9a83d481b5c26a037"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f6c6c359f37a9b9a83d481b5c26a037">&#9670;&nbsp;</a></span>setProductionData() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpResponseMessage kpiMvcApi.Controllers.KpidataController.setProductionData </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a> &gt;&#160;</td>
+          <td class="paramname"><em>prodDataList</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds data into the database, creates new identifiers The data must hafe the following Format [ { "ProductionDay": "2018-01-09T00:00:00", "PcbQuantity": 512345, "PcbSumPrice": 5123456, "PcbGenerationId": 3, "PcbClassId": 0, "PcbGenerationName": null, "PcbClassName": null }, { ... } ] </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prodDataList</td><td>New Dataset in Json Format </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>HttpResponseMessage</code> </dd></dl>
+
+</div>
+</div>
+<a id="a893e7ff73b6dbd31afa5e1aa73e5abae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a893e7ff73b6dbd31afa5e1aa73e5abae">&#9670;&nbsp;</a></span>updateDeliveryData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpResponseMessage kpiMvcApi.Controllers.KpidataController.updateDeliveryData </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a> &gt;&#160;</td>
+          <td class="paramname"><em>deliveryDataList</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds data into the database If the Id alredy exists, update the Dataset if not create the dataset The data must hafe the following format [ { "DeliveryId": 4, "OrderDate": "2018-01-01T00:00:00", "OrderedPc": 100, "DeliveredPc": 100, "NotdeliveredPc": null, "NotdeliveredRel": null, "CountryId": 1, "CountryName": "Switzerland" }, { ... } ] </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deliveryDataList</td><td>New Dataset in Json Format </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>HttpResponseMessage</code> </dd></dl>
+
+</div>
+</div>
+<a id="ac165b3dedfa1744a41af6a1acc07a657"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac165b3dedfa1744a41af6a1acc07a657">&#9670;&nbsp;</a></span>updateKvpData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpResponseMessage kpiMvcApi.Controllers.KpidataController.updateKvpData </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a> &gt;&#160;</td>
+          <td class="paramname"><em>kvpDataList</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds data into the database If the Id alredy exists, update the Dataset if not create the dataset The data must hafe the following format [ { "KvpId": 4, "KvpName": "Dashboard3", "KvpDate": "2018-01-05T00:00:00", "KvpClassId": 2, "KvpStateId": 2, "KvpStateName": "Do", "KvpClassName": "Produktivität" }, { ... } ] </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kvpDataList</td><td>New Dataset in Json Format </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>HttpResponseMessage</code> </dd></dl>
+
+</div>
+</div>
+<a id="a82f308e9ae4809dfdca3ce685af05774"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82f308e9ae4809dfdca3ce685af05774">&#9670;&nbsp;</a></span>updateProductionData() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpResponseMessage kpiMvcApi.Controllers.KpidataController.updateProductionData </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a> &gt;&#160;</td>
+          <td class="paramname"><em>prodDataList</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds data into the database If the Id alredy exists, update the Dataset if not create the dataset The data must hafe the following format [ { "PcbDailyId": 8, "ProductionDay": "2018-01-09T00:00:00", "PcbQuantity": 512345, "PcbSumPrice": 5123456, "PcbGenerationId": 3, "PcbClassId": 0, "PcbGenerationName": null, "PcbClassName": null }, { ... } ] </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prodDataList</td><td>New Dataset in Json Format </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>HttpResponseMessage</code> </dd></dl>
+
+</div>
+</div>
+<a id="a82f308e9ae4809dfdca3ce685af05774"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82f308e9ae4809dfdca3ce685af05774">&#9670;&nbsp;</a></span>updateProductionData() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpResponseMessage kpiMvcApi.Controllers.KpidataController.updateProductionData </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_production_data_dto.html">ProductionDataDto</a> &gt;&#160;</td>
+          <td class="paramname"><em>prodDataList</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds data into the database If the Id alredy exists, update the Dataset if not create the dataset The data must hafe the following format [ { "PcbDailyId": 8, "ProductionDay": "2018-01-09T00:00:00", "PcbQuantity": 512345, "PcbSumPrice": 5123456, "PcbGenerationId": 3, "PcbClassId": 0, "PcbGenerationName": null, "PcbClassName": null }, { ... } ] </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prodDataList</td><td>New Dataset in Json Format </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>HttpResponseMessage</code> </dd></dl>
 
 </div>
 </div>

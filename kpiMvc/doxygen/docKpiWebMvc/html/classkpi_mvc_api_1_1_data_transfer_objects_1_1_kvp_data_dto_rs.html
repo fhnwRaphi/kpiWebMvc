@@ -50,62 +50,1206 @@ $(function() {
 <div class="title">kpiMvcApi.DataTransferObjects.KvpDataDtoRs Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This Recordset stores a List of Kvap Data transfer objects It prowides all Methods to read, write, update and delete data from databse It provides Methods to get HTML data for the frontend  
+ <a href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#details">More...</a></p>
+<div class="dynheader">
+Inheritance diagram for kpiMvcApi.DataTransferObjects.KvpDataDtoRs:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.png" usemap="#kpiMvcApi.DataTransferObjects.KvpDataDtoRs_map" alt=""/>
+  <map id="kpiMvcApi.DataTransferObjects.KvpDataDtoRs_map" name="kpiMvcApi.DataTransferObjects.KvpDataDtoRs_map">
+<area href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_data_dto_rs.html" title="Parent class for all recordsets " alt="kpiMvcApi.DataTransferObjects.DataDtoRs" shape="rect" coords="0,0,278,24"/>
+<area href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_data_dto_rs.html" title="Parent class for all recordsets " alt="kpiMvcApi.DataTransferObjects.DataDtoRs" shape="rect" coords="288,0,566,24"/>
+</map>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:aec5ef29d115053aa1f78d15adc7e1373"><td class="memItemLeft" align="right" valign="top"><a id="aec5ef29d115053aa1f78d15adc7e1373"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>dataset</b> { <b>Datalabels</b> = 0, 
+<tr class="memitem:aec5ef29d115053aa1f78d15adc7e1373"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#aec5ef29d115053aa1f78d15adc7e1373">dataset</a> { <b>Datalabels</b> = 0, 
+<b>dataset1</b>, 
+<b>Datalabels</b> = 0, 
 <b>dataset1</b>
- }</td></tr>
+ }<tr class="memdesc:aec5ef29d115053aa1f78d15adc7e1373"><td class="mdescLeft">&#160;</td><td class="mdescRight">Containing the available diagramm data val == 0 =&gt; x axis, val &gt; 0 =&gt; y axis  <a href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#aec5ef29d115053aa1f78d15adc7e1373">More...</a><br /></td></tr>
+</td></tr>
 <tr class="separator:aec5ef29d115053aa1f78d15adc7e1373"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a829c595d537885ae923de884be501246"><td class="memItemLeft" align="right" valign="top"><a id="a829c595d537885ae923de884be501246"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>charttype</b> { <b>KvpMonthChart</b> =0
- }</td></tr>
+<tr class="memitem:a829c595d537885ae923de884be501246"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#a829c595d537885ae923de884be501246">charttype</a> { <b>KvpMonthChart</b> = 0, 
+<b>KvpClassChart</b>, 
+<b>KvpMonthChart</b> = 0, 
+<b>KvpClassChart</b>
+ }<tr class="memdesc:a829c595d537885ae923de884be501246"><td class="mdescLeft">&#160;</td><td class="mdescRight">Containing zhe available diagramm types  <a href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#a829c595d537885ae923de884be501246">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a829c595d537885ae923de884be501246"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec5ef29d115053aa1f78d15adc7e1373"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#aec5ef29d115053aa1f78d15adc7e1373">dataset</a> { <b>Datalabels</b> = 0, 
+<b>dataset1</b>, 
+<b>Datalabels</b> = 0, 
+<b>dataset1</b>
+ }<tr class="memdesc:aec5ef29d115053aa1f78d15adc7e1373"><td class="mdescLeft">&#160;</td><td class="mdescRight">Containing the available diagramm data val == 0 =&gt; x axis, val &gt; 0 =&gt; y axis  <a href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#aec5ef29d115053aa1f78d15adc7e1373">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:aec5ef29d115053aa1f78d15adc7e1373"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a829c595d537885ae923de884be501246"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#a829c595d537885ae923de884be501246">charttype</a> { <b>KvpMonthChart</b> = 0, 
+<b>KvpClassChart</b>, 
+<b>KvpMonthChart</b> = 0, 
+<b>KvpClassChart</b>
+ }<tr class="memdesc:a829c595d537885ae923de884be501246"><td class="mdescLeft">&#160;</td><td class="mdescRight">Containing zhe available diagramm types  <a href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#a829c595d537885ae923de884be501246">More...</a><br /></td></tr>
+</td></tr>
 <tr class="separator:a829c595d537885ae923de884be501246"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4d9df8d729c0009c23968a0250d45dcc"><td class="memItemLeft" align="right" valign="top"><a id="a4d9df8d729c0009c23968a0250d45dcc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>KvpDataDtoRs</b> (DateTime startdate, DateTime stopdate)</td></tr>
+<tr class="memitem:a8189fa1bf44fd56db7b2df7895373be4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#a8189fa1bf44fd56db7b2df7895373be4">KvpDataDtoRs</a> ()</td></tr>
+<tr class="memdesc:a8189fa1bf44fd56db7b2df7895373be4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor loads the default data from 1.1.18 till today  <a href="#a8189fa1bf44fd56db7b2df7895373be4">More...</a><br /></td></tr>
+<tr class="separator:a8189fa1bf44fd56db7b2df7895373be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2f376c9184bcbb70716826a51e774e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#ab2f376c9184bcbb70716826a51e774e8">KvpDataDtoRs</a> (int id)</td></tr>
+<tr class="memdesc:ab2f376c9184bcbb70716826a51e774e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor loads the specified id  <a href="#ab2f376c9184bcbb70716826a51e774e8">More...</a><br /></td></tr>
+<tr class="separator:ab2f376c9184bcbb70716826a51e774e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d9df8d729c0009c23968a0250d45dcc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#a4d9df8d729c0009c23968a0250d45dcc">KvpDataDtoRs</a> (DateTime startdate, DateTime stopdate)</td></tr>
+<tr class="memdesc:a4d9df8d729c0009c23968a0250d45dcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor loads with the specified daterange  <a href="#a4d9df8d729c0009c23968a0250d45dcc">More...</a><br /></td></tr>
 <tr class="separator:a4d9df8d729c0009c23968a0250d45dcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a562207c4315e1f552734257d994cc2d5"><td class="memItemLeft" align="right" valign="top"><a id="a562207c4315e1f552734257d994cc2d5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>loadData</b> ()</td></tr>
+<tr class="memitem:a562207c4315e1f552734257d994cc2d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#a562207c4315e1f552734257d994cc2d5">loadData</a> ()</td></tr>
+<tr class="memdesc:a562207c4315e1f552734257d994cc2d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">loads the default data from 1.1.18 till today stores in object <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html" title="This Recordset stores a List of Kvap Data transfer objects It prowides all Methods to read...">KvpDataDtoRs</a></code>  <a href="#a562207c4315e1f552734257d994cc2d5">More...</a><br /></td></tr>
 <tr class="separator:a562207c4315e1f552734257d994cc2d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbda5e8db6a5f8b25125d2a6b6dcf7e1"><td class="memItemLeft" align="right" valign="top"><a id="afbda5e8db6a5f8b25125d2a6b6dcf7e1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>loadData</b> (DateTime startdate, DateTime stopdate)</td></tr>
+<tr class="memitem:a7c0a2f992ea673548b507ee6a74e4046"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#a7c0a2f992ea673548b507ee6a74e4046">loadData</a> (int id)</td></tr>
+<tr class="memdesc:a7c0a2f992ea673548b507ee6a74e4046"><td class="mdescLeft">&#160;</td><td class="mdescRight">loads the specified dataset id stores in object <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html" title="This Recordset stores a List of Kvap Data transfer objects It prowides all Methods to read...">KvpDataDtoRs</a></code>  <a href="#a7c0a2f992ea673548b507ee6a74e4046">More...</a><br /></td></tr>
+<tr class="separator:a7c0a2f992ea673548b507ee6a74e4046"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbda5e8db6a5f8b25125d2a6b6dcf7e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#afbda5e8db6a5f8b25125d2a6b6dcf7e1">loadData</a> (DateTime startdate, DateTime stopdate)</td></tr>
+<tr class="memdesc:afbda5e8db6a5f8b25125d2a6b6dcf7e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor loads with the specified daterange stores in object <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html" title="This Recordset stores a List of Kvap Data transfer objects It prowides all Methods to read...">KvpDataDtoRs</a></code>  <a href="#afbda5e8db6a5f8b25125d2a6b6dcf7e1">More...</a><br /></td></tr>
 <tr class="separator:afbda5e8db6a5f8b25125d2a6b6dcf7e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a895f4b97fb8c74c1a853145c03f5d393"><td class="memItemLeft" align="right" valign="top"><a id="a895f4b97fb8c74c1a853145c03f5d393"></a>
-List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getData</b> ()</td></tr>
+<tr class="memitem:a895f4b97fb8c74c1a853145c03f5d393"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#a895f4b97fb8c74c1a853145c03f5d393">getData</a> ()</td></tr>
+<tr class="memdesc:a895f4b97fb8c74c1a853145c03f5d393"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all Data from <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html" title="Represents the Kvp data model Transfers the data between the WebFrontend and the Database Backend ...">KvpDataDto</a></code>  <a href="#a895f4b97fb8c74c1a853145c03f5d393">More...</a><br /></td></tr>
 <tr class="separator:a895f4b97fb8c74c1a853145c03f5d393"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6493e99d1c2fc236a25b61bc51014f9"><td class="memItemLeft" align="right" valign="top"><a id="ac6493e99d1c2fc236a25b61bc51014f9"></a>
-List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getData</b> (DateTime startdate, DateTime stopdate)</td></tr>
-<tr class="separator:ac6493e99d1c2fc236a25b61bc51014f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab05e9ab80b2e766a6744a200e4d8e91"><td class="memItemLeft" align="right" valign="top"><a id="aab05e9ab80b2e766a6744a200e4d8e91"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>setData</b> (List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a> &gt; kvpdto)</td></tr>
+<tr class="memitem:aab05e9ab80b2e766a6744a200e4d8e91"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#aab05e9ab80b2e766a6744a200e4d8e91">setData</a> (List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a> &gt; kvpdto)</td></tr>
+<tr class="memdesc:aab05e9ab80b2e766a6744a200e4d8e91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds Kvp Data into the database Generates new id for each datzaset  <a href="#aab05e9ab80b2e766a6744a200e4d8e91">More...</a><br /></td></tr>
 <tr class="separator:aab05e9ab80b2e766a6744a200e4d8e91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9aa97ab6777b36a033c3662e86239e81"><td class="memItemLeft" align="right" valign="top"><a id="a9aa97ab6777b36a033c3662e86239e81"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>getDataset</b> (charttype charttype, dataset datset, string groupMode)</td></tr>
-<tr class="separator:a9aa97ab6777b36a033c3662e86239e81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1bd4b0312a7a0a07b8848d9cdf739da"><td class="memItemLeft" align="right" valign="top"><a id="ac1bd4b0312a7a0a07b8848d9cdf739da"></a>
-List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getKvpList</b> ()</td></tr>
+<tr class="memitem:aded42b5e75fcbc416d4ac02875c34849"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#aded42b5e75fcbc416d4ac02875c34849">getDataset</a> (<a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#a829c595d537885ae923de884be501246">charttype</a> <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#a829c595d537885ae923de884be501246">charttype</a>, <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#aec5ef29d115053aa1f78d15adc7e1373">dataset</a> datset, string filter)</td></tr>
+<tr class="memdesc:aded42b5e75fcbc416d4ac02875c34849"><td class="mdescLeft">&#160;</td><td class="mdescRight">Produces Datastrings for the html / chart.js charts  <a href="#aded42b5e75fcbc416d4ac02875c34849">More...</a><br /></td></tr>
+<tr class="separator:aded42b5e75fcbc416d4ac02875c34849"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1bd4b0312a7a0a07b8848d9cdf739da"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#ac1bd4b0312a7a0a07b8848d9cdf739da">getKvpList</a> ()</td></tr>
+<tr class="memdesc:ac1bd4b0312a7a0a07b8848d9cdf739da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the kvp list  <a href="#ac1bd4b0312a7a0a07b8848d9cdf739da">More...</a><br /></td></tr>
 <tr class="separator:ac1bd4b0312a7a0a07b8848d9cdf739da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29e122aca7de38b447056485ad8b4afa"><td class="memItemLeft" align="right" valign="top"><a id="a29e122aca7de38b447056485ad8b4afa"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>getDatasetLabel</b> ()</td></tr>
+<tr class="memitem:a29e122aca7de38b447056485ad8b4afa"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#a29e122aca7de38b447056485ad8b4afa">getDatasetLabel</a> ()</td></tr>
+<tr class="memdesc:a29e122aca7de38b447056485ad8b4afa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the chart label  <a href="#a29e122aca7de38b447056485ad8b4afa">More...</a><br /></td></tr>
 <tr class="separator:a29e122aca7de38b447056485ad8b4afa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac08415561811e16a01e4fa425709905b"><td class="memItemLeft" align="right" valign="top"><a id="ac08415561811e16a01e4fa425709905b"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>getDatsetBackroundColor</b> ()</td></tr>
+<tr class="memitem:ac08415561811e16a01e4fa425709905b"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#ac08415561811e16a01e4fa425709905b">getDatsetBackroundColor</a> ()</td></tr>
+<tr class="memdesc:ac08415561811e16a01e4fa425709905b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the chart colors  <a href="#ac08415561811e16a01e4fa425709905b">More...</a><br /></td></tr>
 <tr class="separator:ac08415561811e16a01e4fa425709905b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1a9b5ca7012ddd12549e157929f23e7"><td class="memItemLeft" align="right" valign="top"><a id="ac1a9b5ca7012ddd12549e157929f23e7"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>getChartTitle</b> ()</td></tr>
+<tr class="memitem:ac1a9b5ca7012ddd12549e157929f23e7"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#ac1a9b5ca7012ddd12549e157929f23e7">getChartTitle</a> ()</td></tr>
+<tr class="memdesc:ac1a9b5ca7012ddd12549e157929f23e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the chart title  <a href="#ac1a9b5ca7012ddd12549e157929f23e7">More...</a><br /></td></tr>
 <tr class="separator:ac1a9b5ca7012ddd12549e157929f23e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcb6b42bf6a7f8271efc95f671bc9e08"><td class="memItemLeft" align="right" valign="top"><a id="afcb6b42bf6a7f8271efc95f671bc9e08"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getChartBorderWidth</b> ()</td></tr>
+<tr class="memitem:afcb6b42bf6a7f8271efc95f671bc9e08"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#afcb6b42bf6a7f8271efc95f671bc9e08">getChartBorderWidth</a> ()</td></tr>
+<tr class="memdesc:afcb6b42bf6a7f8271efc95f671bc9e08"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the boarer width  <a href="#afcb6b42bf6a7f8271efc95f671bc9e08">More...</a><br /></td></tr>
+<tr class="separator:afcb6b42bf6a7f8271efc95f671bc9e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8189fa1bf44fd56db7b2df7895373be4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#a8189fa1bf44fd56db7b2df7895373be4">KvpDataDtoRs</a> ()</td></tr>
+<tr class="memdesc:a8189fa1bf44fd56db7b2df7895373be4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor loads the default data from 1.1.18 till today  <a href="#a8189fa1bf44fd56db7b2df7895373be4">More...</a><br /></td></tr>
+<tr class="separator:a8189fa1bf44fd56db7b2df7895373be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2f376c9184bcbb70716826a51e774e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#ab2f376c9184bcbb70716826a51e774e8">KvpDataDtoRs</a> (int id)</td></tr>
+<tr class="memdesc:ab2f376c9184bcbb70716826a51e774e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor loads the specified id  <a href="#ab2f376c9184bcbb70716826a51e774e8">More...</a><br /></td></tr>
+<tr class="separator:ab2f376c9184bcbb70716826a51e774e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d9df8d729c0009c23968a0250d45dcc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#a4d9df8d729c0009c23968a0250d45dcc">KvpDataDtoRs</a> (DateTime startdate, DateTime stopdate)</td></tr>
+<tr class="memdesc:a4d9df8d729c0009c23968a0250d45dcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor loads with the specified daterange  <a href="#a4d9df8d729c0009c23968a0250d45dcc">More...</a><br /></td></tr>
+<tr class="separator:a4d9df8d729c0009c23968a0250d45dcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a562207c4315e1f552734257d994cc2d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#a562207c4315e1f552734257d994cc2d5">loadData</a> ()</td></tr>
+<tr class="memdesc:a562207c4315e1f552734257d994cc2d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">loads the default data from 1.1.18 till today stores in object <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html" title="This Recordset stores a List of Kvap Data transfer objects It prowides all Methods to read...">KvpDataDtoRs</a></code>  <a href="#a562207c4315e1f552734257d994cc2d5">More...</a><br /></td></tr>
+<tr class="separator:a562207c4315e1f552734257d994cc2d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c0a2f992ea673548b507ee6a74e4046"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#a7c0a2f992ea673548b507ee6a74e4046">loadData</a> (int id)</td></tr>
+<tr class="memdesc:a7c0a2f992ea673548b507ee6a74e4046"><td class="mdescLeft">&#160;</td><td class="mdescRight">loads the specified dataset id stores in object <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html" title="This Recordset stores a List of Kvap Data transfer objects It prowides all Methods to read...">KvpDataDtoRs</a></code>  <a href="#a7c0a2f992ea673548b507ee6a74e4046">More...</a><br /></td></tr>
+<tr class="separator:a7c0a2f992ea673548b507ee6a74e4046"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbda5e8db6a5f8b25125d2a6b6dcf7e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#afbda5e8db6a5f8b25125d2a6b6dcf7e1">loadData</a> (DateTime startdate, DateTime stopdate)</td></tr>
+<tr class="memdesc:afbda5e8db6a5f8b25125d2a6b6dcf7e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor loads with the specified daterange stores in object <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html" title="This Recordset stores a List of Kvap Data transfer objects It prowides all Methods to read...">KvpDataDtoRs</a></code>  <a href="#afbda5e8db6a5f8b25125d2a6b6dcf7e1">More...</a><br /></td></tr>
+<tr class="separator:afbda5e8db6a5f8b25125d2a6b6dcf7e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a895f4b97fb8c74c1a853145c03f5d393"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#a895f4b97fb8c74c1a853145c03f5d393">getData</a> ()</td></tr>
+<tr class="memdesc:a895f4b97fb8c74c1a853145c03f5d393"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all Data from <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html" title="Represents the Kvp data model Transfers the data between the WebFrontend and the Database Backend ...">KvpDataDto</a></code>  <a href="#a895f4b97fb8c74c1a853145c03f5d393">More...</a><br /></td></tr>
+<tr class="separator:a895f4b97fb8c74c1a853145c03f5d393"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab05e9ab80b2e766a6744a200e4d8e91"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#aab05e9ab80b2e766a6744a200e4d8e91">setData</a> (List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a> &gt; kvpdto)</td></tr>
+<tr class="memdesc:aab05e9ab80b2e766a6744a200e4d8e91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds Kvp Data into the database Generates new id for each datzaset  <a href="#aab05e9ab80b2e766a6744a200e4d8e91">More...</a><br /></td></tr>
+<tr class="separator:aab05e9ab80b2e766a6744a200e4d8e91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aded42b5e75fcbc416d4ac02875c34849"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#aded42b5e75fcbc416d4ac02875c34849">getDataset</a> (<a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#a829c595d537885ae923de884be501246">charttype</a> <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#a829c595d537885ae923de884be501246">charttype</a>, <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#aec5ef29d115053aa1f78d15adc7e1373">dataset</a> datset, string filter)</td></tr>
+<tr class="memdesc:aded42b5e75fcbc416d4ac02875c34849"><td class="mdescLeft">&#160;</td><td class="mdescRight">Produces Datastrings for the html / chart.js charts  <a href="#aded42b5e75fcbc416d4ac02875c34849">More...</a><br /></td></tr>
+<tr class="separator:aded42b5e75fcbc416d4ac02875c34849"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1bd4b0312a7a0a07b8848d9cdf739da"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#ac1bd4b0312a7a0a07b8848d9cdf739da">getKvpList</a> ()</td></tr>
+<tr class="memdesc:ac1bd4b0312a7a0a07b8848d9cdf739da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the kvp list  <a href="#ac1bd4b0312a7a0a07b8848d9cdf739da">More...</a><br /></td></tr>
+<tr class="separator:ac1bd4b0312a7a0a07b8848d9cdf739da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29e122aca7de38b447056485ad8b4afa"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#a29e122aca7de38b447056485ad8b4afa">getDatasetLabel</a> ()</td></tr>
+<tr class="memdesc:a29e122aca7de38b447056485ad8b4afa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the chart label  <a href="#a29e122aca7de38b447056485ad8b4afa">More...</a><br /></td></tr>
+<tr class="separator:a29e122aca7de38b447056485ad8b4afa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac08415561811e16a01e4fa425709905b"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#ac08415561811e16a01e4fa425709905b">getDatsetBackroundColor</a> ()</td></tr>
+<tr class="memdesc:ac08415561811e16a01e4fa425709905b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the chart colors  <a href="#ac08415561811e16a01e4fa425709905b">More...</a><br /></td></tr>
+<tr class="separator:ac08415561811e16a01e4fa425709905b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1a9b5ca7012ddd12549e157929f23e7"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#ac1a9b5ca7012ddd12549e157929f23e7">getChartTitle</a> ()</td></tr>
+<tr class="memdesc:ac1a9b5ca7012ddd12549e157929f23e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the chart title  <a href="#ac1a9b5ca7012ddd12549e157929f23e7">More...</a><br /></td></tr>
+<tr class="separator:ac1a9b5ca7012ddd12549e157929f23e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcb6b42bf6a7f8271efc95f671bc9e08"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#afcb6b42bf6a7f8271efc95f671bc9e08">getChartBorderWidth</a> ()</td></tr>
+<tr class="memdesc:afcb6b42bf6a7f8271efc95f671bc9e08"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the boarer width  <a href="#afcb6b42bf6a7f8271efc95f671bc9e08">More...</a><br /></td></tr>
 <tr class="separator:afcb6b42bf6a7f8271efc95f671bc9e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:ae4c7dbba98cf290c43fdbce4172b6ca1"><td class="memItemLeft" align="right" valign="top"><a id="ae4c7dbba98cf290c43fdbce4172b6ca1"></a>
-List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>KvpDataRs</b><code> [get, set]</code></td></tr>
-<tr class="separator:ae4c7dbba98cf290c43fdbce4172b6ca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae32122a6aba038291afde6128898487e"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#ae32122a6aba038291afde6128898487e">KvpDataRs</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ae32122a6aba038291afde6128898487e"><td class="mdescLeft">&#160;</td><td class="mdescRight">A List of Kvp Data transfer Objects This List is loaded at construction and reprsent the actual Dataset  <a href="#ae32122a6aba038291afde6128898487e">More...</a><br /></td></tr>
+<tr class="separator:ae32122a6aba038291afde6128898487e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This Recordset stores a List of Kvap Data transfer objects It prowides all Methods to read, write, update and delete data from databse It provides Methods to get HTML data for the frontend </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a829c595d537885ae923de884be501246"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a829c595d537885ae923de884be501246">&#9670;&nbsp;</a></span>charttype <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#a829c595d537885ae923de884be501246">kpiMvcApi.DataTransferObjects.KvpDataDtoRs.charttype</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Containing zhe available diagramm types </p>
+
+</div>
+</div>
+<a id="a829c595d537885ae923de884be501246"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a829c595d537885ae923de884be501246">&#9670;&nbsp;</a></span>charttype <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#a829c595d537885ae923de884be501246">kpiMvcApi.DataTransferObjects.KvpDataDtoRs.charttype</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Containing zhe available diagramm types </p>
+
+</div>
+</div>
+<a id="aec5ef29d115053aa1f78d15adc7e1373"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec5ef29d115053aa1f78d15adc7e1373">&#9670;&nbsp;</a></span>dataset <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#aec5ef29d115053aa1f78d15adc7e1373">kpiMvcApi.DataTransferObjects.KvpDataDtoRs.dataset</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Containing the available diagramm data val == 0 =&gt; x axis, val &gt; 0 =&gt; y axis </p>
+
+</div>
+</div>
+<a id="aec5ef29d115053aa1f78d15adc7e1373"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec5ef29d115053aa1f78d15adc7e1373">&#9670;&nbsp;</a></span>dataset <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#aec5ef29d115053aa1f78d15adc7e1373">kpiMvcApi.DataTransferObjects.KvpDataDtoRs.dataset</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Containing the available diagramm data val == 0 =&gt; x axis, val &gt; 0 =&gt; y axis </p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a8189fa1bf44fd56db7b2df7895373be4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8189fa1bf44fd56db7b2df7895373be4">&#9670;&nbsp;</a></span>KvpDataDtoRs() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">kpiMvcApi.DataTransferObjects.KvpDataDtoRs.KvpDataDtoRs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor loads the default data from 1.1.18 till today </p>
+
+</div>
+</div>
+<a id="ab2f376c9184bcbb70716826a51e774e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2f376c9184bcbb70716826a51e774e8">&#9670;&nbsp;</a></span>KvpDataDtoRs() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">kpiMvcApi.DataTransferObjects.KvpDataDtoRs.KvpDataDtoRs </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor loads the specified id </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>id of requested dataset</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4d9df8d729c0009c23968a0250d45dcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d9df8d729c0009c23968a0250d45dcc">&#9670;&nbsp;</a></span>KvpDataDtoRs() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">kpiMvcApi.DataTransferObjects.KvpDataDtoRs.KvpDataDtoRs </td>
+          <td>(</td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>startdate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>stopdate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor loads with the specified daterange </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">startdate</td><td>dataset start date (including)</td></tr>
+    <tr><td class="paramname">stopdate</td><td>dataset stop date (including)</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8189fa1bf44fd56db7b2df7895373be4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8189fa1bf44fd56db7b2df7895373be4">&#9670;&nbsp;</a></span>KvpDataDtoRs() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">kpiMvcApi.DataTransferObjects.KvpDataDtoRs.KvpDataDtoRs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor loads the default data from 1.1.18 till today </p>
+
+</div>
+</div>
+<a id="ab2f376c9184bcbb70716826a51e774e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2f376c9184bcbb70716826a51e774e8">&#9670;&nbsp;</a></span>KvpDataDtoRs() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">kpiMvcApi.DataTransferObjects.KvpDataDtoRs.KvpDataDtoRs </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor loads the specified id </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>id of requested dataset</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4d9df8d729c0009c23968a0250d45dcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d9df8d729c0009c23968a0250d45dcc">&#9670;&nbsp;</a></span>KvpDataDtoRs() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">kpiMvcApi.DataTransferObjects.KvpDataDtoRs.KvpDataDtoRs </td>
+          <td>(</td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>startdate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>stopdate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor loads with the specified daterange </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">startdate</td><td>dataset start date (including)</td></tr>
+    <tr><td class="paramname">stopdate</td><td>dataset stop date (including)</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="afcb6b42bf6a7f8271efc95f671bc9e08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcb6b42bf6a7f8271efc95f671bc9e08">&#9670;&nbsp;</a></span>getChartBorderWidth() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int kpiMvcApi.DataTransferObjects.KvpDataDtoRs.getChartBorderWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>returns the boarer width </p>
+<dl class="section return"><dt>Returns</dt><dd>string containing the Chart boarer width</dd></dl>
+
+</div>
+</div>
+<a id="afcb6b42bf6a7f8271efc95f671bc9e08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcb6b42bf6a7f8271efc95f671bc9e08">&#9670;&nbsp;</a></span>getChartBorderWidth() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int kpiMvcApi.DataTransferObjects.KvpDataDtoRs.getChartBorderWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>returns the boarer width </p>
+<dl class="section return"><dt>Returns</dt><dd>string containing the Chart boarer width</dd></dl>
+
+</div>
+</div>
+<a id="ac1a9b5ca7012ddd12549e157929f23e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1a9b5ca7012ddd12549e157929f23e7">&#9670;&nbsp;</a></span>getChartTitle() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string kpiMvcApi.DataTransferObjects.KvpDataDtoRs.getChartTitle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the chart title </p>
+<dl class="section return"><dt>Returns</dt><dd>string containing the Chart Title</dd></dl>
+
+</div>
+</div>
+<a id="ac1a9b5ca7012ddd12549e157929f23e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1a9b5ca7012ddd12549e157929f23e7">&#9670;&nbsp;</a></span>getChartTitle() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string kpiMvcApi.DataTransferObjects.KvpDataDtoRs.getChartTitle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the chart title </p>
+<dl class="section return"><dt>Returns</dt><dd>string containing the Chart Title</dd></dl>
+
+</div>
+</div>
+<a id="a895f4b97fb8c74c1a853145c03f5d393"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a895f4b97fb8c74c1a853145c03f5d393">&#9670;&nbsp;</a></span>getData() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a>&gt; kpiMvcApi.DataTransferObjects.KvpDataDtoRs.getData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get all Data from <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html" title="Represents the Kvp data model Transfers the data between the WebFrontend and the Database Backend ...">KvpDataDto</a></code> </p>
+<dl class="section return"><dt>Returns</dt><dd><code> List <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html" title="Represents the Kvp data model Transfers the data between the WebFrontend and the Database Backend ...">KvpDataDto</a> </code> A list with in this object loaded production data </dd></dl>
+
+</div>
+</div>
+<a id="a895f4b97fb8c74c1a853145c03f5d393"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a895f4b97fb8c74c1a853145c03f5d393">&#9670;&nbsp;</a></span>getData() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a>&gt; kpiMvcApi.DataTransferObjects.KvpDataDtoRs.getData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get all Data from <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html" title="Represents the Kvp data model Transfers the data between the WebFrontend and the Database Backend ...">KvpDataDto</a></code> </p>
+<dl class="section return"><dt>Returns</dt><dd><code> List <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html" title="Represents the Kvp data model Transfers the data between the WebFrontend and the Database Backend ...">KvpDataDto</a> </code> A list with in this object loaded production data </dd></dl>
+
+</div>
+</div>
+<a id="aded42b5e75fcbc416d4ac02875c34849"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aded42b5e75fcbc416d4ac02875c34849">&#9670;&nbsp;</a></span>getDataset() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string kpiMvcApi.DataTransferObjects.KvpDataDtoRs.getDataset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#a829c595d537885ae923de884be501246">charttype</a>&#160;</td>
+          <td class="paramname"><em>charttype</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#aec5ef29d115053aa1f78d15adc7e1373">dataset</a>&#160;</td>
+          <td class="paramname"><em>datset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Produces Datastrings for the html / chart.js charts </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">charttype</td><td></td></tr>
+    <tr><td class="paramname">datset</td><td></td></tr>
+    <tr><td class="paramname">filter</td><td>"y" year, "M" month, "d" day</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>string HTML.Raw Datastring</code> string for direct implementation in html.raw() view</dd></dl>
+
+</div>
+</div>
+<a id="aded42b5e75fcbc416d4ac02875c34849"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aded42b5e75fcbc416d4ac02875c34849">&#9670;&nbsp;</a></span>getDataset() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string kpiMvcApi.DataTransferObjects.KvpDataDtoRs.getDataset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#a829c595d537885ae923de884be501246">charttype</a>&#160;</td>
+          <td class="paramname"><em>charttype</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html#aec5ef29d115053aa1f78d15adc7e1373">dataset</a>&#160;</td>
+          <td class="paramname"><em>datset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Produces Datastrings for the html / chart.js charts </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">charttype</td><td></td></tr>
+    <tr><td class="paramname">datset</td><td></td></tr>
+    <tr><td class="paramname">filter</td><td>"y" year, "M" month, "d" day</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>string HTML.Raw Datastring</code> string for direct implementation in html.raw() view</dd></dl>
+
+</div>
+</div>
+<a id="a29e122aca7de38b447056485ad8b4afa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29e122aca7de38b447056485ad8b4afa">&#9670;&nbsp;</a></span>getDatasetLabel() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string kpiMvcApi.DataTransferObjects.KvpDataDtoRs.getDatasetLabel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the chart label </p>
+<dl class="section return"><dt>Returns</dt><dd>string containing the Chartlabel text</dd></dl>
+
+</div>
+</div>
+<a id="a29e122aca7de38b447056485ad8b4afa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29e122aca7de38b447056485ad8b4afa">&#9670;&nbsp;</a></span>getDatasetLabel() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string kpiMvcApi.DataTransferObjects.KvpDataDtoRs.getDatasetLabel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the chart label </p>
+<dl class="section return"><dt>Returns</dt><dd>string containing the Chartlabel text</dd></dl>
+
+</div>
+</div>
+<a id="ac08415561811e16a01e4fa425709905b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac08415561811e16a01e4fa425709905b">&#9670;&nbsp;</a></span>getDatsetBackroundColor() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string kpiMvcApi.DataTransferObjects.KvpDataDtoRs.getDatsetBackroundColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the chart colors </p>
+<dl class="section return"><dt>Returns</dt><dd>string containing the Chart backround colors</dd></dl>
+
+</div>
+</div>
+<a id="ac08415561811e16a01e4fa425709905b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac08415561811e16a01e4fa425709905b">&#9670;&nbsp;</a></span>getDatsetBackroundColor() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string kpiMvcApi.DataTransferObjects.KvpDataDtoRs.getDatsetBackroundColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the chart colors </p>
+<dl class="section return"><dt>Returns</dt><dd>string containing the Chart backround colors</dd></dl>
+
+</div>
+</div>
+<a id="ac1bd4b0312a7a0a07b8848d9cdf739da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1bd4b0312a7a0a07b8848d9cdf739da">&#9670;&nbsp;</a></span>getKvpList() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a>&gt; kpiMvcApi.DataTransferObjects.KvpDataDtoRs.getKvpList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the kvp list </p>
+<dl class="section return"><dt>Returns</dt><dd>string containing the Chartlabel text</dd></dl>
+
+</div>
+</div>
+<a id="ac1bd4b0312a7a0a07b8848d9cdf739da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1bd4b0312a7a0a07b8848d9cdf739da">&#9670;&nbsp;</a></span>getKvpList() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a>&gt; kpiMvcApi.DataTransferObjects.KvpDataDtoRs.getKvpList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the kvp list </p>
+<dl class="section return"><dt>Returns</dt><dd>string containing the Chartlabel text</dd></dl>
+
+</div>
+</div>
+<a id="a562207c4315e1f552734257d994cc2d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a562207c4315e1f552734257d994cc2d5">&#9670;&nbsp;</a></span>loadData() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kpiMvcApi.DataTransferObjects.KvpDataDtoRs.loadData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>loads the default data from 1.1.18 till today stores in object <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html" title="This Recordset stores a List of Kvap Data transfer objects It prowides all Methods to read...">KvpDataDtoRs</a></code> </p>
+
+</div>
+</div>
+<a id="a562207c4315e1f552734257d994cc2d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a562207c4315e1f552734257d994cc2d5">&#9670;&nbsp;</a></span>loadData() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kpiMvcApi.DataTransferObjects.KvpDataDtoRs.loadData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>loads the default data from 1.1.18 till today stores in object <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html" title="This Recordset stores a List of Kvap Data transfer objects It prowides all Methods to read...">KvpDataDtoRs</a></code> </p>
+
+</div>
+</div>
+<a id="a7c0a2f992ea673548b507ee6a74e4046"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c0a2f992ea673548b507ee6a74e4046">&#9670;&nbsp;</a></span>loadData() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kpiMvcApi.DataTransferObjects.KvpDataDtoRs.loadData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>loads the specified dataset id stores in object <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html" title="This Recordset stores a List of Kvap Data transfer objects It prowides all Methods to read...">KvpDataDtoRs</a></code> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>id of requested dataset</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7c0a2f992ea673548b507ee6a74e4046"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c0a2f992ea673548b507ee6a74e4046">&#9670;&nbsp;</a></span>loadData() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kpiMvcApi.DataTransferObjects.KvpDataDtoRs.loadData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>loads the specified dataset id stores in object <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html" title="This Recordset stores a List of Kvap Data transfer objects It prowides all Methods to read...">KvpDataDtoRs</a></code> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>id of requested dataset</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afbda5e8db6a5f8b25125d2a6b6dcf7e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbda5e8db6a5f8b25125d2a6b6dcf7e1">&#9670;&nbsp;</a></span>loadData() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kpiMvcApi.DataTransferObjects.KvpDataDtoRs.loadData </td>
+          <td>(</td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>startdate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>stopdate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor loads with the specified daterange stores in object <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html" title="This Recordset stores a List of Kvap Data transfer objects It prowides all Methods to read...">KvpDataDtoRs</a></code> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">startdate</td><td>dataset start date (including)</td></tr>
+    <tr><td class="paramname">stopdate</td><td>dataset stop date (including)</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afbda5e8db6a5f8b25125d2a6b6dcf7e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbda5e8db6a5f8b25125d2a6b6dcf7e1">&#9670;&nbsp;</a></span>loadData() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kpiMvcApi.DataTransferObjects.KvpDataDtoRs.loadData </td>
+          <td>(</td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>startdate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>stopdate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor loads with the specified daterange stores in object <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto_rs.html" title="This Recordset stores a List of Kvap Data transfer objects It prowides all Methods to read...">KvpDataDtoRs</a></code> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">startdate</td><td>dataset start date (including)</td></tr>
+    <tr><td class="paramname">stopdate</td><td>dataset stop date (including)</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aab05e9ab80b2e766a6744a200e4d8e91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab05e9ab80b2e766a6744a200e4d8e91">&#9670;&nbsp;</a></span>setData() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kpiMvcApi.DataTransferObjects.KvpDataDtoRs.setData </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a> &gt;&#160;</td>
+          <td class="paramname"><em>kvpdto</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds Kvp Data into the database Generates new id for each datzaset </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kvpdto</td><td><code> List <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html" title="Represents the Kvp data model Transfers the data between the WebFrontend and the Database Backend ...">KvpDataDto</a> </code> a list of Kvp data data transfer object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>booo</code> success</dd></dl>
+
+</div>
+</div>
+<a id="aab05e9ab80b2e766a6744a200e4d8e91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab05e9ab80b2e766a6744a200e4d8e91">&#9670;&nbsp;</a></span>setData() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kpiMvcApi.DataTransferObjects.KvpDataDtoRs.setData </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a> &gt;&#160;</td>
+          <td class="paramname"><em>kvpdto</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds Kvp Data into the database Generates new id for each datzaset </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kvpdto</td><td><code> List <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html" title="Represents the Kvp data model Transfers the data between the WebFrontend and the Database Backend ...">KvpDataDto</a> </code> a list of Kvp data data transfer object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>booo</code> success</dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="ae32122a6aba038291afde6128898487e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae32122a6aba038291afde6128898487e">&#9670;&nbsp;</a></span>KvpDataRs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_kvp_data_dto.html">KvpDataDto</a> &gt; kpiMvcApi.DataTransferObjects.KvpDataDtoRs.KvpDataRs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A List of Kvp Data transfer Objects This List is loaded at construction and reprsent the actual Dataset </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>C:/Users/Ulysses/Documents/01_StudyFhnw/815_veri/kpiWebMvc/kpiMvc/kpiMvcApi/DataTransferObjects/KvpDataDtoRs.cs</li>
 </ul>

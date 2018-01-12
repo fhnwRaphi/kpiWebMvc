@@ -50,63 +50,992 @@ $(function() {
 <div class="title">kpiMvcApi.DataTransferObjects.DeliveryDataDtoRs Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This Recordset stores a List of Delivery Data transfer objects It prowides all Methods to read, write, update and delete data from databse It provides Methods to get HTML data for the frontend  
+ <a href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#details">More...</a></p>
+<div class="dynheader">
+Inheritance diagram for kpiMvcApi.DataTransferObjects.DeliveryDataDtoRs:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.png" usemap="#kpiMvcApi.DataTransferObjects.DeliveryDataDtoRs_map" alt=""/>
+  <map id="kpiMvcApi.DataTransferObjects.DeliveryDataDtoRs_map" name="kpiMvcApi.DataTransferObjects.DeliveryDataDtoRs_map">
+<area href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_data_dto_rs.html" title="Parent class for all recordsets " alt="kpiMvcApi.DataTransferObjects.DataDtoRs" shape="rect" coords="0,0,304,24"/>
+<area href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_data_dto_rs.html" title="Parent class for all recordsets " alt="kpiMvcApi.DataTransferObjects.DataDtoRs" shape="rect" coords="314,0,618,24"/>
+</map>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:aae6559e3841d130771a24d8345f9a97c"><td class="memItemLeft" align="right" valign="top"><a id="aae6559e3841d130771a24d8345f9a97c"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>dataset</b> { <b>Datalabels</b> = 0, 
+<tr class="memitem:aae6559e3841d130771a24d8345f9a97c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#aae6559e3841d130771a24d8345f9a97c">dataset</a> { <br />
+&#160;&#160;<b>Datalabels</b> = 0, 
 <b>dataset1</b>, 
+<b>dataset2</b>, 
+<b>Datalabels</b> = 0, 
+<br />
+&#160;&#160;<b>dataset1</b>, 
 <b>dataset2</b>
- }</td></tr>
+<br />
+ }<tr class="memdesc:aae6559e3841d130771a24d8345f9a97c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Containing the available diagramm data val == 0 =&gt; x axis, val &gt; 0 =&gt; y axis  <a href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#aae6559e3841d130771a24d8345f9a97c">More...</a><br /></td></tr>
+</td></tr>
 <tr class="separator:aae6559e3841d130771a24d8345f9a97c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09a01f7e378bb8d705847ee3b4fd06f0"><td class="memItemLeft" align="right" valign="top"><a id="a09a01f7e378bb8d705847ee3b4fd06f0"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>charttype</b> { <b>KvpMonthChart</b> = 0
- }</td></tr>
+<tr class="memitem:a09a01f7e378bb8d705847ee3b4fd06f0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a09a01f7e378bb8d705847ee3b4fd06f0">charttype</a> { <b>DeliveryDaily</b> = 0, 
+<b>DeliveryCountry</b>, 
+<b>DeliveryDaily</b> = 0, 
+<b>DeliveryCountry</b>
+ }<tr class="memdesc:a09a01f7e378bb8d705847ee3b4fd06f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Containing zhe available diagramm types  <a href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a09a01f7e378bb8d705847ee3b4fd06f0">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a09a01f7e378bb8d705847ee3b4fd06f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae6559e3841d130771a24d8345f9a97c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#aae6559e3841d130771a24d8345f9a97c">dataset</a> { <br />
+&#160;&#160;<b>Datalabels</b> = 0, 
+<b>dataset1</b>, 
+<b>dataset2</b>, 
+<b>Datalabels</b> = 0, 
+<br />
+&#160;&#160;<b>dataset1</b>, 
+<b>dataset2</b>
+<br />
+ }<tr class="memdesc:aae6559e3841d130771a24d8345f9a97c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Containing the available diagramm data val == 0 =&gt; x axis, val &gt; 0 =&gt; y axis  <a href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#aae6559e3841d130771a24d8345f9a97c">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:aae6559e3841d130771a24d8345f9a97c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09a01f7e378bb8d705847ee3b4fd06f0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a09a01f7e378bb8d705847ee3b4fd06f0">charttype</a> { <b>DeliveryDaily</b> = 0, 
+<b>DeliveryCountry</b>, 
+<b>DeliveryDaily</b> = 0, 
+<b>DeliveryCountry</b>
+ }<tr class="memdesc:a09a01f7e378bb8d705847ee3b4fd06f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Containing zhe available diagramm types  <a href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a09a01f7e378bb8d705847ee3b4fd06f0">More...</a><br /></td></tr>
+</td></tr>
 <tr class="separator:a09a01f7e378bb8d705847ee3b4fd06f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab4a2e25c208fc08d574771e5054f6f96"><td class="memItemLeft" align="right" valign="top"><a id="ab4a2e25c208fc08d574771e5054f6f96"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>DeliveryDataDtoRs</b> (DateTime startdate, DateTime stopdate)</td></tr>
+<tr class="memitem:a2f5d9488a60c596c15ec91ea71a4df84"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a2f5d9488a60c596c15ec91ea71a4df84">DeliveryDataDtoRs</a> ()</td></tr>
+<tr class="memdesc:a2f5d9488a60c596c15ec91ea71a4df84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor loads the default data from 1.1.18 till today  <a href="#a2f5d9488a60c596c15ec91ea71a4df84">More...</a><br /></td></tr>
+<tr class="separator:a2f5d9488a60c596c15ec91ea71a4df84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a329d3c877228b17932f852ebb24a2339"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a329d3c877228b17932f852ebb24a2339">DeliveryDataDtoRs</a> (int id)</td></tr>
+<tr class="memdesc:a329d3c877228b17932f852ebb24a2339"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor loads the specified id  <a href="#a329d3c877228b17932f852ebb24a2339">More...</a><br /></td></tr>
+<tr class="separator:a329d3c877228b17932f852ebb24a2339"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4a2e25c208fc08d574771e5054f6f96"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#ab4a2e25c208fc08d574771e5054f6f96">DeliveryDataDtoRs</a> (DateTime startdate, DateTime stopdate)</td></tr>
+<tr class="memdesc:ab4a2e25c208fc08d574771e5054f6f96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor loads with the specified daterange  <a href="#ab4a2e25c208fc08d574771e5054f6f96">More...</a><br /></td></tr>
 <tr class="separator:ab4a2e25c208fc08d574771e5054f6f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49d6be9988a6157c75746ca357a44813"><td class="memItemLeft" align="right" valign="top"><a id="a49d6be9988a6157c75746ca357a44813"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>loadData</b> ()</td></tr>
+<tr class="memitem:a49d6be9988a6157c75746ca357a44813"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a49d6be9988a6157c75746ca357a44813">loadData</a> ()</td></tr>
+<tr class="memdesc:a49d6be9988a6157c75746ca357a44813"><td class="mdescLeft">&#160;</td><td class="mdescRight">loads the default data from 1.1.18 till today stores in object <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html" title="This Recordset stores a List of Delivery Data transfer objects It prowides all Methods to read...">DeliveryDataDtoRs</a></code>  <a href="#a49d6be9988a6157c75746ca357a44813">More...</a><br /></td></tr>
 <tr class="separator:a49d6be9988a6157c75746ca357a44813"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab956a92693af48a6da78eab193b9ca7"><td class="memItemLeft" align="right" valign="top"><a id="aab956a92693af48a6da78eab193b9ca7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>loadData</b> (DateTime startdate, DateTime stopdate)</td></tr>
+<tr class="memitem:a0f32ca8fceecc3a51dadd09b68029df4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a0f32ca8fceecc3a51dadd09b68029df4">loadData</a> (int id)</td></tr>
+<tr class="memdesc:a0f32ca8fceecc3a51dadd09b68029df4"><td class="mdescLeft">&#160;</td><td class="mdescRight">loads the specified dataset id stores in object <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html" title="This Recordset stores a List of Delivery Data transfer objects It prowides all Methods to read...">DeliveryDataDtoRs</a></code>  <a href="#a0f32ca8fceecc3a51dadd09b68029df4">More...</a><br /></td></tr>
+<tr class="separator:a0f32ca8fceecc3a51dadd09b68029df4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab956a92693af48a6da78eab193b9ca7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#aab956a92693af48a6da78eab193b9ca7">loadData</a> (DateTime startdate, DateTime stopdate)</td></tr>
+<tr class="memdesc:aab956a92693af48a6da78eab193b9ca7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor loads with the specified daterange stores in object <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html" title="This Recordset stores a List of Delivery Data transfer objects It prowides all Methods to read...">DeliveryDataDtoRs</a></code>  <a href="#aab956a92693af48a6da78eab193b9ca7">More...</a><br /></td></tr>
 <tr class="separator:aab956a92693af48a6da78eab193b9ca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c771808f4607524b53ee7a65fec5119"><td class="memItemLeft" align="right" valign="top"><a id="a7c771808f4607524b53ee7a65fec5119"></a>
-List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getData</b> ()</td></tr>
+<tr class="memitem:a7c771808f4607524b53ee7a65fec5119"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a7c771808f4607524b53ee7a65fec5119">getData</a> ()</td></tr>
+<tr class="memdesc:a7c771808f4607524b53ee7a65fec5119"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all Data from <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html" title="This Recordset stores a List of Delivery Data transfer objects It prowides all Methods to read...">DeliveryDataDtoRs</a></code>  <a href="#a7c771808f4607524b53ee7a65fec5119">More...</a><br /></td></tr>
 <tr class="separator:a7c771808f4607524b53ee7a65fec5119"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ba5fe32ae589d5aa5da5e301bfa5356"><td class="memItemLeft" align="right" valign="top"><a id="a1ba5fe32ae589d5aa5da5e301bfa5356"></a>
-List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getData</b> (DateTime startdate, DateTime stopdate)</td></tr>
-<tr class="separator:a1ba5fe32ae589d5aa5da5e301bfa5356"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7a5599b20fc48614aa3245dc5ee8302"><td class="memItemLeft" align="right" valign="top"><a id="ab7a5599b20fc48614aa3245dc5ee8302"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>setData</b> (List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a> &gt; deldto)</td></tr>
+<tr class="memitem:ab7a5599b20fc48614aa3245dc5ee8302"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#ab7a5599b20fc48614aa3245dc5ee8302">setData</a> (List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a> &gt; deldto)</td></tr>
+<tr class="memdesc:ab7a5599b20fc48614aa3245dc5ee8302"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds Kvp Data into the database Generates new id for each dataset  <a href="#ab7a5599b20fc48614aa3245dc5ee8302">More...</a><br /></td></tr>
 <tr class="separator:ab7a5599b20fc48614aa3245dc5ee8302"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb50241c1126f86bd7c3a34b829bfa99"><td class="memItemLeft" align="right" valign="top"><a id="aeb50241c1126f86bd7c3a34b829bfa99"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>getDataset</b> (charttype charttype, dataset datset, string groupMode)</td></tr>
-<tr class="separator:aeb50241c1126f86bd7c3a34b829bfa99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab074181fa2c9dc804bb1e435e8f563f0"><td class="memItemLeft" align="right" valign="top"><a id="ab074181fa2c9dc804bb1e435e8f563f0"></a>
-List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getKvpList</b> ()</td></tr>
-<tr class="separator:ab074181fa2c9dc804bb1e435e8f563f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8409245fef6ebe61c3ca608363b8ca59"><td class="memItemLeft" align="right" valign="top"><a id="a8409245fef6ebe61c3ca608363b8ca59"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>getDatasetLabel</b> ()</td></tr>
-<tr class="separator:a8409245fef6ebe61c3ca608363b8ca59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73e5ded80e01f064d9c1e8911234e111"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a73e5ded80e01f064d9c1e8911234e111">getDataset</a> (<a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a09a01f7e378bb8d705847ee3b4fd06f0">charttype</a> <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a09a01f7e378bb8d705847ee3b4fd06f0">charttype</a>, <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#aae6559e3841d130771a24d8345f9a97c">dataset</a> datset, string filter)</td></tr>
+<tr class="memdesc:a73e5ded80e01f064d9c1e8911234e111"><td class="mdescLeft">&#160;</td><td class="mdescRight">Produces Datastrings for the html / chart.js charts  <a href="#a73e5ded80e01f064d9c1e8911234e111">More...</a><br /></td></tr>
+<tr class="separator:a73e5ded80e01f064d9c1e8911234e111"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6442a0812dac20aff0dd6082a18c7024"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a6442a0812dac20aff0dd6082a18c7024">getDeliveryList</a> ()</td></tr>
+<tr class="memdesc:a6442a0812dac20aff0dd6082a18c7024"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the delivery label  <a href="#a6442a0812dac20aff0dd6082a18c7024">More...</a><br /></td></tr>
+<tr class="separator:a6442a0812dac20aff0dd6082a18c7024"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a286d74373bfd6c9ece26ae0bc0d00763"><td class="memItemLeft" align="right" valign="top"><a id="a286d74373bfd6c9ece26ae0bc0d00763"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>getDatasetLabel</b> (<a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a09a01f7e378bb8d705847ee3b4fd06f0">charttype</a> <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a09a01f7e378bb8d705847ee3b4fd06f0">charttype</a>, <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#aae6559e3841d130771a24d8345f9a97c">dataset</a> <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#aae6559e3841d130771a24d8345f9a97c">dataset</a>)</td></tr>
+<tr class="separator:a286d74373bfd6c9ece26ae0bc0d00763"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a963e855134d343e9686771929910db26"><td class="memItemLeft" align="right" valign="top"><a id="a963e855134d343e9686771929910db26"></a>
 string&#160;</td><td class="memItemRight" valign="bottom"><b>getDatsetBackroundColor</b> ()</td></tr>
 <tr class="separator:a963e855134d343e9686771929910db26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5604f97bdcb8087efa4ac924e928e00a"><td class="memItemLeft" align="right" valign="top"><a id="a5604f97bdcb8087efa4ac924e928e00a"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>getChartTitle</b> ()</td></tr>
-<tr class="separator:a5604f97bdcb8087efa4ac924e928e00a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac70ae0c1b987978a5c090a4d3e4707c7"><td class="memItemLeft" align="right" valign="top"><a id="ac70ae0c1b987978a5c090a4d3e4707c7"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>getChartTitle</b> (<a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a09a01f7e378bb8d705847ee3b4fd06f0">charttype</a> <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a09a01f7e378bb8d705847ee3b4fd06f0">charttype</a>)</td></tr>
+<tr class="separator:ac70ae0c1b987978a5c090a4d3e4707c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91f1349a7d1f86bbb2a75faa9c99595f"><td class="memItemLeft" align="right" valign="top"><a id="a91f1349a7d1f86bbb2a75faa9c99595f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getChartBorderWidth</b> ()</td></tr>
+<tr class="separator:a91f1349a7d1f86bbb2a75faa9c99595f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f5d9488a60c596c15ec91ea71a4df84"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a2f5d9488a60c596c15ec91ea71a4df84">DeliveryDataDtoRs</a> ()</td></tr>
+<tr class="memdesc:a2f5d9488a60c596c15ec91ea71a4df84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor loads the default data from 1.1.18 till today  <a href="#a2f5d9488a60c596c15ec91ea71a4df84">More...</a><br /></td></tr>
+<tr class="separator:a2f5d9488a60c596c15ec91ea71a4df84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a329d3c877228b17932f852ebb24a2339"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a329d3c877228b17932f852ebb24a2339">DeliveryDataDtoRs</a> (int id)</td></tr>
+<tr class="memdesc:a329d3c877228b17932f852ebb24a2339"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor loads the specified id  <a href="#a329d3c877228b17932f852ebb24a2339">More...</a><br /></td></tr>
+<tr class="separator:a329d3c877228b17932f852ebb24a2339"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4a2e25c208fc08d574771e5054f6f96"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#ab4a2e25c208fc08d574771e5054f6f96">DeliveryDataDtoRs</a> (DateTime startdate, DateTime stopdate)</td></tr>
+<tr class="memdesc:ab4a2e25c208fc08d574771e5054f6f96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor loads with the specified daterange  <a href="#ab4a2e25c208fc08d574771e5054f6f96">More...</a><br /></td></tr>
+<tr class="separator:ab4a2e25c208fc08d574771e5054f6f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49d6be9988a6157c75746ca357a44813"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a49d6be9988a6157c75746ca357a44813">loadData</a> ()</td></tr>
+<tr class="memdesc:a49d6be9988a6157c75746ca357a44813"><td class="mdescLeft">&#160;</td><td class="mdescRight">loads the default data from 1.1.18 till today stores in object <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html" title="This Recordset stores a List of Delivery Data transfer objects It prowides all Methods to read...">DeliveryDataDtoRs</a></code>  <a href="#a49d6be9988a6157c75746ca357a44813">More...</a><br /></td></tr>
+<tr class="separator:a49d6be9988a6157c75746ca357a44813"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f32ca8fceecc3a51dadd09b68029df4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a0f32ca8fceecc3a51dadd09b68029df4">loadData</a> (int id)</td></tr>
+<tr class="memdesc:a0f32ca8fceecc3a51dadd09b68029df4"><td class="mdescLeft">&#160;</td><td class="mdescRight">loads the specified dataset id stores in object <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html" title="This Recordset stores a List of Delivery Data transfer objects It prowides all Methods to read...">DeliveryDataDtoRs</a></code>  <a href="#a0f32ca8fceecc3a51dadd09b68029df4">More...</a><br /></td></tr>
+<tr class="separator:a0f32ca8fceecc3a51dadd09b68029df4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab956a92693af48a6da78eab193b9ca7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#aab956a92693af48a6da78eab193b9ca7">loadData</a> (DateTime startdate, DateTime stopdate)</td></tr>
+<tr class="memdesc:aab956a92693af48a6da78eab193b9ca7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor loads with the specified daterange stores in object <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html" title="This Recordset stores a List of Delivery Data transfer objects It prowides all Methods to read...">DeliveryDataDtoRs</a></code>  <a href="#aab956a92693af48a6da78eab193b9ca7">More...</a><br /></td></tr>
+<tr class="separator:aab956a92693af48a6da78eab193b9ca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c771808f4607524b53ee7a65fec5119"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a7c771808f4607524b53ee7a65fec5119">getData</a> ()</td></tr>
+<tr class="memdesc:a7c771808f4607524b53ee7a65fec5119"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all Data from <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html" title="This Recordset stores a List of Delivery Data transfer objects It prowides all Methods to read...">DeliveryDataDtoRs</a></code>  <a href="#a7c771808f4607524b53ee7a65fec5119">More...</a><br /></td></tr>
+<tr class="separator:a7c771808f4607524b53ee7a65fec5119"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7a5599b20fc48614aa3245dc5ee8302"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#ab7a5599b20fc48614aa3245dc5ee8302">setData</a> (List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a> &gt; deldto)</td></tr>
+<tr class="memdesc:ab7a5599b20fc48614aa3245dc5ee8302"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds Kvp Data into the database Generates new id for each dataset  <a href="#ab7a5599b20fc48614aa3245dc5ee8302">More...</a><br /></td></tr>
+<tr class="separator:ab7a5599b20fc48614aa3245dc5ee8302"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73e5ded80e01f064d9c1e8911234e111"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a73e5ded80e01f064d9c1e8911234e111">getDataset</a> (<a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a09a01f7e378bb8d705847ee3b4fd06f0">charttype</a> <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a09a01f7e378bb8d705847ee3b4fd06f0">charttype</a>, <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#aae6559e3841d130771a24d8345f9a97c">dataset</a> datset, string filter)</td></tr>
+<tr class="memdesc:a73e5ded80e01f064d9c1e8911234e111"><td class="mdescLeft">&#160;</td><td class="mdescRight">Produces Datastrings for the html / chart.js charts  <a href="#a73e5ded80e01f064d9c1e8911234e111">More...</a><br /></td></tr>
+<tr class="separator:a73e5ded80e01f064d9c1e8911234e111"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6442a0812dac20aff0dd6082a18c7024"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a6442a0812dac20aff0dd6082a18c7024">getDeliveryList</a> ()</td></tr>
+<tr class="memdesc:a6442a0812dac20aff0dd6082a18c7024"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the delivery label  <a href="#a6442a0812dac20aff0dd6082a18c7024">More...</a><br /></td></tr>
+<tr class="separator:a6442a0812dac20aff0dd6082a18c7024"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a286d74373bfd6c9ece26ae0bc0d00763"><td class="memItemLeft" align="right" valign="top"><a id="a286d74373bfd6c9ece26ae0bc0d00763"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>getDatasetLabel</b> (<a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a09a01f7e378bb8d705847ee3b4fd06f0">charttype</a> <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a09a01f7e378bb8d705847ee3b4fd06f0">charttype</a>, <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#aae6559e3841d130771a24d8345f9a97c">dataset</a> <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#aae6559e3841d130771a24d8345f9a97c">dataset</a>)</td></tr>
+<tr class="separator:a286d74373bfd6c9ece26ae0bc0d00763"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a963e855134d343e9686771929910db26"><td class="memItemLeft" align="right" valign="top"><a id="a963e855134d343e9686771929910db26"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>getDatsetBackroundColor</b> ()</td></tr>
+<tr class="separator:a963e855134d343e9686771929910db26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac70ae0c1b987978a5c090a4d3e4707c7"><td class="memItemLeft" align="right" valign="top"><a id="ac70ae0c1b987978a5c090a4d3e4707c7"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>getChartTitle</b> (<a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a09a01f7e378bb8d705847ee3b4fd06f0">charttype</a> <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a09a01f7e378bb8d705847ee3b4fd06f0">charttype</a>)</td></tr>
+<tr class="separator:ac70ae0c1b987978a5c090a4d3e4707c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91f1349a7d1f86bbb2a75faa9c99595f"><td class="memItemLeft" align="right" valign="top"><a id="a91f1349a7d1f86bbb2a75faa9c99595f"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>getChartBorderWidth</b> ()</td></tr>
 <tr class="separator:a91f1349a7d1f86bbb2a75faa9c99595f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:ad533bafa32f72f2a3b008d5004bd1d1f"><td class="memItemLeft" align="right" valign="top"><a id="ad533bafa32f72f2a3b008d5004bd1d1f"></a>
-List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>DeliveryDataRs</b><code> [get, set]</code></td></tr>
-<tr class="separator:ad533bafa32f72f2a3b008d5004bd1d1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae096dfea7797a7e0614150291a66c7bf"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#ae096dfea7797a7e0614150291a66c7bf">DeliveryDataRs</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ae096dfea7797a7e0614150291a66c7bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">A List of Delivery Data transfer Objects This List is loaded at construction and reprsent the actual Dataset  <a href="#ae096dfea7797a7e0614150291a66c7bf">More...</a><br /></td></tr>
+<tr class="separator:ae096dfea7797a7e0614150291a66c7bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This Recordset stores a List of Delivery Data transfer objects It prowides all Methods to read, write, update and delete data from databse It provides Methods to get HTML data for the frontend </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a09a01f7e378bb8d705847ee3b4fd06f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09a01f7e378bb8d705847ee3b4fd06f0">&#9670;&nbsp;</a></span>charttype <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a09a01f7e378bb8d705847ee3b4fd06f0">kpiMvcApi.DataTransferObjects.DeliveryDataDtoRs.charttype</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Containing zhe available diagramm types </p>
+
+</div>
+</div>
+<a id="a09a01f7e378bb8d705847ee3b4fd06f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09a01f7e378bb8d705847ee3b4fd06f0">&#9670;&nbsp;</a></span>charttype <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a09a01f7e378bb8d705847ee3b4fd06f0">kpiMvcApi.DataTransferObjects.DeliveryDataDtoRs.charttype</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Containing zhe available diagramm types </p>
+
+</div>
+</div>
+<a id="aae6559e3841d130771a24d8345f9a97c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae6559e3841d130771a24d8345f9a97c">&#9670;&nbsp;</a></span>dataset <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#aae6559e3841d130771a24d8345f9a97c">kpiMvcApi.DataTransferObjects.DeliveryDataDtoRs.dataset</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Containing the available diagramm data val == 0 =&gt; x axis, val &gt; 0 =&gt; y axis </p>
+
+</div>
+</div>
+<a id="aae6559e3841d130771a24d8345f9a97c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae6559e3841d130771a24d8345f9a97c">&#9670;&nbsp;</a></span>dataset <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#aae6559e3841d130771a24d8345f9a97c">kpiMvcApi.DataTransferObjects.DeliveryDataDtoRs.dataset</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Containing the available diagramm data val == 0 =&gt; x axis, val &gt; 0 =&gt; y axis </p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a2f5d9488a60c596c15ec91ea71a4df84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f5d9488a60c596c15ec91ea71a4df84">&#9670;&nbsp;</a></span>DeliveryDataDtoRs() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">kpiMvcApi.DataTransferObjects.DeliveryDataDtoRs.DeliveryDataDtoRs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor loads the default data from 1.1.18 till today </p>
+
+</div>
+</div>
+<a id="a329d3c877228b17932f852ebb24a2339"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a329d3c877228b17932f852ebb24a2339">&#9670;&nbsp;</a></span>DeliveryDataDtoRs() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">kpiMvcApi.DataTransferObjects.DeliveryDataDtoRs.DeliveryDataDtoRs </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor loads the specified id </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>id of requested dataset</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab4a2e25c208fc08d574771e5054f6f96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4a2e25c208fc08d574771e5054f6f96">&#9670;&nbsp;</a></span>DeliveryDataDtoRs() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">kpiMvcApi.DataTransferObjects.DeliveryDataDtoRs.DeliveryDataDtoRs </td>
+          <td>(</td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>startdate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>stopdate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor loads with the specified daterange </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">startdate</td><td>dataset start date (including)</td></tr>
+    <tr><td class="paramname">stopdate</td><td>dataset stop date (including)</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2f5d9488a60c596c15ec91ea71a4df84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f5d9488a60c596c15ec91ea71a4df84">&#9670;&nbsp;</a></span>DeliveryDataDtoRs() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">kpiMvcApi.DataTransferObjects.DeliveryDataDtoRs.DeliveryDataDtoRs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor loads the default data from 1.1.18 till today </p>
+
+</div>
+</div>
+<a id="a329d3c877228b17932f852ebb24a2339"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a329d3c877228b17932f852ebb24a2339">&#9670;&nbsp;</a></span>DeliveryDataDtoRs() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">kpiMvcApi.DataTransferObjects.DeliveryDataDtoRs.DeliveryDataDtoRs </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor loads the specified id </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>id of requested dataset</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab4a2e25c208fc08d574771e5054f6f96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4a2e25c208fc08d574771e5054f6f96">&#9670;&nbsp;</a></span>DeliveryDataDtoRs() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">kpiMvcApi.DataTransferObjects.DeliveryDataDtoRs.DeliveryDataDtoRs </td>
+          <td>(</td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>startdate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>stopdate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor loads with the specified daterange </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">startdate</td><td>dataset start date (including)</td></tr>
+    <tr><td class="paramname">stopdate</td><td>dataset stop date (including)</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7c771808f4607524b53ee7a65fec5119"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c771808f4607524b53ee7a65fec5119">&#9670;&nbsp;</a></span>getData() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a>&gt; kpiMvcApi.DataTransferObjects.DeliveryDataDtoRs.getData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get all Data from <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html" title="This Recordset stores a List of Delivery Data transfer objects It prowides all Methods to read...">DeliveryDataDtoRs</a></code> </p>
+<dl class="section return"><dt>Returns</dt><dd><code> List <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html" title="This Recordset stores a List of Delivery Data transfer objects It prowides all Methods to read...">DeliveryDataDtoRs</a> </code> A list with in this object loaded production data </dd></dl>
+
+</div>
+</div>
+<a id="a7c771808f4607524b53ee7a65fec5119"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c771808f4607524b53ee7a65fec5119">&#9670;&nbsp;</a></span>getData() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a>&gt; kpiMvcApi.DataTransferObjects.DeliveryDataDtoRs.getData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get all Data from <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html" title="This Recordset stores a List of Delivery Data transfer objects It prowides all Methods to read...">DeliveryDataDtoRs</a></code> </p>
+<dl class="section return"><dt>Returns</dt><dd><code> List <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html" title="This Recordset stores a List of Delivery Data transfer objects It prowides all Methods to read...">DeliveryDataDtoRs</a> </code> A list with in this object loaded production data </dd></dl>
+
+</div>
+</div>
+<a id="a73e5ded80e01f064d9c1e8911234e111"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73e5ded80e01f064d9c1e8911234e111">&#9670;&nbsp;</a></span>getDataset() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string kpiMvcApi.DataTransferObjects.DeliveryDataDtoRs.getDataset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a09a01f7e378bb8d705847ee3b4fd06f0">charttype</a>&#160;</td>
+          <td class="paramname"><em>charttype</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#aae6559e3841d130771a24d8345f9a97c">dataset</a>&#160;</td>
+          <td class="paramname"><em>datset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Produces Datastrings for the html / chart.js charts </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">charttype</td><td></td></tr>
+    <tr><td class="paramname">datset</td><td></td></tr>
+    <tr><td class="paramname">filter</td><td>"y" year, "M" month, "d" day</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>string HTML.Raw Datastring</code> string for direct implementation in html.raw() view</dd></dl>
+
+</div>
+</div>
+<a id="a73e5ded80e01f064d9c1e8911234e111"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73e5ded80e01f064d9c1e8911234e111">&#9670;&nbsp;</a></span>getDataset() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string kpiMvcApi.DataTransferObjects.DeliveryDataDtoRs.getDataset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#a09a01f7e378bb8d705847ee3b4fd06f0">charttype</a>&#160;</td>
+          <td class="paramname"><em>charttype</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html#aae6559e3841d130771a24d8345f9a97c">dataset</a>&#160;</td>
+          <td class="paramname"><em>datset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Produces Datastrings for the html / chart.js charts </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">charttype</td><td></td></tr>
+    <tr><td class="paramname">datset</td><td></td></tr>
+    <tr><td class="paramname">filter</td><td>"y" year, "M" month, "d" day</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>string HTML.Raw Datastring</code> string for direct implementation in html.raw() view</dd></dl>
+
+</div>
+</div>
+<a id="a6442a0812dac20aff0dd6082a18c7024"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6442a0812dac20aff0dd6082a18c7024">&#9670;&nbsp;</a></span>getDeliveryList() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a>&gt; kpiMvcApi.DataTransferObjects.DeliveryDataDtoRs.getDeliveryList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the delivery label </p>
+<dl class="section return"><dt>Returns</dt><dd>string containing the Chartlabel text</dd></dl>
+
+</div>
+</div>
+<a id="a6442a0812dac20aff0dd6082a18c7024"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6442a0812dac20aff0dd6082a18c7024">&#9670;&nbsp;</a></span>getDeliveryList() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a>&gt; kpiMvcApi.DataTransferObjects.DeliveryDataDtoRs.getDeliveryList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the delivery label </p>
+<dl class="section return"><dt>Returns</dt><dd>string containing the Chartlabel text</dd></dl>
+
+</div>
+</div>
+<a id="a49d6be9988a6157c75746ca357a44813"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49d6be9988a6157c75746ca357a44813">&#9670;&nbsp;</a></span>loadData() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kpiMvcApi.DataTransferObjects.DeliveryDataDtoRs.loadData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>loads the default data from 1.1.18 till today stores in object <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html" title="This Recordset stores a List of Delivery Data transfer objects It prowides all Methods to read...">DeliveryDataDtoRs</a></code> </p>
+
+</div>
+</div>
+<a id="a49d6be9988a6157c75746ca357a44813"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49d6be9988a6157c75746ca357a44813">&#9670;&nbsp;</a></span>loadData() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kpiMvcApi.DataTransferObjects.DeliveryDataDtoRs.loadData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>loads the default data from 1.1.18 till today stores in object <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html" title="This Recordset stores a List of Delivery Data transfer objects It prowides all Methods to read...">DeliveryDataDtoRs</a></code> </p>
+
+</div>
+</div>
+<a id="a0f32ca8fceecc3a51dadd09b68029df4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f32ca8fceecc3a51dadd09b68029df4">&#9670;&nbsp;</a></span>loadData() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kpiMvcApi.DataTransferObjects.DeliveryDataDtoRs.loadData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>loads the specified dataset id stores in object <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html" title="This Recordset stores a List of Delivery Data transfer objects It prowides all Methods to read...">DeliveryDataDtoRs</a></code> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>id of requested dataset</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0f32ca8fceecc3a51dadd09b68029df4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f32ca8fceecc3a51dadd09b68029df4">&#9670;&nbsp;</a></span>loadData() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kpiMvcApi.DataTransferObjects.DeliveryDataDtoRs.loadData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>loads the specified dataset id stores in object <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html" title="This Recordset stores a List of Delivery Data transfer objects It prowides all Methods to read...">DeliveryDataDtoRs</a></code> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>id of requested dataset</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aab956a92693af48a6da78eab193b9ca7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab956a92693af48a6da78eab193b9ca7">&#9670;&nbsp;</a></span>loadData() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kpiMvcApi.DataTransferObjects.DeliveryDataDtoRs.loadData </td>
+          <td>(</td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>startdate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>stopdate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor loads with the specified daterange stores in object <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html" title="This Recordset stores a List of Delivery Data transfer objects It prowides all Methods to read...">DeliveryDataDtoRs</a></code> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">startdate</td><td>dataset start date (including)</td></tr>
+    <tr><td class="paramname">stopdate</td><td>dataset stop date (including)</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aab956a92693af48a6da78eab193b9ca7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab956a92693af48a6da78eab193b9ca7">&#9670;&nbsp;</a></span>loadData() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kpiMvcApi.DataTransferObjects.DeliveryDataDtoRs.loadData </td>
+          <td>(</td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>startdate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>stopdate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor loads with the specified daterange stores in object <code><a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html" title="This Recordset stores a List of Delivery Data transfer objects It prowides all Methods to read...">DeliveryDataDtoRs</a></code> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">startdate</td><td>dataset start date (including)</td></tr>
+    <tr><td class="paramname">stopdate</td><td>dataset stop date (including)</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab7a5599b20fc48614aa3245dc5ee8302"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7a5599b20fc48614aa3245dc5ee8302">&#9670;&nbsp;</a></span>setData() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kpiMvcApi.DataTransferObjects.DeliveryDataDtoRs.setData </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a> &gt;&#160;</td>
+          <td class="paramname"><em>deldto</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds Kvp Data into the database Generates new id for each dataset </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deldto</td><td><code> List <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html" title="This Recordset stores a List of Delivery Data transfer objects It prowides all Methods to read...">DeliveryDataDtoRs</a> </code> a list of Kvp data data transfer object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>booo</code> success</dd></dl>
+
+</div>
+</div>
+<a id="ab7a5599b20fc48614aa3245dc5ee8302"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7a5599b20fc48614aa3245dc5ee8302">&#9670;&nbsp;</a></span>setData() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kpiMvcApi.DataTransferObjects.DeliveryDataDtoRs.setData </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a> &gt;&#160;</td>
+          <td class="paramname"><em>deldto</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds Kvp Data into the database Generates new id for each dataset </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deldto</td><td><code> List <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto_rs.html" title="This Recordset stores a List of Delivery Data transfer objects It prowides all Methods to read...">DeliveryDataDtoRs</a> </code> a list of Kvp data data transfer object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>booo</code> success</dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="ae096dfea7797a7e0614150291a66c7bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae096dfea7797a7e0614150291a66c7bf">&#9670;&nbsp;</a></span>DeliveryDataRs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; <a class="el" href="classkpi_mvc_api_1_1_data_transfer_objects_1_1_delivery_data_dto.html">DeliveryDataDto</a> &gt; kpiMvcApi.DataTransferObjects.DeliveryDataDtoRs.DeliveryDataRs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A List of Delivery Data transfer Objects This List is loaded at construction and reprsent the actual Dataset </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>C:/Users/Ulysses/Documents/01_StudyFhnw/815_veri/kpiWebMvc/kpiMvc/kpiMvcApi/DataTransferObjects/DeliveryDataDtoRs.cs</li>
 </ul>
